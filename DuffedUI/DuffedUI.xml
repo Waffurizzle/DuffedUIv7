@@ -1,0 +1,76 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="developer\reloadui.lua" />
+	<Script file="developer\commands.lua" />
+	<Script file="core\init.lua" />
+	<Include file="locales\load_locales.xml" />
+	<Script file="config\config.lua" />
+	<Script file="config\profiles.lua" />
+	<Script file="core\customconfig.lua" />
+	<Script file="core\config.lua" />
+	<Script file="medias\medias.lua" />
+	<Include file="modules\unitframes\core\oUF\oUF.xml" />
+	<Include file="modules\unitframes\plugins\load_oUFPlugins.xml" />
+	<Script file="modules\unitframes\templates\colors.lua" />
+	<Script file="core\video.lua" />
+	<Script file="core\deprecated.lua" />
+	<Script file="core\api.lua" />
+	<Script file="core\move.lua" />
+	<Script file="core\functions.lua" />
+	<Script file="core\fonts.lua" />
+	<Script file="core\protection.lua" />
+	<Script file="core\popup.lua" />
+	<Script file="core\install.lua" />
+	<Script file="core\filters\f_buffnotice.lua" />
+	<Include file="modules\blizzard\load_blizzard.xml" />
+	<Script file="modules\misc\commands.lua" />
+	<Script file="modules\misc\micromenu.lua" />
+	<Script file="modules\misc\invite.lua" />
+	<Script file="modules\misc\damage.lua" />
+	<Script file="modules\loot\autodez.lua" />
+	<Script file="modules\loot\merchant.lua" />
+	<Script file="modules\chat\copyurl.lua" />
+	<Script file="modules\tooltip\itemidcount.lua" />
+	<Script file="modules\chat\spam.lua" />
+	<Include file="modules\buffs\template.xml" />
+	<Script file="modules\buffs\buffs.lua" />
+	<Script file="modules\buffs\header.lua" />
+	<Script file="modules\maps\minimap.lua" />
+	<Script file="modules\panels\panels.lua" />
+	<Include file="modules\datatext\load_dt.xml" />
+	<Include file="modules\actionbars\load_ab.xml" />	
+	<Script file="modules\chat\chatframes.lua" />
+	<Script file="modules\chat\telltarget.lua" />
+	<Script file="modules\chat\copychat.lua" />
+	<Script file="modules\chat\mousescroll.lua" />
+	<Script file="modules\chat\sounds.lua" />
+	<Script file="modules\tooltip\tooltip.lua" />
+	<Script file="modules\nameplates\nameplates.lua" />
+	<Script file="modules\bags\bags.lua" />
+	<Script file="modules\loot\masterloot.lua" />
+	<Script file="modules\loot\lootframe.lua" />
+	<Script file="modules\loot\rollframe.lua" />
+	<Script file="modules\maps\zonemap.lua" />
+	<Include file="modules\buffnotice\load_bn.xml" />
+	
+	<Include file="modules\unitframes\templates\tankassist.xml" />
+	<Script file="modules\unitframes\tags\tags.lua" />
+	<Script file="modules\unitframes\layouts\duffed.lua" />
+	<Script file="modules\unitframes\layouts\duffed2.lua" />
+	<Script file="modules\unitframes\layouts\merith.lua" />
+	<Script file="modules\misc\altpowerbar.lua" />
+	<Script file="modules\misc\threatbar.lua" />
+	<Script file="modules\blizzard\achievements.lua" />
+	<Script file="modules\misc\dropdownlist.lua" />
+	<Script file="modules\misc\raidutilities.lua" />
+	<Script file="modules\ui\petbattles.lua" />
+	
+	<Include file="modules\plugins\load_plugins.xml" />
+	
+	<Include file="modules\skins\load_skins.xml" />
+	
+	<!-- these are broken skins to fix or not yet tested for MoP
+	<Script file="modules\skins\macosx.lua" />
+	-->
+	
+	<Script file="developer\test.lua"/>	
+</Ui>

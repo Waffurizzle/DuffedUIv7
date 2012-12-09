@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="buffs.lua" />
+	<Script file="buffs2.lua" />
+	<Script file="weapons.lua" />
+</Ui>

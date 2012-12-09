@@ -1,0 +1,24 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="oUF_AuraTracker.lua" />
+	<Script file="oUF_AuraWatch.lua" />
+	<Script file="oUF_CombatFeedback.lua" />
+	<Script file="oUF_DebuffHighlight.lua" />
+	<Script file="oUF_Experience.lua" />
+	<Script file="movable.lua" />
+	<Script file="oUF_Reputation.lua" />
+	<Script file="oUF_Smooth.lua" />
+	<Script file="oUF_TotemBar.lua" />
+	<Script file="oUF_Trinkets.lua" />
+	<Script file="oUF_RaidDebuffs.lua" />
+	<Script file="oUF_WeakenedSoul.lua" />
+	<Script file="oUF_HarmonyBar.lua" />
+	<Script file="oUF_ShadowOrbsBar.lua" />
+	<Script file="oUF_WarlockSpecBars.lua" />
+	<Script file="oUF_ArcaneCharge.lua" />
+	<Script file="oUF_WildMushroom.lua" />
+	<Script file="oUF_PVPSpecIcons.lua" />
+	<Script file="oUF_Statue.lua" />
+	<Script file="oUF_HolyPowerBar.lua" />
+	<Script file="classicons.lua" />
+	<Script file="oUF_Vengeance.lua" />
+</Ui>
