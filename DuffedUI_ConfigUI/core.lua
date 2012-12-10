@@ -37,7 +37,7 @@ if DuffedUIEditedDefaultConfig then
 	end
 end
 
---List of "Table Names" that we do not want to show in the config
+--list of "table names" that we do not want to show in the config
 local TableFilter = {
 	["filter"] = 1,
 }
@@ -206,13 +206,11 @@ function CreateDuffedUIConfigUI()
 		answer2 = CANCEL,
 	}
 
-	-- Main Frame
+	-- main frame
 	local DuffedUIConfigUI = CreateFrame("Frame", "DuffedUIConfigUI", UIParent)
 	DuffedUIConfigUI:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 	DuffedUIConfigUI:SetWidth(750)
 	DuffedUIConfigUI:SetHeight(420)
-	DuffedUIConfigUI:SetFrameStrata("DIALOG")
-	DuffedUIConfigUI:SetFrameLevel(20)
 
 	local DuffedUIConfigUIBG = CreateFrame("Frame", "DuffedUIConfigUI", DuffedUIConfigUI)
 	DuffedUIConfigUIBG:SetPoint("TOPLEFT", -10, 10)
@@ -220,7 +218,7 @@ function CreateDuffedUIConfigUI()
 	DuffedUIConfigUIBG:SetTemplate("Transparent")
 	DuffedUIConfigUIBG:CreateShadow("Default")
 
-	-- Title
+	-- title
 	local DuffedUIConfigUITitleBox = CreateFrame("Frame", "DuffedUIConfigUI", DuffedUIConfigUI)
 	DuffedUIConfigUITitleBox:Size(DuffedUIConfigUIBG:GetWidth() - 33, 30)
 	DuffedUIConfigUITitleBox:SetPoint("BOTTOMLEFT", DuffedUIConfigUIBG, "TOPLEFT", 0, 3)
@@ -243,7 +241,7 @@ function CreateDuffedUIConfigUI()
 	DuffedUIConfigUIIcon.bg:Point("BOTTOMRIGHT", -2, 2)
 	DuffedUIConfigUIIcon.bg:SetTexture(C["media"].duffed)
 
-	-- Left Groups
+	-- left groups
 	local groups = CreateFrame("ScrollFrame", "DuffedUICatagoryGroup", DuffedUIConfigUI)
 	groups:SetPoint("TOPLEFT", 10, -10)
 	groups:SetWidth(150)
@@ -324,7 +322,7 @@ function CreateDuffedUIConfigUI()
 		end
 	end)
 
-	-- Group Frame Right Side
+	-- group frame (right side)
 	local group = CreateFrame("ScrollFrame", "DuffedUIConfigUIGroup", DuffedUIConfigUI)
 	group:SetPoint("TOPRIGHT", -10, -10)
 	group:SetWidth(550)
@@ -591,7 +589,7 @@ function CreateDuffedUIConfigUI()
 
 	ShowGroup("general")
 
-	-- CREDITS
+	-- credits
 	local credits = D.Credits
 	local interval = #credits
 	local f = CreateFrame("ScrollingMessageFrame", "DuffedUIConfigUICredits", DuffedUIConfigUI)
@@ -681,6 +679,7 @@ do
 		end
 	end
 
+	-- ESC button
 	local loaded = CreateFrame("Frame")
 	loaded:RegisterEvent("PLAYER_LOGIN")
 	loaded:SetScript("OnEvent", function(self, event, addon)

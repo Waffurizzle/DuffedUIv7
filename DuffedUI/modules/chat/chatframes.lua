@@ -292,7 +292,7 @@ D.SetDefaultChatPosition = function(frame)
 		if id == 1 then
 			frame:ClearAllPoints()
 			if D.lowversion or C["actionbar"].layout == 2 then
-				frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 6)
+				frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 9)
 			else
 				if C["chat"].background then
 					frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 6)
@@ -304,7 +304,7 @@ D.SetDefaultChatPosition = function(frame)
 			if not frame.isDocked then
 				frame:ClearAllPoints()
 				if D.lowversion or C["actionbar"].layout == 2 then
-					frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)
+					frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 9)
 				else
 					if C["chat"].background then
 						frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)

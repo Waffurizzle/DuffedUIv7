@@ -82,6 +82,7 @@ local spec = CreateFrame("Button", "DuffedUI_Spechelper", UIParent)
 spec:Size(DuffedUIMinimap:GetWidth(), 19)
 spec:SetPoint("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 0, -13)
 spec:SetTemplate("Default")
+spec:SetParent(DuffedUIPetBattleHider)
 
 -- Text
 spec.t = spec:CreateFontString(spec, "OVERLAY")
@@ -142,6 +143,7 @@ MB_reload:Point("TOPLEFT", spec, "BOTTOMLEFT", 0, -2)
 MB_reload:SetFrameLevel(10)
 MB_reload:CreateShadow("Default")
 MB_reload:SetAttribute("macrotext1", "/rl")
+MB_reload:Hide()
 
 D.CreateBtn("MB_heal", MB_reload, 19, 19, "Switch to heal-layout", "H")
 MB_heal:Point("LEFT", MB_reload, "RIGHT", 2, 0)
@@ -232,8 +234,8 @@ if Enablegear == true then
 			gearSets[i]:SetScript("OnLeave", function(self) self:SetBackdropBorderColor(unpack(C["media"].bordercolor)) end)
 			
 			if Autogearswap == true then
-				gearSets[1]:SetBackdropBorderColor(0,1,0)
-				gearSets[2]:SetBackdropBorderColor(1,0,0)
+				gearSets[1]:SetBackdropBorderColor(0, 1, 0)
+				gearSets[2]:SetBackdropBorderColor(1, 0, 0)
 				gearSets[1]:SetScript("OnEnter", nil)
 				gearSets[1]:SetScript("OnLeave", nil)
 				gearSets[2]:SetScript("OnEnter", nil)
@@ -259,9 +261,17 @@ if Enablegear == true then
 end
 
 -- toggle button
-D.CreateBtn("toggle", spec, 29, 19, "Toggle", "+")
+local toggle = CreateFrame("Button", nil, spec)
+toggle:SetTemplate("Default")
+toggle:Size(29, 19)
 toggle:Point("LEFT", spec, "RIGHT", 2, 0)
+toggle:EnableMouse(true)
+toggle:RegisterForClicks("AnyUp")
 
+toggle.t = toggle:CreateFontString(nil, "OVERLAY")
+toggle.t:SetPoint("CENTER", 0, 0)
+toggle.t:SetFont(C["media"].font, C["datatext"].fontsize)
+toggle.t:SetText(cp.."+|r")
 toggle:SetScript("OnEnter", function(self) self:SetBackdropBorderColor(unpack(hoverovercolor)) end)
 toggle:SetScript("OnLeave", function(self) self:SetBackdropBorderColor(unpack(C["media"].bordercolor)) end)
 
