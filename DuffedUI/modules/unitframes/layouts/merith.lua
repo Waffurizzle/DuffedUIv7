@@ -952,10 +952,12 @@ local function Shared(self, unit)
 			
 			-- Border
 			castbar:CreateBackdrop()
+			castbar.backdrop:CreateShadow()
 			
 			if C["castbar"].cbicons then
 				castbar.button = CreateFrame("Frame", nil, castbar)
 				castbar.button:SetTemplate("Default")
+				castbar.button:CreateShadow()
 				
 				if unit == "player" then
 					castbar.button:Size(25)
@@ -972,13 +974,20 @@ local function Shared(self, unit)
 			end
 			
 			-- cast bar latency on player
-			if unit == "player" and C["castbar"].cblatency == true then
+			if unit == "player" and C["castbar"].cblatency then
 				castbar.safezone = castbar:CreateTexture(nil, "ARTWORK")
 				castbar.safezone:SetTexture(normTex)
 				castbar.safezone:SetVertexColor(0.69, 0.31, 0.31, 0.75)
 				castbar.SafeZone = castbar.safezone
 			end
-				
+
+			if unit == "player" and C["castbar"].spark then
+				castbar.Spark = castbar:CreateTexture(nil, "OVERLAY")
+				castbar.Spark:SetHeight(40)
+				castbar.Spark:SetWidth(10)
+				castbar.Spark:SetBlendMode("ADD")
+			end
+
 			self.Castbar = castbar
 			self.Castbar.Time = castbar.time
 			self.Castbar.Icon = castbar.icon

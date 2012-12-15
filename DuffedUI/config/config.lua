@@ -110,6 +110,7 @@ C["castbar"] = {
 	["petenable"] = true,										-- enable petcastbar
 	["cblatency"] = false,                              		-- enable castbar latency
 	["cbicons"] = true,                                 		-- enable icons on castbar
+	["spark"] = true,											-- enable spark
 }
 
 C["auras"] = {

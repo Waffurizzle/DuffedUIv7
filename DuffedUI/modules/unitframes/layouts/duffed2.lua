@@ -939,10 +939,12 @@ local function Shared(self, unit)
 			
 			-- Border
 			castbar:CreateBackdrop()
+			castbar.backdrop:CreateShadow()
 			
 			if C["castbar"].cbicons then
 				castbar.button = CreateFrame("Frame", nil, castbar)
 				castbar.button:SetTemplate("Default")
+				castbar.button:CreateShadow()
 				
 				if unit == "player" then
 					castbar.button:Size(25)
@@ -964,6 +966,13 @@ local function Shared(self, unit)
 				castbar.safezone:SetTexture(normTex)
 				castbar.safezone:SetVertexColor(0.69, 0.31, 0.31, 0.75)
 				castbar.SafeZone = castbar.safezone
+			end
+
+			if unit == "player" and C["castbar"].spark then
+				castbar.Spark = castbar:CreateTexture(nil, "OVERLAY")
+				castbar.Spark:SetHeight(40)
+				castbar.Spark:SetWidth(10)
+				castbar.Spark:SetBlendMode("ADD")
 			end
 					
 			self.Castbar = castbar

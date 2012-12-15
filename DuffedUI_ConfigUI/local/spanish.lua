@@ -5,6 +5,7 @@
 	DuffedUIConfigUILocalization.castbarpetenable = "Enable pet castbar"
 	DuffedUIConfigUILocalization.castbarcbicons = "Enable castbar-icons"
 	DuffedUIConfigUILocalization.castbarcblatency = "Enable castbar latency"
+	DuffedUIConfigUILocalization.castbarspark = "Enable castbar spark"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "Misc"

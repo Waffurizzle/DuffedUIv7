@@ -5,6 +5,7 @@
 	DuffedUIConfigUILocalization.castbarpetenable = "啟用寵物施法條"
 	DuffedUIConfigUILocalization.castbarcbicons = "啟用施放技能圖示"
 	DuffedUIConfigUILocalization.castbarcblatency = "啟用施法條延遲時間顯示"
+	DuffedUIConfigUILocalization.castbarspark = "Enable castbar spark"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "雜項"
