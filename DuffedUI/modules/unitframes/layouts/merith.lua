@@ -410,8 +410,43 @@ local function Shared(self, unit)
 					mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
 				end
 				
+				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+				
 				self.ArcaneChargeBar = mb
+
+				local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
+				rp:Point("TOP", power, "BOTTOM", -52, -1)
+				rp:SetWidth(100)
+				rp:SetHeight(5)
+				rp:SetBackdrop(backdrop)
+				rp:SetBackdropColor(0, 0, 0)
+				rp:SetBackdropBorderColor(0, 0, 0)
+
+				for i = 1, 2 do
+					rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
+					rp[i]:Height(5)
+					rp[i]:SetStatusBarTexture(C.media.normTex)
+
+					if i == 1 then
+						rp[i]:Width(176 / 2)
+						rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+					else
+						rp[i]:Width(176 / 2)
+						rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+					end
+
+					rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
+				end
+
+				rp:CreateBackdrop()
+
+				rp:SetScript("OnShow", T.UpdateMageClassBarVisibility)
+				rp:SetScript("OnHide", T.UpdateMageClassBarVisibility)
+
+				self.RunePower = rp
 			end
+
 			
 			-- classbars
 			if C["unitframes"].classbar then

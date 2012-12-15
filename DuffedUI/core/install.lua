@@ -145,6 +145,7 @@ local function cvarsetup()
 	SetCVar("autoOpenLootHistory", 0)
 	SetCVar("spamFilter", 0)
 	SetCVar("violenceLevel", 5)
+	SetCVar("gxApi", 1)
 end
 
 local OnLogon = CreateFrame("Frame")

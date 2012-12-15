@@ -282,7 +282,7 @@
 	DuffedUIConfigUILocalization.aurasbuffnotice = "启用Buff缺失警告提醒"
 	DuffedUIConfigUILocalization.auraswarning = "为Buff缺失警告提醒功能(BuffNotice)启用报警音效"
 	DuffedUIConfigUILocalization.aurasbufftracker = "启用 Buff追踪功能"
-	DuffedUIConfigUILocalization.auraswrap = "Set wrap for buffs (default = 18)"
+	DuffedUIConfigUILocalization.auraswrap = "设定(小地图旁)单行Buff显示数量(默认 = 18)"
 
 	-- buttons
 	DuffedUIConfigUILocalization.option_button_reset = "重置"

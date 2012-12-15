@@ -425,7 +425,7 @@ local function Shared(self, unit)
 			if C["unitframes"].mageclassbar and D.myclass == "MAGE" then
 				local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
 				mb:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5)
-				mb:SetWidth(playerwidth -4)
+				mb:SetWidth(playerwidth - 4)
 				mb:SetHeight(5)
 				mb:SetBackdrop(backdrop)
 				mb:SetBackdropColor(0, 0, 0)
@@ -437,10 +437,10 @@ local function Shared(self, unit)
 					mb[i]:SetStatusBarTexture(C["media"].normTex)
 					
 					if i == 1 then
-						mb[i]:Width((playerwidth -4) / 6)
+						mb[i]:Width((playerwidth - 4) / 6)
 						mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
 					else
-						mb[i]:Width(((playerwidth -4) / 6) - 1)
+						mb[i]:Width(((playerwidth - 4) / 6) - 1)
 						mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 1, 0)
 					end
 					
@@ -448,8 +448,42 @@ local function Shared(self, unit)
 				end
 				
 				mb:CreateBackdrop()
+
+				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
 				
 				self.ArcaneChargeBar = mb
+
+				local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
+				rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
+				rp:SetWidth(playerwidth)
+				rp:SetHeight(5)
+				rp:SetBackdrop(backdrop)
+				rp:SetBackdropColor(0, 0, 0)
+				rp:SetBackdropBorderColor(0, 0, 0)
+
+				for i = 1, 2 do
+					rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
+					rp[i]:Height(5)
+					rp[i]:SetStatusBarTexture(C.media.normTex)
+
+					if i == 1 then
+						rp[i]:Width((playerwidth - 4) / 2)
+						rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+					else
+						rp[i]:Width((playerwidth - 4) / 2)
+						rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+					end
+
+					rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
+				end
+
+				rp:CreateBackdrop()
+
+				rp:SetScript("OnShow", T.UpdateMageClassBarVisibility)
+				rp:SetScript("OnHide", T.UpdateMageClassBarVisibility)
+
+				self.RunePower = rp
 			end
 			
 			if C["unitframes"].classbar then

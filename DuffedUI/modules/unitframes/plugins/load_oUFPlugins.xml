@@ -21,4 +21,5 @@
 	<Script file="oUF_HolyPowerBar.lua" />
 	<Script file="classicons.lua" />
 	<Script file="oUF_Vengeance.lua" />
+	<Script file="oUF_RuneOfPower.lua" />
 </Ui>

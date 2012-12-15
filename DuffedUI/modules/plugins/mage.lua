@@ -52,7 +52,7 @@ for i, spell in pairs(spells) do
  
 	local l = b:CreateFontString(nil,"OVERLAY")
 	l:SetFont(C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
-	l:SetText(string.sub(teleport, string.find(teleport,":") + 1))
+	l:SetText(teleport)
 	b:SetFontString(l)
  
 	b:RegisterForClicks("LeftButtonDown", "RightButtonDown")

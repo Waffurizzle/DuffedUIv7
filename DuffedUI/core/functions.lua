@@ -1190,6 +1190,21 @@ D.DruidBarDisplay = function(self, login)
 	end
 end
 
+D.UpdateMageClassBarVisibility = function(self)
+	local p = self:GetParent()
+	local a = p.ArcaneChargeBar
+	local r = p.RunePower
+	local shadow = p.shadow
+
+	if (a and a:IsShown()) and (r and r:IsShown()) then
+		r:ClearAllPoints()
+		r:Point("BOTTOMLEFT", p, "TOPLEFT", 0, 10)
+	elseif (a and a:IsShown()) or (r and r:IsShown()) then
+		r:ClearAllPoints()
+		r:Point("BOTTOMLEFT", p, "TOPLEFT", 0, 1)
+	end
+end
+
 D.UpdateMushroomVisibility = function(self)
 	local p = self:GetParent()
 	local eb = p.EclipseBar

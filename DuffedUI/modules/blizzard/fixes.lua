@@ -2,7 +2,7 @@
 local D, C, L, G = unpack(select(2, ...))
 
 -- blizzard glyph bug -> http://us.battle.net/wow/en/forum/topic/6470967787
-local Load = CreateFrame("Frame")
+--[[local Load = CreateFrame("Frame")
 Load:RegisterEvent("PLAYER_ENTERING_WORLD")
 Load:SetScript("OnEvent", function(self, event)
 	LoadAddOn("Blizzard_TalentUI")
@@ -50,4 +50,4 @@ if addon == "DuffedUI_Raid" or addon == "DuffedUI_Raid_Healing" then
 			LoadTalentFix()
 		end
 	end)
-end
+end]]--

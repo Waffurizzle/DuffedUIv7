@@ -9,11 +9,11 @@ if D.client == "zhTW" then
 	L.Duffed_HELP_BUTTON1 = "快捷命令" 
 	L.Duffed_HELP_BUTTON2 = "天赋/装备切换助手" 
 	L.Duffed_HELP_BUTTON3 = "特殊按鈕" 
-	L.Duffed_HELP_BUTTON4 = "Actionbars"  --內容準備中 
+	L.Duffed_HELP_BUTTON4 = "動作條"   
 	L.Duffed_HELP_BUTTON5 = "內容準備中"  --內容準備中 
 	L.Duffed_HELP_BUTTON6 = "內容準備中"  --內容準備中 
 	L.Duffed_HELP_BUTTON7 = "內容準備中"  --內容準備中 
-	L.Duffed_HELP_BUTTON8 = "內容準備中"  --內容準備中 
+	L.Duffed_HELP_BUTTON8 = "已知問題"   
 	L.Duffed_HELP_BUTTON9 = "鳴謝" 
 
 	L.Duffed_HELP_CONTENT0_TITLE = "總覽" 

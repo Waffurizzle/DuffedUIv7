@@ -18,7 +18,7 @@ C["general"] = {
 C["unitframes"] = {
 	-- general options
 	["enable"] = true,                                  		-- do i really need to explain this?
-	["layout"] = 3,												-- set uf-layout
+	["layout"] = 2,												-- set uf-layout
 	["percent"] = false,										-- enable percentdisplay
 	["healthbarcolor"] = {.125, .125, .125, 1},					-- healthbar color (if unicolor = true) 
 	["deficitcolor"] = {0, 0, 0, 1},							-- healthbar deficit color (if unicolor = true)
