@@ -122,7 +122,7 @@ local function UpdateButtonsText(frame)
 									duracolor = "|cFFFF0000"
 								end
 
-								text:SetText(ilevelcolor.. ilevel + upgrades[upgrade].."\n"..duracolor.. itemDurabilityPercentage.."%|r")
+								text:SetText(ilevelcolor.. ilevel + upgrades[upgrade].."\n"..duracolor..D.Round(itemDurabilityPercentage).."%|r")
 							else
 								text:SetText(ilevelcolor.. ilevel + upgrades[upgrade])
 							end
