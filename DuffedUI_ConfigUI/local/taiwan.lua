@@ -6,8 +6,8 @@
 	DuffedUIConfigUILocalization.castbarcbicons = "啟用施放技能圖示"
 	DuffedUIConfigUILocalization.castbarcblatency = "啟用施法條延遲時間顯示"
 	DuffedUIConfigUILocalization.castbarspark = "啟用施法條閃爍"
-	DuffedUIConfigUILocalization.castbarcolor = "Set color for castbars"
-	DuffedUIConfigUILocalization.castbarclasscolor = "Enable classcolor for castbar"
+	DuffedUIConfigUILocalization.castbarcolor = "設定施法條顏色"
+	DuffedUIConfigUILocalization.castbarclasscolor = "啟用施法條按職業顏色著著色"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "雜項"

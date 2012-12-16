@@ -179,7 +179,7 @@ D.CreateBtn("MB_binds", MB_reload, 19, 19, "Set your keybindings", "K")
 MB_binds:Point("LEFT", MB_config, "RIGHT", 2, 0)
 MB_binds:SetFrameLevel(10)
 MB_binds:CreateShadow("Default")
-MB_binds:SetAttribute("macrotext1", "/kb")
+if IsAddOnLoaded("FriendsMenuXP") then MB_binds:SetAttribute("macrotext1", "/hb") else  MB_binds:SetAttribute("macrotext1", "/kb") end
 
 D.CreateBtn("MB_help", MB_reload, 28, 19, "Open the Helpframe for DuffedUI", "Help")
 MB_help:Point("LEFT", MB_binds, "RIGHT", 2, 0)

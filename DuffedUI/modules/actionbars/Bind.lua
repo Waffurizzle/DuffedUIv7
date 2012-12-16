@@ -289,4 +289,4 @@ SlashCmdList.MOUSEOVERBIND = function()
 	end
 end
 SLASH_MOUSEOVERBIND1 = "/bindkey"
-SLASH_MOUSEOVERBIND2 = "/kb"
+if IsAddOnLoaded("FriendsMenuXP") then SLASH_MOUSEOVERBIND2 = "/hb" else SLASH_MOUSEOVERBIND2 = "/kb" end
