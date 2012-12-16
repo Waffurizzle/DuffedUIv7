@@ -439,8 +439,8 @@ local function Shared(self, unit)
 
 				rp:CreateBackdrop()
 
-				rp:SetScript("OnShow", T.UpdateMageClassBarVisibility)
-				rp:SetScript("OnHide", T.UpdateMageClassBarVisibility)
+				rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+				rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
 
 				self.RunePower = rp
 			end
