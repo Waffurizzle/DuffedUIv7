@@ -51,7 +51,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 			
 			ShoppingTooltip1:Hide()
 			
-			if spellmacro=="SPELL" then
+			if spellmacro == "SPELL" then
 				self.button.id = SpellBook_GetSpellBookSlot(self.button)
 				self.button.name = GetSpellBookItemName(self.button.id, SpellBookFrame.bookType)
 				
@@ -73,7 +73,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 					self:Show()
 					self:SetScript("OnHide", nil)
 				end)
-			elseif spellmacro=="MACRO" then
+			elseif spellmacro == "MACRO" then
 				self.button.id = self.button:GetID()
 				
 				if floor(.5+select(2,MacroFrameTab1Text:GetTextColor())*10)/10==.8 then self.button.id = self.button.id + 36 end
@@ -94,7 +94,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 						end
 					end
 				GameTooltip:Show()
-			elseif spellmacro=="STANCE" or spellmacro=="PET" then
+			elseif spellmacro == "STANCE" or spellmacro == "PET" then
 				self.button.id = tonumber(b:GetID())
 				self.button.name = b:GetName()
 				
@@ -197,14 +197,14 @@ SlashCmdList.MOUSEOVERBIND = function()
 			local ctrl = IsControlKeyDown() and "CTRL-" or ""
 			local shift = IsShiftKeyDown() and "SHIFT-" or ""
 			
-			if not self.spellmacro or self.spellmacro=="PET" or self.spellmacro=="STANCE" then
+			if not self.spellmacro or self.spellmacro == "PET" or self.spellmacro == "STANCE" then
 				SetBinding(alt..ctrl..shift..key, self.button.bindstring)
 			else
 				SetBinding(alt..ctrl..shift..key, self.spellmacro.." "..self.button.name)
 			end
 			print(alt..ctrl..shift..key.." |cff00ff00bound to |r"..self.button.name..".")
 			self:Update(self.button, self.spellmacro)
-			if self.spellmacro~="MACRO" then GameTooltip:Hide() end
+			if self.spellmacro ~= "MACRO" then GameTooltip:Hide() end
 		end
 		function bind:HideFrame()
 			self:ClearAllPoints()
@@ -228,7 +228,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 			self:UnregisterEvent("PLAYER_REGEN_DISABLED")
 		end
 
-		D.CreatePopup["TUKUI_KEYBIND_MODE"] = {
+		D.CreatePopup["DUFFEDUI_KEYBIND_MODE"] = {
 			question = L.bind_instruct,
 			answer1 = L.bind_save,
 			answer2 = L.bind_discardbind,
@@ -242,13 +242,13 @@ SlashCmdList.MOUSEOVERBIND = function()
 		local button = SecureActionButton_OnClick
 
 		local function register(val)
-			if val.IsProtected and val.GetObjectType and val.GetScript and val:GetObjectType()=="CheckButton" and val:IsProtected() then
+			if val.IsProtected and val.GetObjectType and val.GetScript and val:GetObjectType() == "CheckButton" and val:IsProtected() then
 				local script = val:GetScript("OnClick")
-				if script==button then
+				if script == button then
 					val:HookScript("OnEnter", function(self) bind:Update(self) end)
-				elseif script==stance then
+				elseif script == stance then
 					val:HookScript("OnEnter", function(self) bind:Update(self, "STANCE") end)
-				elseif script==pet then
+				elseif script == pet then
 					val:HookScript("OnEnter", function(self) bind:Update(self, "PET") end)
 				end
 			end
@@ -260,13 +260,13 @@ SlashCmdList.MOUSEOVERBIND = function()
 			val = EnumerateFrames(val)
 		end
 
-		for i=1,12 do
+		for i = 1, 12 do
 			local b = _G["SpellButton"..i]
 			b:HookScript("OnEnter", function(self) bind:Update(self, "SPELL") end)
 		end
 		
 		local function registermacro()
-			for i=1,36 do
+			for i = 1, 36 do
 				local b = _G["MacroButton"..i]
 				b:HookScript("OnEnter", function(self) bind:Update(self, "MACRO") end)
 			end
@@ -274,7 +274,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 		
 		if not IsAddOnLoaded("Blizzard_MacroUI") then
 			hooksecurefunc("LoadAddOn", function(addon)
-				if addon=="Blizzard_MacroUI" then
+				if addon == "Blizzard_MacroUI" then
 					registermacro()
 				end
 			end)
@@ -285,7 +285,7 @@ SlashCmdList.MOUSEOVERBIND = function()
 	end
 	if not bind.enabled then
 		bind:Activate()
-		D.ShowPopup("TUKUI_KEYBIND_MODE")
+		D.ShowPopup("DUFFEDUI_KEYBIND_MODE")
 	end
 end
 SLASH_MOUSEOVERBIND1 = "/bindkey"
