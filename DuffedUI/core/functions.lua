@@ -1064,7 +1064,11 @@ local CheckInterrupt = function(self, unit)
 	if self.interrupt and UnitCanAttack("player", unit) then
 		self:SetStatusBarColor(1, 0, 0, .5)	
 	else
-		self:SetStatusBarColor(.31, .45, .63, .5)		
+		if C["castbar"].classcolor then
+			self:SetStatusBarColor(unpack(D.UnitColor.class[D.myclass]))
+		else
+			self:SetStatusBarColor(unpack(C["castbar"].color))
+		end
 	end
 end
 

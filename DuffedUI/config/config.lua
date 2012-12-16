@@ -111,6 +111,8 @@ C["castbar"] = {
 	["cblatency"] = false,                              		-- enable castbar latency
 	["cbicons"] = true,                                 		-- enable icons on castbar
 	["spark"] = true,											-- enable spark
+	["classcolor"] = false,										-- enable classcolor for castbar
+	["color"] = { .31, .45, .63, .5 }							-- castbar color
 }
 
 C["auras"] = {

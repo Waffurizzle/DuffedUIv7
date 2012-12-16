@@ -5,7 +5,9 @@
 	DuffedUIConfigUILocalization.castbarpetenable = "启用宠物施法条"
 	DuffedUIConfigUILocalization.castbarcbicons = "启用施放技能图标"
 	DuffedUIConfigUILocalization.castbarcblatency = "启用施法条延迟时间显示"
-	DuffedUIConfigUILocalization.castbarspark = "Enable castbar spark"
+	DuffedUIConfigUILocalization.castbarspark = "启用施法条闪烁"
+	DuffedUIConfigUILocalization.castbarcolor = "Set color for castbars"
+	DuffedUIConfigUILocalization.castbarclasscolor = "Enable classcolor for castbar"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "杂项"

@@ -5,7 +5,9 @@
 	DuffedUIConfigUILocalization.castbarpetenable = "Aktiviere Gef\195\164hrten-Zauberleiste"
 	DuffedUIConfigUILocalization.castbarcbicons = "Aktiviere Zauberleisten-Symbole"
 	DuffedUIConfigUILocalization.castbarcblatency = "Aktiviere Zauberleisten-Latenz"
-	DuffedUIConfigUILocalization.castbarspark = "Enable castbar spark"
+	DuffedUIConfigUILocalization.castbarspark = "Aktiviere Zauberleisten-Spark"
+	DuffedUIConfigUILocalization.castbarcolor = "Wähle Farbe der Zauberleiste"
+	DuffedUIConfigUILocalization.castbarclasscolor = "Aktiviere Klassenfarben f\195\188r die Zauberleiste"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "Diverses"

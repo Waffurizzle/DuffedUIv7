@@ -2,11 +2,6 @@ local D, C, L, G = unpack(select(2, ...))
 
 if not C["actionbar"].enable == true then
 	DuffedUIPetBar:Hide()
-	DuffedUIBar5:Hide()
-	DuffedUIBar6:Hide()
-	DuffedUIBar7:Hide()
-	DuffedUIBar5ButtonTop:Hide()
-	DuffedUIBar5ButtonBottom:Hide()
 	return
 end
 
