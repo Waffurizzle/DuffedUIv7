@@ -172,6 +172,7 @@
 	DuffedUIConfigUILocalization.unitframesshowfocustarget = "啟用焦點的目標框體"
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "顯示狀態條（職業條必須開啟的情況下）"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "設置為默認的邊框顏色"
+	DuffedUIConfigUILocalization.unitframesruneofpower = "Enable rune of power bar"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "啟用小隊/團隊距離檢測"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "小隊/團隊超出距離透明值"

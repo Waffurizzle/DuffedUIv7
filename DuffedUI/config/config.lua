@@ -54,6 +54,7 @@ C["unitframes"] = {
 	["showstatuebar"] = true,                       		    -- show statue bar (Dependencies: class bar option)
 	["bordercolor"] = { .4, .4, .4 },                  			-- unit frames panel border color
 	["focusdebuffs"] = true,									-- enable focus debuffs
+	["runeofpower"] = true,										-- enable rune of power
 
 	-- raid layout (if one of them is enabled)
 	["showrange"] = true,                               		-- show range opacity on raidframes

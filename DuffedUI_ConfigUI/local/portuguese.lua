@@ -172,6 +172,7 @@
 	DuffedUIConfigUILocalization.unitframesshowfocustarget = "Enable Focus target"
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "Show Statue Bar (Dependencies: Class Bar Option need to be enabled)"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "Set default border color of panels"
+	DuffedUIConfigUILocalization.unitframesruneofpower = "Enable rune of power bar"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "Enable party/raid Range alpha display"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "Alpha on Party/Raid unit out of range"

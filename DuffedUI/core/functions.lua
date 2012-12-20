@@ -1452,6 +1452,7 @@ if C["unitframes"].raidunitdebuffwatch == true then
 				{1044, "BOTTOMRIGHT", {0.89, 0.45, 0}, true},	-- Hand of Freedom
 				{1038, "BOTTOMRIGHT", {0.93, 0.75, 0}, true},	-- Hand of Salvation
 				{6940, "BOTTOMRIGHT", {0.89, 0.1, 0.1}, true},	-- Hand of Sacrifice
+				{114163, "BOTTOMLEFT", {0.89, 0.1, 0.1}, true}, -- Eternal Flame
 			},
 			SHAMAN = {
 				{61295, "TOPLEFT", {0.7, 0.3, 0.7}}, -- Riptide 
