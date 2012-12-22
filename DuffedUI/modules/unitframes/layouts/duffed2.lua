@@ -447,7 +447,7 @@ local function Shared(self, unit)
 					mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
 				end
 				
-				mb:CreateBackdrop()
+				mb:CreateBorder("MageBarBorder")
 
 				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
 				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
@@ -479,7 +479,7 @@ local function Shared(self, unit)
 						rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
 					end
 
-					rp:CreateBackdrop()
+					rp:CreateBorder("RuneOfPowerBorder")
 
 					rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
 					rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
@@ -545,7 +545,7 @@ local function Shared(self, unit)
 					if eclipseBar and eclipseBar:IsShown() then FlashInfo.ManaLevel:SetAlpha(0) end
 					
 					-- border
-					eclipseBar:CreateBackdrop()
+					eclipseBar:CreateBackdrop("EclipseBarBorder")
 
 					self.EclipseBar = eclipseBar
 					self.EclipseBar.Text = eclipseBarText
@@ -600,7 +600,7 @@ local function Shared(self, unit)
 						wb[i].bg = wb[i]:CreateTexture(nil, 'ARTWORK')
 					end
 					
-					wb:CreateBackdrop()
+					wb:CreateBorder("ShardBorder")
 					
 					self.WarlockSpecBars = wb				
 				end
@@ -639,7 +639,7 @@ local function Shared(self, unit)
 						bars[i].bg:SetAlpha(.15)
 					end
 					
-					bars:CreateBackdrop()
+					bars:CreateBorder("HolyPowerBorder")
 					
 					self.HolyPower = bars
 				end
@@ -662,7 +662,7 @@ local function Shared(self, unit)
 						Runes[i]:GetStatusBarTexture():SetHorizTile(false)
 					end
 					
-					Runes:CreateBackdrop()
+					Runes:CreateBorder("RuneBarBorder")
 
 					self.Runes = Runes
 					
@@ -715,7 +715,7 @@ local function Shared(self, unit)
 					end
 					
 					-- harmonybar border
-					hb:CreateBackdrop()
+					hb:CreateBorder("HarmonyBarBorder")
 					
 					self.HarmonyBar = hb
 					
@@ -767,7 +767,7 @@ local function Shared(self, unit)
 						end
 					end
 					
-					pb:CreateBackdrop()
+					pb:CreateBorder("ShadowOrbsBarBorder")
 					
 					self.ShadowOrbsBar = pb
 					

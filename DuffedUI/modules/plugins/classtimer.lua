@@ -1088,18 +1088,12 @@ if C["unitframes"].layout == 1 then
 	end
 	playerFrame:Point( "BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", 0, yOffset )
 elseif C["unitframes"].layout == 2 then
-	if D.myclass == "WARLOCK" or D.myclass == "DEATHKNIGHT" or D.myclass == "SHAMAN" or D.myclass == "MONK" or D.myclass == "PALADIN" or DuffedUIArcaneBar then
+	playerFrame:Point("BOTTOMLEFT", MageBarBorder or RuneOfPowerBorder or ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPLEFT", 2, 3)
+	playerFrame:Point("BOTTOMRIGHT", MageBarBorder or RuneOfPowerBorder or ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPRIGHT", -2, 3)
+	
+	if D.myclass == "DRUID" or D.myclass == "SHAMAN" then
 		playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 12)
 		playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 12)
-	--[[elseif DuffedUIArcaneBar:IsShown() then
-		playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 12)
-		playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 12)]]--
-	elseif D.myclass == "DRUID" then
-		playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 14)
-		playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 14)
-	else
-		playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 3)
-		playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 3)
 	end
 elseif C["unitframes"].layout == 3 then
 	playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 7)

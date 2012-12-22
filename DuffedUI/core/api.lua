@@ -220,6 +220,19 @@ local function CreateLine(f, w, h)
 	f:SetBackdropColor(unpack(C["media"].bordercolor))
 end
 
+local function CreateBorder(f, n, p)
+	if f.border then return end
+
+	border = CreateFrame("Frame", n or nil, p or f)
+	border:SetTemplate("")
+	border:Size( 1, 1)
+	border:Point("TOPLEFT", f, "TOPLEFT", -2, 2)
+	border:Point("BOTTOMRIGHT", f, "BOTTOMRIGHT", 2, -2)
+	border:CreateShadow("")
+	
+	f.border = border
+end
+
 local function CreateShadow(f, t)
 	if f.shadow then return end
 			
@@ -712,6 +725,7 @@ local function addapi(object)
 	if not object.HideInsets then mt.HideInsets = HideInsets end
 	if not object.CreateLine then mt.CreateLine = CreateLine end
 	if not object.CreateOverlay then mt.CreateOverlay = CreateOverlay end
+	if not object.CreateBorder then mt.CreateBorder = CreateBorder end
 end
 
 local handled = {["Frame"] = true}
