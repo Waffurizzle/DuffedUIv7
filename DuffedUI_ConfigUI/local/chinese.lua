@@ -172,7 +172,7 @@
 	DuffedUIConfigUILocalization.unitframesshowfocustarget = "启用焦点的目标框体"
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "显示状态条（职业条必须开启的情况下）"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "设置为默认的边框颜色"
-	DuffedUIConfigUILocalization.unitframesruneofpower = "Enable rune of power bar"
+	DuffedUIConfigUILocalization.unitframesruneofpower = "启用奥法符能能量条（法师）"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "启用小队/团队距离检测"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "小队/团队超出距离透明值"
