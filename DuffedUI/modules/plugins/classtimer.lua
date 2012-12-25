@@ -40,8 +40,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(26297), -- Berserking (troll racial)
 	CreateSpellEntry(33702), CreateSpellEntry(33697), CreateSpellEntry(20572), -- Blood Fury (orc racial)
 	CreateSpellEntry(57933), -- Tricks of Trade (15% dmg buff)
-	CreateSpellEntry(91810), -- License to Slay stacks
-	CreateSpellEntry(91832), -- Fury of Angerforge stacks
+	CreateSpellEntry(121279), -- Lifeblood
 	
 	-- Weaponenchants & Stuff
 	CreateSpellEntry(104510), -- Windsong
@@ -284,6 +283,9 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(6940), -- Hand of Sacrifice
 			CreateSpellEntry(84963), -- Inquisition
 			CreateSpellEntry(20925), -- Inquisition
+			CreateSpellEntry(105809), -- Holy Avenger
+			CreateSpellEntry(86659), -- Guardian of Ancient Kings
+			CreateSpellEntry(85499), -- Speed of Light
 		},
 		procs = {
 			CreateSpellEntry(53672), CreateSpellEntry(54149), -- Infusion of Light (Rank1/Rank2)
@@ -384,6 +386,8 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(53390), -- Tidal Waves Rank 1/2/3
 			CreateSpellEntry(79206), -- Spiritwalker's Grace
 			CreateSpellEntry(114049), -- Ascendance
+			CreateSpellEntry(118473), -- Unleashed Fury
+			CreateSpellEntry(73685), -- Unleash Live
 		},
 		procs = {
 			CreateSpellEntry(53817), -- Maelstrom Weapon
@@ -412,6 +416,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(74434), -- Soulburn
 			CreateSpellEntry(17962), -- Conflagrate
 			CreateSpellEntry(108686), -- Immolate (Area)
+			CreateSpellEntry(87389), -- Seed of Corruption via Soulburn
 		},
 		player = {
 			CreateSpellEntry(17941), -- Shadow Trance
@@ -1075,15 +1080,15 @@ if C["unitframes"].layout == 1 then
 		playerFrame:Point( "BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, 6 )
 	else
 		if DuffedUIFocus:IsShown() then
-			playerFrame:Point( "BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, yOffset   + DuffedUIFocus:GetHeight() +6)
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, yOffset   + DuffedUIFocus:GetHeight() +6)
 		else
-			playerFrame:Point( "BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, 6 )
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, 6 )
 		end
 		DuffedUIFocus:HookScript("OnShow", function()
-			playerFrame:Point( "BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, yOffset   + DuffedUIFocus:GetHeight() +6)
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, yOffset   + DuffedUIFocus:GetHeight() +6)
 		end)
 		DuffedUIFocus:HookScript("OnHide", function()
-			playerFrame:Point( "BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, 6 )
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", xOffset, 6 )
 		end)	
 	end
 	playerFrame:Point( "BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", 0, yOffset )

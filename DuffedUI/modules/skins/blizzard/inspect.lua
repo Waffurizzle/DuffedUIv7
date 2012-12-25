@@ -68,6 +68,68 @@ local function LoadSkin()
 	end
 	
 	InspectTalentFrame:StripTextures()
+
+	-- a request to color item by rarity on inspect frame. 
+	local CheckItemBorderColor = CreateFrame("Frame") 
+	local _MISSING = {} 
+	local time = 3 
+
+	local function ColorItemBorder_OnUpdate(self, elapsed) 
+	   local found 
+	   time = time + elapsed 
+	   if (time >3) then 
+	       if (not UnitIsPlayer("target")) then 
+	         table.wipe(_MISSING) 
+	         self:SetScript("OnUpdate", nil) 
+	      end 
+	      for i, slot in pairs(_MISSING) do 
+	         local target = _G["Inspect"..slot] 
+	         local slotId, _, _ = GetInventorySlotInfo(slot) 
+	         local itemLink = GetInventoryItemLink("target", slotId) 
+	         if itemLink then 
+	            local rarity= select(3, GetItemInfo(itemLink)) 
+	            if rarity then 
+	               target.backdrop:SetBackdropBorderColor(GetItemQualityColor(rarity)) 
+	            end 
+	            _MISSING[i] = nil 
+	         end 
+	         found = true 
+	      end 
+	   end 
+	   if (not found) then 
+	      self:SetScript("OnUpdate", nil) 
+	   end 
+	end 
+
+	local function ColorItemBorder() 
+	   if (not InspectFrame:IsShown()) then return end 
+	   for i, slot in pairs(slots) do 
+	      -- Colour the equipment slots by rarity 
+	      local target = _G["Inspect"..slot] 
+	      local slotId, _, _ = GetInventorySlotInfo(slot) 
+	      local itemLink = GetInventoryItemLink("target", slotId) 
+	      local itemTexture = GetInventoryItemTexture("target", slotId) 
+
+	      if itemLink then 
+	         local rarity= select(3, GetItemInfo(itemLink)) 
+	         if rarity then 
+	            target.backdrop:SetBackdropBorderColor(GetItemQualityColor(rarity)) 
+	         end 
+	      elseif itemTexture then 
+	         _MISSING[i] = slot 
+	         CheckItemBorderColor:SetScript("OnUpdate", ColorItemBorder_OnUpdate) 
+	      else 
+	         target.backdrop:SetBackdropBorderColor(unpack(C.media.bordercolor)) 
+	      end 
+	   end 
+	end 
+
+	-- execute item coloring everytime we open inspect frame 
+	InspectFrame:HookScript("OnShow", ColorItemBorder) 
+
+	-- execute item coloring everytime an item is changed 
+	CheckItemBorderColor:RegisterEvent("PLAYER_TARGET_CHANGED") 
+	CheckItemBorderColor:SetScript("OnEvent", ColorItemBorder)
 end
 
 D.SkinFuncs["Blizzard_InspectUI"] = LoadSkin
