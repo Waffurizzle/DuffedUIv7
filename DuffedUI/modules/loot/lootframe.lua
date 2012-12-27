@@ -157,7 +157,7 @@ addon:SetScript("OnHide", function(self)
 	CloseLoot()
 end)
 addon:SetMovable(true)
-addon:RegisterForClicks"anyup"
+addon:RegisterForClicks("anyup")
 
 addon:SetParent(UIParent)
 addon:Point("TOPLEFT", 0, -104)
@@ -169,7 +169,7 @@ addon:SetBackdropColor(.1, .1, .1, 1)
 addon:SetClampedToScreen(true)
 addon:SetClampRectInsets(0, 0, D.Scale(14), 0)
 addon:SetHitRectInsets(0, 0, D.Scale(-14), 0)
-addon:SetFrameStrata"HIGH"
+addon:SetFrameStrata("HIGH")
 addon:SetToplevel(true)
 
 addon.slots = {}
@@ -184,8 +184,8 @@ addon.LOOT_OPENED = function(self, event, autoloot)
 
 	if IsFishingLoot() then
 		title:SetText(L.loot_fish)
-	elseif(not UnitIsFriend("player", "target") and UnitIsDead"target") then
-		title:SetText(UnitName"target")
+	elseif not UnitIsFriend("player", "target") and UnitIsDead("target") then
+		title:SetText(UnitName("target"))
 	else
 		title:SetText(LOOT)
 	end
@@ -309,12 +309,12 @@ addon:SetScript("OnEvent", function(self, event, ...)
 	self[event](self, event, ...)
 end)
 
-addon:RegisterEvent"LOOT_OPENED"
-addon:RegisterEvent"LOOT_SLOT_CLEARED"
-addon:RegisterEvent"LOOT_CLOSED"
-addon:RegisterEvent"OPEN_MASTER_LOOT_LIST"
-addon:RegisterEvent"UPDATE_MASTER_LOOT_LIST"
-addon:RegisterEvent"ADDON_LOADED"
+addon:RegisterEvent("LOOT_OPENED")
+addon:RegisterEvent("LOOT_SLOT_CLEARED")
+addon:RegisterEvent("LOOT_CLOSED")
+addon:RegisterEvent("OPEN_MASTER_LOOT_LIST")
+addon:RegisterEvent("UPDATE_MASTER_LOOT_LIST")
+addon:RegisterEvent("ADDON_LOADED")
 addon:Hide()
 
 -- Fuzz

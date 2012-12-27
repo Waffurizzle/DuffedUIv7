@@ -79,7 +79,7 @@ for i = 1, NUM_CHAT_WINDOWS do
 	if C["actionbar"].layout == 1 then
 		if C["chat"].background then button:SetPoint("TOPRIGHT", 4, 25) else button:SetPoint("TOPRIGHT", 0, 0) end
 	else
-		if C["chat"].background then button:SetPoint("TOPRIGHT", 6, 25) else button:SetPoint("TOPRIGHT", 0, 0) end
+		if C["chat"].background then button:SetPoint("TOPRIGHT", 5, 25) else button:SetPoint("TOPRIGHT", 0, 0) end
 	end
 	button:Height(20)
 	button:Width(20)

@@ -265,7 +265,7 @@ local function LoadSkin()
 	PetJournalLoadoutBorder:Height(350)
 end
 
-D.SkinFuncs["Blizzard_PetJournal"] = LoadSkin
+if PetJournalParent then tinsert(D.SkinFuncs["DuffedUI"], LoadSkin) else D.SkinFuncs["Blizzard_PetJournal"] = LoadSkin end
 
 local function LoadPetStableSkin()
 	PetStableFrame:StripTextures()
