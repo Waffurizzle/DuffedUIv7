@@ -384,74 +384,73 @@ local function Shared(self, unit)
 				self.DruidManaText = DruidManaText
 			end
 			
-			if C["unitframes"].mageclassbar and D.myclass == "MAGE" then
-				local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
-				mb:Point("TOP", power, "BOTTOM", -52, -1)
-				mb:Size(100, 5)
-				mb:SetBackdrop(backdrop)
-				mb:SetBackdropColor(0, 0, 0)
-				mb:SetBackdropBorderColor(0, 0, 0)				
-				
-				for i = 1, 6 do
-					mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
-					mb[i]:Height(5)
-					mb[i]:SetStatusBarTexture(C["media"].normTex)
-					
-					if i == 1 then
-						mb[i]:Width(176 / 6)
-						mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
-						mb[i]:CreateBackdrop()
-					else
-						mb[i]:Width(176 / 6)
-						mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 6, 0)
-						mb[i]:CreateBackdrop()
-					end
-					
-					mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
-				end
-				
-				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-				
-				self.ArcaneChargeBar = mb
-
-				if C["unitframes"]	.runeofpower then
-					local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
-					rp:Point("TOP", power, "BOTTOM", -52, -1)
-					rp:SetWidth(100)
-					rp:SetHeight(5)
-					rp:SetBackdrop(backdrop)
-					rp:SetBackdropColor(0, 0, 0)
-					rp:SetBackdropBorderColor(0, 0, 0)
-
-					for i = 1, 2 do
-						rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
-						rp[i]:Height(5)
-						rp[i]:SetStatusBarTexture(C.media.normTex)
-
-						if i == 1 then
-							rp[i]:Width(176 / 2)
-							rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
-						else
-							rp[i]:Width(176 / 2)
-							rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
-						end
-
-						rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
-					end
-
-					rp:CreateBackdrop()
-
-					rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-					rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-
-					self.RunePower = rp
-				end
-			end
-
-			
 			-- classbars
 			if C["unitframes"].classbar then
+				if D.myclass == "MAGE" then
+					local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
+					mb:Point("TOP", power, "BOTTOM", -52, -1)
+					mb:Size(100, 5)
+					mb:SetBackdrop(backdrop)
+					mb:SetBackdropColor(0, 0, 0)
+					mb:SetBackdropBorderColor(0, 0, 0)				
+					
+					for i = 1, 6 do
+						mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
+						mb[i]:Height(5)
+						mb[i]:SetStatusBarTexture(C["media"].normTex)
+						
+						if i == 1 then
+							mb[i]:Width(176 / 6)
+							mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
+							mb[i]:CreateBackdrop()
+						else
+							mb[i]:Width(176 / 6)
+							mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 6, 0)
+							mb[i]:CreateBackdrop()
+						end
+						
+						mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
+					end
+					
+					mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+					mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+					
+					self.ArcaneChargeBar = mb
+
+					if C["unitframes"]	.runeofpower then
+						local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
+						rp:Point("TOP", power, "BOTTOM", -52, -1)
+						rp:SetWidth(100)
+						rp:SetHeight(5)
+						rp:SetBackdrop(backdrop)
+						rp:SetBackdropColor(0, 0, 0)
+						rp:SetBackdropBorderColor(0, 0, 0)
+
+						for i = 1, 2 do
+							rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
+							rp[i]:Height(5)
+							rp[i]:SetStatusBarTexture(C.media.normTex)
+
+							if i == 1 then
+								rp[i]:Width(176 / 2)
+								rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+							else
+								rp[i]:Width(176 / 2)
+								rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+							end
+
+							rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
+						end
+
+						rp:CreateBackdrop()
+
+						rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+						rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+
+						self.RunePower = rp
+					end
+				end
+				
 				if D.myclass == "DRUID" then
 					
 					local DruidManaBackground = CreateFrame("Frame", nil, self)

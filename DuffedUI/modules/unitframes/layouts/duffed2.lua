@@ -80,6 +80,7 @@ local function Shared(self, unit)
 		panel:Size(1, 13)
 		panel:Point("BOTTOMLEFT", self, "BOTTOMLEFT", 0, 0)
 		panel:SetPoint("BOTTOMRIGHT")
+		panel:CreateShadow()
 		self.panel = panel
 	
 		-- health bar
@@ -148,7 +149,7 @@ local function Shared(self, unit)
 		
 		power.value = panel:CreateFontString(nil, "OVERLAY")
 		power.value:SetFont(C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
-		if unit == "player" then power.value:Point("LEFT", panel, "LEFT", 4, 0) elseif unit == "target" then power.value:Point("RIGHT", panel, "RIGHT", -4, 0) end
+		if unit == "player" then power.value:Point("LEFT", panel, "LEFT", 4, -1) elseif unit == "target" then power.value:Point("RIGHT", panel, "RIGHT", -4, -1) end
 		power.PreUpdate = D.PreUpdatePower
 		power.PostUpdate = D.PostUpdatePower
 				
@@ -169,9 +170,11 @@ local function Shared(self, unit)
 		
 		-- healthbar Border
 		health:CreateBackdrop()
+		health.backdrop:CreateShadow()
 		
 		-- powerbar Border
 		power:CreateBackdrop()
+		power.backdrop:CreateShadow()
 		
 		local l1 = CreateFrame("Frame", nil, power)
 		local l2 = CreateFrame("Frame", nil, l1)
@@ -199,9 +202,9 @@ local function Shared(self, unit)
 			if isMac or graphic == "D3D11" then
 				pf:Size(38)
 				if unit == "player" then
-					pf:Point("BOTTOMRIGHT", panel, "BOTTOMLEFT", -4, 2)
+					pf:Point("BOTTOMRIGHT", panel, "BOTTOMLEFT", -5, 2)
 				else
-					pf:Point("BOTTOMLEFT", panel, "BOTTOMRIGHT", 4, 2)
+					pf:Point("BOTTOMLEFT", panel, "BOTTOMRIGHT", 5, 2)
 				end
 				
 				if C["unitframes"].portraitstyle == "MODEL" then	
@@ -224,6 +227,7 @@ local function Shared(self, unit)
 				
 				-- Portrait Border
 				pf:CreateBackdrop()
+				pf.backdrop:CreateShadow()
 			else
 				local pb = CreateFrame("Frame", self:GetName().."_PortraitBorder", self)
 				pb:SetTemplate("Default")
@@ -422,73 +426,73 @@ local function Shared(self, unit)
 				self.DruidManaText = DruidManaText
 			end
 			
-			if C["unitframes"].mageclassbar and D.myclass == "MAGE" then
-				local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
-				mb:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5)
-				mb:SetWidth(playerwidth - 4)
-				mb:SetHeight(5)
-				mb:SetBackdrop(backdrop)
-				mb:SetBackdropColor(0, 0, 0)
-				mb:SetBackdropBorderColor(0, 0, 0)				
-				
-				for i = 1, 6 do
-					mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
-					mb[i]:Height(5)
-					mb[i]:SetStatusBarTexture(C["media"].normTex)
+			if C["unitframes"].classbar then
+				if D.myclass == "MAGE" then
+					local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
+					mb:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5)
+					mb:SetWidth(playerwidth - 4)
+					mb:SetHeight(5)
+					mb:SetBackdrop(backdrop)
+					mb:SetBackdropColor(0, 0, 0)
+					mb:SetBackdropBorderColor(0, 0, 0)				
 					
-					if i == 1 then
-						mb[i]:Width((playerwidth - 4) / 6)
-						mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
-					else
-						mb[i]:Width(((playerwidth - 4) / 6) - 1)
-						mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 1, 0)
+					for i = 1, 6 do
+						mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
+						mb[i]:Height(5)
+						mb[i]:SetStatusBarTexture(C["media"].normTex)
+						
+						if i == 1 then
+							mb[i]:Width((playerwidth - 4) / 6)
+							mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
+						else
+							mb[i]:Width(((playerwidth - 4) / 6) - 1)
+							mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 1, 0)
+						end
+						
+						mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
 					end
 					
-					mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
-				end
-				
-				mb:CreateBorder("MageBarBorder")
+					mb:CreateBorder("MageBarBorder")
 
-				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-				
-				self.ArcaneChargeBar = mb
+					mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+					mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+					
+					self.ArcaneChargeBar = mb
 
-				if C["unitframes"].runeofpower then
-					local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
-					rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
-					rp:SetWidth(playerwidth)
-					rp:SetHeight(5)
-					rp:SetBackdrop(backdrop)
-					rp:SetBackdropColor(0, 0, 0)
-					rp:SetBackdropBorderColor(0, 0, 0)
+					if C["unitframes"].runeofpower then
+						local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
+						rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
+						rp:SetWidth(playerwidth)
+						rp:SetHeight(5)
+						rp:SetBackdrop(backdrop)
+						rp:SetBackdropColor(0, 0, 0)
+						rp:SetBackdropBorderColor(0, 0, 0)
 
-					for i = 1, 2 do
-						rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
-						rp[i]:Height(5)
-						rp[i]:SetStatusBarTexture(C.media.normTex)
+						for i = 1, 2 do
+							rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
+							rp[i]:Height(5)
+							rp[i]:SetStatusBarTexture(C.media.normTex)
 
-						if i == 1 then
-							rp[i]:Width((playerwidth - 4) / 2)
-							rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
-						else
-							rp[i]:Width((playerwidth - 4) / 2)
-							rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+							if i == 1 then
+								rp[i]:Width((playerwidth - 4) / 2)
+								rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+							else
+								rp[i]:Width((playerwidth - 4) / 2)
+								rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+							end
+
+							rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
 						end
 
-						rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
+						rp:CreateBorder("RuneOfPowerBorder")
+
+						rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+						rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+
+						self.RunePower = rp
 					end
-
-					rp:CreateBorder("RuneOfPowerBorder")
-
-					rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-					rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-
-					self.RunePower = rp
 				end
-			end
-			
-			if C["unitframes"].classbar then
+
 				if D.myclass == "DRUID" then
 					local DruidManaBackground = CreateFrame("Frame", nil, self)
 					DruidManaBackground:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 7)

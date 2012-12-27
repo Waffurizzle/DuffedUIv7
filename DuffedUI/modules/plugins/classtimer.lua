@@ -252,6 +252,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(57761), -- Brain Freeze
 			CreateSpellEntry(12536), -- Clearcasting
 			CreateSpellEntry(48108), -- Pyroblast!
+			CreateSpellEntry(115610), -- Temporal Shield
 		},
 		procs = {
 			CreateSpellEntry(44544), -- Fingers of Frost
@@ -388,6 +389,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(114049), -- Ascendance
 			CreateSpellEntry(118473), -- Unleashed Fury
 			CreateSpellEntry(73685), -- Unleash Live
+			CreateSpellEntry(114049), -- Ascendance
 		},
 		procs = {
 			CreateSpellEntry(53817), -- Maelstrom Weapon
@@ -1063,7 +1065,7 @@ targetDataSource:SetSortDirection(SORT_DIRECTION)
 playerDataSource:SetSortDirection(SORT_DIRECTION)
 trinketDataSource:SetSortDirection(SORT_DIRECTION)
 
-if (classFilter) then
+if classFilter then
 	targetDataSource:AddFilter(classFilter.target, TARGET_BAR_COLOR, TARGET_DEBUFF_COLOR);	
 	playerDataSource:AddFilter(classFilter.player, PLAYER_BAR_COLOR, PLAYER_DEBUFF_COLOR)
 	trinketDataSource:AddFilter(classFilter.procs, TRINKET_BAR_COLOR)
@@ -1093,9 +1095,34 @@ if C["unitframes"].layout == 1 then
 	end
 	playerFrame:Point( "BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", 0, yOffset )
 elseif C["unitframes"].layout == 2 then
-	playerFrame:Point("BOTTOMLEFT", MageBarBorder or RuneOfPowerBorder or ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPLEFT", 2, 3)
-	playerFrame:Point("BOTTOMRIGHT", MageBarBorder or RuneOfPowerBorder or ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPRIGHT", -2, 3)
+	playerFrame:Point("BOTTOMLEFT", ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPLEFT", 2, 3)
+	playerFrame:Point("BOTTOMRIGHT", ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPRIGHT", -2, 3)
 	
+	if C["unitframes"].mageclassbar or C["unitframes"].runeofpower then
+		if MageBarBorder:IsShown() or RuneOfPowerBorder:IsShown() then
+			playerFrame:Point("BOTTOMLEFT", MageBarBorder or RuneOfPowerBorder, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", MageBarBorder or RuneOfPowerBorder, "TOPRIGHT", -2, 3)
+		end
+
+		MageBarBorder:HookScript("OnShow", function ()
+			playerFrame:Point("BOTTOMLEFT", MageBarBorder, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", MageBarBorder, "TOPRIGHT", -2, 3)
+		end)
+		MageBarBorder:HookScript("OnHide", function ()
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 3)
+		end)
+
+		RuneOfPowerBorder:HookScript("OnShow", function ()
+			playerFrame:Point("BOTTOMLEFT", RuneOfPowerBorder, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", RuneOfPowerBorder, "TOPRIGHT", -2, 3)
+		end)
+		RuneOfPowerBorder:HookScript("OnHide", function ()
+			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 3)
+		end)
+	end
+
 	if D.myclass == "DRUID" or D.myclass == "SHAMAN" then
 		playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 12)
 		playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 12)

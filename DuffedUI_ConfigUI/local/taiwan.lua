@@ -193,7 +193,6 @@
 	DuffedUIConfigUILocalization.unitframesclassbar = "啟用職業條"
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "熊、貓姿態下顯示魔法條（德魯伊）"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "平衡或恢復天賦下啟用蘑菇條（德魯伊）"
-	DuffedUIConfigUILocalization.unitframesmageclassbar = "啟用秘法助手"
 
 	-- loot
 	DuffedUIConfigUILocalization.loot = "拾取"

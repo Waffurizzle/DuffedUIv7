@@ -62,6 +62,11 @@ spellCooldowns = {
 		2825, -- Bloodlust
 		32182, -- Heroism
 		79206, -- Spiritwalker's Grace
+		114049, -- Ascendance
+		98008, -- Spirit Link Totem
+		108280, -- Healing Tide Totem
+		120668, -- Stormlash Totem
+		108285, -- Call of the Elements
 	},
 	["ROGUE"] = {
 		1856, -- Vanish

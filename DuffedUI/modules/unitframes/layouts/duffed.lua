@@ -381,73 +381,73 @@ local function Shared(self, unit)
 				self.DruidManaText = DruidManaText
 			end
 			
-			if C["unitframes"].mageclassbar and D.myclass == "MAGE" then
-				local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
-				mb:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
-				mb:SetWidth(playerwidth)
-				mb:SetHeight(5)
-				mb:SetBackdrop(backdrop)
-				mb:SetBackdropColor(0, 0, 0)
-				mb:SetBackdropBorderColor(0, 0, 0)				
-				
-				for i = 1, 6 do
-					mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
-					mb[i]:Height(5)
-					mb[i]:SetStatusBarTexture(C["media"].normTex)
+			if C["unitframes"].classbar then
+				if D.myclass == "MAGE" then
+					local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
+					mb:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
+					mb:SetWidth(playerwidth)
+					mb:SetHeight(5)
+					mb:SetBackdrop(backdrop)
+					mb:SetBackdropColor(0, 0, 0)
+					mb:SetBackdropBorderColor(0, 0, 0)				
 					
-					if i == 1 then
-						mb[i]:Width(playerwidth / 6)
-						mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
-					else
-						mb[i]:Width((playerwidth / 6) - 1)
-						mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 1, 0)
+					for i = 1, 6 do
+						mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
+						mb[i]:Height(5)
+						mb[i]:SetStatusBarTexture(C["media"].normTex)
+						
+						if i == 1 then
+							mb[i]:Width(playerwidth / 6)
+							mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
+						else
+							mb[i]:Width((playerwidth / 6) - 1)
+							mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 1, 0)
+						end
+						
+						mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
 					end
 					
-					mb[i].bg = mb[i]:CreateTexture(nil, 'ARTWORK')
-				end
-				
-				mb:CreateBackdrop()
+					mb:CreateBackdrop()
 
-				mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-				mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-				
-				self.ArcaneChargeBar = mb
+					mb:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+					mb:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+					
+					self.ArcaneChargeBar = mb
 
-				if C["unitframes"].runeofpower then
-					local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
-					rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
-					rp:SetWidth(playerwidth)
-					rp:SetHeight(5)
-					rp:SetBackdrop(backdrop)
-					rp:SetBackdropColor(0, 0, 0)
-					rp:SetBackdropBorderColor(0, 0, 0)
+					if C["unitframes"].runeofpower then
+						local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
+						rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
+						rp:SetWidth(playerwidth)
+						rp:SetHeight(5)
+						rp:SetBackdrop(backdrop)
+						rp:SetBackdropColor(0, 0, 0)
+						rp:SetBackdropBorderColor(0, 0, 0)
 
-					for i = 1, 2 do
-						rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
-						rp[i]:Height(5)
-						rp[i]:SetStatusBarTexture(C.media.normTex)
+						for i = 1, 2 do
+							rp[i] = CreateFrame("StatusBar", "DuffedUIRunePower"..i, rp)
+							rp[i]:Height(5)
+							rp[i]:SetStatusBarTexture(C.media.normTex)
 
-						if i == 1 then
-							rp[i]:Width(playerwidth / 2 - 1)
-							rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
-						else
-							rp[i]:Width(playerwidth / 2)
-							rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+							if i == 1 then
+								rp[i]:Width(playerwidth / 2 - 1)
+								rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+							else
+								rp[i]:Width(playerwidth / 2)
+								rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+							end
+
+							rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
 						end
 
-						rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
+						rp:CreateBackdrop()
+
+						rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
+						rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
+
+						self.RunePower = rp
 					end
-
-					rp:CreateBackdrop()
-
-					rp:SetScript("OnShow", D.UpdateMageClassBarVisibility)
-					rp:SetScript("OnHide", D.UpdateMageClassBarVisibility)
-
-					self.RunePower = rp
 				end
-			end
-			
-			if C["unitframes"].classbar then
+
 				if D.myclass == "DRUID" then
 					-- DRUID MANA BAR
 					local DruidManaBackground = CreateFrame("Frame", nil, self)

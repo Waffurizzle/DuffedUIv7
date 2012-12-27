@@ -85,7 +85,6 @@ C["unitframes"] = {
 	-- these class bar are considered optional
 	["druidmanabar"] = true,                            		-- enable druid class mana bar
 	["druidmushroombar"] = false,                      			-- enable druid class mushroom bar
-	["mageclassbar"] = true,                            		-- enable mage class arcane bar
 }
 
 C["skins"] = {

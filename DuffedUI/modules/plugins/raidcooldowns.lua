@@ -35,7 +35,8 @@ local spells = {
 	[98008] = 180, 		-- Spirit Link
 	[115176] = 180, 	-- Zen Meditation
 	[120668] = 300, 	-- Stormlash Totem
-	[115310] = 180, 	--Revival
+	[115310] = 180, 	-- Revival
+	[108280] = 180,		-- Healing Tide Totem
 }
 
 local filter = COMBATLOG_OBJECT_AFFILIATION_RAID + COMBATLOG_OBJECT_AFFILIATION_PARTY + COMBATLOG_OBJECT_AFFILIATION_MINE

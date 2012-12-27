@@ -193,7 +193,6 @@
 	DuffedUIConfigUILocalization.unitframesclassbar = "Aktiviere Klassenleisten"
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "Zeige Druiden Manaleiste auch in B\195\164ren/Katzen-Form"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "Zeige Druiden \"Wildpilz\"-Leiste auch in Gleichgewicht oder Wiederherstellungs Spezialisierung"
-	DuffedUIConfigUILocalization.unitframesmageclassbar = "Zeige die Arkanleiste des Magiers"
 
 	-- loot
 	DuffedUIConfigUILocalization.loot = "Beute"
