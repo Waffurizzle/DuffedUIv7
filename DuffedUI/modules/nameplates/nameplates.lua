@@ -143,12 +143,6 @@ local function CreateAuraIcon(parent)
 	button.count:SetShadowOffset(1.25, -1.25)
 	button.count:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", 0, 0)
 
-	--[[if button:GetEffectiveScale() < 0.9 then
-		while button:GetEffectiveScale() < 1 do
-			button:SetScale(button:GetScale() + 0.01)
-		end
-	end]]--
-
 	return button
 end
 
