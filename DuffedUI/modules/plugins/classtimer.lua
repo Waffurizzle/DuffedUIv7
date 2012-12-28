@@ -1098,7 +1098,7 @@ elseif C["unitframes"].layout == 2 then
 	playerFrame:Point("BOTTOMLEFT", ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPLEFT", 2, 3)
 	playerFrame:Point("BOTTOMRIGHT", ShardBorder or HolyPowerBorder or RuneBarBorder or HarmonyBarBorder or ShadowOrbsBarBorder or DuffedUIPlayer, "TOPRIGHT", -2, 3)
 	
-	if C["unitframes"].mageclassbar or C["unitframes"].runeofpower then
+	if D.myclass == "MAGE" then
 		if MageBarBorder:IsShown() or RuneOfPowerBorder:IsShown() then
 			playerFrame:Point("BOTTOMLEFT", MageBarBorder or RuneOfPowerBorder, "TOPLEFT", 2, 3)
 			playerFrame:Point("BOTTOMRIGHT", MageBarBorder or RuneOfPowerBorder, "TOPRIGHT", -2, 3)
