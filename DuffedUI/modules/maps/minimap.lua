@@ -21,6 +21,7 @@ DuffedUIMinimap:SetMovable(true)
 DuffedUIMinimap.text = D.SetFontString(DuffedUIMinimap, C.media.uffont, 12)
 DuffedUIMinimap.text:SetPoint("CENTER")
 DuffedUIMinimap.text:SetText(L.move_minimap)
+DuffedUIMinimap:CreateShadow()
 G.Maps.Minimap = DuffedUIMinimap
 tinsert(D.AllowFrameMoving, DuffedUIMinimap)
 

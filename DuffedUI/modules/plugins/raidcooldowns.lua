@@ -37,6 +37,8 @@ local spells = {
 	[120668] = 300, 	-- Stormlash Totem
 	[115310] = 180, 	-- Revival
 	[108280] = 180,		-- Healing Tide Totem
+	[80353] = 300, -- Time Warp
+	[32182] = 300, -- Heroism
 }
 
 local filter = COMBATLOG_OBJECT_AFFILIATION_RAID + COMBATLOG_OBJECT_AFFILIATION_PARTY + COMBATLOG_OBJECT_AFFILIATION_MINE

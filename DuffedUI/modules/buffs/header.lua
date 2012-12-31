@@ -62,7 +62,7 @@ if C["auras"].consolidate then
 end
 
 -- set our buff header
-buffs:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -6, 2)
+buffs:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -17, 2)
 buffs:SetAttribute("filter", "HELPFUL")
 buffs:SetAttribute("consolidateProxy", CreateFrame("Frame", buffs:GetName() .. "ProxyButton", buffs, "DuffedUIAurasProxyTemplate"))
 buffs:SetAttribute("consolidateHeader", consolidate)
@@ -114,7 +114,7 @@ consolidate:Hide()
 SecureHandlerSetFrameRef(proxy, "header", consolidate)
 
 -- set our debuff header
-debuffs:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -6, -3)
+debuffs:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -17, -3)
 debuffs:SetAttribute("filter", "HARMFUL")
 debuffs:Show()
 tinsert(D.AllowFrameMoving, DuffedUIAurasPlayerDebuffs)

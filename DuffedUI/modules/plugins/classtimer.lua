@@ -239,6 +239,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(44572), -- Deep Freeze
 			CreateSpellEntry(82691), -- Ring of Frost
 			CreateSpellEntry(118271), -- Impact
+			CreateSpellEntry(114923), -- Nether Tempest
 		},
 		player = {
 			CreateSpellEntry(36032), -- Arcane Blast

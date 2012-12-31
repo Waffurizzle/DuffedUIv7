@@ -217,7 +217,6 @@ local function Shared(self, unit)
 			self.WeakenedSoul = ws
 		end
 		
-		--leaving here just in case someone want to use it, we now use our own Alt Power Bar.
 		-- alt power bar
 		local AltPowerBar = CreateFrame("StatusBar", self:GetName().."_AltPowerBar", self.Health)
 		AltPowerBar:SetFrameLevel(0)
@@ -290,8 +289,9 @@ local function Shared(self, unit)
 				Experience:SetStatusBarColor(0, 0.4, 1, .8)
 				Experience:SetBackdrop(backdrop)
 				Experience:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Experience:Size(D.Scale(DuffedUIMinimap:GetWidth() + 27), D.Scale(5))
-				Experience:Point("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 2, -4)
+				Experience:SetOrientation("VERTICAL")
+				Experience:Size(5, DuffedUIMinimap:GetHeight() + 17)
+				Experience:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
 				Experience:SetFrameLevel(2)
 				Experience.Tooltip = true						
 				Experience.Rested = CreateFrame("StatusBar", nil, self)
@@ -299,17 +299,11 @@ local function Shared(self, unit)
 				Experience.Rested:SetAllPoints(Experience)
 				Experience.Rested:SetStatusBarTexture(normTex)
 				Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
-				
+
 				-- border for the experience bar
-				local epBG = CreateFrame("Frame", epBG, Experience)
-				epBG:ClearAllPoints()
-				epBG:SetPoint("TOPLEFT")
-				epBG:SetPoint("BOTTOMRIGHT")
-				epBG:Size(1, 1)
-				epBG:SetTemplate("Default")
-				epBG:CreateBackdrop()
-				epBG:SetFrameStrata("Background")
-				
+				Experience:CreateBackdrop()
+				Experience.backdrop:CreateShadow()
+
 				local Resting = Experience:CreateTexture(nil, "OVERLAY")
 				Resting:Size(D.Scale(20))
 				Resting:SetPoint("RIGHT", Experience, "LEFT", 0, 0)
@@ -325,19 +319,14 @@ local function Shared(self, unit)
 				Reputation:SetStatusBarTexture(normTex)
 				Reputation:SetBackdrop(backdrop)
 				Reputation:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Reputation:Size(D.Scale(DuffedUIMinimap:GetWidth() + 27), D.Scale(5))
-				Reputation:Point("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 2, -4)
+				Reputation:SetOrientation("VERTICAL")
+				Reputation:Size(5, DuffedUIMinimap:GetHeight() + 17)
+				Reputation:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
 				Reputation:SetFrameLevel(2)
-				
+
 				-- border for the Reputation bar
-				local repBG = CreateFrame("Frame", repBG, Reputation)
-				repBG:ClearAllPoints()
-				repBG:SetPoint("TOPLEFT")
-				repBG:SetPoint("BOTTOMRIGHT")
-				repBG:Size(1, 1)
-				repBG:SetTemplate("Default")
-				repBG:CreateBackdrop()
-				repBG:SetFrameStrata("Background")
+				Reputation:CreateBackdrop()
+				Reputation.backdrop:CreateShadow()
 
 				Reputation.PostUpdate = D.UpdateReputationColor
 				Reputation.Tooltip = true
@@ -890,6 +879,8 @@ local function Shared(self, unit)
 						
 			buffs.spacing = 2
 			buffs.initialAnchor = 'TOPLEFT'
+			buffs["growth-y"] = "UP"
+			buffs["growth-x"] = "RIGHT"
 			buffs.PostCreateIcon = D.PostCreateAura
 			buffs.PostUpdateIcon = D.PostUpdateAura
 			self.Buffs = buffs	

@@ -376,8 +376,9 @@ local function Shared(self, unit)
 				Experience:SetStatusBarColor(0, 0.4, 1, .8)
 				Experience:SetBackdrop(backdrop)
 				Experience:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Experience:Size(D.Scale(DuffedUIMinimap:GetWidth() + 27), D.Scale(5))
-				Experience:Point("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 2, -4)
+				Experience:SetOrientation("VERTICAL")
+				Experience:Size(5, DuffedUIMinimap:GetHeight() + 17)
+				Experience:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
 				Experience:SetFrameLevel(2)
 				Experience.Tooltip = true						
 				Experience.Rested = CreateFrame("StatusBar", nil, self)
@@ -385,10 +386,11 @@ local function Shared(self, unit)
 				Experience.Rested:SetAllPoints(Experience)
 				Experience.Rested:SetStatusBarTexture(normTex)
 				Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
-				
+
 				-- border for the experience bar
 				Experience:CreateBackdrop()
-				
+				Experience.backdrop:CreateShadow()
+
 				local Resting = Experience:CreateTexture(nil, "OVERLAY")
 				Resting:Size(D.Scale(20))
 				Resting:SetPoint("RIGHT", Experience, "LEFT", 0, 0)
@@ -397,19 +399,21 @@ local function Shared(self, unit)
 				self.Resting = Resting
 				self.Experience = Experience
 			end
-			
+
 			-- reputation bar for max level character
 			if D.level == MAX_PLAYER_LEVEL then
 				local Reputation = CreateFrame("StatusBar", self:GetName().."_Reputation", self)
 				Reputation:SetStatusBarTexture(normTex)
 				Reputation:SetBackdrop(backdrop)
 				Reputation:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Reputation:Size(D.Scale(DuffedUIMinimap:GetWidth() + 27), D.Scale(5))
-				Reputation:Point("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 2, -4)
+				Reputation:SetOrientation("VERTICAL")
+				Reputation:Size(5, DuffedUIMinimap:GetHeight() + 17)
+				Reputation:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
 				Reputation:SetFrameLevel(2)
-				
+
 				-- border for the Reputation bar
 				Reputation:CreateBackdrop()
+				Reputation.backdrop:CreateShadow()
 
 				Reputation.PostUpdate = D.UpdateReputationColor
 				Reputation.Tooltip = true

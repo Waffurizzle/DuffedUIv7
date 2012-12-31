@@ -80,8 +80,9 @@ end
 -- Spec
 local spec = CreateFrame("Button", "DuffedUI_Spechelper", UIParent)
 spec:Size(DuffedUIMinimap:GetWidth(), 19)
-spec:SetPoint("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 0, -13)
+spec:SetPoint("TOPLEFT", DuffedUIMinimapStatsLeft, "BOTTOMLEFT", 0, -2)
 spec:SetTemplate("Default")
+spec:CreateShadow()
 spec:SetParent(DuffedUIPetBattleHider)
 
 -- Text
@@ -194,6 +195,7 @@ if Enablegear == true then
 			gearSets[i]:Size(19, 19)
 			gearSets[i]:SetPoint("CENTER", MB_help, "CENTER", 0, 0)
 			gearSets[i]:SetTemplate("Default")
+			gearSets[i]:CreateShadow()
 
 			if i == 1 then
 				gearSets[i]:Point("TOPRIGHT", MB_help, "BOTTOMRIGHT", 0, -2)
@@ -267,6 +269,7 @@ toggle:Size(29, 19)
 toggle:Point("LEFT", spec, "RIGHT", 2, 0)
 toggle:EnableMouse(true)
 toggle:RegisterForClicks("AnyUp")
+toggle:CreateShadow()
 
 toggle.t = toggle:CreateFontString(nil, "OVERLAY")
 toggle.t:SetPoint("CENTER", 0, 0)
