@@ -1198,14 +1198,31 @@ D.UpdateMageClassBarVisibility = function(self)
 	local p = self:GetParent()
 	local a = p.ArcaneChargeBar
 	local r = p.RunePower
-	local shadow = p.shadow
 
-	if (a and a:IsShown()) and (r and r:IsShown()) then
-		r:ClearAllPoints()
-		r:Point("BOTTOMLEFT", p, "TOPLEFT", 0, 10)
-	elseif (a and a:IsShown()) or (r and r:IsShown()) then
-		r:ClearAllPoints()
-		r:Point("BOTTOMLEFT", p, "TOPLEFT", 0, 1)
+	if C["unitframes"].layout == 1 then
+		if (a and a:IsShown()) and (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("TOPLEFT", p, "BOTTOMLEFT", 0, -16)
+		elseif (a and a:IsShown()) or (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("TOPLEFT", p, "BOTTOMLEFT", 0, -6)
+		end
+	elseif C["unitframes"].layout == 2 then
+		if (a and a:IsShown()) and (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("BOTTOMLEFT", p, "TOPLEFT", 2, 12)
+		elseif (a and a:IsShown()) or (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("BOTTOMLEFT", p, "TOPLEFT", 2, 2)
+		end
+	elseif C["unitframes"].layout == 3 then
+		if (a and a:IsShown()) and (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("TOPLEFT", p, "BOTTOMLEFT", 7, 3)
+		elseif (a and a:IsShown()) or (r and r:IsShown()) then
+			r:ClearAllPoints()
+			r:Point("TOPLEFT", p, "BOTTOMLEFT", 7, 15)
+		end
 	end
 end
 

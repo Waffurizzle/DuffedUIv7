@@ -135,6 +135,8 @@ spellCooldowns = {
 		80353, -- Time Warp
 		82676, -- Ring of Frost
 		82731, -- Flame Orb
+		115610, -- Temporal Shield
+		108978, -- Alter Time
 	},
 	["MONK"] = {
 		116680, -- Thunder Focus Tea

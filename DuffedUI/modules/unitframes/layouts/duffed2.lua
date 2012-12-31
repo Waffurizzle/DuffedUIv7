@@ -465,8 +465,8 @@ local function Shared(self, unit)
 
 					if C["unitframes"].runeofpower then
 						local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
-						rp:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -6)
-						rp:SetWidth(playerwidth)
+						rp:Point("TOPLEFT", self, "BOTTOMLEFT", 2, -6)
+						rp:SetWidth(playerwidth - 4)
 						rp:SetHeight(5)
 						rp:SetBackdrop(backdrop)
 						rp:SetBackdropColor(0, 0, 0)
@@ -478,11 +478,11 @@ local function Shared(self, unit)
 							rp[i]:SetStatusBarTexture(C.media.normTex)
 
 							if i == 1 then
-								rp[i]:Width((playerwidth - 4) / 2)
+								rp[i]:Width((playerwidth - 5) / 2)
 								rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
 							else
-								rp[i]:Width((playerwidth - 4) / 2)
-								rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+								rp[i]:Width((playerwidth - 5) / 2)
+								rp[i]:SetPoint("LEFT", rp[i - 1], "RIGHT", 1, 0)
 							end
 
 							rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')

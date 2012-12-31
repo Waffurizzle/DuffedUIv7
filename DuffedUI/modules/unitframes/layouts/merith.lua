@@ -406,9 +406,9 @@ local function Shared(self, unit)
 					
 					self.ArcaneChargeBar = mb
 
-					if C["unitframes"]	.runeofpower then
+					if C["unitframes"].runeofpower then
 						local rp = CreateFrame("Frame", "DuffedUIRunePower", self)
-						rp:Point("TOP", power, "BOTTOM", -52, -1)
+						rp:Point("TOP", power, "BOTTOM", -50, -1)
 						rp:SetWidth(100)
 						rp:SetHeight(5)
 						rp:SetBackdrop(backdrop)
@@ -421,11 +421,13 @@ local function Shared(self, unit)
 							rp[i]:SetStatusBarTexture(C.media.normTex)
 
 							if i == 1 then
-								rp[i]:Width(176 / 2)
+								rp[i]:Width(198 / 2)
 								rp[i]:SetPoint("LEFT", rp, "LEFT", 0, 0)
+								rp[i]:CreateBackdrop()
 							else
-								rp[i]:Width(176 / 2)
-								rp[i]:SetPoint("LEFT", rp[i-1], "RIGHT", 1, 0)
+								rp[i]:Width(198 / 2)
+								rp[i]:SetPoint("LEFT", rp[i - 1], "RIGHT", 6, 0)
+								rp[i]:CreateBackdrop()
 							end
 
 							rp[i].bg = rp[i]:CreateTexture(nil, 'ARTWORK')
