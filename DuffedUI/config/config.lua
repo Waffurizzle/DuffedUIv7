@@ -112,7 +112,8 @@ C["castbar"] = {
 	["cbicons"] = true,                                 		-- enable icons on castbar
 	["spark"] = true,											-- enable spark
 	["classcolor"] = false,										-- enable classcolor for castbar
-	["color"] = { .31, .45, .63, .5 }							-- castbar color
+	["color"] = { .31, .45, .63, .5 },							-- castbar color
+	["cbticks"] = true,											-- enable castbar ticks
 }
 
 C["auras"] = {

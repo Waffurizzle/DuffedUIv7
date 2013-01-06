@@ -8,6 +8,7 @@
 	DuffedUIConfigUILocalization.castbarspark = "启用施法条闪烁"
 	DuffedUIConfigUILocalization.castbarcolor = "设置施法条颜色"
 	DuffedUIConfigUILocalization.castbarclasscolor = "启用施法条按职业颜色着色"
+	DuffedUIConfigUILocalization.castbarcbticks = "Enable castbar ticks for channeled casts."
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "杂项"

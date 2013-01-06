@@ -8,6 +8,7 @@
 	DuffedUIConfigUILocalization.castbarspark = "Enable castbar spark"
 	DuffedUIConfigUILocalization.castbarcolor = "Set color for castbars"
 	DuffedUIConfigUILocalization.castbarclasscolor = "Enable classcolor for castbar"
+	DuffedUIConfigUILocalization.castbarcbticks = "Enable castbar ticks for channeled casts."
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "Misc"

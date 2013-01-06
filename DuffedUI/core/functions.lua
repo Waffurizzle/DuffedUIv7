@@ -1072,14 +1072,109 @@ local CheckInterrupt = function(self, unit)
 	end
 end
 
+local ticks = {}
+function D.hideticks()
+	for _, tick in pairs(ticks) do
+		tick:Hide()
+	end
+end
+
+function D.setcastticks(frame, numTicks)
+	D.hideticks()
+	if numTicks and numTicks > 0  then
+		local d = frame:GetWidth() / numTicks
+		for i = 1, numTicks do
+			if not ticks[i] then
+				ticks[i] = frame:CreateTexture(nil, "OVERLAY")
+				ticks[i]:SetTexture( C["media"].normTex)
+
+				if C["castbar"].classcolor == true then
+					ticks[i]:SetVertexColor(0, 0, 0)
+				else
+					ticks[i]:SetVertexColor(.84, .75, .65)
+				end
+				ticks[i]:SetWidth(2)
+				ticks[i]:SetHeight(frame:GetHeight())
+			end
+			ticks[i]:ClearAllPoints()
+			ticks[i]:SetPoint("CENTER", frame, "LEFT", d * i, 0)
+			ticks[i]:Show()
+		end
+	end
+end
+
 -- check if we can interrupt on cast
 D.CheckCast = function(self, unit, name, rank, castid)
 	CheckInterrupt(self, unit)
+
+	local color
+	self.unit = unit
+
+	if C["castbar"].cbticks == true and unit == "player" then
+		local baseTicks = D.channelticks[name]
+		if baseTicks and D.hasteticks[name] then
+			local tickIncRate = 1 / baseTicks
+			local curHaste = UnitSpellHaste("player") * 0.01
+			local firstTickInc = tickIncRate / 2
+			local bonusTicks = 0
+			if curHaste >= firstTickInc then
+				bonusTicks = bonusTicks + 1
+			end
+
+			local x = tonumber(D.Round(firstTickInc + tickIncRate, 2))
+			while curHaste >= x do
+				x = tonumber(D.Round(firstTickInc + (tickIncRate * bonusTicks), 2))
+				if curHaste >= x then
+					bonusTicks = bonusTicks + 1
+				end
+			end
+
+			D.setcastticks(self, baseTicks + bonusTicks)
+		elseif baseTicks then
+			D.setcastticks(self, baseTicks)
+		else
+			D.hideticks()
+		end
+	elseif unit == "player" then
+		D.hideticks()
+	end
 end
 
 -- check if we can interrupt on channel cast
 D.CheckChannel = function(self, unit, name, rank)
 	CheckInterrupt(self, unit)
+
+	local color
+	self.unit = unit
+
+	if C["castbar"].cbticks == true and unit == "player" then
+		local baseTicks = D.channelticks[name]
+		if baseTicks and D.hasteticks[name] then
+			local tickIncRate = 1 / baseTicks
+			local curHaste = UnitSpellHaste("player") * 0.01
+			local firstTickInc = tickIncRate / 2
+			local bonusTicks = 0
+			if curHaste >= firstTickInc then
+				bonusTicks = bonusTicks + 1
+			end
+
+			local x = tonumber(D.Round(firstTickInc + tickIncRate, 2))
+			while curHaste >= x do
+				x = tonumber(D.Round(firstTickInc + (tickIncRate * bonusTicks), 2))
+				if curHaste >= x then
+					bonusTicks = bonusTicks + 1
+				end
+			end
+
+			D.setcastticks(self, baseTicks + bonusTicks)
+		elseif baseTicks then
+			D.setcastticks(self, baseTicks)
+		else
+			D.hideticks()
+		end
+	elseif unit == "player" then
+		D.hideticks()
+	end
 end
 
 -- update the warlock shard

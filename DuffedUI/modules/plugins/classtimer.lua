@@ -41,6 +41,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(33702), CreateSpellEntry(33697), CreateSpellEntry(20572), -- Blood Fury (orc racial)
 	CreateSpellEntry(57933), -- Tricks of Trade (15% dmg buff)
 	CreateSpellEntry(121279), -- Lifeblood
+	CreateSpellEntry(96230), -- Synapse Springs
 	
 	-- Weaponenchants & Stuff
 	CreateSpellEntry(104510), -- Windsong
