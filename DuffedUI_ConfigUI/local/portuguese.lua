@@ -152,7 +152,7 @@
 	DuffedUIConfigUILocalization.unitframespowerClasscolored = "Enable classcolored power bar"
 	DuffedUIConfigUILocalization.unitframesfocusdebuffs = "Enable focus debuffs"
 	DuffedUIConfigUILocalization.unitframessComboenable = "Enable sCombo-Plugin"
-	DuffedUIConfigUILocalization.unitframessComboenergybar = "enable energy bar for sCombo"
+	DuffedUIConfigUILocalization.unitframessComboenergybar = "Enable energy bar for sCombo"
 	DuffedUIConfigUILocalization.unitframesenemyhcolor = "Color enemy health bar by hostility (for PVP)"
 	DuffedUIConfigUILocalization.unitframesauratimer = "Enable timer on auras"
 	DuffedUIConfigUILocalization.unitframesauratextscale = "Aura text scale on auras"
@@ -174,6 +174,8 @@
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "Show Statue Bar (Dependencies: Class Bar Option need to be enabled)"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "Set default border color of panels"
 	DuffedUIConfigUILocalization.unitframesruneofpower = "Enable rune of power bar"
+	DuffedUIConfigUILocalization.unitframesfader = "Enable Fader for unitframes"
+	DuffedUIConfigUILocalization.unitframesminalpha = "Set minimum alpha for Fader (default = 0.1)"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "Enable party/raid Range alpha display"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "Alpha on Party/Raid unit out of range"

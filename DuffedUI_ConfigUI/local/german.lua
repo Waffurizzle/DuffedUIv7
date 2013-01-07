@@ -174,6 +174,8 @@
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "Zeige Statusleiste (Abh\195\164ngigkeit: Klassenbar-Option muss daf\195\188r aktiviert sein)"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "Setze Standard Rahmenfarbe der Panels"
 	DuffedUIConfigUILocalization.unitframesruneofpower = "Aktiviere Rune der Macht-Leiste"
+	DuffedUIConfigUILocalization.unitframesfader = "Aktiviere Fader für Einheitenfenster"
+	DuffedUIConfigUILocalization.unitframesminalpha = "Setze Minimumwert für Fader (Standard = 0.1)"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "Aktiviere Alpha Gruppen/Raid Entfernungs Anzeige"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "Alpha auf Gruppen/Raid Einheiten au\195\159er Reichweite"

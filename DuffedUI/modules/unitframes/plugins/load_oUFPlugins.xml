@@ -4,6 +4,7 @@
 	<Script file="oUF_CombatFeedback.lua" />
 	<Script file="oUF_DebuffHighlight.lua" />
 	<Script file="oUF_Experience.lua" />
+	<Script file="oUF_Fader.lua" />
 	<Script file="movable.lua" />
 	<Script file="oUF_Reputation.lua" />
 	<Script file="oUF_Smooth.lua" />

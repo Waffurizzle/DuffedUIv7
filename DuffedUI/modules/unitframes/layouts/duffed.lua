@@ -59,17 +59,17 @@ local function Shared(self, unit)
 	RaidIcon:SetPoint("TOP", 0, 8)
 	self.RaidIcon = RaidIcon
 	
-	-- Fader
-	if C["unitframes"].fader then
-		if (unit and not unit:find("arena%d")) or (unit and not unit:find("boss%d")) then
-			self.Fader = {
-				[1] = {Combat = 1, Arena = 1, Instance = 1}, 
-				[2] = {PlayerTarget = C["unitframes"].fader_alpha, PlayerNotMaxHealth = C["unitframes"].fader_alpha, PlayerNotMaxMana = C["unitframes"].fader_alpha}, 
-				[3] = {Stealth = C["unitframes"].fader_alpha},
-				[4] = {notCombat = 0, PlayerTaxi = 0},
-			}
-		end
-		self.NormalAlpha = 1
+	if C["unitframes"].fader == true then
+		self.FadeCasting = true
+		self.FadeCombat = true
+		self.FadeTarget = true
+		self.FadeHealth = true
+		self.FadePower = true
+		self.FadeHover = true
+
+		self.FadeSmooth = 0.5
+		self.FadeMinAlpha = C["unitframes"].minalpha
+		self.FadeMaxAlpha = 1
 	end
 	------------------------------------------------------------------------
 	--	Player and Target units layout (mostly mirror'd)

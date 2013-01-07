@@ -21,7 +21,11 @@ C["unitframes"] = {
 	["layout"] = 2,												-- set uf-layout
 	["percent"] = false,										-- enable percentdisplay
 	["healthbarcolor"] = {.125, .125, .125, 1},					-- healthbar color (if unicolor = true) 
-	["deficitcolor"] = {0, 0, 0, 1},							-- healthbar deficit color (if unicolor = true)
+	["deficitcolor"] = {
+		0, 0, 0,
+		.6, .3, .3,
+		.125, .125, .125,
+	},
 	["ColorGradient"] = false,									-- enable colorgradient
 	["framewidth"] = 218,										-- framewidth for unitframes
 	["totandpetlines"] = true,									-- enable connectlines
@@ -55,6 +59,8 @@ C["unitframes"] = {
 	["bordercolor"] = { .4, .4, .4 },                  			-- unit frames panel border color
 	["focusdebuffs"] = true,									-- enable focus debuffs
 	["runeofpower"] = true,										-- enable rune of power
+	["fader"] = true,											-- enable fader for unitframes
+	["minalpha"] = 0.1,											-- set minalpha for fader
 
 	-- raid layout (if one of them is enabled)
 	["showrange"] = true,                               		-- show range opacity on raidframes

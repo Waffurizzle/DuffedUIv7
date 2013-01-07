@@ -639,6 +639,10 @@ D.PostUpdateHealth = function(health, unit, min, max)
 	else
 		local r, g, b
 		
+		if C["unitframes"].ColorGradient == true and C["unitframes"].unicolor == true then
+			local r, g, b = oUFDuffedUI.ColorGradient(min, max, unpack(C["unitframes"].deficitcolor))
+			health:SetStatusBarColor(r, g, b)
+		end
 		-- overwrite healthbar color for enemy player (a tukui option if enabled), target vehicle/pet too far away returning unitreaction nil and friend unit not a player. (mostly for overwrite tapped for friendly)
 		-- I don't know if we really need to call C["unitframes"].unicolor but anyway, it's safe this way.
 		if (C["unitframes"].unicolor ~= true and C["unitframes"].enemyhcolor and unit == "target" and UnitIsEnemy(unit, "player") and UnitIsPlayer(unit)) or (C["unitframes"].unicolor ~= true and unit == "target" and not UnitIsPlayer(unit) and UnitIsFriend(unit, "player")) then
@@ -656,7 +660,7 @@ D.PostUpdateHealth = function(health, unit, min, max)
 
 		if min ~= max then
 			local r, g, b
-			r, g, b = oUF.ColorGradient(min, max, .69, .31, .31, .65, .63, .35, .33, .59, .33)
+			r, g, b = oUFDuffedUI.ColorGradient(min, max, .69, .31, .31, .65, .63, .35, .33, .59, .33)
 			if unit == "player" and health:GetAttribute("normalUnit") ~= "pet" then
 				if C["unitframes"].showtotalhpmp == true then
 					health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r", ShortValue(min), ShortValue(max))

@@ -174,6 +174,8 @@
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "顯示狀態條（職業條必須開啟的情況下）"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "設置為默認的邊框顏色"
 	DuffedUIConfigUILocalization.unitframesruneofpower = "啟用秘法符能能量條（法師）"
+	DuffedUIConfigUILocalization.unitframesfader = "Enable Fader for unitframes"
+	DuffedUIConfigUILocalization.unitframesminalpha = "Set minimum alpha for Fader (default = 0.1)"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "啟用小隊/團隊距離檢測"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "小隊/團隊超出距離透明值"

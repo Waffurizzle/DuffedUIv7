@@ -56,16 +56,17 @@ local function Shared(self, unit)
 	self.RaidIcon = RaidIcon
 	
 	-- Fader
-	if C["unitframes"].fader then
-		if (unit and not unit:find("arena%d")) or (unit and not unit:find("boss%d")) then
-			self.Fader = {
-				[1] = {Combat = 1, Arena = 1, Instance = 1}, 
-				[2] = {PlayerTarget = C["unitframes"].fader_alpha, PlayerNotMaxHealth = C["unitframes"].fader_alpha, PlayerNotMaxMana = C["unitframes"].fader_alpha}, 
-				[3] = {Stealth = C["unitframes"].fader_alpha},
-				[4] = {notCombat = 0, PlayerTaxi = 0},
-			}
-		end
-		self.NormalAlpha = 1
+	if C["unitframes"].fader == true then
+		self.FadeCasting = true
+		self.FadeCombat = true
+		self.FadeTarget = true
+		self.FadeHealth = true
+		self.FadePower = true
+		self.FadeHover = true
+
+		self.FadeSmooth = 0.5
+		self.FadeMinAlpha = C["unitframes"].minalpha
+		self.FadeMaxAlpha = 1
 	end
 	
 	------------------------------------------------------------------------
@@ -147,9 +148,9 @@ local function Shared(self, unit)
 			end
 		else
 			health.colorDisconnected = true
-			health.colorTapping = true	
+			health.colorTapping = true
 			health.colorClass = true
-			health.colorReaction = true			
+			health.colorReaction = true
 		end
 		
 		-- power
@@ -1089,8 +1090,23 @@ local function Shared(self, unit)
 		self.Health.bg = healthBG
 		
 		health.frequentUpdates = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
+		if C["unitframes"].unicolor == true then
+			health.colorTapping = false
+			health.colorDisconnected = false
+			health.colorClass = false
+			health:SetStatusBarColor(unpack(C["unitframes"].healthbarcolor))
+			healthBG:SetVertexColor(unpack(C["unitframes"].deficitcolor))
+			healthBG:SetTexture(.6, .6, .6)
+			if C["unitframes"].ColorGradient then
+				health.colorSmooth = true
+				healthBG:SetTexture(.2, .2, .2)
+			end
+		else
+			health.colorDisconnected = true
+			health.colorTapping = true
+			health.colorClass = true
+			health.colorReaction = true
 		end
 		
 		-- Unitframe Lines
@@ -1120,10 +1136,7 @@ local function Shared(self, unit)
 		self.PowerBorder = PowerBorder
 		
 		power.frequentUpdates = true
-		
-		if C["unitframes"].showsmooth == true then
-			power.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then power.Smooth = true end
 
 		local powerBG = power:CreateTexture(nil, 'BORDER')
 		powerBG:SetAllPoints(power)
@@ -1140,25 +1153,7 @@ local function Shared(self, unit)
 		self.Power = power
 		self.Power.bg = powerBG
 
-		if C["unitframes"].showsmooth == true then
-			power.Smooth = true
-		end
-		
-		if C["unitframes"].unicolor == true then
-			health.colorDisconnected = false
-			health.colorClass = false
-			health:SetStatusBarColor(unpack(C["unitframes"].healthbarcolor))
-			healthBG:SetVertexColor(unpack(C["unitframes"].deficitcolor))
-			healthBG:SetTexture(.6, .6, .6)
-			if C["unitframes"].ColorGradient then
-				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
-			end	
-		else
-			health.colorDisconnected = true
-			health.colorClass = true
-			health.colorReaction = true			
-		end
+		if C["unitframes"].showsmooth == true then power.Smooth = true end
 		
 		-- name and level
 		local Name = health:CreateFontString(nil, "OVERLAY")
