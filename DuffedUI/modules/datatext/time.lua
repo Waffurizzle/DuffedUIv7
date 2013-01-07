@@ -136,25 +136,25 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		
 		local oneraid
 		for i = 1, GetNumSavedInstances() do
-			local name,_,reset,difficulty,locked,extended,_,isRaid,maxPlayers = GetSavedInstanceInfo(i)
+			local name, _, reset, difficulty, locked, extended, _, isRaid, maxPlayers = GetSavedInstanceInfo(i)
 			if isRaid and (locked or extended) then
-				local tr,tg,tb,diff
+				local tr, tg, tb, diff
 				if not oneraid then
 					GameTooltip:AddLine(" ")
 					GameTooltip:AddLine(L.datatext_savedraid)
 					oneraid = true
 				end
 
-				local function fmttime(sec,table)
+				local function fmttime(sec, table)
 				local table = table or {}
-				local d,h,m,s = ChatFrame_TimeBreakDown(floor(sec))
-				local string = gsub(gsub(format(" %dd %dh %dm "..((d==0 and h==0) and "%ds" or ""),d,h,m,s)," 0[dhms]"," "),"%s+"," ")
-				local string = strtrim(gsub(string, "([dhms])", {d=table.days or "d",h=table.hours or "h",m=table.minutes or "m",s=table.seconds or "s"})," ")
+				local d, h, m, s = ChatFrame_TimeBreakDown(floor(sec))
+				local string = gsub(gsub(format(" %dd %dh %dm "..((d == 0 and h == 0) and "%ds" or ""), d, h, m, s)," 0[dhms]"," "),"%s+"," ")
+				local string = strtrim(gsub(string, "([dhms])", {d = table.days or "d", h = table.hours or "h", m = table.minutes or "m", s = table.seconds or "s"})," ")
 				return strmatch(string,"^%s*$") and "0"..(table.seconds or L"s") or string
 			end
-			if extended then tr,tg,tb = 0.3,1,0.3 else tr,tg,tb = 1,1,1 end
+			if extended then tr, tg, tb = 0.3, 1, 0.3 else tr, tg, tb = 1, 1, 1 end
 			if difficulty == 3 or difficulty == 4 then diff = "H" else diff = "N" end
-			GameTooltip:AddDoubleLine(name,fmttime(reset),1,1,1,tr,tg,tb)
+			GameTooltip:AddDoubleLine(name, fmttime(reset),1 ,1, 1, tr, tg, tb)
 			end
 		end
 		GameTooltip:Show()
