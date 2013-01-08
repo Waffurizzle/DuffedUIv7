@@ -221,6 +221,7 @@ init:SetScript("OnEvent", function(self, event)
 		DuffedUIBar3:SetWidth((D.buttonsize * 1) + (D.buttonspacing * 2))
 		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -23 -((D.buttonsize * 1) + (D.buttonspacing * 2)), -14) DuffedUILineToPetActionBarBackground:Show() end
 	elseif db.rightbars == 0 then
+		UnregisterStateDriver(DuffedUIBar3, "visibility")
 		DuffedUIBar3Button.text:SetText(cp.."<|r")
 		DuffedUIBar3:Hide()
 		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -14, -14) DuffedUILineToPetActionBarBackground:Hide() end
