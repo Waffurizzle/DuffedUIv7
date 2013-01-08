@@ -51,11 +51,9 @@ local function LoadSkin()
 		_G["CalendarDayButton"..i]:SetFrameLevel(_G["CalendarDayButton"..i]:GetFrameLevel() + 1)
 		_G["CalendarDayButton"..i]:StripTextures()
 		_G["CalendarDayButton"..i]:SetTemplate("Default")
-		_G["CalendarDayButton"..i.."OverlayFrame"]:SetAlpha(0)
+		_G["CalendarDayButton"..i.."OverlayFrame"]:SetAlpha(1)
 		_G["CalendarDayButton"..i.."DarkFrame"]:StripTextures()
-		if C["skins"].calendarevent then
-			_G["CalendarDayButton"..i.."EventTexture"]:SetAlpha(0)
-		end
+		if C["skins"].calendarevent then _G["CalendarDayButton"..i.."EventTexture"]:SetAlpha(0) end
 		for j=1, 4 do
 			local b = _G["CalendarDayButton"..i.."EventButton"..j]
 			b:StripTextures()

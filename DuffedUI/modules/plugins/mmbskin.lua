@@ -1,23 +1,24 @@
 local D, C, L, G = unpack(select(2, ...))
+if IsAddOnLoaded("SquareMinimapButtons") then return end
 
 local buttons = {
 	"QueueStatusMinimapButton",
 	"MiniMapTrackingButton",
 	"MiniMapMailFrame",
 	"HelpOpenTicketButton",
-	"ElvConfigToggle",
 	"DBMMinimapButton",
 	"ZygorGuidesViewerMapIcon",
 }
 
 local function SkinButton(frame)
-	if(frame:GetObjectType() ~= "Button") then return end
+	if frame:GetObjectType() ~= "Button" then return end
 
 	for i, buttons in pairs(buttons) do
-		if(frame:GetName() ~= nil) then
-			if(frame:GetName():match(buttons)) then return end
-			for i = 1,999 do
+		if frame:GetName() ~= nil then
+			if frame:GetName():match(buttons) then return end
+			for i = 1, 120 do
 				if _G["GatherMatePin"..i] then return end
+				if _G["Spy_MapNoteList_mini"..i] == Frame then return end
 			end
 		end
 	end
@@ -46,12 +47,7 @@ local function SkinButton(frame)
 			end
 		end
 	end
-	if IsAddOnLoaded("Tukui_Skins") then
-		local U = unpack(UISkins)
-		U.SkinFrame(frame, true)
-	else
-		frame:SetTemplate("Transparent")
-	end
+	frame:SetTemplate("Transparent")
 end
 
 local UISkinMinimapButtons = CreateFrame("Frame")

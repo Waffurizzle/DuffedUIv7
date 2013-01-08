@@ -59,7 +59,7 @@ C["unitframes"] = {
 	["bordercolor"] = { .4, .4, .4 },                  			-- unit frames panel border color
 	["focusdebuffs"] = true,									-- enable focus debuffs
 	["runeofpower"] = true,										-- enable rune of power
-	["fader"] = true,											-- enable fader for unitframes
+	["fader"] = false,											-- enable fader for unitframes
 	["minalpha"] = 0.1,											-- set minalpha for fader
 
 	-- raid layout (if one of them is enabled)

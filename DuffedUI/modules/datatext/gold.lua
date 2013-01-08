@@ -80,34 +80,22 @@ local function Currency(id, weekly, capped)
 end
 
 local function OnEvent(self, event)
-	if event == "PLAYER_ENTERING_WORLD" then
-		OldMoney = GetMoney()
-	end
+	if event == "PLAYER_ENTERING_WORLD" then OldMoney = GetMoney() end
 
 	local NewMoney	= GetMoney()
 	local Change = NewMoney - OldMoney
 
-	if OldMoney>NewMoney then
-		Spent = Spent - Change
-	else
-		Profit = Profit + Change
-	end
+	if OldMoney>NewMoney then Spent = Spent - Change else Profit = Profit + Change end
 
 	Text:SetText(formatMoney(NewMoney))
 	self:SetAllPoints(Text)
 
 	local myPlayerName  = UnitName("player")
-	if DuffedUIData == nil then
-		DuffedUIData = {}
-	end
+	if DuffedUIData == nil then DuffedUIData = {} end
 
-	if DuffedUIData.gold == nil then
-		DuffedUIData.gold = {}
-	end
+	if DuffedUIData.gold == nil then DuffedUIData.gold = {} end
 
-	if DuffedUIData.gold[myPlayerRealm] == nil then
-		DuffedUIData.gold[myPlayerRealm] = {}
-	end
+	if DuffedUIData.gold[myPlayerRealm] == nil then DuffedUIData.gold[myPlayerRealm] = {} end
 
 	DuffedUIData.gold[myPlayerRealm][myPlayerName] = GetMoney()
 	OldMoney = NewMoney
@@ -195,11 +183,12 @@ Stat:SetScript("OnEnter", function(self)
 	end
 
 	if C["datatext"].gold_jc == true then
-		if prof1 == 755 or prof2 == 755 then
+		if (prof1 == 9 or prof2 == 9) then
 			GameTooltip:AddLine(" ")
 			GameTooltip:AddLine(L.gametooltip_gold_jc)
 			Currency(61)
 			Currency(361)
+			Currency(698)
 		end
 	end
 
