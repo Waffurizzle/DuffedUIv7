@@ -1054,6 +1054,7 @@ local function Shared(self, unit)
 		
 		self.Health = health
 		self.Health.bg = healthBG
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		health.frequentUpdates = true if C["unitframes"].showsmooth == true then health.Smooth = true end
 		

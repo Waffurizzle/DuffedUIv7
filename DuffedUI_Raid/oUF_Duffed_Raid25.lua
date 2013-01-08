@@ -39,10 +39,11 @@ local function Shared(self, unit)
 	health.frequentUpdates = true
 	
 	if C["unitframes"].unicolor == true then
+		health.colorTapping = false
 		health.colorDisconnected = false
 		health.colorClass = false
 		health:SetStatusBarColor(unpack(C["unitframes"].healthbarcolor))
-		health.bg:SetVertexColor(unpack(C["unitframes"].deficitcolor))	
+		health.bg:SetVertexColor(unpack(C["unitframes"].deficitcolor))
 		health.bg:SetTexture(.6, .6, .6)
 		if C["unitframes"].ColorGradient then
 			health.colorSmooth = true
@@ -50,9 +51,9 @@ local function Shared(self, unit)
 		end
 	else
 		health.colorDisconnected = true
+		health.colorTapping = true
 		health.colorClass = true
-		health.colorReaction = true	
-		health.bg:SetTexture(.1, .1, .1)		
+		health.colorReaction = true
 	end
 	
 	local power = CreateFrame("StatusBar", nil, self)
