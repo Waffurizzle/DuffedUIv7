@@ -115,6 +115,49 @@ end
 local enable = true
 local origa1, origf, origa2, origx, origy
 
+local gridsize = function()
+	local defsize = 16
+	local w = tonumber(string.match(({ GetScreenResolutions() })[GetCurrentResolution()], "(%d+)x+%d"))
+	local h = tonumber(string.match(({ GetScreenResolutions() })[GetCurrentResolution()], "%d+x(%d+)"))
+	local x = tonumber(gridsize) or defsize
+
+	function Grid()
+		ali = CreateFrame("Frame", nil, UIParent)
+		ali:SetFrameLevel(0)
+		ali:SetFrameStrata("BACKGROUND")
+
+		for i = - (w / x / 2), w / x / 2 do
+			local aliv = ali:CreateTexture(nil, "BACKGROUND")
+			aliv:SetTexture(0.3, 0, 0, 0.7)
+			aliv:Point("CENTER", UIParent, "CENTER", i * x, 0)
+			aliv:SetSize(1, h)
+		end
+
+		for i = - (h / x / 2), h / x / 2 do
+			local alih = ali:CreateTexture(nil, "BACKGROUND")
+			alih:SetTexture(0.3, 0, 0, 0.7)
+			alih:Point("CENTER", UIParent, "CENTER", 0, i * x)
+			alih:SetSize(w, 1)
+		end
+	end
+
+	if Ali then
+		if ox ~= x then
+			ox = x
+			ali:Hide()
+			Grid()
+			Ali = true
+		else
+			ali:Hide()
+			Ali = false
+		end
+	else
+		ox = x
+		Grid()
+		Ali = true
+	end
+end
+
 D.MoveUIElements = function()
 	if DuffedUIRaidUtilityAnchor then
 		if DuffedUIRaidUtilityAnchor:IsShown() then DuffedUIRaidUtilityAnchor:Hide() else DuffedUIRaidUtilityAnchor:Show() end
@@ -157,7 +200,13 @@ D.MoveUIElements = function()
 		end
 	end
 	
-	if enable then enable = false else enable = true end
+	if enable then 
+		enable = false
+		gridsize()
+	else
+		enable = true
+		gridsize()
+	end
 end
 SLASH_MOVING1 = "/mduffedui"
 SLASH_MOVING2 = "/moveui"

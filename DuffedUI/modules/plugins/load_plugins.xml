@@ -1,6 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="addonmanager.lua" />
 	<Script file="bossicons.lua" />
+	<Script file="buffnotice.lua" />
 	<Script file="bufftracker.lua" />
 	<Script file="chatalert.lua" />
 	<Script file="classtimer.lua" />

@@ -20,6 +20,7 @@
 	<Script file="core\protection.lua" />
 	<Script file="core\popup.lua" />
 	<Script file="core\install.lua" />
+	<Script file="core\update.lua" />
 	<Script file="core\filters\f_buffnotice.lua" />
 	<Script file="core\filters\f_cbticks.lua" />
 	<Include file="modules\blizzard\load_blizzard.xml" />
