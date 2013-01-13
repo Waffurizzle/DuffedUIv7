@@ -11,10 +11,11 @@ local sound
 local function BuffsOnEvent(self, event)
 	if (event == "PLAYER_LOGIN" or event == "LEARNED_SPELL_IN_TAB") then
 		for i, buff in pairs(buffs) do
-			local name = GetSpellInfo(buff)
+			local name, _, icon = GetSpellInfo(buff)
 			local usable, nomana = IsUsableSpell(name)
+			--print(buff, name, usable, nomana)
 			if (usable or nomana) then
-				self.icon:SetTexture(select(3, GetSpellInfo(buff)))
+				self.icon:SetTexture(icon)
 				break
 			end
 		end

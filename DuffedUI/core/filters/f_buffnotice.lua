@@ -11,7 +11,6 @@ D.remindbuffs = {
 		13165, -- Aspect of the Hawk
 		5118, -- Aspect of the Cheetah
 		13159, -- Aspect of the Pack
-		82661, -- Aspect of the Fox
 		109260, -- Aspect of the Iron Hawk
 	},
 	MAGE = {

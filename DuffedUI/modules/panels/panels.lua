@@ -65,7 +65,7 @@ G.ActionBars.Pet = petbg
 
 local ltpetbg1 = CreateFrame("Frame", "DuffedUILineToPetActionBarBackground", petbg)
 ltpetbg1:SetTemplate("Transparent")
-ltpetbg1:Size(24, 265)
+ltpetbg1:Size(10, 265)
 ltpetbg1:Point("LEFT", petbg, "RIGHT", 0, 0)
 ltpetbg1:SetParent(petbg)
 ltpetbg1:SetFrameStrata("BACKGROUND")

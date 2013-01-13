@@ -203,13 +203,15 @@ local CLASS_FILTERS = {
 	},
 	HUNTER = { 
 		target = { 
-			CreateSpellEntry(118253), -- Serpent Sting +
-			CreateSpellEntry(63468), -- Piercing Shots +
-			CreateSpellEntry(3674), -- Black Arrow +
-			CreateSpellEntry(82654), -- Widow Venom +
-			CreateSpellEntry(34490), -- Silencing Shot +
-			CreateSpellEntry(19503), -- Scatter Shot +
-			CreateSpellEntry(1130, true), -- Hunters mark +
+			CreateSpellEntry(118253), -- Serpent Sting
+			CreateSpellEntry(63468), -- Piercing Shots
+			CreateSpellEntry(3674), -- Black Arrow
+			CreateSpellEntry(82654), -- Widow Venom
+			CreateSpellEntry(34490), -- Silencing Shot
+			CreateSpellEntry(19503), -- Scatter Shot
+			CreateSpellEntry(1130, true), -- Hunters mark
+			CreateSpellEntry(5116), -- Concussive Shot
+			CreateSpellEntry(53301), -- Explosive Shot
 		},
 		player = {
 			CreateSpellEntry(3045), -- Rapid Fire +
