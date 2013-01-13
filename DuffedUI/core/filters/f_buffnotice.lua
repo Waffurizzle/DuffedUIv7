@@ -18,6 +18,7 @@ D.remindbuffs = {
 		7302, -- Frost Armor
 		6117, -- Mage Armor
 		30482, -- Molten Armor
+		116257, -- Invoker's Energy
 	},
 	WARLOCK = {
 		1459, -- Arcane Brilliance
@@ -40,6 +41,7 @@ D.remindbuffs = {
 		57330, -- Horn of Winter
 		6673, -- Battle Shout
 		93435, -- Roar of Courage (Hunter Pet)
+		49222, -- Bone Shield
 	},
 	ROGUE = {
 		2823, -- Deadly Poison
@@ -74,11 +76,13 @@ D.remindbuffs2 = {
 	MAGE = {
 		1459, -- Arcane Brilliance
 		61316, -- Dalaran Brilliance
+		116257, -- Invoker's Energy
 	},
 	DEATHKNIGHT = {
 		48263, -- Blood Presence
 		48265, -- Unholy Presence
 		48266, -- Frost Presence
+		49222, -- Bone Shield
 	},
 	ROGUE = {
 		5761, -- Mind-numbing Poison

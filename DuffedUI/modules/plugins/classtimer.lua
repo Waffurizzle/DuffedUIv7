@@ -87,6 +87,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(115175), -- Soothing Mist
 			CreateSpellEntry(116095), -- Disable
 			CreateSpellEntry(115078), -- Paralysis
+			CreateSpellEntry(56092), -- Engulfing Flames (Malygos)
 		},
 		player = {
 			CreateSpellEntry(124081), -- Zensphere

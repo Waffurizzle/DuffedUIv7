@@ -19,6 +19,6 @@ end
 -- Name need to be case sensitive
 ---------------------------------------------------------------------------
 
-if D.myname == "Merith" then
+if D.myname == "Merith" and D.myrealm == "Zirkel des Cenarius" then
 	-- blub
 end

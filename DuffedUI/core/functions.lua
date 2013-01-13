@@ -6,6 +6,12 @@ D.buttonspacing = D.Scale(C["actionbar"].buttonspacing)
 D.petbuttonsize = D.Scale(C["actionbar"].petbuttonsize)
 D.petbuttonspacing = D.Scale(C["actionbar"].buttonspacing)
 
+-- special settings
+if D.myname == "Nediana" or D.myname == "Trinitý" or D.myname == "Nekralia" or D.myname == "Tabeah" then
+	C["media"].font = C["media"].calibri
+	C["media"].uffont = C["media"].ufcalibri
+end
+
 if C["general"].lowres then D.lowversion = true end
 
 -- return if we are currently playing on PTR.
@@ -1116,45 +1122,7 @@ function D.setcastticks(frame, numTicks)
 	end
 end
 
--- check if we can interrupt on cast
-D.CheckCast = function(self, unit, name, rank, castid)
-	CheckInterrupt(self, unit)
-
-	local color
-	self.unit = unit
-
-	if C["castbar"].cbticks == true and unit == "player" then
-		local baseTicks = D.channelticks[name]
-		if baseTicks and D.hasteticks[name] then
-			local tickIncRate = 1 / baseTicks
-			local curHaste = UnitSpellHaste("player") * 0.01
-			local firstTickInc = tickIncRate / 2
-			local bonusTicks = 0
-			if curHaste >= firstTickInc then
-				bonusTicks = bonusTicks + 1
-			end
-
-			local x = tonumber(D.Round(firstTickInc + tickIncRate, 2))
-			while curHaste >= x do
-				x = tonumber(D.Round(firstTickInc + (tickIncRate * bonusTicks), 2))
-				if curHaste >= x then
-					bonusTicks = bonusTicks + 1
-				end
-			end
-
-			D.setcastticks(self, baseTicks + bonusTicks)
-		elseif baseTicks then
-			D.setcastticks(self, baseTicks)
-		else
-			D.hideticks()
-		end
-	elseif unit == "player" then
-		D.hideticks()
-	end
-end
-
--- check if we can interrupt on channel cast
-D.CheckChannel = function(self, unit, name, rank)
+D.castbar = function(self, unit, name, rank, castid)
 	CheckInterrupt(self, unit)
 
 	local color

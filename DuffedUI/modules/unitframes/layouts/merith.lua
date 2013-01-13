@@ -932,8 +932,8 @@ local function Shared(self, unit)
 			end
 			
 			castbar.CustomDelayText = D.CustomCastDelayText
-			castbar.PostCastStart = D.CheckCast
-			castbar.PostChannelStart = D.CheckChannel
+			castbar.PostCastStart = D.castbar
+			castbar.PostChannelStart = D.castbar
 
 			castbar.time = D.SetFontString(castbar, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 			castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
@@ -1233,9 +1233,7 @@ local function Shared(self, unit)
 		healthBG:SetTexture(0, 0, 0)
 		
 		health.frequentUpdates = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false
@@ -1282,8 +1280,8 @@ local function Shared(self, unit)
 			
 			castbar.CustomTimeText = D.CustomCastTimeText
 			castbar.CustomDelayText = D.CustomCastDelayText
-			castbar.PostCastStart = D.CheckCast
-			castbar.PostChannelStart = D.CheckChannel
+			castbar.PostCastStart = D.castbar
+			castbar.PostChannelStart = D.castbar
 			
 			self.Castbar.Time = castbar.time
 		end
@@ -1339,9 +1337,7 @@ local function Shared(self, unit)
 		self.Health.bg = healthBG
 		
 		health.frequentUpdates = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false
@@ -1440,8 +1436,8 @@ local function Shared(self, unit)
 		castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
 		castbar.CustomDelayText = D.CustomCastDelayText
-		castbar.PostCastStart = D.CheckCast
-		castbar.PostChannelStart = D.CheckChannel
+		castbar.PostCastStart = D.castbar
+		castbar.PostChannelStart = D.castbar
 			
 		castbar.button = CreateFrame("Frame", nil, castbar)
 		castbar.button:Height(castbar:GetHeight()+4)
@@ -1482,9 +1478,7 @@ local function Shared(self, unit)
 
 		health.frequentUpdates = true
 		health.colorDisconnected = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
 		health.colorClass = true
 		
 		local healthBG = health:CreateTexture(nil, 'BORDER')
@@ -1493,11 +1487,10 @@ local function Shared(self, unit)
 
 		self.Health = health
 		self.Health.bg = healthBG
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		health.frequentUpdates = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false
@@ -1721,8 +1714,8 @@ local function Shared(self, unit)
 		castbar.CustomTimeText = D.CustomCastTimeText
 		
 		castbar.CustomDelayText = D.CustomCastDelayText
-		castbar.PostCastStart = D.CheckCast
-		castbar.PostChannelStart = D.CheckChannel
+		castbar.PostCastStart = D.castbar
+		castbar.PostChannelStart = D.castbar
 		
 		castbar.button = CreateFrame("Frame", nil, castbar)
 		castbar.button:SetTemplate("Default")
@@ -1769,11 +1762,10 @@ local function Shared(self, unit)
 				
 		self.Health = health
 		self.Health.bg = healthBG
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		health.frequentUpdates = true
-		if C["unitframes"].showsmooth == true then
-			health.Smooth = true
-		end
+		if C["unitframes"].showsmooth == true then health.Smooth = true end
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false

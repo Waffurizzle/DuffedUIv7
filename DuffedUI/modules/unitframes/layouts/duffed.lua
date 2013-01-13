@@ -922,8 +922,8 @@ local function Shared(self, unit)
 			
 			castbar.CustomTimeText = D.CustomCastTimeText
 			castbar.CustomDelayText = D.CustomCastDelayText
-			castbar.PostCastStart = D.CheckCast
-			castbar.PostChannelStart = D.CheckChannel
+			castbar.PostCastStart = D.castbar
+			castbar.PostChannelStart = D.castbar
 
 			castbar.time = D.SetFontString(castbar, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 			castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
@@ -1279,8 +1279,8 @@ local function Shared(self, unit)
 			
 			castbar.CustomTimeText = D.CustomCastTimeText
 			castbar.CustomDelayText = D.CustomCastDelayText
-			castbar.PostCastStart = D.CheckCast
-			castbar.PostChannelStart = D.CheckChannel
+			castbar.PostCastStart = D.castbar
+			castbar.PostChannelStart = D.castbar
 
 			self.Castbar.Time = castbar.time			
 		end
@@ -1534,8 +1534,8 @@ local function Shared(self, unit)
 			castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
 			castbar.CustomDelayText = D.CustomCastDelayText
-			castbar.PostCastStart = D.CheckCast
-			castbar.PostChannelStart = D.CheckChannel
+			castbar.PostCastStart = D.castbar
+			castbar.PostChannelStart = D.castbar
 	
 			if C["castbar"].cbicons == true then
 				castbar.button = CreateFrame("Frame", nil, castbar)
@@ -1853,8 +1853,8 @@ local function Shared(self, unit)
 		castbar.CustomTimeText = D.CustomCastTimeText
 		
 		castbar.CustomDelayText = D.CustomCastDelayText
-		castbar.PostCastStart = D.CheckCast
-		castbar.PostChannelStart = D.CheckChannel
+		castbar.PostCastStart = D.castbar
+		castbar.PostChannelStart = D.castbar
 		
 		local Ax = 0
 		if C["castbar"].cbicons == true then
