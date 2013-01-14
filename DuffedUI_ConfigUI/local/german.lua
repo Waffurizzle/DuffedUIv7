@@ -63,7 +63,7 @@
 	DuffedUIConfigUILocalization.generalbordercolor = "Setze Standard-Rahmenfarbe der Panels"
 	DuffedUIConfigUILocalization.generallowres = "Benutze die niedriegere Aufl\195\182sung auf einer hohen"
 	DuffedUIConfigUILocalization.generaloutlines = "W\195\164hle die Rahmenlinie f\195\188r die Textelemente (Korrekte Werte: THINOUTLINE, OUTLINE, MONOCHROMEOUTLINE)"
-	DuffedUIConfigUILocalization.generalclasscolor = "Aktiviere Klassenfarben fÃ¼r Textelemente"
+	DuffedUIConfigUILocalization.generalclasscolor = "Aktiviere Klassenfarben f\195\188r Textelemente"
 	DuffedUIConfigUILocalization.generalclasscoloredborder = "Aktiviere Rahmen in der Klassenfarbe"
 	 
 	-- nameplate
@@ -141,8 +141,8 @@
 	DuffedUIConfigUILocalization.datatextreputation = "Ruf-Position (0 zum deaktivieren)"
 
 	-- unit frames
-	DuffedUIConfigUILocalization.unitframes = "Unit Frame"
-	DuffedUIConfigUILocalization.unitframesenable = "Aktiviere DuffedUI Unit Frames"
+	DuffedUIConfigUILocalization.unitframes = "Einheitenfenster"
+	DuffedUIConfigUILocalization.unitframesenable = "Aktiviere DuffedUI Einheitenfenster"
 	DuffedUIConfigUILocalization.unitframeslayout = "Setze UF-Layout (1, 2 oder 3, Standard = 2)"
 	DuffedUIConfigUILocalization.unitframespercent = "Aktiviere Prozentanzeige neben Spieler & Ziel"
 	DuffedUIConfigUILocalization.unitframeshealthbarcolor = "Setze Heil-Leisten-Farbe"

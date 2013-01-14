@@ -3,7 +3,20 @@ local D, C, L, G = unpack(select(2, ...))
 if D.client == "zhTW" then
 	L.UI_Outdated = "DuffedUI 版本已過期，請至 www.tukui.org 下載最新版"
 	L.UI_Talent_Change_Bug = "一個由暴雪產生的故障已阻止你改變你當前的天賦,這發生在你使用觀察功能查看其他玩家角色裝備時.不幸的是在這個魔獸補丁中我們對修正它無能為力,請/reload你的Ui程式介面並且再次嘗試."
+	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui)."
+	L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat."
 	
+	-- specswitcher buttons
+	L.sesbutton_reload = "Reloads the entire UI"
+	L.sesbutton_heal = "Switch to heal-layout"
+	L.sesbutton_dps = "Switch to dps-layout"
+	L.sesbutton_am = "Open Addonmanager"
+	L.sesbutton_move = "Move the frames"
+	L.sesbutton_config = "DuffedUI Config"
+	L.sesbutton_kb = "Set your keybindings"
+	L.sesbutton_help = "Open the Helpframe for DuffedUI"
+	L.sesbutton_Thelp = "Help"
+
 	-- helpframe 
 	L.Duffed_HELP_HEADER = "|cffc41f3bDuffedUI|r - 帮助" 
 	L.Duffed_HELP_BUTTON1 = "快捷命令" 
@@ -105,6 +118,11 @@ if D.client == "zhTW" then
 	L.datatext_notalents ="無天賦"
 	L.datatext_download = "下載: "
 	L.datatext_bandwidth = "寬頻: "
+	L.datatext_inc = "Incoming"
+	L.datatext_out = "Outgoing"
+	L.datatext_home = "Home Latency:"
+	L.datatext_world = "World Latency:"
+	L.datatext_global = "Global Latency:"
 	L.datatext_guild = "公會"
 	L.datatext_noguild = "沒有公會"
 	L.datatext_bags = "背包: "

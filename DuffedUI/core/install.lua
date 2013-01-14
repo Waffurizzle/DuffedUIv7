@@ -154,7 +154,8 @@ local OnLogon = CreateFrame("Frame")
 OnLogon:RegisterEvent("PLAYER_ENTERING_WORLD")
 OnLogon:SetScript("OnEvent", function(self, event)
 	self:UnregisterEvent("PLAYER_ENTERING_WORLD")
-	print("Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui). For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat.")
+	print(L.welcome_1)
+	print(L.welcome_2)
 end)
 
 local function positionsetup()
@@ -541,7 +542,7 @@ DuffedUIOnLogon:SetScript("OnEvent", function(self, event)
 
 	if D.screenwidth < 1200 then
 			SetCVar("useUiScale", 0)
-			D.ShowPopup("TUKUIDISABLE_UI")
+			D.ShowPopup("DUFFEDUIDISABLE_UI")
 	else		
 		-- install default if we never ran DuffedUI on this character.
 		if not DuffedUIDataPerChar.install then			

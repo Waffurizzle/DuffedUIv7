@@ -4,6 +4,19 @@ local D, C, L, G = unpack(select(2, ...))
 if D.client == "itIT" then
 	L.UI_Outdated = "La tua versione di DuffedUI non è aggiornata. Puoi scaricare l'ultima versione da www.tukui.org"
 	L.UI_Talent_Change_Bug = "Un bug della Blizzard sta impedendo il cambio dei talenti, questo succede quando si ispeziona qualcuno. Sfortunatamente non si può fare nulla per sistemare il problema, ricaricate la propria ui e riprovate."
+	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui)."
+	L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat."
+
+	-- specswitcher buttons
+	L.sesbutton_reload = "Reloads the entire UI"
+	L.sesbutton_heal = "Switch to heal-layout"
+	L.sesbutton_dps = "Switch to dps-layout"
+	L.sesbutton_am = "Open Addonmanager"
+	L.sesbutton_move = "Move the frames"
+	L.sesbutton_config = "DuffedUI Config"
+	L.sesbutton_kb = "Set your keybindings"
+	L.sesbutton_help = "Open the Helpframe for DuffedUI"
+	L.sesbutton_Thelp = "Help"
 
 	-- helpframe
 	L.Duffed_HELP_HEADER = "|cffc41f3bDuffedUI|r - Help"
@@ -106,6 +119,11 @@ if D.client == "itIT" then
 	L.datatext_notalents ="Nessun talento"
 	L.datatext_download = "Download: "
 	L.datatext_bandwidth = "Bandwidth: "
+	L.datatext_inc = "Incoming"
+	L.datatext_out = "Outgoing"
+	L.datatext_home = "Home Latency:"
+	L.datatext_world = "World Latency:"
+	L.datatext_global = "Global Latency:"
 	L.datatext_guild = "Gilda"
 	L.datatext_noguild = "Nessuna Gilda"
 	L.datatext_bags = "Zaino: "

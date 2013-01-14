@@ -52,7 +52,6 @@
 	<Script file="modules\loot\lootframe.lua" />
 	<Script file="modules\loot\rollframe.lua" />
 	<Script file="modules\maps\zonemap.lua" />
-	<Include file="modules\buffnotice\load_bn.xml" />
 	
 	<Include file="modules\unitframes\templates\tankassist.xml" />
 	<Script file="modules\unitframes\tags\tags.lua" />

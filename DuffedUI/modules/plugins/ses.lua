@@ -139,50 +139,50 @@ spec:SetScript("OnClick", function(self)
 	end
 end)
 
-D.CreateBtn("MB_reload", DuffedUIMinimap, 19, 19, "Reloads the entire UI", "R")
+D.CreateBtn("MB_reload", DuffedUIMinimap, 19, 19, L.sesbutton_reload, "R")
 MB_reload:Point("TOPLEFT", spec, "BOTTOMLEFT", 0, -2)
 MB_reload:SetFrameLevel(10)
 MB_reload:CreateShadow("Default")
 MB_reload:SetAttribute("macrotext1", "/rl")
 MB_reload:Hide()
 
-D.CreateBtn("MB_heal", MB_reload, 19, 19, "Switch to heal-layout", "H")
+D.CreateBtn("MB_heal", MB_reload, 19, 19, L.sesbutton_heal, "H")
 MB_heal:Point("LEFT", MB_reload, "RIGHT", 2, 0)
 MB_heal:SetFrameLevel(10)
 MB_heal:CreateShadow("Default")
 MB_heal:SetAttribute("macrotext1", "/heal")
 
-D.CreateBtn("MB_dps", MB_reload, 19, 19, "Switch to dps-layout", "D")
+D.CreateBtn("MB_dps", MB_reload, 19, 19, L.sesbutton_dps, "D")
 MB_dps:Point("LEFT", MB_heal, "RIGHT", 2, 0)
 MB_dps:SetFrameLevel(10)
 MB_dps:CreateShadow("Default")
 MB_dps:SetAttribute("macrotext1", "/dps")
 
-D.CreateBtn("MB_am", MB_reload, 19, 19, "Open Addonmanager", "A")
+D.CreateBtn("MB_am", MB_reload, 19, 19, L.sesbutton_am, "A")
 MB_am:Point("LEFT", MB_dps, "RIGHT", 2, 0)
 MB_am:SetFrameLevel(10)
 MB_am:CreateShadow("Default")
 if IsAddOnLoaded("AuctionMaster") then MB_am:SetAttribute("macrotext1", "/ap") else MB_am:SetAttribute("macrotext1", "/am") end
 
-D.CreateBtn("MB_mui", MB_reload, 19, 19, "Move the frames", "M")
+D.CreateBtn("MB_mui", MB_reload, 19, 19, L.sesbutton_move, "M")
 MB_mui:Point("LEFT", MB_am, "RIGHT", 2, 0)
 MB_mui:SetFrameLevel(10)
 MB_mui:CreateShadow("Default")
 MB_mui:SetAttribute("macrotext1", "/moveui")
 
-D.CreateBtn("MB_config", MB_reload, 19, 19, "DuffedUI Config", "C")
+D.CreateBtn("MB_config", MB_reload, 19, 19, L.sesbutton_config, "C")
 MB_config:Point("LEFT", MB_mui, "RIGHT", 2, 0)
 MB_config:SetFrameLevel(10)
 MB_config:CreateShadow("Default")
 MB_config:SetAttribute("macrotext1", "/dc")
 
-D.CreateBtn("MB_binds", MB_reload, 19, 19, "Set your keybindings", "K")
+D.CreateBtn("MB_binds", MB_reload, 19, 19, L.sesbutton_kb, "K")
 MB_binds:Point("LEFT", MB_config, "RIGHT", 2, 0)
 MB_binds:SetFrameLevel(10)
 MB_binds:CreateShadow("Default")
 if IsAddOnLoaded("FriendsMenuXP") then MB_binds:SetAttribute("macrotext1", "/hb") else  MB_binds:SetAttribute("macrotext1", "/kb") end
 
-D.CreateBtn("MB_help", MB_reload, 28, 19, "Open the Helpframe for DuffedUI", "Help")
+D.CreateBtn("MB_help", MB_reload, 28, 19, L.sesbutton_help, L.sesbutton_Thelp)
 MB_help:Point("LEFT", MB_binds, "RIGHT", 2, 0)
 MB_help:SetFrameLevel(10)
 MB_help:CreateShadow("Default")

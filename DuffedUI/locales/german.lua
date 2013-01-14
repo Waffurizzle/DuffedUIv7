@@ -3,7 +3,20 @@ local D, C, L, G = unpack(select(2, ...))
 if D.client == "deDE" then
 	L.UI_Outdated = "Deine Version von DuffedUI ist veraltet. Du kannst die aktuelle Version von www.tukui.org laden"
 	L.UI_Talent_Change_Bug = "A blizzard bug has occured which is preventing you from changing your talents, this happen when you've inspected someone. Unfortunatly there is nothing we can do in this WoW Patch to fix it, please reload your ui and try again."
+	L.welcome_1 = "Hallo |cffc41f3b".. D.myname.."!|r".."\n".."Danke das du |cffc41f3bDuffedUI "..D.version.."|r benutzt (basecode von Tukui)."
+	L.welcome_2 = "Fuer detailierte Informationen besuche doch |cffc41f3bhttp://www.tukui.org|r. Fuer zusaetzliche Hilfe nutzen den H-Button oder gebe im Chat /dhelp ein."
 	
+	-- specswitcher buttons
+	L.sesbutton_reload = "Laedt das UI neu"
+	L.sesbutton_heal = "Wechsel zum Heilerlayout"
+	L.sesbutton_dps = "Wechsel zum DPS-Layout"
+	L.sesbutton_am = "Öffne Addonmanager"
+	L.sesbutton_move = "Bewege die Fenster"
+	L.sesbutton_config = "DuffedUI Config"
+	L.sesbutton_kb = "Setze Tastaturbelegung"
+	L.sesbutton_help = "Oeffne das Hilfefenster fuer DuffedUI"
+	L.sesbutton_Thelp = "Hilfe"
+
 	-- helpframe
 	L.Duffed_HELP_HEADER = "|cffc41f3bDuffedUI|r - Hilfe"
 	L.Duffed_HELP_BUTTON1 = "Slashcommands"
@@ -17,22 +30,22 @@ if D.client == "deDE" then
 	L.Duffed_HELP_BUTTON9 = "Credits"
 
 	L.Duffed_HELP_CONTENT0_TITLE = "Allgemein"
-	L.Duffed_HELP_CONTENT0_LINE1 = "Willkommen zum HilfePanel von |cffc41f3bDuffedUI|r!\nDieses Panel soll euch helfen die wichtigsten Einstellungen und Kommandos f\195\188r |cffc41f3bDuffedUI|r zu finden. :)"
-	L.Duffed_HELP_CONTENT0_LINE2 = "W\195\164hle eine Category."
+	L.Duffed_HELP_CONTENT0_LINE1 = "Willkommen zum HilfePanel von |cffc41f3bDuffedUI|r!\nDieses Panel soll euch helfen die wichtigsten Einstellungen und Kommandos fuer |cffc41f3bDuffedUI|r zu finden. :)"
+	L.Duffed_HELP_CONTENT0_LINE2 = "Waehle eine Kategorie."
 	L.Duffed_HELP_CONTENT0_LINE3 = "Viel Spaß!"
 	L.Duffed_HELP_CONTENT0_LINE4 = "greetz Merith - Zirkel des Cenarius EU"
 
 	L.Duffed_HELP_CONTENT9_TITLE = "Credits"
 	L.Duffed_HELP_CONTENT9_LINE1 = ""
 	L.Duffed_HELP_CONTENT9_LINE2 = "Tukz, Elv, nightcracker, Eclípsé, Hydra, Asphyxia, Jasje, Epicgrimm, JerichoHM and all others who help Tukz and the Editors f\195\188r the awesome Tukui"
-	L.Duffed_HELP_CONTENT9_LINE3 = "Ein Extra Danke sch\195\150n geht an meine Betatester:"
+	L.Duffed_HELP_CONTENT9_LINE3 = "Ein Extra Danke schoen geht an meine Betatester:"
 	L.Duffed_HELP_CONTENT9_LINE4 = "Kanestorm, Juhawny, Elenarda, macgee, loveran, transf\195\188rm, Optional, Pixelfcuk, Shera, lefirez, jones7 and all other Betatester :)"
 
 	L.Duffed_HELP_CONTENT8_TITLE = "Bekannte Fehler"
 	L.Duffed_HELP_CONTENT8_LINE1 = ""
 	L.Duffed_HELP_CONTENT8_LINE2 = "Hier werdet ihr eine Liste bekannter Fehler in DuffedUI finden."
 	L.Duffed_HELP_CONTENT8_LINE3 = "Fehler:"
-	L.Duffed_HELP_CONTENT8_LINE4 = "- Itemlevel wird nicht am Charakterbildschirm angezeigt (Fehler in der Aufwertfunktion seit 5.1)\n- Itemlevel wird am Tooltip falsch berechnet"
+	L.Duffed_HELP_CONTENT8_LINE4 = ""
 
 	L.Duffed_HELP_CONTENT7_TITLE = "coming soon"
 	L.Duffed_HELP_CONTENT7_LINE1 = ""
@@ -60,21 +73,21 @@ if D.client == "deDE" then
 
 	L.Duffed_HELP_CONTENT3_TITLE = "Buttons"
 	L.Duffed_HELP_CONTENT3_LINE1 = "Unterhalb der Minimap findet ihr einige Buttons die unterschiedliche Funktionen haben."
-	L.Duffed_HELP_CONTENT3_LINE2 = "R => L\195\164dt das UI neu\nH => Wechselt zum Heilerlayout (Raidframes)"
+	L.Duffed_HELP_CONTENT3_LINE2 = "R => Laedt das UI neu\nH => Wechselt zum Heilerlayout (Raidframes)"
 	L.Duffed_HELP_CONTENT3_LINE3 = "D => Wechselt zum DPS / Tank-Layout (Raidframes)\nA => Addonmanager"
-	L.Duffed_HELP_CONTENT3_LINE4 = "M => Aktiviert die beweglichen Frames\nC => \195\150ffnet die ingameConfig\nK => Aktiviert die Funktion f\195\188r Tastenk\195\188rzel"
+	L.Duffed_HELP_CONTENT3_LINE4 = "M => Aktiviert die beweglichen Frames\nC => Oeffnet die ingameConfig\nK => Aktiviert die Funktion fuer Tastenkuerzel"
 
 	L.Duffed_HELP_CONTENT2_TITLE = "Specswitcher"
-	L.Duffed_HELP_CONTENT2_LINE1 = "Das Specswitcherplugin findet ihr am rechten ChatTab-Hintergrund. Damit habt ihr die M\195\150glichkeit mit einem Klick eure Skillung und Gegenstandset zu wechseln."
+	L.Duffed_HELP_CONTENT2_LINE1 = "Das Specswitcherplugin findet ihr am rechten ChatTab-Hintergrund. Damit habt ihr die Moeglichkeit mit einem Klick eure Skillung und Gegenstandset zu wechseln."
 	L.Duffed_HELP_CONTENT2_LINE2 = ""
-	L.Duffed_HELP_CONTENT2_LINE3 = "Als weitere Option k\195\150nnt ihr einstellen welches Gegenstandsset f\195\188r welche Skillung automatisch genutzt wird oder auch diese Funktion abzuschalten."
+	L.Duffed_HELP_CONTENT2_LINE3 = "Als weitere Option koennt ihr einstellen welches Gegenstandsset fuer welche Skillung automatisch genutzt wird oder auch diese Funktion abzuschalten."
 	L.Duffed_HELP_CONTENT2_LINE4 = "Die Funktion kann bis zu 10 unterschiedliche Sets enthalten"
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => \195\150ffnet dieses Panel\n/resetui => Setzt die Positionen der Frames der UI zur\195\188ck\n/install => Installiert das gesamte UI neu"
-	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Aktiviert die Anker zum plazieren der UI-Elemente\n/kb => Setzt Tastaturk\195\188rzel via Hoverbind\n/rl => L\195\164dt die UI neu"
-	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Wechselt zum Heilerlayout\n/dps => Wechselt zum DPS / Tank-Layout\n/dc => \195\150ffnet die ingameConfig\n/ddbm apply => \195\188bernimmt das DBM-Skin"
-	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => \195\188bernimmt das BigWigs-Skin\n/am => \195\150ffnet den Addonmanager\n/version => Zeigt den Versionshinweis\n/farmmode => Aktiviert den Farmmodus"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Oeffnet dieses Panel\n/resetui => Setzt die Positionen der Frames der UI zurueck\n/install => Installiert das gesamte UI neu"
+	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Aktiviert die Anker zum plazieren der UI-Elemente\n/kb => Setzt Tastaturkuerzel via Hoverbind\n/rl => Laedt die UI neu"
+	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Wechselt zum Heilerlayout\n/dps => Wechselt zum DPS / Tank-Layout\n/dc => Oeffnet die ingameConfig\n/ddbm apply => Uebernimmt das DBM-Skin"
+	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Uebernimmt das BigWigs-Skin\n/am => Oeffnet den Addonmanager\n/version => Zeigt den Versionshinweis\n/farmmode => Aktiviert den Farmmodus"
 	
 	L.chat_INSTANCE_CHAT = "I"
 	L.chat_INSTANCE_CHAT_LEADER = "IL"
@@ -105,6 +118,11 @@ if D.client == "deDE" then
 	L.datatext_notalents ="Keine Spezalisierung"  --changed
 	L.datatext_download = "Download: "
 	L.datatext_bandwidth = "Bandbreite: "
+	L.datatext_inc = "Eingehend"
+	L.datatext_out = "Ausgehend"
+	L.datatext_home = "Heimlatenz:"
+	L.datatext_world = "Weltlatenz:"
+	L.datatext_global = "Globale Latenz:"
 	L.datatext_guild = "Gilde"
 	L.datatext_noguild = "Keine Gilde"
 	L.datatext_bags = "Tasche: "
