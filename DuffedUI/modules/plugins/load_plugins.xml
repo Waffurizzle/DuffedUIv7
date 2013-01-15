@@ -19,6 +19,7 @@
 	<Script file="ilvlr.lua" />
 	<Script file="itemcooldowns.lua" />
 	<Script file="loc.lua" />
+	<Script file="location.lua" />
 	<Script file="mage.lua" />
 	<Script file="mail.lua" />
 	<Script file="mmbskin.lua" />

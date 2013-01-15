@@ -182,100 +182,102 @@ end)
 -- Mouseover map, displaying zone and coords
 ----------------------------------------------------------------------------------------
 
-local m_zone = CreateFrame("Frame", "DuffedUIMinimapZone", DuffedUIMinimap)
-m_zone:SetTemplate()
-m_zone:Size(0,20)
-m_zone:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", 2,-2)
-m_zone:SetFrameLevel(Minimap:GetFrameLevel() + 3)
-m_zone:SetFrameStrata(Minimap:GetFrameStrata())
-m_zone:Point("TOPRIGHT",DuffedUIMinimap,-2,-2)
-m_zone:SetAlpha(0)
-G.Maps.Minimap.Zone = m_zone
-
-local m_zone_text = m_zone:CreateFontString("DuffedUIMinimapZoneText", "Overlay")
-m_zone_text:SetFont(C["media"].font,12)
-m_zone_text:Point("TOP", 0, -1)
-m_zone_text:SetPoint("BOTTOM")
-m_zone_text:Height(12)
-m_zone_text:Width(m_zone:GetWidth()-6)
-m_zone_text:SetAlpha(0)
-G.Maps.Minimap.Zone.Text = m_zone_text
-
-local m_coord = CreateFrame("Frame", "DuffedUIMinimapCoord", DuffedUIMinimap)
-m_coord:SetTemplate()
-m_coord:Size(40,20)
-m_coord:Point("BOTTOMLEFT", DuffedUIMinimap, "BOTTOMLEFT", 2,2)
-m_coord:SetFrameLevel(Minimap:GetFrameLevel() + 3)
-m_coord:SetFrameStrata(Minimap:GetFrameStrata())
-m_coord:SetAlpha(0)
-G.Maps.Minimap.Coord = m_coord
-
-local m_coord_text = m_coord:CreateFontString("DuffedUIMinimapCoordText", "Overlay")
-m_coord_text:SetFont(C["media"].font,12)
-m_coord_text:Point("Center", -1, 0)
-m_coord_text:SetAlpha(0)
-m_coord_text:SetText("00,00")
-G.Maps.Minimap.Coord.Text = m_coord_text
-
-Minimap:SetScript("OnEnter", function()
-	m_zone:SetAlpha(1)
-	m_zone_text:SetAlpha(1)
-	m_coord:SetAlpha(1)
-	m_coord_text:SetAlpha(1)
-end)
-
-Minimap:SetScript("OnLeave", function()
+if C["misc"].location == false then
+	local m_zone = CreateFrame("Frame", "DuffedUIMinimapZone", DuffedUIMinimap)
+	m_zone:SetTemplate()
+	m_zone:Size(0,20)
+	m_zone:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", 2,-2)
+	m_zone:SetFrameLevel(Minimap:GetFrameLevel() + 3)
+	m_zone:SetFrameStrata(Minimap:GetFrameStrata())
+	m_zone:Point("TOPRIGHT",DuffedUIMinimap,-2,-2)
 	m_zone:SetAlpha(0)
+	G.Maps.Minimap.Zone = m_zone
+
+	local m_zone_text = m_zone:CreateFontString("DuffedUIMinimapZoneText", "Overlay")
+	m_zone_text:SetFont(C["media"].font,12)
+	m_zone_text:Point("TOP", 0, -1)
+	m_zone_text:SetPoint("BOTTOM")
+	m_zone_text:Height(12)
+	m_zone_text:Width(m_zone:GetWidth()-6)
 	m_zone_text:SetAlpha(0)
+	G.Maps.Minimap.Zone.Text = m_zone_text
+
+	local m_coord = CreateFrame("Frame", "DuffedUIMinimapCoord", DuffedUIMinimap)
+	m_coord:SetTemplate()
+	m_coord:Size(40,20)
+	m_coord:Point("BOTTOMLEFT", DuffedUIMinimap, "BOTTOMLEFT", 2,2)
+	m_coord:SetFrameLevel(Minimap:GetFrameLevel() + 3)
+	m_coord:SetFrameStrata(Minimap:GetFrameStrata())
 	m_coord:SetAlpha(0)
+	G.Maps.Minimap.Coord = m_coord
+
+	local m_coord_text = m_coord:CreateFontString("DuffedUIMinimapCoordText", "Overlay")
+	m_coord_text:SetFont(C["media"].font,12)
+	m_coord_text:Point("Center", -1, 0)
 	m_coord_text:SetAlpha(0)
-end)
- 
-local ela = 0
-local coord_Update = function(self, t)
-	ela = ela - t
-	if ela > 0 then return end
-	local x, y = GetPlayerMapPosition("player")
-	local xt, yt
-	x = math.floor(100 * x)
-	y = math.floor(100 * y)
-	if x == 0 and y == 0 then
-		m_coord_text:SetText("X _ X")
-	else
-		if x < 10 then
-			xt = "0"..x
+	m_coord_text:SetText("00,00")
+	G.Maps.Minimap.Coord.Text = m_coord_text
+
+	Minimap:SetScript("OnEnter", function()
+		m_zone:SetAlpha(1)
+		m_zone_text:SetAlpha(1)
+		m_coord:SetAlpha(1)
+		m_coord_text:SetAlpha(1)
+	end)
+
+	Minimap:SetScript("OnLeave", function()
+		m_zone:SetAlpha(0)
+		m_zone_text:SetAlpha(0)
+		m_coord:SetAlpha(0)
+		m_coord_text:SetAlpha(0)
+	end)
+	 
+	local ela = 0
+	local coord_Update = function(self, t)
+		ela = ela - t
+		if ela > 0 then return end
+		local x, y = GetPlayerMapPosition("player")
+		local xt, yt
+		x = math.floor(100 * x)
+		y = math.floor(100 * y)
+		if x == 0 and y == 0 then
+			m_coord_text:SetText("X _ X")
 		else
-			xt = x
+			if x < 10 then
+				xt = "0"..x
+			else
+				xt = x
+			end
+			if y < 10 then
+				yt = "0"..y
+			else
+				yt = y
+			end
+			m_coord_text:SetText(xt..","..yt)
 		end
-		if y < 10 then
-			yt = "0"..y
+		ela = .2
+	end
+	m_coord:SetScript("OnUpdate",coord_Update)
+	 
+	local zone_Update = function()
+		local pvp = GetZonePVPInfo()
+		m_zone_text:SetText(GetMinimapZoneText())
+		if pvp == "friendly" then
+			m_zone_text:SetTextColor(.1, 1, .1)
+		elseif pvp == "sanctuary" then
+			m_zone_text:SetTextColor(.41, .8, .94)
+		elseif pvp == "arena" or pvp == "hostile" then
+			m_zone_text:SetTextColor(1, .1, .1)
+		elseif pvp == "contested" then
+			m_zone_text:SetTextColor(1, .7, 0)
 		else
-			yt = y
+			m_zone_text:SetTextColor(1, 1, 1)
 		end
-		m_coord_text:SetText(xt..","..yt)
 	end
-	ela = .2
+	 
+	m_zone:RegisterEvent("PLAYER_ENTERING_WORLD")
+	m_zone:RegisterEvent("ZONE_CHANGED_NEW_AREA")
+	m_zone:RegisterEvent("ZONE_CHANGED")
+	m_zone:RegisterEvent("ZONE_CHANGED_INDOORS")
+	m_zone:SetScript("OnEvent",zone_Update)
 end
-m_coord:SetScript("OnUpdate",coord_Update)
- 
-local zone_Update = function()
-	local pvp = GetZonePVPInfo()
-	m_zone_text:SetText(GetMinimapZoneText())
-	if pvp == "friendly" then
-		m_zone_text:SetTextColor(.1, 1, .1)
-	elseif pvp == "sanctuary" then
-		m_zone_text:SetTextColor(.41, .8, .94)
-	elseif pvp == "arena" or pvp == "hostile" then
-		m_zone_text:SetTextColor(1, .1, .1)
-	elseif pvp == "contested" then
-		m_zone_text:SetTextColor(1, .7, 0)
-	else
-		m_zone_text:SetTextColor(1, 1, 1)
-	end
-end
- 
-m_zone:RegisterEvent("PLAYER_ENTERING_WORLD")
-m_zone:RegisterEvent("ZONE_CHANGED_NEW_AREA")
-m_zone:RegisterEvent("ZONE_CHANGED")
-m_zone:RegisterEvent("ZONE_CHANGED_INDOORS")
-m_zone:SetScript("OnEvent",zone_Update)

@@ -23,6 +23,7 @@
 	DuffedUIConfigUILocalization.miscsesset2 = "为第二套天赋设置装备序号 (必须是1-10之间的序号)"
 	DuffedUIConfigUILocalization.miscgold = "启用聊天框体中获取金钱名称缩写功能."
 	DuffedUIConfigUILocalization.miscchatalert = "启用聊天警报"
+	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "插件美化皮肤"

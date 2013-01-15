@@ -23,7 +23,8 @@
 	DuffedUIConfigUILocalization.miscsesset2 = "Set set for second spec (must be an value between 1 - 10)"
 	DuffedUIConfigUILocalization.miscgold = "Enable shorten golddisplay in chat"
 	DuffedUIConfigUILocalization.miscchatalert = "Enable Chatalert"
-	DuffedUIConfigUILocalization.miscloc = "Disable Loss of Control for actionbars (added 5.1 from Blizzard)"
+	DuffedUIConfigUILocalization.miscloc = "Disable Loss of Control for actionbars"
+	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "Skins"

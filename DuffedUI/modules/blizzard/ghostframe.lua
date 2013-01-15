@@ -13,10 +13,14 @@ GhostFrameContentsFrame:Width(148)
 GhostFrameContentsFrame:ClearAllPoints()
 GhostFrameContentsFrame:SetPoint("CENTER")
 GhostFrameContentsFrame.SetPoint = D.dummy
-GhostFrame:SetFrameStrata("HIGH")
-GhostFrame:SetFrameLevel(10)
+GhostFrame:SetFrameStrata("LOW")
+GhostFrame:SetFrameLevel(5)
 GhostFrame:ClearAllPoints()
-GhostFrame:Point("TOP", UIParent, 0, 26)
+if C["misc"].location == true then
+	GhostFrame:Point("TOP", UIParent, 0, 6)
+else
+	GhostFrame:Point("TOP", UIParent, 0, 26)
+end
 GhostFrameContentsFrameText:ClearAllPoints()
 GhostFrameContentsFrameText:Point("BOTTOM", 0, 5)
 

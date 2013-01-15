@@ -174,6 +174,7 @@ C["misc"] = {
 	["flightpoint"] = true,										-- enable flightpoint list
 	["ilvlcharacter"] = true,									-- enable itemlevel display on charscreen
 	["loc"] = true,												-- disable loss of control
+	["location"] = true,										-- enable location panel
 }
 
 C["duffed"] = {

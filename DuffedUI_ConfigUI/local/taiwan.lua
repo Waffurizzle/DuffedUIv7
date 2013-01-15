@@ -23,7 +23,8 @@
 	DuffedUIConfigUILocalization.miscsesset2 = "為第二套天賦設置裝備序號 (必須是1-10之間的序號)"
 	DuffedUIConfigUILocalization.miscgold = "啟用聊天框體中獲取金錢名稱縮寫功能."
 	DuffedUIConfigUILocalization.miscchatalert = "啟用聊天警報"
-	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能(暴雪5.1添加功能)"
+	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
+	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "其他插件程式美化皮膚"

@@ -23,7 +23,8 @@
 	DuffedUIConfigUILocalization.miscsesset2 = "Aktiviere Set f\195\188r zweite Spezalisierung (muss ein Wer zwischen 1 - 10 sein)"
 	DuffedUIConfigUILocalization.miscgold = "Aktiviere gek\195\188rzte Goldanzeige im Chat"
 	DuffedUIConfigUILocalization.miscchatalert = "Aktiviere Chatalarm"
-	DuffedUIConfigUILocalization.miscloc = "Deaktiviere Loss of Control an den Aktionsleisten (hinzugefügt von Blizzard in 5.1)"
+	DuffedUIConfigUILocalization.miscloc = "Deaktiviere Loss of Control an den Aktionsleisten"
+	DuffedUIConfigUILocalization.misclocation = "Aktviere / Deaktviere Ortsanzeige"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "AddOn-Skins"
