@@ -207,7 +207,8 @@ spellCooldowns = {
 		82327, -- Holy Radiance
 		31842, -- Divine Favor
 		114158, -- Light's Hammer
-		86669, -- Guardian of Ancient Kings
+		105809, -- Holy Avenger
+		114916, -- Execution Sentence
 	},
 	["DEATHKNIGHT"] = {
 		43265, -- Death and Decay

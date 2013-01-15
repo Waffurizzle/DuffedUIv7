@@ -1,4 +1,4 @@
-local D, C, L, G = unpack(select(2, ...))
+--[[local D, C, L, G = unpack(select(2, ...))
 
 local Version = tonumber(GetAddOnMetadata("DuffedUI", "Version"))
 local SendAddonMessage = SendAddonMessage
@@ -34,4 +34,4 @@ DuffedUIVersionOnLogon:RegisterEvent("GROUP_ROSTER_UPDATE")
 DuffedUIVersionOnLogon:RegisterEvent("CHAT_MSG_ADDON")
 DuffedUIVersionOnLogon:SetScript("OnEvent", CheckCurrentDuffedUIVersion)
 
-RegisterAddonMessagePrefix("DuffedUI")
+RegisterAddonMessagePrefix("DuffedUI")]]--
