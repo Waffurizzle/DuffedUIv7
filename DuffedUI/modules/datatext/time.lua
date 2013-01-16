@@ -85,7 +85,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		GameTooltip:SetOwner(panel, anchor, xoff, yoff)
 		GameTooltip:ClearLines()
 		local pvp = GetNumWorldPVPAreas()
-		for i=1, pvp do
+		for i = 1, pvp do
 			local timeleft = select(5, GetWorldPVPAreaInfo(i))
 			local name = select(2, GetWorldPVPAreaInfo(i))
 			local inprogress = select(3, GetWorldPVPAreaInfo(i))
@@ -95,9 +95,9 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			elseif inprogress then
 				timeleft = WINTERGRASP_IN_PROGRESS
 			else
-				local hour = tonumber(format("%01.f", floor(timeleft/3600)))
-				local min = format(hour>0 and "%02.f" or "%01.f", floor(timeleft/60 - (hour*60)))
-				local sec = format("%02.f", floor(timeleft - hour*3600 - min *60)) 
+				local hour = tonumber(format("%01.f", floor(timeleft / 3600)))
+				local min = format(hour>0 and "%02.f" or "%01.f", floor(timeleft / 60 - (hour * 60)))
+				local sec = format("%02.f", floor(timeleft - hour * 3600 - min * 60)) 
 				timeleft = (hour>0 and hour..":" or "")..min..":"..sec
 			end
 			GameTooltip:AddDoubleLine(L.datatext_timeto.." "..name,timeleft)
@@ -157,6 +157,22 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			GameTooltip:AddDoubleLine(name, fmttime(reset),1 ,1, 1, tr, tg, tb)
 			end
 		end
+
+		GameTooltip:AddLine(" ")
+		local quests = {}
+		local updateQuestTable = false
+		local function OnEvent(self, event)
+			if event == "QUEST_COMPLETE" then
+				updateQuestTable = true
+			elseif (event == "QUEST_LOG_UPDATE" and updateQuestTable) then
+				wipe(quests)
+				quests = GetQuestsCompleted()
+				updateQuestTable = false
+			end
+		end
+		GameTooltip:AddDoubleLine(L.worldboss_title)
+		GameTooltip:AddDoubleLine("Sha of Anger:", quests[32099] and L.worldboss_defeated or L.worldboss_undefeated, 1, 1, 1, 0.8, 0.8, 0.8)
+		GameTooltip:AddDoubleLine("Galleon:", quests[32098] and L.worldboss_defeated or L.worldboss_undefeated, 1, 1, 1, 0.8, 0.8, 0.8)
 		GameTooltip:Show()
 	end)
 	

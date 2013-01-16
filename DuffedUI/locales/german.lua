@@ -5,6 +5,11 @@ if D.client == "deDE" then
 	L.UI_Talent_Change_Bug = "A blizzard bug has occured which is preventing you from changing your talents, this happen when you've inspected someone. Unfortunatly there is nothing we can do in this WoW Patch to fix it, please reload your ui and try again."
 	L.welcome_1 = "Hallo |cffc41f3b".. D.myname.."!|r".."\n".."Danke das du |cffc41f3bDuffedUI "..D.version.."|r benutzt (basecode von Tukui)."
 	L.welcome_2 = "Fuer detailierte Informationen besuche doch |cffc41f3bhttp://www.tukui.org|r. Fuer zusaetzliche Hilfe nutzen den H-Button oder gebe im Chat /dhelp ein."
+
+	-- worldboss
+	L.worldboss_title = "Weltboss(e):"
+	L.worldboss_defeated = "Besiegt"
+	L.worldboss_undefeated = "Unbesiegt"
 	
 	-- specswitcher buttons
 	L.sesbutton_reload = "Laedt das UI neu"

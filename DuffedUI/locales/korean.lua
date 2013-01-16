@@ -5,6 +5,11 @@ if D.client == "koKR" then
 	L.UI_Talent_Change_Bug = "A blizzard bug has occured which is preventing you from changing your talents, this happen when you've inspected someone. Unfortunatly there is nothing we can do in this WoW Patch to fix it, please reload your ui and try again."
 	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui)."
 	L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat."
+
+	-- worldboss
+	L.worldboss_title = "World Boss(s):"
+	L.worldboss_defeated = "Defeated"
+	L.worldboss_undefeated = "Undefeated"
 	
 	-- specswitcher buttons
 	L.sesbutton_reload = "Reloads the entire UI"

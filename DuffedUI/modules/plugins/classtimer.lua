@@ -65,6 +65,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(126577), -- Light of the Cosmos
 	CreateSpellEntry(126534), -- Vial of the Dragon's Blood
 	CreateSpellEntry(126554), -- Bottle of Infinite Stars
+	CreateSpellEntry(126599), -- Jade Charioteer Figurine
 	
 	-- Terrace of Endless Spring
 	CreateSpellEntry(126646), -- Stuff of Nightmares

@@ -8,7 +8,7 @@
 	DuffedUIConfigUILocalization.castbarspark = "啟用施法條閃爍"
 	DuffedUIConfigUILocalization.castbarcolor = "設定施法條顏色"
 	DuffedUIConfigUILocalization.castbarclasscolor = "啟用施法條按職業顏色著著色"
-	DuffedUIConfigUILocalization.castbarcbticks = "Enable castbar ticks for channeled casts."
+	DuffedUIConfigUILocalization.castbarcbticks = "啟用施法條取消技能施放提示音"
 
 	-- misc
 	DuffedUIConfigUILocalization.misc = "雜項"
@@ -24,7 +24,8 @@
 	DuffedUIConfigUILocalization.miscgold = "啟用聊天框體中獲取金錢名稱縮寫功能."
 	DuffedUIConfigUILocalization.miscchatalert = "啟用聊天警報"
 	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
-	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
+	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
+	DuffedUIConfigUILocalization.misclocation = "啟用/禁用頂部地理位置信息欄"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "其他插件程式美化皮膚"
@@ -115,12 +116,12 @@
 	DuffedUIConfigUILocalization.datatextfriends = "好友(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextwowtime = "時間(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextgold = "金幣(輸入0關閉)"
-	DuffedUIConfigUILocalization.datatextgold_a = "Enable display of Archaeologyfragment"
-	DuffedUIConfigUILocalization.datatextgold_c = "Enable display of Cooking Awards"
-	DuffedUIConfigUILocalization.datatextgold_jc = "Enable display of Jewelcrafting Tokens"
-	DuffedUIConfigUILocalization.datatextgold_dr = "Enable display of Justice- & Valorpoints"
-	DuffedUIConfigUILocalization.datatextgold_pvp = "Enable display of Honor- & Conquestpoints"
-	DuffedUIConfigUILocalization.datatextgold_misc = "Enable display of miscellaneous Currency"
+	DuffedUIConfigUILocalization.datatextgold_a = "顯示考古學碎片统计"
+	DuffedUIConfigUILocalization.datatextgold_c = "顯示烹飪獎勵勳章统计"
+	DuffedUIConfigUILocalization.datatextgold_jc = "顯示珠寶代幣統計"
+	DuffedUIConfigUILocalization.datatextgold_dr = "顯示正義&勇氣點數統計"
+	DuffedUIConfigUILocalization.datatextgold_pvp = "顯示榮譽&征服點數統計"
+	DuffedUIConfigUILocalization.datatextgold_misc = "顯示各項混雜貨幣統計"
 	DuffedUIConfigUILocalization.datatextdps_text = "DPS (輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextcrit = "爆擊 % (輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextdur = "耐久度(輸入0關閉)"
@@ -181,8 +182,8 @@
 	DuffedUIConfigUILocalization.unitframesshowstatuebar = "顯示狀態條（職業條必須開啟的情況下）"
 	DuffedUIConfigUILocalization.unitframesbordercolor = "設置為默認的邊框顏色"
 	DuffedUIConfigUILocalization.unitframesruneofpower = "啟用秘法符能能量條（法師）"
-	DuffedUIConfigUILocalization.unitframesfader = "Enable Fader for unitframes"
-	DuffedUIConfigUILocalization.unitframesminalpha = "Set minimum alpha for Fader (default = 0.1)"
+	DuffedUIConfigUILocalization.unitframesfader = "啟用頭像漸隱"
+	DuffedUIConfigUILocalization.unitframesminalpha = "設定頭像漸隱最低透明度(默認 = 0.1)"
 
 	DuffedUIConfigUILocalization.unitframesshowrange = "啟用小隊/團隊距離檢測"
 	DuffedUIConfigUILocalization.unitframesraidalphaoor = "小隊/團隊超出距離透明值"

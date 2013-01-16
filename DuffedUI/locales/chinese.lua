@@ -3,20 +3,20 @@ local D, C, L, G = unpack(select(2, ...))
 if D.client == "zhCN" then
 	L.UI_Outdated = "DuffedUI 版本已过期，请至 www.tukui.org 下载最新版"
 	L.UI_Talent_Change_Bug = "一个由暴雪产生的故障已阻止你改变你当前的天赋,这发生在你使用观察功能查看其他玩家角色装备时.不幸的是在这个魔兽补丁中我们对修正它无能为力,请/reload你的插件界面并且再次尝试."
-	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui)."
-	L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat."
-	
-	-- specswitcher buttons
-	L.sesbutton_reload = "Reloads the entire UI"
-	L.sesbutton_heal = "Switch to heal-layout"
-	L.sesbutton_dps = "Switch to dps-layout"
-	L.sesbutton_am = "Open Addonmanager"
-	L.sesbutton_move = "Move the frames"
-	L.sesbutton_config = "DuffedUI Config"
-	L.sesbutton_kb = "Set your keybindings"
-	L.sesbutton_help = "Open the Helpframe for DuffedUI"
-	L.sesbutton_Thelp = "Help"
+	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."感谢您使用|cffc41f3bDuffedUI "..D.version.."|r (基于Tukui编译)."
+	L.welcome_2 = "详细信息请访问 |cffc41f3bhttp://www.tukui.org|r. 进一步信息及额外的使用帮助请使用小地图 H 按钮或者聊天窗口输入/dhelp."
 
+	-- specswitcher buttons
+	L.sesbutton_reload = "重新载入Ui界面"
+	L.sesbutton_heal = "切换到治疗布局"
+	L.sesbutton_dps = "切换到Dps输出布局"
+	L.sesbutton_am = "打开插件管理器 Addonmanager"
+	L.sesbutton_move = "移动框体"
+	L.sesbutton_config = "DuffedUI 设置"
+	L.sesbutton_kb = "设置你的按键绑定"
+	L.sesbutton_help = "打开DuffedUI帮助面板"
+	L.sesbutton_Thelp = "帮助"
+	
 	-- helpframe
 	L.Duffed_HELP_HEADER = "|cffc41f3bDuffedUI|r - 帮助"
 	L.Duffed_HELP_BUTTON1 = "命令行"
@@ -119,11 +119,11 @@ if D.client == "zhCN" then
 
 	L.datatext_download = "下载： "
 	L.datatext_bandwidth = "带宽："
-	L.datatext_inc = "Incoming"
-	L.datatext_out = "Outgoing"
-	L.datatext_home = "Home Latency:"
-	L.datatext_world = "World Latency:"
-	L.datatext_global = "Global Latency:"
+	L.datatext_inc = "接收"
+	L.datatext_out = "发送"
+	L.datatext_home = "本地延迟:"
+	L.datatext_world = "世界延迟:"
+	L.datatext_global = "全局延迟:"
 	L.datatext_guild = "公会"
 	L.datatext_noguild = "没有公会"
 	L.datatext_bags = "背包 "
@@ -146,10 +146,10 @@ if D.client == "zhCN" then
 	L.datatext_character = "角色："
 	L.datatext_server = "服务器："
 	L.datatext_totalgold = "总共："
-	L.gametooltip_gold_a = "Archaeology: "
-	L.gametooltip_gold_c = "Cooking: "
-	L.gametooltip_gold_jc = "Jewelcrafting: "
-	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.gametooltip_gold_a = "考古学: "
+	L.gametooltip_gold_c = "烹饪: "
+	L.gametooltip_gold_jc = "珠宝: "
+	L.gametooltip_gold_dr = "地城 & 团队: "
 	L.datatext_savedraid = "已保存进度的团队副本"
 	L.datatext_currency = "兑换通货："
 	L.datatext_fps = " 帧数 & "
@@ -192,9 +192,9 @@ if D.client == "zhCN" then
 	L.datatext_control = "控制方："
 	L.datatext_cta_allunavailable = "无法获取战斗的召唤信息."
 	L.datatext_cta_nodungeons = "目前没有可用的战斗的召唤地下城."
-	L.datatext_carts_controlled = "Carts Controlled:"
-	L.datatext_victory_points = "征服点数:"
-	L.datatext_orb_possessions = "Orb Possessions:"
+	L.datatext_carts_controlled = "矿车控制:"
+	L.datatext_victory_points = "胜利点数:"
+	L.datatext_orb_possessions = "能量宝珠点数:"
 
 	L.Slots = {
 		[1] = {1, "头部", 1000},

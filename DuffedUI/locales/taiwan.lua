@@ -3,20 +3,21 @@ local D, C, L, G = unpack(select(2, ...))
 if D.client == "zhTW" then
 	L.UI_Outdated = "DuffedUI 版本已過期，請至 www.tukui.org 下載最新版"
 	L.UI_Talent_Change_Bug = "一個由暴雪產生的故障已阻止你改變你當前的天賦,這發生在你使用觀察功能查看其他玩家角色裝備時.不幸的是在這個魔獸補丁中我們對修正它無能為力,請/reload你的Ui程式介面並且再次嘗試."
-	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."Thank you for using |cffc41f3bDuffedUI "..D.version.."|r (basecode from Tukui)."
-	L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. For further information and additional help use the H-Button or type /dhelp in chat."
-	
-	-- specswitcher buttons
-	L.sesbutton_reload = "Reloads the entire UI"
-	L.sesbutton_heal = "Switch to heal-layout"
-	L.sesbutton_dps = "Switch to dps-layout"
-	L.sesbutton_am = "Open Addonmanager"
-	L.sesbutton_move = "Move the frames"
-	L.sesbutton_config = "DuffedUI Config"
-	L.sesbutton_kb = "Set your keybindings"
-	L.sesbutton_help = "Open the Helpframe for DuffedUI"
-	L.sesbutton_Thelp = "Help"
 
+	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."感謝您使用|cffc41f3bDuffedUI "..D.version.."|r (基於Tukui編譯)."
+	L.welcome_2 = "詳細資訊請訪問 |cffc41f3bhttp://www.tukui.org|r. 進一步資訊及額外的使用幫助請使用小地圖 H 按鈕或者聊天窗口輸入/dhelp."
+
+	-- specswitcher buttons
+	L.sesbutton_reload = "重新載入Ui介面"
+	L.sesbutton_heal = "切換到治療佈局"
+	L.sesbutton_dps = "切換到Dps輸出佈局"
+	L.sesbutton_am = "打開插件管理器 Addonmanager"
+	L.sesbutton_move = "移動框體"
+	L.sesbutton_config = "DuffedUI 設置"
+	L.sesbutton_kb = "設置您的按鍵綁定"
+	L.sesbutton_help = "打開DuffedUI幫助面板"
+	L.sesbutton_Thelp = "幫助"
+	
 	-- helpframe 
 	L.Duffed_HELP_HEADER = "|cffc41f3bDuffedUI|r - 帮助" 
 	L.Duffed_HELP_BUTTON1 = "快捷命令" 
@@ -118,11 +119,11 @@ if D.client == "zhTW" then
 	L.datatext_notalents ="無天賦"
 	L.datatext_download = "下載: "
 	L.datatext_bandwidth = "寬頻: "
-	L.datatext_inc = "Incoming"
-	L.datatext_out = "Outgoing"
-	L.datatext_home = "Home Latency:"
-	L.datatext_world = "World Latency:"
-	L.datatext_global = "Global Latency:"
+	L.datatext_inc = "接收"
+	L.datatext_out = "發送"
+	L.datatext_home = "本地延遲:"
+	L.datatext_world = "世界延遲:"
+	L.datatext_global = "全局延遲:"
 	L.datatext_guild = "公會"
 	L.datatext_noguild = "沒有公會"
 	L.datatext_bags = "背包: "
@@ -145,10 +146,10 @@ if D.client == "zhTW" then
 	L.datatext_character = "角色: "
 	L.datatext_server = "伺服器: "
 	L.datatext_totalgold = "總額: "
-	L.gametooltip_gold_a = "Archaeology: "
-	L.gametooltip_gold_c = "Cooking: "
-	L.gametooltip_gold_jc = "Jewelcrafting: "
-	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.gametooltip_gold_a = "考古學: "
+	L.gametooltip_gold_c = "烹飪: "
+	L.gametooltip_gold_jc = "珠寶: "
+	L.gametooltip_gold_dr = "地城 & 團隊: "
 	L.datatext_savedraid = "已有進度的團隊副本"
 	L.datatext_currency = "兌換通貨:"
 	L.datatext_fps = " fps & "
@@ -191,9 +192,9 @@ if D.client == "zhTW" then
 	L.datatext_control = "控制方:"
 	L.datatext_cta_allunavailable = "無法獲取戰鬥的召喚信息."
 	L.datatext_cta_nodungeons = "目前沒有可用的戰鬥的召喚地下城."
-	L.datatext_carts_controlled = "購物車:"
+	L.datatext_carts_controlled = "礦車控制:"
 	L.datatext_victory_points = "勝利點數:"
-	L.datatext_orb_possessions = "珠寶財務:"
+	L.datatext_orb_possessions = "能量寶珠點數:"
  
 	L.Slots = {
 		[1] = {1, "頭部", 1000},

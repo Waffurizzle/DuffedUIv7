@@ -67,6 +67,7 @@ spellCooldowns = {
 		108280, -- Healing Tide Totem
 		120668, -- Stormlash Totem
 		108285, -- Call of the Elements
+		5394, -- Healing Stream Totem
 	},
 	["ROGUE"] = {
 		1856, -- Vanish
