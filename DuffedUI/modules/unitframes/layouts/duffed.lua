@@ -1034,6 +1034,10 @@ local function Shared(self, unit)
 			self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', D.UpdateThreat)
 			self:RegisterEvent('UNIT_THREAT_SITUATION_UPDATE', D.UpdateThreat)
 		end
+
+		if unit == "player" then
+			self:RegisterEvent("PLAYER_ENTERING_WORLD", D.updateAllElements)
+		end
 	end
 	
 	------------------------------------------------------------------------

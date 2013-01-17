@@ -10,21 +10,25 @@ if not C["actionbar"].enable == true then return end
 local bar = DuffedUIBar1
 if C["actionbar"].swap and C["actionbar"].layout == 1 then bar = DuffedUIBar2 end
 
-local shd = 7
-local meta = ""
-local warstance = ""
+-- warrior custom paging
+local warrior = ""
+if C["actionbar"].ownwarstancebar then warrior = "[stance:1] 7; [stance:2] 8; [stance:3] 9;" end
 
-if C["actionbar"].ownshdbar then shd = 10 end
-if C["actionbar"].ownmetabar then meta = "[stance:1] 10; [stance:2] 10;" end
-if C["actionbar"].ownwarstancebar then warstance = "[stance:1] 7; [stance:2] 8; [stance:3] 9;" end
+-- rogue custom paging
+local rogue = ""
+if C["actionbar"].ownshdbar then rogue = "[stance:3] 10; " end
+
+-- warlock custom paging
+local warlock = ""
+if C["actionbar"].ownmetabar then warlock = "[stance:1] 10; " end
 
 local Page = {
 	["DRUID"] = "[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] 8; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;",
-	["WARRIOR"] = warstance,
+	["WARRIOR"] = warrior,
 	["PRIEST"] = "[bonusbar:1] 7;",
-	["ROGUE"] = "[bonusbar:1] 7; [stance:3] "..shd..";",
+	["ROGUE"] = rogue.."[bonusbar:1] 7;",
+	["WARLOCK"] = warlock,
 	["MONK"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;",
-	["WARLOCK"] = meta,
 	["DEFAULT"] = "[vehicleui:12] 12; [possessbar] 12; [overridebar] 14; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6;",
 }
 
@@ -35,7 +39,8 @@ local function GetBar()
 	if page then
 		condition = condition.." "..page
 	end
-	condition = condition.." 1"
+
+	condition = condition.." [form] 1; 1"
 
 	return condition
 end
@@ -63,7 +68,11 @@ bar:SetScript("OnEvent", function(self, event, unit, ...)
 			end
 		]])
 
-		self:SetAttribute("_onstate-page", [[ 
+		self:SetAttribute("_onstate-page", [[
+			if HasTempShapeshiftActionBar() then
+				newstate = GetTempShapeshiftBarIndex() or newstate
+			end
+
 			for i, button in ipairs(buttons) do
 				button:SetAttribute("actionpage", tonumber(newstate))
 			end

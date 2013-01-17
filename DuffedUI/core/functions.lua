@@ -1344,7 +1344,13 @@ D.UpdateManaLevel = function(self, elapsed)
 	if self.parent.unit ~= "player" or UpdateManaLevelDelay < .2 or UnitIsDeadOrGhost("player") or UnitPowerType("player") ~= 0 then return end
 	UpdateManaLevelDelay = 0
 
-	local percMana = UnitMana("player") / UnitManaMax("player") * 100
+	--local percMana = UnitMana("player") / UnitManaMax("player") * 100
+	local mana = UnitMana("player")
+	local maxmana = UnitManaMax("player")
+
+	if maxmana == 0 then return end
+
+	local percMana = mana / maxmana * 100
 
 	if percMana <= C["unitframes"].lowThreshold then
 		self.ManaLevel:SetText("|cffaf5050"..L.unitframes_ouf_lowmana.."|r")

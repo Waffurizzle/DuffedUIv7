@@ -239,6 +239,12 @@ local function LoadSkin()
 			end
 		end
 	end)
+
+	-- Channel Pullout
+	ChannelPulloutBackground:Hide()
+	ChannelPullout:SetTemplate()
+	ChannelPulloutCloseButton:SkinCloseButton()
+	ChannelPulloutTab:SkinTab()
 end
 
 tinsert(D.SkinFuncs["DuffedUI"], LoadSkin)
