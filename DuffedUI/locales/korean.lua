@@ -89,7 +89,7 @@ if D.client == "koKR" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "It can be created and utilize up to ten equipsets."
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/resetui => Reset the position of the entire UI\n/install => Reinstall the entire UI"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/reset => Reset the position of the entire UI\n/install => Reinstall the entire UI"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Enable movers to place the UI-Elements\n/kb => Set keybindings via hoverbind\n/rl => Reloads the UI"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Switch to Heal-Layout\n/dps => Switch to DPS-Layout\n/dc => Open ingame-Config\n/ddbm apply => Apply the DBM-Skin"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Apply the BigWigs-Skin\n/am => Open Addonmanager\n/version => Shows the versionframe\n/farmmode => Enable the farmmode"
@@ -302,7 +302,7 @@ if D.client == "koKR" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - 힐러용 공격대 레이아웃을 사용합니다."
 	L.core_uihelp7 = "|cffFF0000/dps|r - DPS/탱커용 레이아웃을 사용합니다."
 	L.core_uihelp8 = "|cffFF0000/bags|r - 분류, 정리, 가방 보관함을 추가 구입을 할 수 있습니다."
-	L.core_uihelp9 = "|cffFF0000/resetui|r - DuffedUI를 기본값으로 초기화 합니다."
+	L.core_uihelp9 = "|cffFF0000/reset|r - DuffedUI를 기본값으로 초기화 합니다."
 	L.core_uihelp10 = "|cffFF0000/rd|r - 공격대를 해체합니다."
 	L.core_uihelp11 = "|cffFF0000/ainv|r - 자동초대 기능을 사용합니다. '/ainv 단어'를 입력하여 해당 단어가 들어간 귓속말이 올 경우 자동으로 초대를 합니다."
 	L.core_uihelp100 = "(위로 올리십시오 ...)"
@@ -381,7 +381,7 @@ if D.client == "koKR" then
 	L.tutorial_step_5_line_1 = "마지막으로, DuffedUI는 유용한 슬래시 명령어를 포함하고 있습니다. 하기 리스트를 참고하세요."
 	L.tutorial_step_5_line_2 = "/moveui는 화면 어디든 많은 프레임 이동을 가능하게 합니다. /enable과 /disable은 빠르게 애드온 적용과 미적용에 사용됩니다. /rl은 UI를 다시 불러올때. /heal은 힐러 레이드 유닛프레임을 사용 /dps는 딜러/탱커 레이드 유닛프레임을 사용."
 	L.tutorial_step_5_line_3 = "/tt는 대상타겟에게 귓속말을 보낼때. /rc는 전투준비 체크. /rd 파티나 레이드 해체. /bags 명령어 라인으로 가능한 몇가지 기능을 보여줍니다. /ainv 귓속말 대상 자동초대를 가능하게 합니다. (/ainv off) 자동초대 기능 끄기"
-	L.tutorial_step_5_line_4 = "/gm 지엠창 끄기 켜기. /install, /resetui 또는 /tutorial은 설치를 불러옵니다. /frame 커서가 위치한 프레임의 이름과 추가정보를 보여줍니다."
+	L.tutorial_step_5_line_4 = "/gm 지엠창 끄기 켜기. /install, /reset 또는 /tutorial은 설치를 불러옵니다. /frame 커서가 위치한 프레임의 이름과 추가정보를 보여줍니다."
 
 	L.tutorial_step_6_line_1 = "지침서가 완료되었습니다. 재조정을 원하시면 언제든지 /tutorial 입력하시면 됩니다."
 	L.tutorial_step_6_line_2 = "config/config.lua 파일을 살펴보시기 바랍니다. 혹은 /DuffedUI 입력을 통해 원하시는대로 UI 구성을 하시면 됩니다."

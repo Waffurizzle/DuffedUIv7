@@ -89,7 +89,7 @@ L.Duffed_HELP_CONTENT2_LINE3 = "As an option, the plugin also provides to determ
 L.Duffed_HELP_CONTENT2_LINE4 = "It can be created and utilize up to ten equipsets."
 
 L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/resetui => Reset the position of the entire UI\n/install => Reinstall the entire UI"
+L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/reset => Reset the position of the entire UI\n/install => Reinstall the entire UI"
 L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Enable movers to place the UI-Elements\n/kb => Set keybindings via hoverbind\n/rl => Reloads the UI"
 L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Switch to Heal-Layout\n/dps => Switch to DPS-Layout\n/dc => Open ingame-Config\n/ddbm apply => Apply the DBM-Skin"
 L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Apply the BigWigs-Skin\n/am => Open Addonmanager\n/version => Shows the versionframe\n/farmmode => Enable the farmmode"
@@ -295,7 +295,7 @@ L.core_uihelp5 = "|cffFF0000/frame|r - Detect the frame name your mouse is curre
 L.core_uihelp6 = "|cffFF0000/heal|r - Enable Healing raid layout."
 L.core_uihelp7 = "|cffFF0000/dps|r - Enable DDPS/Tank raid layout."
 L.core_uihelp8 = "|cffFF0000/bags|r - For sorting, buying bank slots, or stacking items in your bags."
-L.core_uihelp9 = "|cffFF0000/resetui|r - Reset DuffedUI to default."
+L.core_uihelp9 = "|cffFF0000/reset|r - Reset DuffedUI to default."
 L.core_uihelp10 = "|cffFF0000/rd|r - Disband raid."
 L.core_uihelp11 = "|cffFF0000/ainv|r - Enable autoinvite via keyword on whisper. You can set your own keyword by typing `/ainv myword`"
 L.core_uihelp100 = "(Scroll up for more commands ...)"

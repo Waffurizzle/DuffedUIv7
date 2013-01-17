@@ -90,7 +90,7 @@ if D.client == "ptBR" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "It can be created and utilize up to ten equipsets."
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/resetui => Reset the position of the entire UI\n/install => Reinstall the entire UI"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/reset => Reset the position of the entire UI\n/install => Reinstall the entire UI"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Enable movers to place the UI-Elements\n/kb => Set keybindings via hoverbind\n/rl => Reloads the UI"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Switch to Heal-Layout\n/dps => Switch to DPS-Layout\n/dc => Open ingame-Config\n/ddbm apply => Apply the DBM-Skin"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Apply the BigWigs-Skin\n/am => Open Addonmanager\n/version => Shows the versionframe\n/farmmode => Enable the farmmode"
@@ -296,7 +296,7 @@ if D.client == "ptBR" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - Activa o layout de curandeiro na raide."
 	L.core_uihelp7 = "|cffFF0000/dps|r - Activa o layout de Dps/Tank na raide."
 	L.core_uihelp8 = "|cffFF0000/bags|r - Para organização, compra de espaço no banco ou empilhamento de itens nos seus sacos."
-	L.core_uihelp9 = "|cffFF0000/resetui|r - Redefine para a DuffedUI padrão."
+	L.core_uihelp9 = "|cffFF0000/reset|r - Redefine para a DuffedUI padrão."
 	L.core_uihelp10 = "|cffFF0000/rd|r - Raide Dissolvida."
 	L.core_uihelp11 = "|cffFF0000/ainv|r - Activa o convite automático via palavra chave por sussurro. voce pode defenir a sua própria palavra chave escrevendo `/ainv myword`"
 	L.core_uihelp100 = "(Scroll para cima para mais comandos ...)"
@@ -385,7 +385,7 @@ if D.client == "ptBR" then
 	L.tutorial_step_5_line_1 = " Finalmente, a DuffedUI inclui comandos slash muito úteis. Em baixo está uma lista." 
 	L.tutorial_step_5_line_2 = "/moveui permite mover muitos quadros para qualquer sitio do ecrã. /enable e /disable são usados para rapidamente activar e desactivar addons. /rl recarrega a UI. /heal activa os quadros de raide para o modo curandeiro. /dps activa os quadros de raide para o modo dps/tank."
 	L.tutorial_step_5_line_3 = "/tt permite sussurrar ao seu alvo. /rc inicia um 'verificador de prontidão'. /rd dissolve um grupo ou uma raide. /bags mostra algumas opções disponíveis via linha de comandos. /ainv activa o autoinvite a quem o pedir via sussurro. (/ainv off) para desactivar."
-	L.tutorial_step_5_line_4 = "/gm mostra/oculta o quadro de ajuda. /install, /resetui or /tutorial carrega este instalador. /frame mostra o nome do quadro por baixo do cursor com informação adicional."
+	L.tutorial_step_5_line_4 = "/gm mostra/oculta o quadro de ajuda. /install, /reset or /tutorial carrega este instalador. /frame mostra o nome do quadro por baixo do cursor com informação adicional."
 
 	-- tutorial 6
 	L.tutorial_step_6_line_1 = "O tutorial está completo. Você pode escolher revê-lo a qualquer altura escrevendo /tutorial." 

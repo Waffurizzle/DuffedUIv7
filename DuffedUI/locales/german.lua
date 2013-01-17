@@ -89,7 +89,7 @@ if D.client == "deDE" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "Die Funktion kann bis zu 10 unterschiedliche Sets enthalten"
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Oeffnet dieses Panel\n/resetui => Setzt die Positionen der Frames der UI zurueck\n/install => Installiert das gesamte UI neu"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Oeffnet dieses Panel\n/reset => Setzt die Positionen der Frames der UI zurueck\n/install => Installiert das gesamte UI neu"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Aktiviert die Anker zum plazieren der UI-Elemente\n/kb => Setzt Tastaturkuerzel via Hoverbind\n/rl => Laedt die UI neu"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Wechselt zum Heilerlayout\n/dps => Wechselt zum DPS / Tank-Layout\n/dc => Oeffnet die ingameConfig\n/ddbm apply => Uebernimmt das DBM-Skin"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Uebernimmt das BigWigs-Skin\n/am => Oeffnet den Addonmanager\n/version => Zeigt den Versionshinweis\n/farmmode => Aktiviert den Farmmodus"
@@ -295,7 +295,7 @@ if D.client == "deDE" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - Heil-Layout aktivieren."
 	L.core_uihelp7 = "|cffFF0000/dps|r - Dps/Tank-Layout aktivieren."
 	L.core_uihelp8 = "|cffFF0000/bags|r - Taschen sortieren, Bankplätze kaufen oder gegenstände stapeln."
-	L.core_uihelp9 = "|cffFF0000/resetui|r - Auf DuffedUI Standard zurücksetzen."
+	L.core_uihelp9 = "|cffFF0000/reset|r - Auf DuffedUI Standard zurücksetzen."
 	L.core_uihelp10 = "|cffFF0000/rd|r - Raid auflösen."
 	L.core_uihelp11 = "|cffFF0000/ainv|r - Automatische Gruppeneinladung beim Anflüstern mit Schlüsselwort aktivieren. Du kannst dein eigenes Schlüsselwort mit `/ainv myword` einstellen"
 	L.core_uihelp100 = "(Hochscrollen wenn du mehr Befehle sehen willst ...)"
@@ -374,7 +374,7 @@ if D.client == "deDE" then
     L.tutorial_step_5_line_1 = "Zu guter Letzt beinhaltet DuffedUI eine Reihe nützlicher Kommandos."
     L.tutorial_step_5_line_2 = "/moveui erlaubt Dir das Bewegen vieler Fenster überall auf dem Bildschirm. /enable und /disable sind nützlich um schnell Addons ein- oder auszuschalten. /rl lädt das Interface neu. /heal aktiviert das Heiler-Raidinterface und /dps aktiviert das Tank/DPS-Raidinterface."
     L.tutorial_step_5_line_3 = "/tt erlaubt es dir, dein Ziel anzuflüstern. /rc startet einen Bereitschaftscheck. /rd löst Deine Gruppe oder Raid auf. /bags zeigt einige Funktionen, die über die Kommandozeile verfügbar sind. /ainv aktiviert automatisches Einladen per anflüstern. (/ainv off) deaktiviert dies wieder."
-    L.tutorial_step_5_line_4 = "/gm öffnet das Hilfe-Fenster. /install, /resetui oder /tutorial lädt dieses Installationsprogramm. /frame zeigt den Namen des Fensters unter deinem Mauszeiger und dem des übergeordneten Fensters mit einigen anderen Informationen an."
+    L.tutorial_step_5_line_4 = "/gm öffnet das Hilfe-Fenster. /install, /reset oder /tutorial lädt dieses Installationsprogramm. /frame zeigt den Namen des Fensters unter deinem Mauszeiger und dem des übergeordneten Fensters mit einigen anderen Informationen an."
 
     L.tutorial_step_6_line_1 = "Die Einführung ist abgeschlossen. Du kannst sie jeder Zeit wieder starten, indem Du /tutorial eingibst."
     L.tutorial_step_6_line_2 = "Ich schlage vor, Du wirfst mal einen Blick auf die Datei DuffedUI/config/config.lua oder gibst /tukui ein, um das Interface deinen Bedürfnissen anzupassen."

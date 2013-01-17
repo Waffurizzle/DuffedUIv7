@@ -565,7 +565,7 @@ SlashCmdList.VERSION = function() if v:IsShown() then v:Hide() else v:Show() end
 SLASH_CONFIGURE1 = "/install"
 SlashCmdList.CONFIGURE = install
 
-SLASH_RESETUI1 = "/resetui"
+SLASH_RESETUI1 = "/reset"
 SlashCmdList.RESETUI = function() f:Show() step1() end
 
 D.CreatePopup["DUFFEDUIDISABLE_UI"] = {

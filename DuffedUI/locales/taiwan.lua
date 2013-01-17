@@ -85,7 +85,7 @@ if D.client == "zhTW" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "他可以支持創建及設定多達10套裝備." 
 
 	L.Duffed_HELP_CONTENT1_TITLE = "快速指令" 
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => 打開這個幫助面板\n/resetui => 重置插件的所有描點位置為原狀\n/install => 重新安裝所有Duffed設置(當你的聊天框或者某個功能出現問題時)" 
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => 打開這個幫助面板\n/reset => 重置插件的所有描點位置為原狀\n/install => 重新安裝所有Duffed設置(當你的聊天框或者某個功能出現問題時)" 
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => 移動所有界面元素(頭像,任務追踪)\n/kb => 滑鼠,鼠標移動到動作條上進行熱鍵綁定\n/rl => 重載UI" 
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => 切換到治療佈局\n/dps => 切換到Dps佈局\n/dc => 打開Tukui遊戲內置控制台\n/ddbm apply => 應用特殊的 DBM-Skin(皮膚)" 
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => 應用特殊的 BigWigs-Skin(皮膚)\n/am => 打開 Addonmanager(內置插件管理器)\n/version => 顯示插件版本號\n/farmmode => Enable the farmmode" 
@@ -291,7 +291,7 @@ if D.client == "zhTW" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - 啟用Heal介面"
 	L.core_uihelp7 = "|cffFF0000/dps|r - 啟用Dps/Tank介面"
 	L.core_uihelp8 = "|cffFF0000/bags|r - 排序背包, 購買銀行背包位置或堆疊物品"
-	L.core_uihelp9 = "|cffFF0000/resetui|r - 重置DuffedUI到預設設置"
+	L.core_uihelp9 = "|cffFF0000/reset|r - 重置DuffedUI到預設設置"
 	L.core_uihelp10 = "|cffFF0000/rd|r - 解散團隊"
 	L.core_uihelp11 = "|cffFF0000/ainv|r - 啟用密語自動邀請, 您可以設定輸入`/ainv myword`以設置您的密語關鍵字"
 	L.core_uihelp100 = "(想看更多? 向上拉吧! ...)"
@@ -370,7 +370,7 @@ if D.client == "zhTW" then
 	L.tutorial_step_5_line_1 = "最近，DuffedUI有許多實用的指令，以下列表。"
 	L.tutorial_step_5_line_2 = "/moveui 允許你移動畫面上大部分的框架。 /enable 及 /disable 快速啟用或關閉插件。 /rl 重新載入UI。 /heal 啟用治療者團隊框架。 /dps 啟用傷害輸出/坦克團隊框架。"
 	L.tutorial_step_5_line_3 = "/tt 密語目標。 /rc 發起團隊確認。 /rd 解散隊伍或團隊。 /bags 顯示可用的背包指令。 /ainv 啟用自動密語邀請。(/ainv off 關閉功能)"
-	L.tutorial_step_5_line_4 = "/gm 開啟尋求幫助選單。 /install, /resetui 或 /tutorial 載入安裝程序。 /frame 列出滑鼠游標下的框架名稱及額外資訊。"
+	L.tutorial_step_5_line_4 = "/gm 開啟尋求幫助選單。 /install, /reset 或 /tutorial 載入安裝程序。 /frame 列出滑鼠游標下的框架名稱及額外資訊。"
 
 	L.tutorial_step_6_line_1 = "指南到此結束，您可藉由輸入/tutorial 以再次諮詢。"
 	L.tutorial_step_6_line_2 = "建議您開啟config/config.lua或鍵入/DuffedUI來自訂符合您需求的UI。"

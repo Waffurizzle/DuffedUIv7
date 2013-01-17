@@ -89,7 +89,7 @@ if D.client == "ruRU" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "It can be created and utilize up to ten equipsets."
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/resetui => Reset the position of the entire UI\n/install => Reinstall the entire UI"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/reset => Reset the position of the entire UI\n/install => Reinstall the entire UI"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Enable movers to place the UI-Elements\n/kb => Set keybindings via hoverbind\n/rl => Reloads the UI"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Switch to Heal-Layout\n/dps => Switch to DPS-Layout\n/dc => Open ingame-Config\n/ddbm apply => Apply the DBM-Skin"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Apply the BigWigs-Skin\n/am => Open Addonmanager\n/version => Shows the versionframe\n/farmmode => Enable the farmmode"
@@ -295,7 +295,7 @@ if D.client == "ruRU" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - Включить рейдовый интерфейс для хила."
 	L.core_uihelp7 = "|cffFF0000/dps|r - Включить рейдовый интерфейс для ДПС/Танка."
 	L.core_uihelp8 = "|cffFF0000/bags|r - Сортировка сумок, покупка слотов в банке."
-	L.core_uihelp9 = "|cffFF0000/resetui|r - Сбросить DuffedUI к настройкам по умолчанию."
+	L.core_uihelp9 = "|cffFF0000/reset|r - Сбросить DuffedUI к настройкам по умолчанию."
 	L.core_uihelp10 = "|cffFF0000/rd|r - Распустить рейд."
 	L.core_uihelp11 = "|cffFF0000/ainv|r - Включить автоинвайт по определенному слову в приват. Вы можете установить ваше слово коммандой `/ainv слово`"
 	L.core_uihelp100 = "(Прокрутите вверх, чтобы увидеть больше команд...)"
@@ -374,7 +374,7 @@ if D.client == "ruRU" then
 	L.tutorial_step_5_line_1 = "Напоследок, TukUI имеет широкий набор консольных команд (слэш-команды). Ниже приведен список некоторых из них. "
 	L.tutorial_step_5_line_2 = "/moveui позволяет вам двигать почти все элементы интерфейса на любую точку. /enable and /disable используются для быстрого включения и отключения аддонов (модификаций). /rl перезагружает интерфейс. /heal включает интерфейс хилера (лекаря), а /dps включает интерфейс для ДДшников (ДПСеров) и танков."
 	L.tutorial_step_5_line_3 = "/tt позволяет Вам послать сообщение вашей цели. /rc производить проверку готовности вашей группы/рейда (рэди-чек). /rd распускает группу или рейд. /bags отображает некоторые особенности команд, используемых через командную строку.. /ainv включает автоматическое приглашение в группу (инвайт) через посылку Вам сообщения. /ainv off отключает эту функцию"
-	L.tutorial_step_5_line_4 = "/gm открывает окно помощи. /install, /resetui или /tutorial загружает данный установщик. /frame показывает вам имя и дополнительную информацию об элементе интерфейса, на который Вы навели курсор."
+	L.tutorial_step_5_line_4 = "/gm открывает окно помощи. /install, /reset или /tutorial загружает данный установщик. /frame показывает вам имя и дополнительную информацию об элементе интерфейса, на который Вы навели курсор."
 
 	L.tutorial_step_6_line_1 = "Введение завершено. Вы можете повторить его в любое время, просто напечатав /tutorial."
 	L.tutorial_step_6_line_2 = "Рекомендую Вам взглянуть на файл конфигурации, который находится по пути config/config.lua, или же просто напечатайте /DuffedUI для настройки интерфейса, как Вам нравится."

@@ -84,7 +84,7 @@ if D.client == "zhCN" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "它可以创建和启用多达十套装备."
 
 	L.Duffed_HELP_CONTENT1_TITLE = "命令行"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => 打开帮主面板\n/resetui => 重置所有UI界面\n/install => 重新安装整个UI"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => 打开帮主面板\n/reset => 重置所有UI界面\n/install => 重新安装整个UI"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => 移动界面内元素\n/kb => 设置按键\n/rl => 重载界面"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => 切换到治疗界面\n/dps => 切换到DPS/坦克界面\n/dc => 打开游戏内设置\n/ddbm apply => 启用DBM皮肤"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => 启用BigWigs皮肤\n/am => 打开插件管理器\n/version => 显示插件版本\n/farmmode => Enable the farmmode"
@@ -291,7 +291,7 @@ if D.client == "zhCN" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - 启用团队治疗框体样式。"
 	L.core_uihelp7 = "|cffFF0000/dps|r - 启用Dps/Tank 团队样式。"
 	L.core_uihelp8 = "|cffFF0000/bags|r - 整理背包，购买银行栏位或者购买物品。"
-	L.core_uihelp9 = "|cffFF0000/resetui|r - 重置所有框体配置文件至原始的DuffedUI。"
+	L.core_uihelp9 = "|cffFF0000/reset|r - 重置所有框体配置文件至原始的DuffedUI。"
 	L.core_uihelp10 = "|cffFF0000/rd|r - 解散团队。"
 	L.core_uihelp11 = "|cffFF0000/ainv|r - 通过M语关键词启用自动邀请。你可以通过在聊天框输入“/ainv 你的关键词”来设置你自己的关键词。"
 	L.core_uihelp100 = "（向下滚动以获取更多的指令。）"
@@ -379,7 +379,7 @@ if D.client == "zhCN" then
 	L.tutorial_step_5_line_1 = "最后，DuffedUI有一些实用的命令，下面是列表"
 	L.tutorial_step_5_line_2 = "/moveui 允许你移动屏幕上的大多数框体至任何地方。 /enable 和 /disable 被用于快速开启或关闭大多数插件。 /rl 重载插件。 /heal 启用治疗团队框架。/dps 启用坦克/输出团队框架。"
 	L.tutorial_step_5_line_3 = "/tt 让你M语你的目标 /rc 立即进行团队就绪检查 /rd 解散团队或小队 /bags 通过命令行来显示一些可用信息 /ainv 通过M语你来启用自动邀请 (/ainv off) 关闭自动邀请。"
-	L.tutorial_step_5_line_4 = "/gm 打开帮助面板 /install, /resetui or /tutorial 载入安装程序 /frame 在聊天框里输入当前鼠标下框体的一些额外的信息。"
+	L.tutorial_step_5_line_4 = "/gm 打开帮助面板 /install, /reset or /tutorial 载入安装程序 /frame 在聊天框里输入当前鼠标下框体的一些额外的信息。"
 
 	-- tutorial 6
 	L.tutorial_step_6_line_1 = "教程结束了。你可以在任何时候输入/tutorial来重新参看教程。"

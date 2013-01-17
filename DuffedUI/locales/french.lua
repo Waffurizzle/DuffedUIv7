@@ -89,7 +89,7 @@ if D.client == "frFR" then
 	L.Duffed_HELP_CONTENT2_LINE4 = "It can be created and utilize up to ten equipsets."
 
 	L.Duffed_HELP_CONTENT1_TITLE = "Slashcommands"
-	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/resetui => Reset the position of the entire UI\n/install => Reinstall the entire UI"
+	L.Duffed_HELP_CONTENT1_LINE1 = "/dhelp => Open this panel\n/reset => Reset the position of the entire UI\n/install => Reinstall the entire UI"
 	L.Duffed_HELP_CONTENT1_LINE2 = "/moveui or /mduffedui => Enable movers to place the UI-Elements\n/kb => Set keybindings via hoverbind\n/rl => Reloads the UI"
 	L.Duffed_HELP_CONTENT1_LINE3 = "/heal => Switch to Heal-Layout\n/dps => Switch to DPS-Layout\n/dc => Open ingame-Config\n/ddbm apply => Apply the DBM-Skin"
 	L.Duffed_HELP_CONTENT1_LINE4 = "/dbigwigs apply => Apply the BigWigs-Skin\n/am => Open Addonmanager\n/version => Shows the versionframe\n/farmmode => Enable the farmmode"
@@ -296,7 +296,7 @@ if D.client == "frFR" then
 	L.core_uihelp6 = "|cffFF0000/heal|r - Active le schéma de raid soigneur."
 	L.core_uihelp7 = "|cffFF0000/dps|r - Active le schéma de raid dps/tank."
 	L.core_uihelp8 = "|cffFF0000/bags|r - Pour trier, acheter un emplacement à la banque ou empiler les objets dans vos sacs."
-	L.core_uihelp9 = "|cffFF0000/resetui|r - Relance DuffedUI par défaut."
+	L.core_uihelp9 = "|cffFF0000/reset|r - Relance DuffedUI par défaut."
 	L.core_uihelp10 = "|cffFF0000/rd|r - Dissout le raid."
 	L.core_uihelp11 = "|cffFF0000/ainv|r - Active l'auto-invitation via mot clef par message privé. Vous pouvez définir votre mot clef en saisissant la commande `/ainv votremot`"
 	L.core_uihelp100 = "(Faites défiler le texte vers le haut pour plus de commandes...)"
@@ -375,7 +375,7 @@ if D.client == "frFR" then
 	L.tutorial_step_5_line_1 = "Enfin, DuffedUI comprend des commandes utiles. Voici la liste ci-dessous."
 	L.tutorial_step_5_line_2 = "/moveui vous permet de bouger beaucoup de cadres n'importe où à l'écran. /enable et /disable sont utilisés pour (dés)activer des addons. /rl recharge l'interface. /heal active l'interface de raid pour soigneur et /dps active l'interface raid pour dps/tank."
 	L.tutorial_step_5_line_3 = "/tt vous permet du chuchoter à votre cible. /rc permet de demander si tout le monde est prêt. /rd dissoud un groupe ou raid. /bags affiche quelques options disponibles par ligne de commande. /ainv active l'auto-invitation en vous chuchotant. (/ainv off) pour le désactiver"
-	L.tutorial_step_5_line_4 = "/gm affiche la fenêtre d'aide. Les commandes /install, /resetui ou /tutorial lancent cette installation. /frame affiche le nom et parent du cadre sous le curseur avec des informations supplémentaires."
+	L.tutorial_step_5_line_4 = "/gm affiche la fenêtre d'aide. Les commandes /install, /reset ou /tutorial lancent cette installation. /frame affiche le nom et parent du cadre sous le curseur avec des informations supplémentaires."
 
 	L.tutorial_step_6_line_1 = "Le tutoriel est terminé. Vous pouvez le reconsulter à tout moment en tapant /tutorial."
 	L.tutorial_step_6_line_2 = "Je vous suggère de regarder le fichier /config/config.lua ou en tapant /DuffedUI pour customiser l'interface selon vos besoins."
