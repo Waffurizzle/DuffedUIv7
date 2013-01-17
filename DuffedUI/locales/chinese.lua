@@ -1,4 +1,4 @@
-local D, C, L, G = unpack(select(2, ...))
+﻿local D, C, L, G = unpack(select(2, ...))
 
 if D.client == "zhCN" then
 	L.UI_Outdated = "DuffedUI 版本已过期，请至 www.tukui.org 下载最新版"

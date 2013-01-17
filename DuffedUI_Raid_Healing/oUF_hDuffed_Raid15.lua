@@ -29,6 +29,7 @@ local function Shared(self, unit)
 	health:SetStatusBarTexture(normTex)
 	health:CreateBackdrop()
 	self.Health = health
+	if C["unitframes"].gridhealthvertical == true then health:SetOrientation('VERTICAL') end
 	
 	health.bg = health:CreateTexture(nil, 'BORDER')
 	health.bg:SetAllPoints(health)
@@ -44,7 +45,6 @@ local function Shared(self, unit)
 	self.Health.value = health.value
 	
 	health.PostUpdate = D.PostUpdateHealthRaid
-	
 	health.frequentUpdates = true
 	
 	if C["unitframes"].unicolor == true then

@@ -159,20 +159,16 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		end
 
 		GameTooltip:AddLine(" ")
-		local quests = {}
-		local updateQuestTable = false
-		local function OnEvent(self, event)
-			if event == "QUEST_COMPLETE" then
-				updateQuestTable = true
-			elseif (event == "QUEST_LOG_UPDATE" and updateQuestTable) then
-				wipe(quests)
-				quests = GetQuestsCompleted()
-				updateQuestTable = false
-			end
-		end
 		GameTooltip:AddDoubleLine(L.worldboss_title)
-		GameTooltip:AddDoubleLine("Sha of Anger:", quests[32099] and L.worldboss_defeated or L.worldboss_undefeated, 1, 1, 1, 0.8, 0.8, 0.8)
-		GameTooltip:AddDoubleLine("Galleon:", quests[32098] and L.worldboss_defeated or L.worldboss_undefeated, 1, 1, 1, 0.8, 0.8, 0.8)
+		local z , t, s = {[32099] = "Sha of Anger:", [32098] = "Galleon:"}, GetQuestsCompleted() 
+		for c, v in pairs(z) do 
+			if t[c] then
+				s='' 
+			else 
+				s=' not' 
+			end
+			GameTooltip:AddDoubleLine(v, s.." done", 1, 1, 1)
+		end
 		GameTooltip:Show()
 	end)
 	
