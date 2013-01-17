@@ -7,6 +7,7 @@ assert(oUF, "DuffedUI was unable to locate oUF install.")
 
 ns._Objects = {}
 ns._Headers = {}
+
 ------------------------------------------------------------------------
 --	local variables
 ------------------------------------------------------------------------
@@ -961,7 +962,7 @@ local function Shared(self, unit)
 					castbar.button:Size(25)
 					castbar.button:Point("RIGHT",castbar,"LEFT", -4, 0)
 				elseif unit == "target" then
-					castbar.button:Size(27)
+					castbar.button:Size(25)
 					castbar.button:Point("BOTTOM", castbar, "TOP", 0, 5)
 				end
 
@@ -972,7 +973,7 @@ local function Shared(self, unit)
 			end
 			
 			-- cast bar latency on player
-			if unit == "player" and C["castbar"].cblatency == true then
+			if unit == "player" and C["castbar"].cblatency then
 				castbar.safezone = castbar:CreateTexture(nil, "ARTWORK")
 				castbar.safezone:SetTexture(normTex)
 				castbar.safezone:SetVertexColor(0.69, 0.31, 0.31, 0.75)

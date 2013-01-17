@@ -1,5 +1,5 @@
 local D, C, L, G = unpack(select(2, ...))
-if not C["unitframes"].enable == true or C["unitframes"].layout ~= 1 then return end
+if not C["unitframes"].enable or C["unitframes"].layout ~= 1 then return end
 
 local ADDON_NAME, ns = ...
 local oUF = ns.oUF or oUF
@@ -7,6 +7,7 @@ assert(oUF, "DuffedUI was unable to locate oUF install.")
 
 ns._Objects = {}
 ns._Headers = {}
+
 ------------------------------------------------------------------------
 --	local variables
 ------------------------------------------------------------------------
@@ -59,6 +60,7 @@ local function Shared(self, unit)
 	RaidIcon:SetPoint("TOP", 0, 8)
 	self.RaidIcon = RaidIcon
 	
+	-- Fader
 	if C["unitframes"].fader == true then
 		self.FadeCasting = true
 		self.FadeCombat = true
@@ -71,6 +73,7 @@ local function Shared(self, unit)
 		self.FadeMinAlpha = C["unitframes"].minalpha
 		self.FadeMaxAlpha = 1
 	end
+	
 	------------------------------------------------------------------------
 	--	Player and Target units layout (mostly mirror'd)
 	------------------------------------------------------------------------
@@ -945,9 +948,9 @@ local function Shared(self, unit)
 				
 				if unit == "player" then
 					castbar.button:Size(25)
-					castbar.button:Point("RIGHT",castbar,"LEFT", -5, 0)
+					castbar.button:Point("RIGHT",castbar,"LEFT", -4, 0)
 				elseif unit == "target" then
-					castbar.button:Size(27)
+					castbar.button:Size(25)
 					castbar.button:Point("BOTTOM", castbar, "TOP", 0, 5)
 				end
 
@@ -958,7 +961,7 @@ local function Shared(self, unit)
 			end
 			
 			-- cast bar latency on player
-			if unit == "player" and C["castbar"].cblatency == true then
+			if unit == "player" and C["castbar"].cblatency then
 				castbar.safezone = castbar:CreateTexture(nil, "ARTWORK")
 				castbar.safezone:SetTexture(normTex)
 				castbar.safezone:SetVertexColor(0.69, 0.31, 0.31, 0.75)

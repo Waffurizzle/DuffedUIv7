@@ -1,5 +1,5 @@
 local D, C, L, G = unpack(select(2, ...))
-if not C["unitframes"].enable == true or C["unitframes"].layout ~= 3 then return end
+if not C["unitframes"].enable or C["unitframes"].layout ~= 3 then return end
 
 local ADDON_NAME, ns = ...
 local oUF = ns.oUF or oUF
@@ -213,7 +213,7 @@ local function Shared(self, unit)
 			ws:GetStatusBarTexture():SetHorizTile(false)
 			ws:SetBackdrop(backdrop)
 			ws:SetBackdropColor(unpack(C["media"].backdropcolor))
-			ws:SetStatusBarColor(191/255, 10/255, 10/255)
+			ws:SetStatusBarColor(205/255, 20/255, 20/255)
 			
 			self.WeakenedSoul = ws
 		end
@@ -931,6 +931,7 @@ local function Shared(self, unit)
 				castbar:Point("LEFT", TCBanchor, "LEFT", 0, 0)
 			end
 			
+			castbar.CustomTimeText = D.CustomCastTimeText
 			castbar.CustomDelayText = D.CustomCastDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
@@ -939,7 +940,6 @@ local function Shared(self, unit)
 			castbar.time:Point("RIGHT", castbar, "RIGHT", -5, 0)
 			castbar.time:SetTextColor(0.84, 0.75, 0.65)
 			castbar.time:SetJustifyH("RIGHT")
-			castbar.CustomTimeText = D.CustomCastTimeText
 
 			castbar.Text = D.SetFontString(castbar, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 			castbar.Text:Point("LEFT", castbar, "LEFT", 6, 0)
