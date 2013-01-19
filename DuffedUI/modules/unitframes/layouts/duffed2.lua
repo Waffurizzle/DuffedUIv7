@@ -937,7 +937,7 @@ local function Shared(self, unit)
 			end
 			
 			castbar.CustomTimeText = D.CustomTimeText
-			castbar.CustomTimeText = D.CustomDelayText
+			castbar.CustomTimeText = D.CustomCastDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 
@@ -1200,7 +1200,7 @@ local function Shared(self, unit)
 			castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
 			castbar.CustomTimeText = D.CustomTimeText
-			castbar.CustomTimeText = D.CustomDelayText
+			castbar.CustomTimeText = D.CustomCastDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 			
@@ -1396,7 +1396,7 @@ local function Shared(self, unit)
 			castbar.Text:SetPoint("LEFT", castbar, "LEFT", 4, 0)
 			castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
-			castbar.CustomTimeText = D.CustomDelayText
+			castbar.CustomTimeText = D.CustomCastDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 			
@@ -1779,7 +1779,7 @@ local function Shared(self, unit)
 		castbar.time:SetJustifyH("RIGHT")
 		castbar.CustomTimeText = D.CustomTimeText
 		
-		castbar.CustomTimeText = D.CustomDelayText
+		castbar.CustomTimeText = D.CustomCastDelayText
 		castbar.PostCastStart = D.castbar
 		castbar.PostChannelStart = D.castbar
 		
