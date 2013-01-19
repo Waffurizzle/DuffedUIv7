@@ -10,7 +10,6 @@ if D.client == "ptBR" then
 	-- worldboss
 	L.worldboss_title = "World Boss(s):"
 	L.worldboss_defeated = "Defeated"
-	L.worldboss_undefeated = "Undefeated"
 	
 	-- specswitcher buttons
 	L.sesbutton_reload = "Reloads the entire UI"

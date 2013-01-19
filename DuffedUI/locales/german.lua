@@ -9,7 +9,6 @@ if D.client == "deDE" then
 	-- worldboss
 	L.worldboss_title = "Weltboss(e):"
 	L.worldboss_defeated = "Besiegt"
-	L.worldboss_undefeated = "Unbesiegt"
 	
 	-- specswitcher buttons
 	L.sesbutton_reload = "Laedt das UI neu"

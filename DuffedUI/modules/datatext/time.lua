@@ -167,7 +167,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			else 
 				s=' not' 
 			end
-			GameTooltip:AddDoubleLine(v, s.." done", 1, 1, 1)
+			GameTooltip:AddDoubleLine(v, s.." "..L.worldboss_defeated, 1, 1, 1)
 		end
 		GameTooltip:Show()
 	end)

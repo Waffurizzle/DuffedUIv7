@@ -6,6 +6,10 @@ if D.client == "zhCN" then
 	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."感谢您使用|cffc41f3bDuffedUI "..D.version.."|r (基于Tukui编译)."
 	L.welcome_2 = "详细信息请访问 |cffc41f3bhttp://www.tukui.org|r. 进一步信息及额外的使用帮助请使用小地图 H 按钮或者聊天窗口输入/dhelp."
 
+	-- worldboss 世界Boss
+	L.worldboss_title = "世界Boss:"
+	L.worldboss_defeated = "击杀"
+	
 	-- specswitcher buttons
 	L.sesbutton_reload = "重新载入Ui界面"
 	L.sesbutton_heal = "切换到治疗布局"
