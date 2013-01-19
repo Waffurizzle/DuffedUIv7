@@ -473,6 +473,8 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(23885), -- Blood Thirst
 			CreateSpellEntry(86663), CreateSpellEntry(84585), CreateSpellEntry(84586), -- Slaughter
 			CreateSpellEntry(125831), -- Taste for Blood
+			CreateSpellEntry(112048), -- Shield Barrier
+			CreateSpellEntry(132404), -- Shield Block
 		},
 		procs = {
 			CreateSpellEntry(46916), -- Bloodsurge Slam (Free & Instant)
