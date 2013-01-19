@@ -104,7 +104,6 @@ D.DuffedCredits = {
 	"Sinaris",
 	"Juhawny",
 	"Elenarda",
-	"Trisha",
 	"Zenglao",
 }
 

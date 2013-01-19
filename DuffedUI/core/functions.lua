@@ -896,16 +896,6 @@ function D.PvPUpdate(self, elapsed)
 	end
 end
 
--- display casting time
-D.CustomCastTimeText = function(self, duration)
-	self.Time:SetText(("%.1f / %.1f"):format(self.channeling and duration or self.max - duration, self.max))
-end
-
--- display delay in casting time
-D.CustomCastDelayText = function(self, duration)
-	self.Time:SetText(("%.1f |cffaf5050%s %.1f|r"):format(self.channeling and duration or self.max - duration, self.channeling and "- " or "+", self.delay))
-end
-
 -- display seconds to min/hour/day
 D.FormatTime = function(s)
 	local day, hour, minute = 86400, 3600, 60
@@ -1122,12 +1112,23 @@ function D.setcastticks(frame, numTicks)
 	end
 end
 
+-- display casting time
+D.CustomCastTime = function(self, duration)
+	self.Time:SetText(("%.1f / %.1f"):format(self.channeling and duration or self.max - duration, self.max))
+end
+
+-- display delay in casting time
+D.CustomCastDelayText = function(self, duration)
+	self.Time:SetText(("%.1f |cffaf5050%s %.1f|r"):format(self.channeling and duration or self.max - duration, self.channeling and "- " or "+", self.delay))
+end
+
+-- check if we can interrupt on cast
 D.castbar = function(self, unit, name, rank, castid)
 	CheckInterrupt(self, unit)
 
 	local color
 	self.unit = unit
-
+	
 	if C["castbar"].cbticks == true and unit == "player" then
 		local baseTicks = D.channelticks[name]
 		if baseTicks and D.hasteticks[name] then

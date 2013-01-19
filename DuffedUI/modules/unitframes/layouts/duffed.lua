@@ -923,8 +923,8 @@ local function Shared(self, unit)
 				castbar:Point("LEFT", TCBanchor, "LEFT", 0, 0)
 			end
 			
-			castbar.CustomTimeText = D.CustomCastTimeText
-			castbar.CustomDelayText = D.CustomCastDelayText
+			castbar.CustomTimeText = D.CustomTimeText
+			castbar.CustomTimeText = D.CustomDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 
@@ -1284,8 +1284,8 @@ local function Shared(self, unit)
 			castbar.Text:Point("LEFT", castbar, "LEFT", 6, 0)
 			castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
-			castbar.CustomTimeText = D.CustomCastTimeText
-			castbar.CustomDelayText = D.CustomCastDelayText
+			castbar.CustomTimeText = D.CustomTimeText
+			castbar.CustomTimeText = D.CustomDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 
@@ -1534,13 +1534,13 @@ local function Shared(self, unit)
 			castbar.time:Point("RIGHT", castbar, "RIGHT", -4, 0)
 			castbar.time:SetTextColor(0.84, 0.75, 0.65)
 			castbar.time:SetJustifyH("RIGHT")
-			castbar.CustomTimeText = D.CustomCastTimeText
+			castbar.CustomTimeText = D.CustomTimeText
 
 			castbar.Text = D.SetFontString(castbar, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 			castbar.Text:SetPoint("LEFT", castbar, "LEFT", 4, 0)
 			castbar.Text:SetTextColor(0.84, 0.75, 0.65)
 			
-			castbar.CustomDelayText = D.CustomCastDelayText
+			castbar.CustomTimeText = D.CustomDelayText
 			castbar.PostCastStart = D.castbar
 			castbar.PostChannelStart = D.castbar
 	
@@ -1857,9 +1857,9 @@ local function Shared(self, unit)
 		castbar.time:Point("RIGHT", castbar, "RIGHT", -4, 0)
 		castbar.time:SetTextColor(0.84, 0.75, 0.65)
 		castbar.time:SetJustifyH("RIGHT")
-		castbar.CustomTimeText = D.CustomCastTimeText
+		castbar.CustomTimeText = D.CustomTimeText
 		
-		castbar.CustomDelayText = D.CustomCastDelayText
+		castbar.CustomTimeText = D.CustomDelayText
 		castbar.PostCastStart = D.castbar
 		castbar.PostChannelStart = D.castbar
 		
