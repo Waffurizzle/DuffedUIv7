@@ -23,7 +23,7 @@ C["unitframes"] = {
 	["healthbarcolor"] = {.125, .125, .125, 1},					-- healthbar color (if unicolor = true) 
 	["deficitcolor"] = {
 		0, 0, 0,
-		.6, .3, .3,
+		.6, .2, .2,
 		.125, .125, .125,
 	},
 	["ColorGradient"] = false,									-- enable colorgradient

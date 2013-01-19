@@ -130,7 +130,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end
 		else
 			health.colorDisconnected = true
@@ -1086,7 +1086,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end			
 		else
 			health.colorDisconnected = true
@@ -1156,7 +1156,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end			
 		else
 			health.colorDisconnected = true	
@@ -1317,7 +1317,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end
 		else
 			health.colorDisconnected = true
@@ -1509,7 +1509,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end
 		else
 			health.colorDisconnected = true
@@ -1619,7 +1619,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)	
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end
 		else
 			health.colorDisconnected = true
@@ -1837,7 +1837,7 @@ local function Shared(self, unit)
 			healthBG:SetTexture(.6, .6, .6)
 			if C["unitframes"].ColorGradient then
 				health.colorSmooth = true
-				healthBG:SetTexture(.2, .2, .2)
+				healthBG:SetTexture(0, 0, 0)
 			end
 		else
 			health.colorDisconnected = true
