@@ -3,71 +3,71 @@ if C["auras"].bufftracker ~= true then return end
 
 local function SetCasterOnlyBuffs()
 	Spell1Buff = {
-		77747,
-		109773,
-		1459,
-		61316,
+		1459, -- Arcane Brilliance
+		61316, -- Dalaran Brilliance
+		77747,	-- Burning Wrath
+		109773, -- Dark Intent
 	}
 	Spell2Buff = {
-		24907,
-		51470,
-		49868,
+		24907, -- Moonkin Aura
+		49868, -- Mind Quickening
+		51470, -- Elemental Oath
 	}
 	Spell3Buff = {
-		117667,
-		1126,
-		20217,
+		1126, -- Mark of the Wild
+		20217, -- Blessing of Kings
+		117667, -- Legacy of the Emperor
 	}
 	Spell4Buff = {
-		469,
-		6307,
-		21562,
+		469, -- Commanding Shout
+		6307, -- Blood Pact
+		21562, -- Power Word: Fortitude
 	}
 	Spell5Buff = {
-		116956,
-		19740,
+		19740, -- Blessing of Might
+		116956, -- Grace of Air
 	}
 	Spell6Buff = {
-		1459,
-		24932,
-		116781,
-		61316,
+		1459, -- Arcane Brilliance
+		24932, -- Leader of the Pack
+		61316, -- Dalaran Brilliance
+		116781, -- Legacy of the White Tiger
 	}
 end
 
 local function SetBuffs()
 	Spell1Buff = {
-		30809,
-		113742,
-		55610,
-		128432,
+		30809, -- Unleashed Rage
+		55610, -- Unholy Aura
+		113742, -- Swiftblade's Cunning
+		128432, -- Cackling Howl
 	}
 	Spell2Buff = {
-		1459,
-		24932,
-		116781,
-		61316,
-		109773,
-		77747,
+		1459, -- Arcane Brilliance
+		24932, -- Leader of the Pack
+		61316, -- Dalaran Brilliance
+		77747,	-- Burning Wrath
+		109773, -- Dark Intent
+		116781, -- Legacy of the White Tiger
 	}
 	Spell3Buff = {
-		1126,
-		20217,
-		117667,
+		1126, -- Mark of the Wild
+		20217, -- Blessing of Kings
+		117667, -- Legacy of the Emperor
 	}
 	Spell4Buff = {
-		469,
-		6307,
-		21562,
+		469, -- Commanding Shout
+		6307, -- Blood Pact
+		21562, -- Power Word: Fortitude
 	}
 	Spell5Buff = {
-		116956,
-		19740,
+		19740, -- Blessing of Might
+		116956, -- Grace of Air
 	}
 	Spell6Buff = {
-		19506,
-		6673,
-		57330,
+		6673, -- Battle Shout
+		19506, -- Trueshot Aura
+		57330, -- Horn of Winter
 	}
 end
 
@@ -218,22 +218,22 @@ CreateButton("Spell6Frame", Spell5Frame, false, true)
 -- Adding in ALL RAID BUFFS
 local AllBuffs = {
 	["10ap"] = {
-		57330,						-- Horn of Winter
-		19506,						-- Trueshot Aura
 		6673,						-- Battle Shout
+		19506,						-- Trueshot Aura
+		57330,						-- Horn of Winter
 	},
 	["10as"] = {
+		30809,						-- Unleashed Rage
 		55610,						-- Unholy Aura
+		113742,						-- Swiftblade's Cunning
 		128432,						-- Cackling Howl (Hunterpet)
 		128433,						-- Serpent's Swiftness (Hunterpet)
-		113742,						-- Swiftblade's Cunning
-		30809,						-- Unleashed Rage
 	},
 	["10sp"] = {
 		1459,						-- Arcane Brilliance
+		61316,						-- Dalaran Brilliance
 		77747,						-- Burning Wrath
 		109773,						-- Dark Intent
-		61316,						-- Dalaran Brilliance
 	},
 	["5sh"] = {
 		24907,						-- Moonkin Aura
@@ -241,30 +241,30 @@ local AllBuffs = {
 		51470,						-- Elemental Oath
 	},
 	["5csc"] = {
-		17007,						-- Leader of the Pack
-		90309,						-- Terrifying Roar (Hunterpet)
-		24604,						-- Furious Howl (Hunterpet)
 		1459,						-- Arcane Brilliance
-		116781,						-- Legacy of the White Tiger
+		17007,						-- Leader of the Pack
+		24604,						-- Furious Howl (Hunterpet)
 		61316,						-- Dalaran Brilliance
+		90309,						-- Terrifying Roar (Hunterpet)
+		116781,						-- Legacy of the White Tiger
 	},
 	["3kmr"] = {
-		93435,						-- Roar of Courage (Hunterpet)
-		128997,						-- Spirit Beast Blessing
 		19740,						-- Blessing of Might
+		93435,						-- Roar of Courage (Hunterpet)
 		116956,						-- Grace of Air
+		128997,						-- Spirit Beast Blessing
 	},
 	["5sai"] = {
 		1126,						-- Mark of the Wild
+		20217,						-- Blessing of Kings
 		90363,						-- Embrace of the Shale Spider (Hunterpet)
 		115921,						-- Legacy of the Emperor
-		20217,						-- Blessing of Kings
 	},
 	["10s"] = {
-		90364,						-- Qiraji Fortitude
-		21562,						-- Power Word: Fortitude
-		6307,						-- Blood Pact
 		469,						-- Commanding Shout
+		6307,						-- Blood Pact
+		21562,						-- Power Word: Fortitude
+		90364,						-- Qiraji Fortitude
 	},
 }
 
