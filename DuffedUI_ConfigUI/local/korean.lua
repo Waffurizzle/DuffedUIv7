@@ -25,6 +25,7 @@
 	DuffedUIConfigUILocalization.miscchatalert = "Enable Chatalert"
 	DuffedUIConfigUILocalization.miscloc = "Disable Loss of Control for actionbars"
 	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
+	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "Skins"
@@ -137,9 +138,7 @@
 	DuffedUIConfigUILocalization.datatextparry = "Parry position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextblock = "Block position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatexthonor = "Honor  position (0 for disabled)"
-	DuffedUIConfigUILocalization.datatextexperience = "Experience position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextprofession = "Profession position (0 for disabled)"
-	DuffedUIConfigUILocalization.datatextreputation = "Reputation position (0 for disabled)"
 
 	-- unit frames
 	DuffedUIConfigUILocalization.unitframes = "Unit Frames"

@@ -26,6 +26,7 @@
 	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
 	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
 	DuffedUIConfigUILocalization.misclocation = "啟用/禁用頂部地理位置信息欄"
+	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "其他插件程式美化皮膚"
@@ -138,9 +139,7 @@
 	DuffedUIConfigUILocalization.datatextparry = "招架率(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextblock = "格擋率(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatexthonor = "榮譽值(輸入0關閉)"
-	DuffedUIConfigUILocalization.datatextexperience = "經驗(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextprofession = "專業(輸入0關閉)"
-	DuffedUIConfigUILocalization.datatextreputation = "聲望(輸入0關閉)"
 
 	-- unit frames
 	DuffedUIConfigUILocalization.unitframes = "單位框體"

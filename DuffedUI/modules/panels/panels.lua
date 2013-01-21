@@ -25,7 +25,11 @@ if C["actionbar"].layout ~= 1 then
 	DuffedUIBar2:Point("BOTTOMRIGHT", DuffedUIBar1, "BOTTOMLEFT", -3, 0)
 	DuffedUIBar2:SetSize((D.buttonsize * 3) + (D.buttonspacing * 4), (D.buttonsize * 2) + (D.buttonspacing * 3))
 else
-	DuffedUIBar2:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
+	if C["misc"].exp_rep == true and D.lowversion then
+		DuffedUIBar2:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 27)
+	else
+		DuffedUIBar2:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
+	end
 	DuffedUIBar2:SetSize((D.buttonsize * 12) + (D.buttonspacing * 13), (D.buttonsize * 1) + (D.buttonspacing * 2))
 end
 DuffedUIBar2:SetFrameStrata("BACKGROUND")

@@ -8,6 +8,7 @@
 	<Script file="combat.lua" />
 	<Script file="dispel_announcement.lua" />
 	<Script file="drink_announcement.lua" />
+	<Script file="exp_repbar.lua" />
 	<Script file="farmmode.lua" />
 	<Script file="flightpoint.lua" />
 	<Include file="flightpoint.xml" />

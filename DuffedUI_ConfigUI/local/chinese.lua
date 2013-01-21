@@ -24,6 +24,7 @@
 	DuffedUIConfigUILocalization.miscgold = "启用聊天框体中获取金钱名称缩写功能."
 	DuffedUIConfigUILocalization.miscchatalert = "启用聊天警报"
 	DuffedUIConfigUILocalization.misclocation = "启用/禁用顶部地理位置信息栏"
+	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "插件美化皮肤"
@@ -137,9 +138,7 @@
 	DuffedUIConfigUILocalization.datatextparry = "招架率(输入0关闭)"
 	DuffedUIConfigUILocalization.datatextblock = "格挡率(输入0关闭)"
 	DuffedUIConfigUILocalization.datatexthonor = "荣誉值(输入0关闭)"
-	DuffedUIConfigUILocalization.datatextexperience = "经验(输入0关闭)"
 	DuffedUIConfigUILocalization.datatextprofession = "专业(输入0关闭)"
-	DuffedUIConfigUILocalization.datatextreputation = "声望(输入0关闭)"
 
 	-- unit frames
 	DuffedUIConfigUILocalization.unitframes = "单位框体"

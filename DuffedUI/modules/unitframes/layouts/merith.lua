@@ -284,55 +284,57 @@ local function Shared(self, unit)
 			self:RegisterEvent("PARTY_MEMBERS_CHANGED", D.MLAnchorUpdate)
 			
 			-- experience --
-			if D.level ~= MAX_PLAYER_LEVEL then
-				local Experience = CreateFrame("StatusBar", self:GetName().."_Experience", self)
-				Experience:SetStatusBarTexture(normTex)
-				Experience:SetStatusBarColor(0, 0.4, 1, .8)
-				Experience:SetBackdrop(backdrop)
-				Experience:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Experience:SetOrientation("VERTICAL")
-				Experience:Size(5, DuffedUIMinimap:GetHeight() + 17)
-				Experience:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
-				Experience:SetFrameLevel(2)
-				Experience.Tooltip = true						
-				Experience.Rested = CreateFrame("StatusBar", nil, self)
-				Experience.Rested:SetParent(Experience)
-				Experience.Rested:SetAllPoints(Experience)
-				Experience.Rested:SetStatusBarTexture(normTex)
-				Experience.Rested:SetOrientation("VERTICAL")
-				Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
+			if C["misc"].exp_rep == false then
+				if D.level ~= MAX_PLAYER_LEVEL then
+					local Experience = CreateFrame("StatusBar", self:GetName().."_Experience", self)
+					Experience:SetStatusBarTexture(normTex)
+					Experience:SetStatusBarColor(0, 0.4, 1, .8)
+					Experience:SetBackdrop(backdrop)
+					Experience:SetBackdropColor(unpack(C["media"].backdropcolor))
+					Experience:SetOrientation("VERTICAL")
+					Experience:Size(5, DuffedUIMinimap:GetHeight() + 17)
+					Experience:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
+					Experience:SetFrameLevel(2)
+					Experience.Tooltip = true						
+					Experience.Rested = CreateFrame("StatusBar", nil, self)
+					Experience.Rested:SetParent(Experience)
+					Experience.Rested:SetAllPoints(Experience)
+					Experience.Rested:SetStatusBarTexture(normTex)
+					Experience.Rested:SetOrientation("VERTICAL")
+					Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
 
-				-- border for the experience bar
-				Experience:CreateBackdrop()
-				Experience.backdrop:CreateShadow()
+					-- border for the experience bar
+					Experience:CreateBackdrop()
+					Experience.backdrop:CreateShadow()
 
-				local Resting = Experience:CreateTexture(nil, "OVERLAY")
-				Resting:Size(D.Scale(20))
-				Resting:SetPoint("RIGHT", Experience, "LEFT", 0, 0)
-				Resting:SetTexture([=[Interface\CharacterFrame\UI-StateIcon]=])
-				Resting:SetTexCoord(0, 0.5, 0, 0.421875)
-				self.Resting = Resting
-				self.Experience = Experience
-			end
+					local Resting = Experience:CreateTexture(nil, "OVERLAY")
+					Resting:Size(D.Scale(20))
+					Resting:SetPoint("RIGHT", Experience, "LEFT", 0, 0)
+					Resting:SetTexture([=[Interface\CharacterFrame\UI-StateIcon]=])
+					Resting:SetTexCoord(0, 0.5, 0, 0.421875)
+					self.Resting = Resting
+					self.Experience = Experience
+				end
 
-			-- reputation bar for max level character
-			if D.level == MAX_PLAYER_LEVEL then
-				local Reputation = CreateFrame("StatusBar", self:GetName().."_Reputation", self)
-				Reputation:SetStatusBarTexture(normTex)
-				Reputation:SetBackdrop(backdrop)
-				Reputation:SetBackdropColor(unpack(C["media"].backdropcolor))
-				Reputation:SetOrientation("VERTICAL")
-				Reputation:Size(5, DuffedUIMinimap:GetHeight() + 17)
-				Reputation:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
-				Reputation:SetFrameLevel(2)
+				-- reputation bar for max level character
+				if D.level == MAX_PLAYER_LEVEL then
+					local Reputation = CreateFrame("StatusBar", self:GetName().."_Reputation", self)
+					Reputation:SetStatusBarTexture(normTex)
+					Reputation:SetBackdrop(backdrop)
+					Reputation:SetBackdropColor(unpack(C["media"].backdropcolor))
+					Reputation:SetOrientation("VERTICAL")
+					Reputation:Size(5, DuffedUIMinimap:GetHeight() + 17)
+					Reputation:Point("TOPLEFT", DuffedUIMinimap, "TOPLEFT", -9, -2)
+					Reputation:SetFrameLevel(2)
 
-				-- border for the Reputation bar
-				Reputation:CreateBackdrop()
-				Reputation.backdrop:CreateShadow()
+					-- border for the Reputation bar
+					Reputation:CreateBackdrop()
+					Reputation.backdrop:CreateShadow()
 
-				Reputation.PostUpdate = D.UpdateReputationColor
-				Reputation.Tooltip = true
-				self.Reputation = Reputation
+					Reputation.PostUpdate = D.UpdateReputationColor
+					Reputation.Tooltip = true
+					self.Reputation = Reputation
+				end
 			end
 			
 			-- Vengeance Plugin

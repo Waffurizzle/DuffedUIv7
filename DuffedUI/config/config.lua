@@ -175,6 +175,7 @@ C["misc"] = {
 	["ilvlcharacter"] = true,									-- enable itemlevel display on charscreen
 	["loc"] = true,												-- disable loss of control
 	["location"] = true,										-- enable location panel
+	["exp_rep"] = true,											-- enable EXP / Rep-panel on bottom panel
 }
 
 C["duffed"] = {
@@ -218,8 +219,6 @@ C["icd"] = {
 
 C["datatext"] = {
 	["dodge"] = 0,												-- show dodge on panels
-	["experience"] = 0,											-- show experience on panels
-	["reputation"] = 0,											-- show reputation on panels
 	["honor"] = 0,												-- show honor on panels
 	["honorablekills"] = 0,										-- show honorablekills on panels
 	["parry"] = 0,												-- show parry on panels

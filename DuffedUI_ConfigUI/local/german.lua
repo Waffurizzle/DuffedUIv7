@@ -25,6 +25,7 @@
 	DuffedUIConfigUILocalization.miscchatalert = "Aktiviere Chatalarm"
 	DuffedUIConfigUILocalization.miscloc = "Deaktiviere Loss of Control an den Aktionsleisten"
 	DuffedUIConfigUILocalization.misclocation = "Aktviere / Deaktviere Ortsanzeige"
+	DuffedUIConfigUILocalization.miscexp_rep = "Zeige Erfahrungs / XP-Panel an dem unteren Panel"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "AddOn-Skins"
@@ -137,9 +138,7 @@
 	DuffedUIConfigUILocalization.datatextparry = "Parrieren-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextblock = "Blocken-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatexthonor = "Ehrenpunkte-Position (0 zum deaktivieren)"
-	DuffedUIConfigUILocalization.datatextexperience = "Erfahrung-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextprofession = "Beruf-Position (0 zum deaktivieren)"
-	DuffedUIConfigUILocalization.datatextreputation = "Ruf-Position (0 zum deaktivieren)"
 
 	-- unit frames
 	DuffedUIConfigUILocalization.unitframes = "Einheitenfenster"
