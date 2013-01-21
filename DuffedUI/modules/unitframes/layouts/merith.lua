@@ -299,6 +299,7 @@ local function Shared(self, unit)
 				Experience.Rested:SetParent(Experience)
 				Experience.Rested:SetAllPoints(Experience)
 				Experience.Rested:SetStatusBarTexture(normTex)
+				Experience.Rested:SetOrientation("VERTICAL")
 				Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
 
 				-- border for the experience bar

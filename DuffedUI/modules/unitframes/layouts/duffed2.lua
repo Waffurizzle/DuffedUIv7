@@ -389,6 +389,7 @@ local function Shared(self, unit)
 				Experience.Rested:SetAllPoints(Experience)
 				Experience.Rested:SetStatusBarTexture(normTex)
 				Experience.Rested:SetStatusBarColor(1, 0, 1, 0.2)
+				Experience.Rested:SetOrientation("VERTICAL")
 
 				-- border for the experience bar
 				Experience:CreateBackdrop()

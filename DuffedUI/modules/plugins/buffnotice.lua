@@ -11,6 +11,7 @@ local function Buffs1OnEvent(self, event)
 		for i, buff in pairs(Buffs1) do
 			local name, _, icon = GetSpellInfo(buff)
 			local usable, nomana = IsUsableSpell(name)
+			--print(buff, name, usable, nomana)
 			if (usable or nomana) then
 				self.icon:SetTexture(icon)
 				break
@@ -54,6 +55,7 @@ local function Buffs2OnEvent(self, event)
 		for i, buff in pairs(Buffs2) do
 			local name, _, icon = GetSpellInfo(buff)
 			local usable, nomana = IsUsableSpell(name)
+			--print(buff, name, usable, nomana)
 			if (usable or nomana) then
 				self.icon:SetTexture(icon)
 				break

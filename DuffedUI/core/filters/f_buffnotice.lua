@@ -53,7 +53,10 @@ D.BuffReminder1 = {
 		52127, -- Water Shield
 	},
 	WARLOCK = {
+		1459, -- Arcane Brilliance
+		61316, -- Dalaran Brilliance
 		109773, -- Dark Intent
+		116781, -- Legacy of the White Tiger
 	},
 	WARRIOR = {
 		469, -- Commanding Shout
@@ -77,6 +80,8 @@ D.BuffReminder2 = {
 	MAGE = {
 		1459, -- Arcane Brilliance
 		61316, -- Dalaran Brilliance
+		109773, -- Dark Intent
+		116781, -- Legacy of the White Tiger
 	},
 	MONK = {
 	},
