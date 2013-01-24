@@ -24,7 +24,7 @@
 	DuffedUIConfigUILocalization.miscgold = "启用聊天框体中获取金钱名称缩写功能."
 	DuffedUIConfigUILocalization.miscchatalert = "启用聊天警报"
 	DuffedUIConfigUILocalization.misclocation = "启用/禁用顶部地理位置信息栏"
-	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
+	DuffedUIConfigUILocalization.miscexp_rep = "显示 声望/经验 面板于下方面板"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "插件美化皮肤"
