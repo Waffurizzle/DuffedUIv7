@@ -216,10 +216,10 @@ end
 -- TOOLTIP DEFAULT POSITION
 hooksecurefunc("PetBattleAbilityTooltip_Show", function()
 	local t = PetBattlePrimaryAbilityTooltip
-	local a = DuffedUIInfoLeft
+	local a = DuffedUIChatBackgroundLeft
 	if a then
 		t:ClearAllPoints()
-		t:SetPoint("BOTTOMLEFT", a, "TOPLEFT", 0, 6)
+		t:SetPoint("BOTTOMRIGHT", a, "TOPRIGHT", 0, 6)
 	end
 end)
 

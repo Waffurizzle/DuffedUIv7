@@ -8,6 +8,7 @@ locpanel:SetTemplate("Default")
 locpanel:SetFrameStrata("Medium")
 locpanel:SetFrameLevel(6)
 locpanel:EnableMouse(true)
+locpanel:SetParent(DuffedUIPetBattleHider)
 
 local xcoords = CreateFrame("Frame", "DuffedUIXCoordsPanel", locpanel)
 xcoords:Size(35, 20)

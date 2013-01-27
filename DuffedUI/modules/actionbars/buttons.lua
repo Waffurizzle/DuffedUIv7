@@ -128,6 +128,7 @@ if C["actionbar"].button2 == true then DuffedUIBar2Button:SetAlpha(0) else Duffe
 DuffedUIBar2Button:SetScript("OnEnter", function(self) self:SetBackdropBorderColor(unpack(C["media"].datatextcolor1)) end)
 DuffedUIBar2Button:SetScript("OnLeave", function(self) self:SetBackdropBorderColor(unpack(C["media"].bordercolor)) end)
 DuffedUIBar2Button.text:SetText(cm.."-|r")
+DuffedUIBar2Button:SetParent(DuffedUIPetBattleHider)
 
 -- >/< 1
 local DuffedUIBar3Button = CreateFrame("Button", "DuffedUIBar3Button", UIParent)

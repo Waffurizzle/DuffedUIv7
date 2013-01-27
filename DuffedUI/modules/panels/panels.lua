@@ -90,6 +90,7 @@ end
 ileft:SetFrameLevel(2)
 ileft:SetFrameStrata("BACKGROUND")
 ileft:CreateShadow("Default")
+ileft:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextLeft = ileft
 
 -- INFO RIGHT (FOR STATS)
@@ -105,6 +106,7 @@ end
 iright:SetFrameLevel(2)
 iright:SetFrameStrata("BACKGROUND")
 iright:CreateShadow("Default")
+iright:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextRight = iright
 
 if C["actionbar"].buttonsize > 26 and C["actionbar"].layout == 1 and not D.lowversion then
@@ -135,7 +137,7 @@ end
 
 if C["chat"].background then
 	-- CHAT BG LEFT
-	local chatleftbg = CreateFrame("Frame", "DuffedUIChatBackgroundLeft", DuffedUIInfoLeft)
+	local chatleftbg = CreateFrame("Frame", "DuffedUIChatBackgroundLeft", UIParent)
 	chatleftbg:SetTemplate("Transparent")
 	chatleftbg:Size(D.InfoLeftRightWidth + 12, 149)
 	if C["actionbar"].layout ~= 1 or D.lowversion then chatleftbg:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 24) else chatleftbg:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 5) end
@@ -144,7 +146,7 @@ if C["chat"].background then
 	G.Panels.LeftChatBackground = chatleftbg
 
 	-- CHAT BG RIGHT
-	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", DuffedUIInfoRight)
+	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", UIParent)
 	chatrightbg:SetTemplate("Transparent")
 	chatrightbg:Size(D.InfoLeftRightWidth + 12, 149)
 	if C["actionbar"].layout ~= 1 or D.lowversion then chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 24) else chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 5) end

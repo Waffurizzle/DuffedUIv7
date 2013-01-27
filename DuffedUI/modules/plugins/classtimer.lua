@@ -138,6 +138,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(115989), -- Unholy Blight
 			CreateSpellEntry(108200), -- Remorseless Winter
 			CreateSpellEntry(51460), -- Runic Corruption
+			CreateSpellEntry(49039), -- Lichborne
 		},
 		procs = {
 			CreateSpellEntry(53365), -- Unholy Strength
@@ -215,9 +216,10 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(53301), -- Explosive Shot
 		},
 		player = {
-			CreateSpellEntry(3045), -- Rapid Fire +
-			CreateSpellEntry(34471), --The beast within
-			CreateSpellEntry(53434), --call of the wild
+			CreateSpellEntry(3045), -- Rapid Fire
+			CreateSpellEntry(34471), -- The beast within
+			CreateSpellEntry(53434), -- Call of the wild
+			CreateSpellEntry(34720), -- Thrill of the Hunt
 		},
 		procs = {
 			CreateSpellEntry(56453), -- Lock and Load
