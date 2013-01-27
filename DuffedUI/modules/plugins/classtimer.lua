@@ -465,8 +465,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(23920), -- Spell Reflection
 			CreateSpellEntry(871), -- Shield Wall
 			CreateSpellEntry(1719), -- Recklessness
-			CreateSpellEntry(2565), -- Shield Block
-			CreateSpellEntry(12976), -- Last Stand
+			CreateSpellEntry(12975), -- Last Stand
 			CreateSpellEntry(32216), -- Victorious (Victory Rush enabled)
 			CreateSpellEntry(85738), CreateSpellEntry(85739), -- Meat Cleaver Rank 1 and 2
 			CreateSpellEntry(86662), CreateSpellEntry(86663), -- Rude interruption rank 1 and 2
