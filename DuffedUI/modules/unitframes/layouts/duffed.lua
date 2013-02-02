@@ -1451,33 +1451,64 @@ local function Shared(self, unit)
 			-- power border
 			power:CreateBackdrop()
 			
-			-- Auratracker Frame
-			local TrackBorder = CreateFrame("Frame", "TrackBorder", self)
-			TrackBorder:SetTemplate("Default")
-			TrackBorder:Size(40, 40)
-			TrackBorder:Point("BOTTOMRIGHT", health.border, "BOTTOMLEFT", -3, 0)
-			TrackBorder:CreateShadow("Default")
-			
-			local AuraTracker = CreateFrame("Frame", nil, self)
-			AuraTracker:SetFrameLevel(9)
-			self.AuraTracker = AuraTracker
-			
-			AuraTracker.icon = AuraTracker:CreateTexture(nil, "OVERLAY")
-			AuraTracker.icon:Point("TOPLEFT", TrackBorder, 2, -2)
-			AuraTracker.icon:Point("BOTTOMRIGHT", TrackBorder, -2, 2)
-			AuraTracker.icon:SetTexCoord(0.07,0.93,0.07,0.93)
-			
-			AuraTracker.text = D.SetFontString(AuraTracker, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
-			AuraTracker.text:SetPoint("CENTER", TrackBorder, 0, 0)
-			AuraTracker:SetScript("OnUpdate", updateAuraTrackerTime)
-			
-			-- Portrait
-			local portrait = CreateFrame("PlayerModel", nil, TrackBorder)
-			portrait:SetFrameLevel(8)
-			portrait:Point("TOPLEFT", 2, -2)
-			portrait:Point("BOTTOMRIGHT", -2, 2)
-			portrait.PostUpdate = D.PortraitUpdate --Worgen Fix (Hydra)
-			self.Portrait = portrait
+			-- portrait
+		if lafo then
+			local graphic = GetCVar("gxapi")
+			local isMac = IsMacClient()
+			local pf = CreateFrame("Frame", self:GetName() .. "_PortraitFrame", self)
+			if isMac or graphic == "D3D11" then
+				pf:Size(38)
+				pf:Point("BOTTOMRIGHT", health, "BOTTOMLEFT", -7, -5)
+				
+				if C["unitframes"].portraitstyle == "MODEL" then	
+					local portrait = CreateFrame("PlayerModel", self:GetName().."_Portrait", pf)
+					portrait:SetFrameLevel(8)
+					portrait:Size(37)
+					portrait:Point("TOPLEFT", 0, 0)
+					portrait:Point("BOTTOMRIGHT", 0, 0)
+					portrait:SetAlpha(1)
+					table.insert(self.__elements, D.HidePortrait)
+					portrait.PostUpdate = D.PortraitUpdate --Worgen Fix (Hydra)
+					
+					self.Portrait = portrait
+				else
+					local class = pf:CreateTexture(self:GetName().."_ClassIcon", "ARTWORK")
+					class:Point("TOPLEFT", 0, 0)
+					class:Point("BOTTOMRIGHT", 0, 0)
+					
+					self.ClassIcon = class
+				end
+				
+				-- Portrait Border
+				pf:CreateBackdrop()
+
+				local AuraTracker = CreateFrame("Frame", nil, self)
+				AuraTracker:Size(45)
+				AuraTracker:Point("BOTTOMRIGHT", pf, "BOTTOMLEFT", -2, -3)
+				
+				AuraTracker.icon = AuraTracker:CreateTexture(nil, "OVERLAY")
+				AuraTracker.icon:Point("TOPLEFT", 2, -2)
+				AuraTracker.icon:Point("BOTTOMRIGHT", -2, 2)
+				AuraTracker.icon:SetTexCoord(0.07,0.93,0.07,0.93)
+				
+				AuraTracker.text = D.SetFontString(AuraTracker, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
+				AuraTracker.text:SetPoint("CENTER", AuraTracker, 0, 0)
+				AuraTracker:SetScript("OnUpdate", updateAuraTrackerTime)
+			else
+				local pb = CreateFrame("Frame", self:GetName().."_PortraitBorder", self)
+				pb:SetTemplate("Default")
+				pb:Size(40)
+				pb:Point("BOTTOMLEFT", health, "BOTTOMLEFT", -43, 0)
+
+				local portrait = CreateFrame("PlayerModel", self:GetName().."_Portrait", pb)
+				portrait:Point("TOPLEFT", 2, -2)
+				portrait:Point("BOTTOMRIGHT", -2, 2)
+				portrait:SetHeight(35)
+				portrait:SetWidth(35)
+
+				self.Portrait = portrait
+			end
+		end
 		end
 		
 		-- Border

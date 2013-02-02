@@ -26,6 +26,14 @@ D.mult = mult
 
 if noinset then inset = mult end
 
+local function FadeIn(f)
+	UIFrameFadeIn(f, .4, f:GetAlpha(), 1)
+end
+
+local function FadeOut(f)
+	UIFrameFadeOut(f, .8, f:GetAlpha(), 0)
+end
+
 local function UpdateColor(t)
 	if t == template then return end
 
@@ -726,6 +734,8 @@ local function addapi(object)
 	if not object.CreateLine then mt.CreateLine = CreateLine end
 	if not object.CreateOverlay then mt.CreateOverlay = CreateOverlay end
 	if not object.CreateBorder then mt.CreateBorder = CreateBorder end
+	if not object.FadeIn then mt.FadeIn = FadeIn end
+	if not object.FadeOut then mt.FadeOut = FadeOut end
 end
 
 local handled = {["Frame"] = true}

@@ -12,6 +12,7 @@
 	<Script file="farmmode.lua" />
 	<Script file="flightpoint.lua" />
 	<Include file="flightpoint.xml" />
+	<Script file="focusbutton.lua" />
 	<Script file="gold.lua" />
 	<Script file="HatTrick.lua" />
 	<Script file="helpframe.lua" />
