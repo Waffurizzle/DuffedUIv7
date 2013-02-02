@@ -90,7 +90,6 @@ end
 ileft:SetFrameLevel(2)
 ileft:SetFrameStrata("BACKGROUND")
 ileft:CreateShadow("Default")
---ileft:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextLeft = ileft
 
 -- INFO RIGHT (FOR STATS)
@@ -106,7 +105,6 @@ end
 iright:SetFrameLevel(2)
 iright:SetFrameStrata("BACKGROUND")
 iright:CreateShadow("Default")
---iright:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextRight = iright
 
 if C["actionbar"].buttonsize > 26 and C["actionbar"].layout == 1 and not D.lowversion then

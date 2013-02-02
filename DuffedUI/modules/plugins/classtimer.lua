@@ -854,7 +854,7 @@ do
 			iconAnchor2 = "TOPLEFT";
 			iconOffset = -1;	
 			
-			icon:Point(iconAnchor1, result, iconAnchor2, iconOffset * -5, 3)
+			icon:Point(iconAnchor1, result, iconAnchor2, iconOffset * -4, 3)
 			icon:SetWidth(BAR_HEIGHT + 6);
 			icon:SetHeight(BAR_HEIGHT + 6);	
 
