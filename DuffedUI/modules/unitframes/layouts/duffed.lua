@@ -1589,6 +1589,7 @@ local function Shared(self, unit)
 		
 		health.frequentUpdates = true
 		if C["unitframes"].showsmooth == true then health.Smooth = true end
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false

@@ -63,7 +63,7 @@ if C["actionbar"].petbarhorizontal ~= true then
 	petbg:SetPoint("RIGHT", DuffedUIBar3, "LEFT", -6, 0)
 else
 	petbg:SetSize((D.petbuttonsize * 10) + (D.petbuttonspacing * 11), D.petbuttonsize + (D.petbuttonspacing * 2))
-	petbg:SetPoint("BOTTOM", DuffedUIBar2, "TOP", 0, 3)
+	petbg:SetPoint("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
 end
 G.ActionBars.Pet = petbg
 
@@ -90,7 +90,7 @@ end
 ileft:SetFrameLevel(2)
 ileft:SetFrameStrata("BACKGROUND")
 ileft:CreateShadow("Default")
-ileft:SetParent(DuffedUIPetBattleHider)
+--ileft:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextLeft = ileft
 
 -- INFO RIGHT (FOR STATS)
@@ -106,7 +106,7 @@ end
 iright:SetFrameLevel(2)
 iright:SetFrameStrata("BACKGROUND")
 iright:CreateShadow("Default")
-iright:SetParent(DuffedUIPetBattleHider)
+--iright:SetParent(DuffedUIPetBattleHider)
 G.Panels.DataTextRight = iright
 
 if C["actionbar"].buttonsize > 26 and C["actionbar"].layout == 1 and not D.lowversion then

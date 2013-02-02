@@ -250,10 +250,14 @@ end
 D.petBarPosition = function()
 if C["actionbar"].petbarhorizontal ~= true or InCombatLockdown() then return end
 	DuffedUIPetBar:ClearAllPoints()
-	if DuffedUIDataPerChar.bar1 == true then
-		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
+	if C["actionbar"].petbarhorizontal ~= true then
+		if DuffedUIDataPerChar.bar1 == true then
+			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
+		else
+			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar2, "TOP", 0, 3)
+		end
 	else
-		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar2, "TOP", 0, 3)
+		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
 	end
 end
 

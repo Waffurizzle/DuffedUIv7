@@ -42,6 +42,8 @@ spellCooldowns = {
 		87153, -- Dark Archangel
 		33206, -- Pain Supression
 		6346,  -- Fear Ward
+		120644, -- Halo (Damage)
+		120517, -- Halo (Heal)
 		-- Chakra stuff
 		14751, -- Chakra
 		88625, -- Holy Word: Chastise

@@ -46,6 +46,9 @@ local TRINKET_FILTER = {
 	-- Weaponenchants & Stuff
 	CreateSpellEntry(104510), -- Windsong
 	CreateSpellEntry(125487), -- Lightweave
+	CreateSpellEntry(120032), -- Dancing Steel
+	CreateSpellEntry(104993), -- Jade Spirit
+	CreateSpellEntry(116660), -- River's Song
 	
 	-- Dungeon-, Valor- & Darkmoontrinkets
 	CreateSpellEntry(126519), -- Lessons of the Darkmaster

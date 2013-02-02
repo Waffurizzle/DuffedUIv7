@@ -1303,7 +1303,6 @@ local function Shared(self, unit)
 			health.value = health:CreateFontString(nil, "OVERLAY")
 			health.value:SetFont(C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 			health.value:Point("LEFT", 4, -1)
-			health.PostUpdate = D.PostUpdateHealth
 		end
 				
 		self.Health = health
@@ -1311,6 +1310,7 @@ local function Shared(self, unit)
 		
 		health.frequentUpdates = true
 		if C["unitframes"].showsmooth == true then health.Smooth = true end
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false
@@ -1503,6 +1503,7 @@ local function Shared(self, unit)
 		
 		health.frequentUpdates = true
 		if C["unitframes"].showsmooth == true then health.Smooth = true end
+		health.PostUpdate = D.PostUpdatePetColor
 		
 		if C["unitframes"].unicolor == true then
 			health.colorDisconnected = false
@@ -1925,9 +1926,9 @@ if lafo then
 	focustarget:Point("TOPRIGHT", DuffedUIFocus, "BOTTOMRIGHT", 0, -3)
 else
 	focus:Size(playerwidth/2 -18, 15)
-	focus:Point("TOPRIGHT", DuffedUIPlayer, "BOTTOMRIGHT", -169, -2)
+	focus:Point("TOPRIGHT", DuffedUIPlayer, "BOTTOMRIGHT", -171, -3)
 	focustarget:Size(playerwidth/2 -18, 15)
-	focustarget:Point("TOPRIGHT", DuffedUIFocus, "BOTTOMRIGHT", 0, -2)
+	focustarget:Point("TOPRIGHT", DuffedUIFocus, "BOTTOMRIGHT", 0, -3)
 end
 
 if C["unitframes"].arena then
