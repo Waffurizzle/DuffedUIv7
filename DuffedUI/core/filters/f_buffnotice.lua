@@ -7,6 +7,7 @@ D.BuffReminder1 = {
 		6673, -- Battle Shout
 		57330, -- Horn of Winter
 		93435, -- Roar of Courage (Hunter Pet)
+		19506, -- Trueshot Aura
 	},
 	DRUID = {
 		1126, -- Mark of the Wild
@@ -18,6 +19,7 @@ D.BuffReminder1 = {
 		5118, -- Aspect of the Cheetah
 		13159, -- Aspect of the Pack
 		13165, -- Aspect of the Hawk
+		19506, -- Trueshot Aura
 		109260, -- Aspect of the Iron Hawk
 	},
 	MAGE = {
@@ -57,13 +59,18 @@ D.BuffReminder1 = {
 		61316, -- Dalaran Brilliance
 		109773, -- Dark Intent
 		116781, -- Legacy of the White Tiger
+		90364, -- Qiraj Fortitude
+		6307, -- Blood Pact
 	},
 	WARRIOR = {
 		469, -- Commanding Shout
 		6673, -- Battle Shout
+		19506, -- Trueshot Aura
 		93435, -- Roar of Courage (Hunter Pet)
 		57330, -- Horn of Winter
 		21562, -- PW: Fortitude
+		90364, -- Qiraj Fortitude
+		6307, -- Blood Pact
 	},
 }
 

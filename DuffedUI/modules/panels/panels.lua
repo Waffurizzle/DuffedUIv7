@@ -135,7 +135,7 @@ end
 
 if C["chat"].background then
 	-- CHAT BG LEFT
-	local chatleftbg = CreateFrame("Frame", "DuffedUIChatBackgroundLeft", UIParent)
+	local chatleftbg = CreateFrame("Frame", "DuffedUIChatBackgroundLeft", DuffedUIInfoLeft)
 	chatleftbg:SetTemplate("Transparent")
 	chatleftbg:Size(D.InfoLeftRightWidth + 12, 149)
 	if C["actionbar"].layout ~= 1 or D.lowversion then chatleftbg:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 24) else chatleftbg:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 5) end
@@ -144,7 +144,7 @@ if C["chat"].background then
 	G.Panels.LeftChatBackground = chatleftbg
 
 	-- CHAT BG RIGHT
-	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", UIParent)
+	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", DuffedUIInfoRight)
 	chatrightbg:SetTemplate("Transparent")
 	chatrightbg:Size(D.InfoLeftRightWidth + 12, 149)
 	if C["actionbar"].layout ~= 1 or D.lowversion then chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 24) else chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 5) end
