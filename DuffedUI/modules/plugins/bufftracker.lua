@@ -20,8 +20,9 @@ local function SetCasterOnlyBuffs()
 	}
 	Spell4Buff = {
 		469, -- Commanding Shout
-		6307, -- Blood Pact
 		21562, -- Power Word: Fortitude
+		109773, -- Dark Intent
+		90364, -- Qiraji Fortitude
 	}
 	Spell5Buff = {
 		19740, -- Blessing of Might
@@ -57,8 +58,9 @@ local function SetBuffs()
 	}
 	Spell4Buff = {
 		469, -- Commanding Shout
-		6307, -- Blood Pact
 		21562, -- Power Word: Fortitude
+		109773,	-- Dark Intent
+		90364, -- Qiraji Fortitude
 	}
 	Spell5Buff = {
 		19740, -- Blessing of Might
@@ -262,9 +264,9 @@ local AllBuffs = {
 	},
 	["10s"] = {
 		469,						-- Commanding Shout
-		6307,						-- Blood Pact
 		21562,						-- Power Word: Fortitude
 		90364,						-- Qiraji Fortitude
+		109773,						-- Dark Intent
 	},
 }
 

@@ -86,7 +86,7 @@ local function Shared(self, unit)
 	end
 	self.Name = name
 	
-	if C["unitframes"].showsymbols == true then
+	if C["raid"].showsymbols == true then
 		RaidIcon = health:CreateTexture(nil, 'OVERLAY')
 		RaidIcon:Height(14 * D.raidscale)
 		RaidIcon:Width(14 * D.raidscale)
@@ -95,7 +95,7 @@ local function Shared(self, unit)
 		self.RaidIcon = RaidIcon
 	end
 	
-	if C["unitframes"].aggro == true then
+	if C["raid"].aggro == true then
 		table.insert(self.__elements, D.UpdateThreat)
 		self:RegisterEvent('PLAYER_TARGET_CHANGED', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', D.UpdateThreat)
@@ -143,8 +143,8 @@ local function Shared(self, unit)
 
 	if C["unitframes"].showsmooth == true then health.Smooth = true end
 	
-	if C["unitframes"].showrange == true then
-		local range = {insideAlpha = 1, outsideAlpha = C["unitframes"].raidalphaoor}
+	if C["raid"].showrange == true then
+		local range = {insideAlpha = 1, outsideAlpha = C["raid"].raidalphaoor}
 		self.Range = range
 	end
 	
@@ -165,7 +165,7 @@ oUF:Factory(function(self)
 		'initial-height', D.Scale(19 * D.raidscale),
 		"initial-anchor", "BOTTOM",
 		"showParty", true, 
-		"showPlayer", C["unitframes"].showplayerinparty, 
+		"showPlayer", C["raid"].showplayerinparty, 
 		"showRaid", true,
 		--"showSolo", true, -- only for dev
 		"groupFilter", "1,2,3,4,5,6,7,8", 

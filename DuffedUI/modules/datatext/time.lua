@@ -158,16 +158,22 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			end
 		end
 
-		GameTooltip:AddLine(" ")
+		local startTimer = GetTime()
+		local actualtime = GetTime()
+		played = actualtime - startTimer
+		if played > 60 then
+			GameTooltip:AddDoubleLine(TIME_PLAYED_MSG..": ", T.FormatTime(played))
+		end
+
+		GameTooltip:AddDoubleLine(" ", " ")
+
 		GameTooltip:AddDoubleLine(L.worldboss_title)
-		local z , t, s = {[32099] = "Sha of Anger:", [32098] = "Galleon:"}, GetQuestsCompleted() 
-		for c, v in pairs(z) do 
-			if t[c] then
-				s='' 
-			else 
-				s=' not' 
-			end
-			GameTooltip:AddDoubleLine(v, s.." "..L.worldboss_defeated, 1, 1, 1)
+		if UnitLevel("player") == 90 then
+			local Sha = IsQuestFlaggedCompleted(32099)
+			local Galleon = IsQuestFlaggedCompleted(32098)
+
+			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_sha.."|r ", Sha and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
+			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_galleon.."|r ", Galleon and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
 		end
 		GameTooltip:Show()
 	end)

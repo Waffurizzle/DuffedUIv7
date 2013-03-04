@@ -248,16 +248,19 @@ D.PetBarUpdate = function(self, event)
 end
 
 D.petBarPosition = function()
-if C["actionbar"].petbarhorizontal ~= true or InCombatLockdown() then return end
+	if C["actionbar"].petbarhorizontal ~= true or InCombatLockdown() then return end
+
 	DuffedUIPetBar:ClearAllPoints()
-	if C["actionbar"].petbarhorizontal ~= true then
+	if C["actionbar"].layout == 1 then
 		if DuffedUIDataPerChar.bar1 == true then
 			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
 		else
 			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar2, "TOP", 0, 3)
 		end
-	else
+	elseif C["actionbar"].layout == 2 then
 		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
+	elseif (D.lowversion and C["misc"].exp_rep) then
+		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 22)
 	end
 end
 
@@ -596,7 +599,7 @@ D.PostUpdateHealth = function(health, unit, min, max)
 
 		if min ~= max then
 			local r, g, b
-			r, g, b = oUFDuffedUI.ColorGradient(min, max, .69, .31, .31, .65, .63, .35, .33, .59, .33) 
+			r, g, b = oUF.ColorGradient(min, max, .69, .31, .31, .65, .63, .35, .33, .59, .33) 
 			if unit == "player" and health:GetAttribute("normalUnit") ~= "pet" then
 				if C["unitframes"].showtotalhpmp == true then
 					health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5|||r |cff559655%s|r", ShortValue(min), ShortValue(max))
@@ -1450,12 +1453,12 @@ end
 
 -- position of indicators
 D.countOffsets = {
-	TOPLEFT = {6 * C["unitframes"].gridscale, 1},
-	TOPRIGHT = {-6 * C["unitframes"].gridscale, 1},
-	BOTTOMLEFT = {6 * C["unitframes"].gridscale, 1},
-	BOTTOMRIGHT = {-6 * C["unitframes"].gridscale, 1},
-	LEFT = {6 * C["unitframes"].gridscale, 1},
-	RIGHT = {-6 * C["unitframes"].gridscale, 1},
+	TOPLEFT = {6 * C["raid"].gridscale, 1},
+	TOPRIGHT = {-6 * C["raid"].gridscale, 1},
+	BOTTOMLEFT = {6 * C["raid"].gridscale, 1},
+	BOTTOMRIGHT = {-6 * C["raid"].gridscale, 1},
+	LEFT = {6 * C["raid"].gridscale, 1},
+	RIGHT = {-6 * C["raid"].gridscale, 1},
 	TOP = {0, 0},
 	BOTTOM = {0, 0},
 }
@@ -1507,8 +1510,8 @@ D.createAuraWatch = function(self, unit)
 			local icon = CreateFrame("Frame", nil, auras)
 			icon.spellID = spell[1]
 			icon.anyUnit = spell[4]
-			icon:Width(6 * C["unitframes"].gridscale)
-			icon:Height(6 * C["unitframes"].gridscale)
+			icon:Width(6 * C["raid"].gridscale)
+			icon:Height(6 * C["raid"].gridscale)
 			icon:SetPoint(spell[2], 0, 0)
 
 			local tex = icon:CreateTexture(nil, "OVERLAY")
@@ -1521,7 +1524,7 @@ D.createAuraWatch = function(self, unit)
 			end
 
 			local count = icon:CreateFontString(nil, "OVERLAY")
-			count:SetFont(C["media"].uffont, 8 * C["unitframes"].gridscale, "THINOUTLINE")
+			count:SetFont(C["media"].uffont, 8 * C["raid"].gridscale, "THINOUTLINE")
 			count:SetPoint("CENTER", unpack(D.countOffsets[spell[2]]))
 			icon.count = count
 
@@ -1599,9 +1602,9 @@ if C["unitframes"].raidunitdebuffwatch == true then
 		-- Mists of Pandaria debuff list created by prophet
 		-- http://www.tukui.org/code/view.php?id=PROPHET170812083424
 		D.debuffids = {			
-			-----------------------------------------------------------------
-			-- Mogu'shan Vaults
-			-----------------------------------------------------------------
+			----------------------
+			-- Mogu'shan Vaults --
+			----------------------
 			-- The Stone Guard
 			SpellName(116281),	-- Cobalt Mine Blast
 			
@@ -1629,9 +1632,9 @@ if C["unitframes"].raidunitdebuffwatch == true then
 			SpellName(116778),	-- Focused Defense
 			SpellName(116525),	-- Focused Assault
 			
-			-----------------------------------------------------------------
-			-- Heart of Fear
-			-----------------------------------------------------------------
+			-------------------
+			-- Heart of Fear --
+			-------------------
 			-- Imperial Vizier Zor'lok
 			SpellName(122761),	-- Exhale
 			SpellName(122760), -- Exhale
@@ -1654,9 +1657,9 @@ if C["unitframes"].raidunitdebuffwatch == true then
 			SpellName(121949),	-- Parasitic Growth
 			-- Grand Empress Shek'zeer
 			
-			-----------------------------------------------------------------
-			-- Terrace of Endless Spring
-			-----------------------------------------------------------------
+			-------------------------------
+			-- Terrace of Endless Spring --
+			-------------------------------
 			-- Protectors of the Endless
 			SpellName(117436),	-- Lightning Prison
 			SpellName(118091),	-- Defiled Ground
@@ -1674,6 +1677,21 @@ if C["unitframes"].raidunitdebuffwatch == true then
 			SpellName(119985),	-- Dread Spray
 			SpellName(119086),	-- Penetrating Bolt
 			SpellName(119775),	-- Reaching Attack
+
+			-----------------------
+			-- Throne of Thunder --
+			-----------------------
+			--Jin'rokh the Breaker
+			SpellName(138002), -- Fluidity
+			SpellName(138349), -- Static Wound
+			SpellName(69593),  -- Focused Lighting
+
+			--Horridon
+			SpellName(136654), -- Rending Charge
+			SpellName(136587), -- Venom Bolt Volley (Poison)
+			SpellName(136710), -- Deadly Plague (Disease)
+			SpellName(136670), -- Mortal Strike
+			SpellName(136513), -- Hex of Confusion
 		}
 
 		D.ReverseTimer = {

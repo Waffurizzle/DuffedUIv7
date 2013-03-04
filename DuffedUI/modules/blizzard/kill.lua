@@ -57,7 +57,7 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 	-- make sure boss or arena frame is always disabled when running DuffedUI
 	SetCVar("showArenaEnemyFrames", 0)
 	
-	if C["unitframes"].arena then
+	if C["raid"].arena then
 		InterfaceOptionsFrameCategoriesButton10:SetScale(0.00001)
 		InterfaceOptionsFrameCategoriesButton10:SetAlpha(0) 
 		InterfaceOptionsUnitFramePanelArenaEnemyFrames:Kill()

@@ -9,7 +9,10 @@ if D.client == "zhTW" then
 
 	-- worldboss 世界Boss
 	L.worldboss_title = "世界Boss:"
-	L.worldboss_defeated = "擊殺"
+	L.worldboss_galleon = "帆船"
+	L.worldboss_sha = "憤怒之煞"
+	L.worldboss_defeated = "已擊殺"
+	L.worldboss_undefeated = "未擊殺"
 
 	-- specswitcher buttons
 	L.sesbutton_reload = "重新載入Ui介面"

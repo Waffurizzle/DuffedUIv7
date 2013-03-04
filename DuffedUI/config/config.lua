@@ -47,8 +47,6 @@ C["unitframes"] = {
 	["showtotalhpmp"] = false,                          		-- change the display of info text on player and target with XXXX/Total.
 	["showsmooth"] = true,                              		-- enable smooth bar
 	["charportrait"] = true,	                           		-- do i really need to explain this?
-	["maintank"] = false,                               		-- enable maintank
-	["mainassist"] = false,     		                        -- enable mainassist
 	["unicolor"] = true,               		                	-- enable unicolor theme
 	["combatfeedback"] = true,                  		        -- enable combattext on player and target.
 	["playeraggro"] = true,                             		-- color player border to red if you have aggro on current target.
@@ -61,8 +59,13 @@ C["unitframes"] = {
 	["runeofpower"] = true,										-- enable rune of power
 	["fader"] = false,											-- enable fader for unitframes
 	["minalpha"] = 0.1,											-- set minalpha for fader
+	["weakenedsoulbar"] = true,                         		-- show weakened soul bar
+	["classbar"] = true,                                		-- enable tukui classbar over player unit
+	["druidmanabar"] = true,                            		-- enable druid class mana bar
+	["druidmushroombar"] = false,                      			-- enable druid class mushroom bar
+}
 
-	-- raid layout (if one of them is enabled)
+C["raid"] = {
 	["showrange"] = true,                               		-- show range opacity on raidframes
 	["raidalphaoor"] = 0.3,                             		-- alpha of unitframes when unit is out of range
 	["showsymbols"] = true,	                            		-- show symbol.
@@ -75,22 +78,10 @@ C["unitframes"] = {
 	["showgroupresurrect"] = false,                     		-- show ressurect icon on raid frames
 	["showplayerinparty"] = true,								-- show player in party
 	["gridonly"] = true,										-- enable grid only
-	
-	-- boss frames
-	["showboss"] = true,                                		-- enable boss unit frames for PVELOL encounters.
-	
-	-- arena frames
+	["showboss"] = true,                                		-- enable boss unit frames for encounters.
 	["arena"] = true,                                   		-- enable arena frames
-
-	-- priest only plugin
-	["weakenedsoulbar"] = true,                         		-- show weakened soul bar
-	
-	-- class bar
-	["classbar"] = true,                                		-- enable tukui classbar over player unit
-	
-	-- these class bar are considered optional
-	["druidmanabar"] = true,                            		-- enable druid class mana bar
-	["druidmushroombar"] = false,                      			-- enable druid class mushroom bar
+	["maintank"] = false,                               		-- enable maintank
+	["mainassist"] = false,     		                        -- enable mainassist
 }
 
 C["skins"] = {

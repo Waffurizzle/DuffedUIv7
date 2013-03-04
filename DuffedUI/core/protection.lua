@@ -31,7 +31,7 @@ if (IsAddOnLoaded("TipTac") or IsAddOnLoaded("FreebTip")) then
 end
 
 if (IsAddOnLoaded("Gladius")) then
-	C["unitframes"].arena = false
+	C["raid"].arena = false
 end
 
 if (IsAddOnLoaded("SatrinaBuffFrame") or IsAddOnLoaded("ElkBuffBars")) then

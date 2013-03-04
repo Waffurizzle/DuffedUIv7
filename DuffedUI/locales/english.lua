@@ -8,7 +8,10 @@ L.welcome_2 = "For detailed Information visit |cffc41f3bhttp://www.tukui.org|r. 
 
 -- worldboss
 L.worldboss_title = "World Boss(s):"
+L.worldboss_galleon = "Galleon"
+L.worldboss_sha = "Sha of Anger"
 L.worldboss_defeated = "Defeated"
+L.worldboss_undefeated = "Undefeated"
 
 -- specswitcher buttons
 L.sesbutton_reload = "Reloads the entire UI"

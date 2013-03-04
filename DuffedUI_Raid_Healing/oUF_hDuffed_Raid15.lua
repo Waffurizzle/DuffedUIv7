@@ -6,7 +6,7 @@ ns._Objects = {}
 ns._Headers = {}
 
 local D, C, L, G = unpack(DuffedUI)
-if not C["unitframes"].enable == true or C["unitframes"].gridonly == true then return end
+if not C["unitframes"].enable == true or C["raid"].gridonly == true then return end
 
 local normTex = C["media"].normTex
 local backdrop = {
@@ -29,7 +29,7 @@ local function Shared(self, unit)
 	health:SetStatusBarTexture(normTex)
 	health:CreateBackdrop()
 	self.Health = health
-	if C["unitframes"].gridhealthvertical == true then health:SetOrientation('VERTICAL') end
+	if C["raid"].gridhealthvertical == true then health:SetOrientation('VERTICAL') end
 	
 	health.bg = health:CreateTexture(nil, 'BORDER')
 	health.bg:SetAllPoints(health)
@@ -125,14 +125,14 @@ local function Shared(self, unit)
     self:RegisterEvent("PARTY_LEADER_CHANGED", D.MLAnchorUpdate)
     self:RegisterEvent("PARTY_MEMBERS_CHANGED", D.MLAnchorUpdate)
 	
-	if C["unitframes"].aggro == true then
+	if C["raid"].aggro == true then
 		table.insert(self.__elements, D.UpdateThreat)
 		self:RegisterEvent('PLAYER_TARGET_CHANGED', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_SITUATION_UPDATE', D.UpdateThreat)
     end
 	
-	if C["unitframes"].showsymbols == true then
+	if C["raid"].showsymbols == true then
 		local RaidIcon = health:CreateTexture(nil, 'OVERLAY')
 		RaidIcon:Height(18 * D.raidscale)
 		RaidIcon:Width(18 * D.raidscale)
@@ -163,8 +163,8 @@ local function Shared(self, unit)
 	self.DebuffHighlightBackdrop = false
 	self.DebuffHighlightFilter = true
 	
-	if C["unitframes"].showrange == true then
-		local range = {insideAlpha = 1, outsideAlpha = C["unitframes"].raidalphaoor}
+	if C["raid"].showrange == true then
+		local range = {insideAlpha = 1, outsideAlpha = C["raid"].raidalphaoor}
 		self.Range = range
 	end
 	
@@ -223,7 +223,7 @@ oUF:Factory(function(self)
 	'initial-width', D.Scale(150 * D.raidscale),
 	'initial-height', D.Scale(32 * D.raidscale),	
 	"showParty", true, 
-	"showPlayer", C["unitframes"].showplayerinparty, 
+	"showPlayer", C["raid"].showplayerinparty, 
 	"showRaid", true,
 	--"showSolo", true, -- only for dev
 	"groupFilter", "1,2,3,4,5,6,7,8", 
@@ -237,7 +237,7 @@ oUF:Factory(function(self)
 		raid:Point("BOTTOMLEFT", ChatFrame1, "TOPLEFT", 2, 20)
 	end
 	
-	if C["unitframes"].showraidpets == false then
+	if C["raid"].showraidpets == false then
 		local pets = {} 
 			pets[1] = oUF:Spawn('partypet1', 'oUF_DuffedUIPartyPet1') 
 			pets[1]:Point('BOTTOMLEFT', raid, 'TOPLEFT', 0, 24 * D.raidscale)
@@ -262,7 +262,7 @@ oUF:Factory(function(self)
 			local numraid = GetNumGroupMembers()
 			local numparty = GetNumSubgroupMembers()
 			if numparty > 0 and numraid == 0 or numraid > 0 and numraid <= 5 then
-				if C["unitframes"].showraidpets == false then for i,v in ipairs(pets) do v:Enable() end end
+				if C["raid"].showraidpets == false then for i,v in ipairs(pets) do v:Enable() end end
 			elseif numraid > 5 and numraid <= 10 then
 				for i,v in ipairs(pets) do v:Disable() end
 			elseif numraid > 10 and numraid <= 15 then

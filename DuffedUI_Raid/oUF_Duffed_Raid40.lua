@@ -64,7 +64,7 @@ local function Shared(self, unit)
 	end
 	self.Name = name
 	
-	if C["unitframes"].showsymbols == true then
+	if C["raid"].showsymbols == true then
 		RaidIcon = health:CreateTexture(nil, 'OVERLAY')
 		RaidIcon:Height(14 * D.raidscale)
 		RaidIcon:Width(14 * D.raidscale)
@@ -73,7 +73,7 @@ local function Shared(self, unit)
 		self.RaidIcon = RaidIcon
 	end
 	
-	if C["unitframes"].aggro == true then
+	if C["raid"].aggro == true then
 		table.insert(self.__elements, D.UpdateThreat)
 		self:RegisterEvent('PLAYER_TARGET_CHANGED', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', D.UpdateThreat)
@@ -121,8 +121,8 @@ local function Shared(self, unit)
 
 	if C["unitframes"].showsmooth == true then health.Smooth = true end
 	
-	if C["unitframes"].showrange == true then
-		local range = {insideAlpha = 1, outsideAlpha = C["unitframes"].raidalphaoor}
+	if C["raid"].showrange == true then
+		local range = {insideAlpha = 1, outsideAlpha = C["raid"].raidalphaoor}
 		self.Range = range
 	end
 	

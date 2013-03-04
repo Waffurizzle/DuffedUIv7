@@ -109,6 +109,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(115176), -- Zen Meditation
 			CreateSpellEntry(119085), -- Momentum
 			CreateSpellEntry(115867), -- Mana Tea
+			CreateSpellEntry(124275), -- Light Stagger
 		},
 		procs = {
 			CreateSpellEntry(116768), -- Combobreaker: Blackout-Kick
@@ -441,6 +442,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(113858), -- Dark Soul: Instability
 			CreateSpellEntry(104773), -- Unending Resolve
 			CreateSpellEntry(108359), -- Dark Regeneration
+			CreateSpellEntry(34936), -- Backlash
 		},
 		procs = {
 			CreateSpellEntry(86121), CreateSpellEntry(86211), -- Soul Swap

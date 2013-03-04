@@ -25,11 +25,11 @@ local function Shared(self, unit)
 	local health = CreateFrame('StatusBar', nil, self)
 	health:SetPoint("TOPLEFT")
 	health:SetPoint("TOPRIGHT")
-	if unit:find("partypet") then health:Height(18) else health:Height(36 * C["unitframes"].gridscale * D.raidscale) end
+	if unit:find("partypet") then health:Height(18) else health:Height(36 * C["raid"].gridscale * D.raidscale) end
 	health:SetStatusBarTexture(normTex)
 	health:CreateBackdrop()
 	self.Health = health
-	if C["unitframes"].gridhealthvertical == true then health:SetOrientation('VERTICAL') end
+	if C["raid"].gridhealthvertical == true then health:SetOrientation('VERTICAL') end
 	
 	health.bg = health:CreateTexture(nil, 'BORDER')
 	health.bg:SetAllPoints(health)
@@ -103,14 +103,14 @@ local function Shared(self, unit)
 	self:Tag(name, "[DuffedUI:getnamecolor][DuffedUI:nameshort]")
 	self.Name = name
 	
-    if C["unitframes"].aggro == true then
+    if C["raid"].aggro == true then
 		table.insert(self.__elements, D.UpdateThreat)
 		self:RegisterEvent('PLAYER_TARGET_CHANGED', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', D.UpdateThreat)
 		self:RegisterEvent('UNIT_THREAT_SITUATION_UPDATE', D.UpdateThreat)
 	end
 	
-	if C["unitframes"].showsymbols == true then
+	if C["raid"].showsymbols == true then
 		local RaidIcon = health:CreateTexture(nil, 'OVERLAY')
 		RaidIcon:Height(18 * D.raidscale)
 		RaidIcon:Width(18 * D.raidscale)
@@ -136,8 +136,8 @@ local function Shared(self, unit)
     self.ResurrectIcon = ResurrectIcon
 	
 	local ReadyCheck = power:CreateTexture(nil, "OVERLAY")
-	ReadyCheck:Height(12 * C["unitframes"].gridscale * D.raidscale)
-	ReadyCheck:Width(12 * C["unitframes"].gridscale * D.raidscale)
+	ReadyCheck:Height(12 * C["raid"].gridscale * D.raidscale)
+	ReadyCheck:Width(12 * C["raid"].gridscale * D.raidscale)
 	ReadyCheck:SetPoint('CENTER') 	
 	self.ReadyCheck = ReadyCheck
 	
@@ -154,14 +154,14 @@ local function Shared(self, unit)
     self:RegisterEvent("PARTY_LEADER_CHANGED", D.MLAnchorUpdate)
     self:RegisterEvent("PARTY_MEMBERS_CHANGED", D.MLAnchorUpdate)
 	
-	if not C["unitframes"].raidunitdebuffwatch == true then
+	if not C["raid"].raidunitdebuffwatch == true then
 		self.DebuffHighlightAlpha = 1
 		self.DebuffHighlightBackdrop = true
 		self.DebuffHighlightFilter = true
 	end
 	
-	if C["unitframes"].showrange == true then
-		local range = {insideAlpha = 1, outsideAlpha = C["unitframes"].raidalphaoor}
+	if C["raid"].showrange == true then
+		local range = {insideAlpha = 1, outsideAlpha = C["raid"].raidalphaoor}
 		self.Range = range
 	end
 	
@@ -172,29 +172,29 @@ local function Shared(self, unit)
 	
 	if C["unitframes"].healcomm then
 		local mhpb = CreateFrame('StatusBar', nil, self.Health)
-		if C["unitframes"].gridhealthvertical then
+		if C["raid"].gridhealthvertical then
 			mhpb:SetOrientation("VERTICAL")
 			mhpb:SetPoint('BOTTOM', self.Health:GetStatusBarTexture(), 'TOP', 0, 0)
-			mhpb:Width(68 * C["unitframes"].gridscale * D.raidscale)
-			mhpb:Height(31 * C["unitframes"].gridscale * D.raidscale)		
+			mhpb:Width(68 * C["raid"].gridscale * D.raidscale)
+			mhpb:Height(31 * C["raid"].gridscale * D.raidscale)		
 		else
 			mhpb:SetPoint('TOPLEFT', self.Health:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
 			mhpb:SetPoint('BOTTOMLEFT', self.Health:GetStatusBarTexture(), 'BOTTOMRIGHT', 0, 0)
-			mhpb:Width(68 * C["unitframes"].gridscale * D.raidscale)
+			mhpb:Width(68 * C["raid"].gridscale * D.raidscale)
 		end				
 		mhpb:SetStatusBarTexture(normTex)
 		mhpb:SetStatusBarColor(0, 1, 0.5, 0.25)
 
 		local ohpb = CreateFrame('StatusBar', nil, self.Health)
-		if C["unitframes"].gridhealthvertical then
+		if C["raid"].gridhealthvertical then
 			ohpb:SetOrientation("VERTICAL")
 			ohpb:SetPoint('BOTTOM', mhpb:GetStatusBarTexture(), 'TOP', 0, 0)
-			ohpb:Width(68 * C["unitframes"].gridscale * D.raidscale)
-			ohpb:Height(31 * C["unitframes"].gridscale * D.raidscale)
+			ohpb:Width(68 * C["raid"].gridscale * D.raidscale)
+			ohpb:Height(31 * C["raid"].gridscale * D.raidscale)
 		else
 			ohpb:SetPoint('TOPLEFT', mhpb:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
 			ohpb:SetPoint('BOTTOMLEFT', mhpb:GetStatusBarTexture(), 'BOTTOMRIGHT', 0, 0)
-			ohpb:Width(68 * C["unitframes"].gridscale * D.raidscale)
+			ohpb:Width(68 * C["raid"].gridscale * D.raidscale)
 		end
 		ohpb:SetStatusBarTexture(normTex)
 		ohpb:SetStatusBarColor(0, 1, 0, 0.25)
@@ -218,14 +218,14 @@ local function Shared(self, unit)
 		self.WeakenedSoul = ws
 	end
 	
-	if C["unitframes"].raidunitdebuffwatch == true then
+	if C["raid"].raidunitdebuffwatch == true then
 		-- AuraWatch (corner icon)
 		D.createAuraWatch(self,unit)
 		
 		-- Raid Debuffs (big middle icon)
 		local RaidDebuffs = CreateFrame('Frame', nil, self)
-		RaidDebuffs:Height(24 * C["unitframes"].gridscale)
-		RaidDebuffs:Width(24 * C["unitframes"].gridscale)
+		RaidDebuffs:Height(24 * C["raid"].gridscale)
+		RaidDebuffs:Width(24 * C["raid"].gridscale)
 		RaidDebuffs:Point('CENTER', health, 1,0)
 		RaidDebuffs:SetFrameStrata(health:GetFrameStrata())
 		RaidDebuffs:SetFrameLevel(health:GetFrameLevel() + 2)
@@ -242,7 +242,7 @@ local function Shared(self, unit)
 		RaidDebuffs.time:SetTextColor(1, .9, 0)
 		
 		RaidDebuffs.count = RaidDebuffs:CreateFontString(nil, 'OVERLAY')
-		RaidDebuffs.count:SetFont(C["media"].uffont, 9 * C["unitframes"].gridscale, "THINOUTLINE")
+		RaidDebuffs.count:SetFont(C["media"].uffont, 9 * C["raid"].gridscale, "THINOUTLINE")
 		RaidDebuffs.count:Point('BOTTOMRIGHT', RaidDebuffs, 'BOTTOMRIGHT', 0, 2)
 		RaidDebuffs.count:SetTextColor(1, .9, 0)
 		
@@ -257,13 +257,13 @@ oUF:Factory(function(self)
 	oUF:SetActiveStyle("DuffedUIHealR25R40")
 	
 	local spawnG = "solo,raid,party"
-	if C["unitframes"].gridonly ~= true then spawnG = "custom [@raid16,exists] show;hide" end
+	if C["raid"].gridonly ~= true then spawnG = "custom [@raid16,exists] show;hide" end
 	
 	local pointG = "LEFT"
-	if C["unitframes"].gridvertical then pointG = "BOTTOM" end
+	if C["raid"].gridvertical then pointG = "BOTTOM" end
 	
 	local capG = "BOTTOM"
-	if C["unitframes"].gridvertical then capG = "LEFT" end
+	if C["raid"].gridvertical then capG = "LEFT" end
 	
 	local raid = self:SpawnHeader(
 		"DuffedUIGrid", nil, spawnG,
@@ -272,10 +272,10 @@ oUF:Factory(function(self)
 			self:SetWidth(header:GetAttribute('initial-width'))
 			self:SetHeight(header:GetAttribute('initial-height'))
 		]],
-		'initial-width', D.Scale(65 * C["unitframes"].gridscale * D.raidscale),
-		'initial-height', D.Scale(42 * C["unitframes"].gridscale * D.raidscale),
+		'initial-width', D.Scale(65 * C["raid"].gridscale * D.raidscale),
+		'initial-height', D.Scale(42 * C["raid"].gridscale * D.raidscale),
 		"showParty", true,
-		"showPlayer", C["unitframes"].showplayerinparty, 
+		"showPlayer", C["raid"].showplayerinparty, 
 		"showRaid", true, 
 		"xoffset", D.Scale(8),
 		"yOffset", D.Scale(8),
@@ -287,7 +287,7 @@ oUF:Factory(function(self)
 		"columnSpacing", D.Scale(8),
 		"point", pointG,
 		"columnAnchorPoint", capG,
-		"showSolo", C["unitframes"].gridsolo
+		"showSolo", C["raid"].gridsolo
 	)
 	if DuffedUIChatBackgroundLeft then
 		raid:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "TOPLEFT", 2, 6)
@@ -295,15 +295,15 @@ oUF:Factory(function(self)
 		raid:Point("BOTTOMLEFT", ChatFrame1, "TOPLEFT", 2, 23)
 	end
 	
-	if C["unitframes"].showraidpets == false and not C["unitframes"].gridvertical then
+	if C["raid"].showraidpets == false and not C["raid"].gridvertical then
 		local pets = {} 
 			pets[1] = oUF:Spawn('partypet1', 'oUF_DuffedUIPartyPet1') 
 			pets[1]:Point('BOTTOMLEFT', raid, 'TOPLEFT', 0, 8)
-			pets[1]:Size(65 * C["unitframes"].gridscale * D.raidscale, 18 * C["unitframes"].gridscale * D.raidscale)
+			pets[1]:Size(65 * C["raid"].gridscale * D.raidscale, 18 * C["raid"].gridscale * D.raidscale)
 		for i =2, 4 do 
 			pets[i] = oUF:Spawn('partypet'..i, 'oUF_DuffedUIPartyPet'..i) 
 			pets[i]:Point('LEFT', pets[i-1], 'RIGHT', 8, 0)
-			pets[i]:Size(65 * C["unitframes"].gridscale * D.raidscale, 18 * C["unitframes"].gridscale * D.raidscale)
+			pets[i]:Size(65 * C["raid"].gridscale * D.raidscale, 18 * C["raid"].gridscale * D.raidscale)
 		end
 		
 		local ShowPet = CreateFrame("Frame")
