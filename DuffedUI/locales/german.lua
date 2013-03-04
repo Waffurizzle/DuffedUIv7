@@ -10,6 +10,8 @@ if D.client == "deDE" then
 	L.worldboss_title = "Weltboss(e):"
 	L.worldboss_galleon = "Galleon"
 	L.worldboss_sha = "Sha of Anger"
+	L.worldboss_oondasta = "Oondasta"
+	L.worldboss_nalak = "Nalak"
 	L.worldboss_defeated = "Besiegt"
 	L.worldboss_undefeated = "Unbesiegt"
 	

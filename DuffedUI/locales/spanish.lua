@@ -10,6 +10,8 @@ if D.client == "esES" or D.client == "esMX" then
 	L.worldboss_title = "World Boss(s):"
 	L.worldboss_galleon = "Galeón"
 	L.worldboss_sha = "Sha de la Ira"
+	L.worldboss_oondasta = "Oondasta"
+	L.worldboss_nalak = "Nalak"
 	L.worldboss_defeated = "Derrotado"
 	L.worldboss_undefeated = "No derrotado"
 	

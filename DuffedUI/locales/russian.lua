@@ -10,6 +10,8 @@ if D.client == "ruRU" then
 	L.worldboss_title = "World Boss(s):"
 	L.worldboss_galleon = "Галеон"
 	L.worldboss_sha = "Ша Злости"
+	L.worldboss_oondasta = "Oondasta"
+	L.worldboss_nalak = "Nalak"
 	L.worldboss_defeated = "Убит"
 	L.worldboss_undefeated = "Не убит"
 	

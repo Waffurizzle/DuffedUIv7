@@ -10,6 +10,8 @@ if D.client == "zhCN" then
 	L.worldboss_title = "世界Boss:"
 	L.worldboss_galleon = "炮舰"
 	L.worldboss_sha = "怒之煞"
+	L.worldboss_oondasta = "Oondasta"
+	L.worldboss_nalak = "Nalak"
 	L.worldboss_defeated = "已击杀"
 	L.worldboss_undefeated = "未击杀"
 	

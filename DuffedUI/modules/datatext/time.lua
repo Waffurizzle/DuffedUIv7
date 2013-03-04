@@ -171,9 +171,13 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		if UnitLevel("player") == 90 then
 			local Sha = IsQuestFlaggedCompleted(32099)
 			local Galleon = IsQuestFlaggedCompleted(32098)
+			local Oondasta = IsQuestFlaggedCompleted(32519)
+			local Nalak = IsQuestFlaggedCompleted(32518)
 
 			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_sha.."|r ", Sha and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
 			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_galleon.."|r ", Galleon and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
+			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_oondasta.."|r: ", Oondasta and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
+			GameTooltip:AddDoubleLine("|cffffffff"..L.worldboss_nalak.."|r: ", Nalak and "|cff00ff00"..L.worldboss_defeated.."|r" or "|cffff0000"..L.worldboss_undefeated.."|r")
 		end
 		GameTooltip:Show()
 	end)

@@ -11,6 +11,8 @@ if D.client == "itIT" then
 	L.worldboss_title = "World Boss(s):"
 	L.worldboss_galleon = "Galleon"
 	L.worldboss_sha = "Sha of Anger"
+	L.worldboss_oondasta = "Oondasta"
+	L.worldboss_nalak = "Nalak"
 	L.worldboss_defeated = "Defeated"
 	L.worldboss_undefeated = "Undefeated"
 
