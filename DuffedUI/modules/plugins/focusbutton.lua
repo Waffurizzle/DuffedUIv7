@@ -15,9 +15,9 @@ for i = 1, 2 do
 	if i == 1 then
 		Focus[i]:SetParent(DuffedUITarget)
 		if C["unitframes"].layout == 1 then
-			Focus[i]:Point("CENTER", DuffedUITarget, "CENTER", 10, -7)
+			Focus[i]:Point("LEFT", DuffedUITarget, "LEFT", -10, -34)
 		elseif C["unitframes"].layout == 2 then
-			Focus[i]:Point("CENTER", DuffedUITarget, "CENTER", 10, 7)
+			Focus[i]:Point("RIGHT", DuffedUITarget, "RIGHT", 10, -32)
 		elseif C["unitframes"].layout == 3 then
 			Focus[i]:Point("BOTTOMRIGHT", DuffedUITarget, "BOTTOMRIGHT", 20, -1)
 		end
@@ -29,15 +29,15 @@ for i = 1, 2 do
 		Focus[i]:SetParent(DuffedUIFocus)
 		if C["unitframes"].layout == 1 then
 			if C["unitframes"].largefocus then
-				Focus[i]:Point("CENTER", DuffedUIFocus, "CENTER", 0, -5)
+				Focus[i]:Point("LEFT", DuffedUIFocus, "LEFT", 0, -32)
 			else
 				Focus[i]:Point("CENTER", DuffedUIFocus, "CENTER", 0, -1)
 			end
 		elseif C["unitframes"].layout == 2 then
 			if C["unitframes"].largefocus then
-				Focus[i]:Point("CENTER", DuffedUIFocus, "CENTER", 0, 7)
+				Focus[i]:Point("LEFT", DuffedUIFocus, "LEFT", -9, -30)
 			else
-				Focus[i]:Point("CENTER", DuffedUIFocus, "CENTER", 0, -1)
+				Focus[i]:Point("RIGHT", DuffedUIFocus, "LEFT", -4, -1)
 			end
 		elseif C["unitframes"].layout == 3 then
 			Focus[i]:Point("TOPRIGHT", DuffedUIFocus, "TOPRIGHT", 2, 14)
