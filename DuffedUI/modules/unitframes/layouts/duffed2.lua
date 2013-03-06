@@ -2007,7 +2007,7 @@ if C["unitframes"].arena then
 	end)
 end
 
-if C["unitframes"].showboss then
+if C["raid"].showboss then
 	for i = 1,MAX_BOSS_FRAMES do
 		local t_boss = _G["Boss"..i.."TargetFrame"]
 		t_boss:UnregisterAllEvents()
@@ -2032,7 +2032,7 @@ end
 
 local assisttank_width = 90
 local assisttank_height  = 20
-if C["unitframes"].maintank == true then
+if C["raid"].maintank == true then
 	local tank = oUF:SpawnHeader('DuffedUIMainTank', nil, 'raid',
 		'oUF-initialConfigFunction', ([[
 			self:SetWidth(%d)
@@ -2052,7 +2052,7 @@ if C["unitframes"].maintank == true then
 	end
 end
  
-if C["unitframes"].mainassist == true then
+if C["raid"].mainassist == true then
 	local assist = oUF:SpawnHeader("DuffedUIMainAssist", nil, 'raid',
 		'oUF-initialConfigFunction', ([[
 			self:SetWidth(%d)
@@ -2065,7 +2065,7 @@ if C["unitframes"].mainassist == true then
 		'template', 'oUF_DuffedUIMtt'
 	)
 	assist:SetParent(DuffedUIPetBattleHider)
-	if C["unitframes"].maintank == true then
+	if C["raid"].maintank == true then
 		assist:SetPoint("TOPLEFT", DuffedUIMainTank, "BOTTOMLEFT", 2, -50)
 	else
 		assist:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
