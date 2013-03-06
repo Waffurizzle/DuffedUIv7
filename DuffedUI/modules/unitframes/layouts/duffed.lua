@@ -1654,7 +1654,7 @@ local function Shared(self, unit)
 	--	Arena or boss units layout (both mirror'd)
 	------------------------------------------------------------------------
 	
-	if (unit and unit:find("arena%d") and C["unitframes"].arena == true) or (unit and unit:find("boss%d") and C["unitframes"].showboss == true) then
+	if (unit and unit:find("arena%d") and C["raid"].arena == true) or (unit and unit:find("boss%d") and C["raid"].showboss == true) then
 		-- Right-click focus on arena or boss units
 		self:SetAttribute("type2", "focus")
 		
@@ -1821,7 +1821,7 @@ local function Shared(self, unit)
 		self.Debuffs = debuffs
 				
 		-- trinket feature via trinket plugin
-		if (C["unitframes"].arena) and (unit and unit:find('arena%d')) then
+		if (C["raid"].arena) and (unit and unit:find('arena%d')) then
 			if C["unitframes"].powerClasscolored then
 				power.colorTapping = true
 				power.colorClass = true		

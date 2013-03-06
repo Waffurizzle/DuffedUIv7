@@ -1531,7 +1531,7 @@ local function Shared(self, unit)
 	--	Arena or boss units layout (both mirror'd)
 	------------------------------------------------------------------------
 	
-	if (unit and unit:find("arena%d") and C["unitframes"].arena == true) or (unit and unit:find("boss%d") and C["unitframes"].showboss == true) then
+	if (unit and unit:find("arena%d") and C["raid"].arena == true) or (unit and unit:find("boss%d") and C["raid"].showboss == true) then
 		-- Right-click focus on arena or boss units
 		self:SetAttribute("type2", "focus")
 		
@@ -1690,7 +1690,7 @@ local function Shared(self, unit)
 		self.Debuffs = debuffs
 				
 		-- trinket feature via trinket plugin
-		if (C["unitframes"].arena) and (unit and unit:find('arena%d')) then
+		if (C["raid"].arena) and (unit and unit:find('arena%d')) then
 			local Trinket = CreateFrame("Frame", nil, self)
 			Trinket:Size(26)
 			Trinket:SetPoint("TOPRIGHT", self, "TOPLEFT", -5, 2)
@@ -1867,7 +1867,7 @@ local focustarget = oUF:Spawn("focustarget", "DuffedUIFocusTarget")
 focustarget:SetPoint("TOPRIGHT", focus, "BOTTOMLEFT", 0, -2)
 focustarget:Size(75, 10)
 
-if C["unitframes"].arena then
+if C["raid"].arena then
 	local arena = {}
 	for i = 1, 5 do
 		arena[i] = oUF:Spawn("arena"..i, "DuffedUIArena"..i)
@@ -1945,7 +1945,7 @@ end
 
 
 if C["raid"].showboss then
-	for i = 1,MAX_BOSS_FRAMES do
+	for i = 1, MAX_BOSS_FRAMES do
 		local t_boss = _G["Boss"..i.."TargetFrame"]
 		t_boss:UnregisterAllEvents()
 		t_boss.Show = D.dummy
