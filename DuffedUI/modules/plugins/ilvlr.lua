@@ -127,7 +127,7 @@ local function UpdateButtonsText(frame)
 								text:SetText(ilevelcolor..ilevel + upgrades[upgrade])
 							end
 						else
-							text:SetText(ilevel + upgrades[upgrade])
+							text:SetText(ilevel) -- + upgrades[upgrade]
 						end
 					end
 				end
