@@ -1,7 +1,7 @@
 ## Interface: 50200
 ## Author: Merith @ Zirkel des Cenarius EU
 ## Title: |cffC41F3BDuffedUI|r Raid Healing
-## Version: 7.1.6
+## Version: 7.1.7
 ## Notes: Raid layout for party and raid, Healer mode.
 ## X-Email: admin@duffed.net
 ## X-Category: UnitFrame
