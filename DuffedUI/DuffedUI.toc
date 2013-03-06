@@ -1,6 +1,6 @@
 ﻿## Interface: 50200
 ## Author: Merith @ Zirkel des Cenarius EU
-## Version: 7.1.7
+## Version: 7.1.7a
 ## Title: |cffC41F3BDuffedUI|r
 ## Notes: UI of awesomeness!
 ## SavedVariables: DuffedUIData
