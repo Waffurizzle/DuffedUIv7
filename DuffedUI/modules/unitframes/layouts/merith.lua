@@ -387,17 +387,17 @@ local function Shared(self, unit)
 					mb:SetBackdropColor(0, 0, 0)
 					mb:SetBackdropBorderColor(0, 0, 0)				
 					
-					for i = 1, 6 do
+					for i = 1, 4 do
 						mb[i] = CreateFrame("StatusBar", "DuffedUIArcaneBar"..i, mb)
 						mb[i]:Height(5)
 						mb[i]:SetStatusBarTexture(C["media"].normTex)
 						
 						if i == 1 then
-							mb[i]:Width(176 / 6)
+							mb[i]:Width(176 / 4)
 							mb[i]:SetPoint("LEFT", mb, "LEFT", 0, 0)
 							mb[i]:CreateBackdrop()
 						else
-							mb[i]:Width(176 / 6)
+							mb[i]:Width(176 / 4)
 							mb[i]:SetPoint("LEFT", mb[i-1], "RIGHT", 6, 0)
 							mb[i]:CreateBackdrop()
 						end

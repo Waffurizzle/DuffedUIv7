@@ -91,13 +91,8 @@ local function Visibility(self, event, unit)
 		end
 		
 		if spec == SPEC_WARLOCK_DESTRUCTION then
-			local maxembers = 3
+			local maxembers = 4
 			
-			for i = 1, GetNumGlyphSockets() do
-				local glyphID = select(4, GetGlyphSocketInfo(i))
-				if glyphID == SPEC_WARLOCK_DESTRUCTION_GLYPH_EMBERS then maxembers = 4 end
-			end			
-
 			for i = 1, maxembers do
 				if i ~= maxembers then
 					wsb[i]:SetWidth(w / maxembers - spacing)
@@ -109,15 +104,9 @@ local function Visibility(self, event, unit)
 				if wsb[i].bg then wsb[i].bg:SetAlpha(0.15) wsb[i].bg:SetTexture(unpack(Colors[SPEC_WARLOCK_DESTRUCTION])) end
 			end
 			
-			if maxembers == 3 then wsb[4]:Hide() else wsb[4]:Show() end
 		elseif spec == SPEC_WARLOCK_AFFLICTION then
-			local maxshards = 3
+			local maxshards = 4
 			
-			for i = 1, GetNumGlyphSockets() do
-				local glyphID = select(4, GetGlyphSocketInfo(i))
-				if glyphID == SPEC_WARLOCK_AFFLICTION_GLYPH_SHARDS then maxshards = 4 end
-			end			
-
 			for i = 1, maxshards do
 				if i ~= maxshards then
 					wsb[i]:SetWidth(w / maxshards - spacing)
@@ -129,7 +118,6 @@ local function Visibility(self, event, unit)
 				if wsb[i].bg then wsb[i].bg:SetAlpha(0) end
 			end
 			
-			if maxshards == 3 then wsb[4]:Hide() else wsb[4]:Show() end
 		elseif spec == SPEC_WARLOCK_DEMONOLOGY then
 			wsb[2]:Hide()
 			wsb[3]:Hide()
