@@ -265,8 +265,7 @@ oUF:Factory(function(self)
 	local capG = "BOTTOM"
 	if C["raid"].gridvertical then capG = "LEFT" end
 	
-	local raid = self:SpawnHeader(
-		"DuffedUIGrid", nil, spawnG,
+	local raid = self:SpawnHeader("DuffedUIGrid", nil, spawnG,
 		'oUF-initialConfigFunction', [[
 			local header = self:GetParent()
 			self:SetWidth(header:GetAttribute('initial-width'))

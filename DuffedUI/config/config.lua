@@ -71,16 +71,16 @@ C["raid"] = {
 	["showsymbols"] = true,	                            		-- show symbol.
 	["aggro"] = true,                                   		-- show aggro on all raids layouts
 	["raidunitdebuffwatch"] = true,                     		-- track important spell to watch in pve for grid mode.
-	["gridhealthvertical"] = false,                    			-- enable vertical grow on health bar for grid mode.
+	["gridhealthvertical"] = true,                    			-- enable vertical grow on health bar for grid mode.
 	["gridscale"] = 1,                                  		-- set the healing grid scaling
-	["gridvertical"] = true,                            		-- grid group displayed vertically
+	["gridvertical"] = false,                            		-- grid group displayed vertically
 	["showraidpets"] = true,                            		-- show pets in raid unit frames
 	["showgroupresurrect"] = false,                     		-- show ressurect icon on raid frames
-	["showplayerinparty"] = true,								-- show player in party
+	["showplayerinparty"] = false,								-- show player in party
 	["gridonly"] = true,										-- enable grid only
 	["showboss"] = true,                                		-- enable boss unit frames for encounters.
 	["arena"] = true,                                   		-- enable arena frames
-	["maintank"] = false,                               		-- enable maintank
+	["maintank"] = true,                               			-- enable maintank
 	["mainassist"] = false,     		                        -- enable mainassist
 }
 

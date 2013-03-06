@@ -1516,7 +1516,7 @@ D.createAuraWatch = function(self, unit)
 
 			local tex = icon:CreateTexture(nil, "OVERLAY")
 			tex:SetAllPoints(icon)
-			tex:SetTexture(C.media.blank)
+			tex:SetTexture(C["media"].blank)
 			if (spell[3]) then
 				tex:SetVertexColor(unpack(spell[3]))
 			else
@@ -1539,7 +1539,7 @@ end
 -- This is the "Grid" theme debuff display section, like what GridStatusDebuffs does
 --------------------------------------------------------------------------------------------
 
-if C["unitframes"].raidunitdebuffwatch == true then
+if C["raid"].raidunitdebuffwatch == true then
 	-- Class buffs { spell ID, position [, {r,g,b,a}][, anyUnit] }
 	-- It use oUF_AuraWatch lib, for grid indicator
 	do
@@ -1681,17 +1681,50 @@ if C["unitframes"].raidunitdebuffwatch == true then
 			-----------------------
 			-- Throne of Thunder --
 			-----------------------
-			--Jin'rokh the Breaker
-			SpellName(138002), -- Fluidity
+			--Trash
 			SpellName(138349), -- Static Wound
-			SpellName(69593),  -- Focused Lighting
+			SpellName(137371), -- Thundering Throw
 
 			--Horridon
-			SpellName(136654), -- Rending Charge
-			SpellName(136587), -- Venom Bolt Volley (Poison)
-			SpellName(136710), -- Deadly Plague (Disease)
-			SpellName(136670), -- Mortal Strike
-			SpellName(136513), -- Hex of Confusion
+			SpellName(136767), --Triple Puncture
+
+			--Council of Elders
+			SpellName(137641), --Soul Fragment
+			SpellName(137359), --Shadowed Loa Spirit Fixate
+			SpellName(137972), --Twisted Fate
+
+			--Tortos
+			SpellName(136753), --Slashing Talons
+			SpellName(137633), --Crystal Shell
+
+			--Megaera
+			SpellName(137731), --Ignite Flesh
+
+			--Ji-Kun
+			SpellName(138309), --Slimed
+
+			--Durumu the Forgotten
+			SpellName(133767), --Serious Wound
+			SpellName(133768), --Arterial Cut
+
+			--Primordius
+			SpellName(136050), --Malformed Blood
+
+			--Dark Animus
+			SpellName(138569), --Explosive Slam
+
+			--Iron Qon
+			SpellName(134691), --Impale
+
+			--Twin Consorts
+			SpellName(137440), --Icy Shadows
+			SpellName(137408), --Fan of Flames
+			SpellName(137360), --Corrupted Healing
+
+			--Lei Shen
+			SpellName(135000), --Decapitate
+
+			--Ra-den
 		}
 
 		D.ReverseTimer = {
