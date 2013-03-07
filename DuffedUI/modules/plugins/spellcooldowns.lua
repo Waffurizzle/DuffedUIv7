@@ -159,6 +159,7 @@ spellCooldowns = {
 		115313, -- Jade Serpent Statue
 		116841, -- Tiger's Lust
 		115151, -- Renewing Mist
+		124098, -- Zen Sphere
 	},
 	["WARLOCK"] = {
 		5484, -- Howl of Terror
