@@ -125,7 +125,6 @@
 	DuffedUIConfigUILocalization.datatextdps_text = "Schaden pro Sekunde - Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextcrit = "Kritisch-Position, in % (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextdur = "R\195\188stungs-Haltbarkeit-Position (0 zum deaktivieren)"
-	DuffedUIConfigUILocalization.datatextcurrency = "Abzeichen-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "Micro-Menu\195\188-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatexthit = "Trefferwertung-Position (0 zum deaktivieren)"
 	DuffedUIConfigUILocalization.datatextmastery = "Meisterschaft-Position (0 zum deaktivieren)"

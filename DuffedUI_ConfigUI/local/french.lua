@@ -125,7 +125,6 @@
 	DuffedUIConfigUILocalization.datatextdps_text = "Damage per second position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextcrit = "Crit % position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextdur = "Durability position (0 for disabled)"
-	DuffedUIConfigUILocalization.datatextcurrency = "Currency position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "Micro Menu position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatexthit = "Hit position (0 for disabled)"
 	DuffedUIConfigUILocalization.datatextmastery = "Mastery position (0 for disabled)"

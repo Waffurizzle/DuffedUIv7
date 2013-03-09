@@ -381,7 +381,7 @@ local function Shared(self, unit)
 			if C["unitframes"].classbar then
 				if D.myclass == "MAGE" then
 					local mb = CreateFrame("Frame", "DuffedUIArcaneBar", self)
-					mb:Point("TOP", power, "BOTTOM", -52, -1)
+					mb:Point("TOP", power, "BOTTOM", -47, -1)
 					mb:Size(100, 5)
 					mb:SetBackdrop(backdrop)
 					mb:SetBackdropColor(0, 0, 0)

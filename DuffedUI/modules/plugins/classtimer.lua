@@ -76,6 +76,26 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(126640), -- Spirits of the Sun
 	CreateSpellEntry(126657), -- Darkmist Vortex
 	CreateSpellEntry(126659), -- Essence of Terror
+
+	-- Throne of Thunder
+	CreateSpellEntry(138938), -- JuJu Madness
+	CreateSpellEntry(138898), -- Breath of Many Minds
+	CreateSpellEntry(139133), -- Mastermind
+	CreateSpellEntry(138864), -- Blood of Power
+	CreateSpellEntry(138759), -- Feathers of Fury
+	CreateSpellEntry(126697), -- Tremendous Fortitude
+	CreateSpellEntry(139170), -- Eye of Brutality
+	CreateSpellEntry(138856), -- Cloudburst
+	CreateSpellEntry(140380), -- Shield of Hydra Sputum
+	CreateSpellEntry(139189), -- Infinite Power
+	CreateSpellEntry(138870), -- Rampage
+	CreateSpellEntry(138756), -- Blades of Renataki
+	CreateSpellEntry(138979), -- Soul Barrier
+	CreateSpellEntry(138958), -- Spark of Zandalar
+	CreateSpellEntry(138967), -- Blessing of Zuldazar
+	CreateSpellEntry(138895), -- Frenzy
+	CreateSpellEntry(138963), -- Perfect Aim
+	CreateSpellEntry(138786), -- Wushoolay's Lightning
 }
 	
 local CLASS_FILTERS = {
@@ -265,6 +285,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(12536), -- Clearcasting
 			CreateSpellEntry(48108), -- Pyroblast!
 			CreateSpellEntry(115610), -- Temporal Shield
+			CreateSpellEntry(116257), -- Invocation
 		},
 		procs = {
 			CreateSpellEntry(44544), -- Fingers of Frost
@@ -1132,8 +1153,8 @@ elseif C["unitframes"].layout == 2 then
 			playerFrame:Point("BOTTOMRIGHT", RuneOfPowerBorder, "TOPRIGHT", -2, 3)
 		end)
 		RuneOfPowerBorder:HookScript("OnHide", function ()
-			playerFrame:Point("BOTTOMLEFT", DuffedUIPlayer, "TOPLEFT", 2, 3)
-			playerFrame:Point("BOTTOMRIGHT", DuffedUIPlayer, "TOPRIGHT", -2, 3)
+			playerFrame:Point("BOTTOMLEFT", MageBarBorder or DuffedUIPlayer, "TOPLEFT", 2, 3)
+			playerFrame:Point("BOTTOMRIGHT", MageBarBorder or DuffedUIPlayer, "TOPRIGHT", -2, 3)
 		end)
 	end
 

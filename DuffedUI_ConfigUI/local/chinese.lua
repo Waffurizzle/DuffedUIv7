@@ -125,7 +125,6 @@
 	DuffedUIConfigUILocalization.datatextdps_text = "DPS (输入0关闭)"
 	DuffedUIConfigUILocalization.datatextcrit = "爆击 % (输入0关闭)"
 	DuffedUIConfigUILocalization.datatextdur = "耐久度(输入0关闭)"
-	DuffedUIConfigUILocalization.datatextcurrency = "货币(输入0关闭)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "微型菜单(输入0关闭)"
 	DuffedUIConfigUILocalization.datatexthit = "命中(输入0关闭)"
 	DuffedUIConfigUILocalization.datatextmastery = "精通 (输入0关闭)"

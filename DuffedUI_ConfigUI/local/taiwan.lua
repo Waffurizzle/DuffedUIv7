@@ -126,7 +126,6 @@
 	DuffedUIConfigUILocalization.datatextdps_text = "DPS (輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextcrit = "爆擊 % (輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextdur = "耐久度(輸入0關閉)"
-	DuffedUIConfigUILocalization.datatextcurrency = "貨幣(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextmicromenu = "微型功能表(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatexthit = "命中(輸入0關閉)"
 	DuffedUIConfigUILocalization.datatextmastery = "精通 (輸入0關閉)"
