@@ -1,4 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="acmscreen.lua" />
 	<Script file="addonmanager.lua" />
 	<Script file="bossicons.lua" />
 	<Script file="buffnotice.lua" />

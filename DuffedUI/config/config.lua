@@ -167,6 +167,7 @@ C["misc"] = {
 	["loc"] = true,												-- disable loss of control
 	["location"] = true,										-- enable location panel
 	["exp_rep"] = true,											-- enable EXP / Rep-panel on bottom panel
+	["acm_screen"] = true,										-- enable Achievment-screenshot
 }
 
 C["duffed"] = {

@@ -195,6 +195,7 @@ Stat:SetScript("OnEnter", function(self)
 	if C["datatext"].gold_dr == true then
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L.gametooltip_gold_dr)
+		Currency(752, false, true)
 		Currency(697, false, true)
 		Currency(738)
 		Currency(615)
