@@ -26,6 +26,7 @@
 	DuffedUIConfigUILocalization.miscloc = "Disable Loss of Control for actionbars"
 	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
 	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
+	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "Skins"

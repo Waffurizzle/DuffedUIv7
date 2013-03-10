@@ -27,6 +27,7 @@
 	DuffedUIConfigUILocalization.miscloc = "禁止動作條<角色失去控制>功能"
 	DuffedUIConfigUILocalization.misclocation = "啟用/禁用頂部地理位置信息欄"
 	DuffedUIConfigUILocalization.miscexp_rep = "顯示 聲望/經驗 面板於下方面板"
+	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "其他插件程式美化皮膚"

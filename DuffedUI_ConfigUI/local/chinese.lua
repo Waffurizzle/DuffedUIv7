@@ -25,6 +25,7 @@
 	DuffedUIConfigUILocalization.miscchatalert = "启用聊天警报"
 	DuffedUIConfigUILocalization.misclocation = "启用/禁用顶部地理位置信息栏"
 	DuffedUIConfigUILocalization.miscexp_rep = "显示 声望/经验 面板于下方面板"
+	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "插件美化皮肤"

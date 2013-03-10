@@ -26,6 +26,7 @@
 	DuffedUIConfigUILocalization.miscloc = "Deaktiviere Loss of Control an den Aktionsleisten"
 	DuffedUIConfigUILocalization.misclocation = "Aktviere / Deaktviere Ortsanzeige"
 	DuffedUIConfigUILocalization.miscexp_rep = "Zeige Erfahrungs / XP-Panel an dem unteren Panel"
+	DuffedUIConfigUILocalization.miscacm_screen = "Aktiviere automatische Screenshots bei Achievments"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "AddOn-Skins"
