@@ -67,16 +67,6 @@ else
 end
 G.ActionBars.Pet = petbg
 
-local ltpetbg1 = CreateFrame("Frame", "DuffedUILineToPetActionBarBackground", petbg)
-ltpetbg1:SetTemplate("Transparent")
-ltpetbg1:Size(10, 265)
-ltpetbg1:Point("LEFT", petbg, "RIGHT", 0, 0)
-ltpetbg1:SetParent(petbg)
-ltpetbg1:SetFrameStrata("BACKGROUND")
-ltpetbg1:SetFrameLevel(0)
-if C["actionbar"].petbarhorizontal or C["actionbar"].petbaralwaysvisible then ltpetbg1:Hide() end
-G.ActionBars.Pet.BackgroundLink = ltpetbg1
-
 -- INFO LEFT (FOR STATS)
 local ileft = CreateFrame("Frame", "DuffedUIInfoLeft", UIParent)
 ileft:SetTemplate("Default")

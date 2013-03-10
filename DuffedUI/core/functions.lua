@@ -251,16 +251,10 @@ D.petBarPosition = function()
 	if C["actionbar"].petbarhorizontal ~= true or InCombatLockdown() then return end
 
 	DuffedUIPetBar:ClearAllPoints()
-	if C["actionbar"].layout == 1 then
-		if DuffedUIDataPerChar.bar1 == true then
-			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
-		else
-			DuffedUIPetBar:Point("BOTTOM", DuffedUIBar2, "TOP", 0, 3)
-		end
-	elseif C["actionbar"].layout == 2 then
-		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 3)
-	elseif (D.lowversion and C["misc"].exp_rep) then
-		DuffedUIPetBar:Point("BOTTOM", DuffedUIBar1, "TOP", 0, 22)
+	if C["chat"].background then
+		DuffedUIPetBar:Point("BOTTOM", DuffedUIChatBackgroundRight, "TOP", 24, 3)
+	else
+		DuffedUIPetBar:Point("BOTTOM", ChatFrame4, "TOP", 0, 10)
 	end
 end
 
@@ -1102,25 +1096,9 @@ D.cbSize = function()
 	local x = 4
 	if C["castbar"].cbicons then x = 32 end
 	if C["actionbar"].layout == 1 then
-		if C["actionbar"].petbarhorizontal == true then
-			if DuffedUIPetBar:IsShown() then
-				DuffedUIPlayerCastBar:Width(DuffedUIPetBar:GetWidth() - x)
-			else
-				DuffedUIPlayerCastBar:Width((DuffedUIBar2:GetWidth() + 1) - x)
-			end
-		else
-			DuffedUIPlayerCastBar:Width((DuffedUIBar2:GetWidth() + 1) - x)
-		end
+		DuffedUIPlayerCastBar:Width((DuffedUIBar2:GetWidth() + 1) - x)
 	else
-		if C["actionbar"].petbarhorizontal == true then
-			if DuffedUIPetBar:IsShown() then
-				DuffedUIPlayerCastBar:Width(DuffedUIPetBar:GetWidth() - x)
-			else
-				DuffedUIPlayerCastBar:Width((DuffedUIBar1:GetWidth() + 1) - x)
-			end
-		else
-			DuffedUIPlayerCastBar:Width((DuffedUIBar1:GetWidth() + 1) - x)
-		end
+		DuffedUIPlayerCastBar:Width((DuffedUIBar1:GetWidth() + 1) - x)
 	end
 end
 
@@ -1134,37 +1112,13 @@ D.cbPosition = function()
 	if C["castbar"].cbicons then x = 14 end
 	if DuffedUIDataPerChar.bar1 == true then
 		DuffedUIPlayerCastBar:ClearAllPoints()
-		if C["actionbar"].petbarhorizontal == true then
-			if DuffedUIPetBar:IsShown() then
-				DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIPetBar, "TOPRIGHT", -2, y)
-			else
-				DuffedUIPlayerCastBar:Point("BOTTOM", DuffedUIBar1, "TOP", x, y)
-			end
-		else
-			DuffedUIPlayerCastBar:Point("BOTTOM", DuffedUIBar1, "TOP", x, y)
-		end
+		DuffedUIPlayerCastBar:Point("BOTTOM", DuffedUIBar1, "TOP", x, y)
 	else
 		DuffedUIPlayerCastBar:ClearAllPoints()
 		if C["actionbar"].layout == 1 then
-			if C["actionbar"].petbarhorizontal == true then
-				if DuffedUIPetBar:IsShown() then
-					DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIPetBar, "TOPRIGHT", -2, y)
-				else
-					DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar2, "TOPRIGHT", -2, y)
-				end
-			else
-				DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar2, "TOPRIGHT", -2, y)
-			end
+			DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar2, "TOPRIGHT", -2, y)
 		else
-			if C["actionbar"].petbarhorizontal == true then
-				if DuffedUIPetBar:IsShown() then
-					DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIPetBar, "TOPRIGHT", -2, y)
-				else
-					DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar1, "TOPRIGHT", -2, y)
-				end
-			else
-				DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar1, "TOPRIGHT", -2, y)
-			end
+			DuffedUIPlayerCastBar:Point("BOTTOMRIGHT", DuffedUIBar1, "TOPRIGHT", -2, y)
 		end
 	end
 end

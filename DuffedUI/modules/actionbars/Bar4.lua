@@ -58,7 +58,6 @@ function DuffedUIRightBarsMouseover(alpha)
 	DuffedUIBar3Button:SetAlpha(alpha)
 	MultiBarRight:SetAlpha(alpha)
 	MultiBarLeft:SetAlpha(alpha)
-	DuffedUILineToPetActionBarBackground:SetAlpha(alpha)
 	if C["actionbar"].petbaralwaysvisible ~= true then
 		DuffedUIPetBar:SetAlpha(alpha)
 		for i=1, NUM_PET_ACTION_SLOTS do
@@ -93,6 +92,4 @@ if C["actionbar"].petbaralwaysvisible ~= true then
 		_G["PetActionButton"..i]:HookScript("OnLeave", function() DuffedUIRightBarsMouseover(0) end)
 	end
 	mouseover(DuffedUIPetBar)
-else
-	DuffedUILineToPetActionBarBackground:Hide()
 end

@@ -13,7 +13,7 @@ local function exec(self, enable)
 			self:Hide()
 		end
 	end
-	
+
 	if self == DuffedUIMinimap then
 		if enable then 
 			Minimap:Hide()

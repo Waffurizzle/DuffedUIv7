@@ -6,8 +6,6 @@ if not C["actionbar"].enable == true then return end
 ---------------------------------------------------------------------------
 
 local bar = DuffedUIPetBar
-local link = DuffedUILineToPetActionBarBackground
-link:SetAlpha(.8)
 	
 bar:RegisterEvent("PLAYER_LOGIN")
 bar:RegisterEvent("PLAYER_CONTROL_LOST")

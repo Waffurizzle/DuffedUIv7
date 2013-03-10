@@ -16,7 +16,6 @@ local function ShowOrHideBar(bar, button)
 		
 		if bar == DuffedUIBar3 then
 			if button == DuffedUIBar3Button then
-				if C["actionbar"].petbarhorizontal ~= true then DuffedUILineToPetActionBarBackground:Show() end
 				if db.rightbars == 1 then
 					MultiBarRight:Show()
 					db.rightbars = 2
@@ -27,7 +26,6 @@ local function ShowOrHideBar(bar, button)
 					bar:SetWidth((D.buttonsize * 1) + (D.buttonspacing * 2))
 				end
 			elseif button == DuffedUIBar3Button2 then
-				if C["actionbar"].petbarhorizontal ~= true then DuffedUILineToPetActionBarBackground:Hide() end
 				db.rightbars = 0
 				UnregisterStateDriver(bar, "visibility")
 				bar:Hide()
@@ -43,7 +41,6 @@ local function ShowOrHideBar(bar, button)
 				bar:SetWidth((D.buttonsize * 1) + (D.buttonspacing * 2))
 				MultiBarRight:Hide()
 				db.rightbars = 1
-				if C["actionbar"].petbarhorizontal ~= true then DuffedUILineToPetActionBarBackground:Show() end
 				RegisterStateDriver(bar, "visibility", "[vehicleui][petbattle] hide; show")
 			end
 		end
@@ -220,13 +217,13 @@ init:SetScript("OnEvent", function(self, event)
 	if db.rightbars == 1 then
 		MoveButtonBar(DuffedUIBar3Button, DuffedUIBar3)
 		DuffedUIBar3:SetWidth((D.buttonsize * 1) + (D.buttonspacing * 2))
-		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -23 -((D.buttonsize * 1) + (D.buttonspacing * 2)), -14) DuffedUILineToPetActionBarBackground:Show() end
+		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -23 -((D.buttonsize * 1) + (D.buttonspacing * 2)), -14) end
 	elseif db.rightbars == 0 then
 		UnregisterStateDriver(DuffedUIBar3, "visibility")
 		DuffedUIBar3Button.text:SetText(cp.."<|r")
 		DuffedUIBar3:Hide()
-		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -14, -14) DuffedUILineToPetActionBarBackground:Hide() end
+		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -14, -14) end
 	elseif db.rightbars == 2 then
-		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -23 -((D.buttonsize * 2) + (D.buttonspacing * 3)), -14) DuffedUILineToPetActionBarBackground:Show() end
+		if C["actionbar"].petbarhorizontal ~= true then DuffedUIPetBar:Point("RIGHT", UIParent, "RIGHT", -23 -((D.buttonsize * 2) + (D.buttonspacing * 3)), -14) end
 	end
 end)
