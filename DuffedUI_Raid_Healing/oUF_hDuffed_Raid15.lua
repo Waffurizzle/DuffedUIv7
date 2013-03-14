@@ -188,9 +188,17 @@ local function Shared(self, unit)
 		ohpb:SetStatusBarTexture(normTex)
 		ohpb:SetStatusBarColor(0, 1, 0, .25)
 
+		local absb = CreateFrame("StatusBar", nil, self.Health)
+		absb:SetPoint("TOPLEFT", ohpb:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
+		absb:SetPoint("BOTTOMLEFT", ohpb:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
+		absb:SetWidth(140 * D.raidscale)
+		absb:SetStatusBarTexture(normTex)
+		absb:SetStatusBarColor(1, 1, 0, 0.25)
+
 		self.HealPrediction = {
 			myBar = mhpb,
 			otherBar = ohpb,
+			absBar = absb,
 			maxOverflow = 1,
 		}
 	end
