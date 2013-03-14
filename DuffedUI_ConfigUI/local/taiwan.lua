@@ -188,6 +188,7 @@
 
 	-- raid frames
 	DuffedUIConfigUILocalization.raid = "Raid Frames"
+	DuffedUIConfigUILocalization.raidenable = "Enable Raid Frames"
 	DuffedUIConfigUILocalization.raidshowrange = "啟用小隊/團隊距離檢測"
 	DuffedUIConfigUILocalization.raidraidalphaoor = "小隊/團隊超出距離透明值"
 	DuffedUIConfigUILocalization.raidshowsymbols = "顯示小隊/團隊標記"

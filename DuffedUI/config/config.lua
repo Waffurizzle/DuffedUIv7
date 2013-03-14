@@ -66,6 +66,7 @@ C["unitframes"] = {
 }
 
 C["raid"] = {
+	["enable"] = true,											-- enable raid frames
 	["showrange"] = true,                               		-- show range opacity on raidframes
 	["raidalphaoor"] = 0.3,                             		-- alpha of unitframes when unit is out of range
 	["showsymbols"] = true,	                            		-- show symbol.

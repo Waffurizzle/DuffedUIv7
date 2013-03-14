@@ -13,29 +13,31 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 	if addon ~= "DuffedUI" then return end
 	
 	-- disable Blizzard party & raid frame if our Raid Frames are loaded
-	if addon == "DuffedUI_Raid" or addon == "DuffedUI_Raid_Heal" or addon == "DuffedUI" then
-		InterfaceOptionsFrameCategoriesButton11:SetScale(0.00001)
-		InterfaceOptionsFrameCategoriesButton11:SetAlpha(0)
-		
-		-- raid
-		CompactRaidFrameManager:SetParent(DuffedUIUIHider)
-		CompactUnitFrameProfiles:UnregisterAllEvents()
+	if C["raid"].enable == true then
+		if addon == "DuffedUI_Raid" or addon == "DuffedUI_Raid_Heal" or addon == "DuffedUI" then
+			InterfaceOptionsFrameCategoriesButton11:SetScale(0.00001)
+			InterfaceOptionsFrameCategoriesButton11:SetAlpha(0)
 			
-		for i = 1, MAX_PARTY_MEMBERS do
-			local name = "PartyMemberFrame" .. i
-			local frame = _G[name]
+			-- raid
+			CompactRaidFrameManager:SetParent(DuffedUIUIHider)
+			CompactUnitFrameProfiles:UnregisterAllEvents()
+				
+			for i = 1, MAX_PARTY_MEMBERS do
+				local name = "PartyMemberFrame" .. i
+				local frame = _G[name]
 
-			frame:SetParent(DuffedUIUIHider)
+				frame:SetParent(DuffedUIUIHider)
 
-			_G[name .. "HealthBar"]:UnregisterAllEvents()
-			_G[name .. "ManaBar"]:UnregisterAllEvents()
-			
-			local pet = name.."PetFrame"
-			local petframe = _G[pet]
-			
-			petframe:SetParent(DuffedUIUIHider)
-			
-			_G[pet .. "HealthBar"]:UnregisterAllEvents()
+				_G[name .. "HealthBar"]:UnregisterAllEvents()
+				_G[name .. "ManaBar"]:UnregisterAllEvents()
+				
+				local pet = name.."PetFrame"
+				local petframe = _G[pet]
+				
+				petframe:SetParent(DuffedUIUIHider)
+				
+				_G[pet .. "HealthBar"]:UnregisterAllEvents()
+			end
 		end
 	end
 		

@@ -185,7 +185,9 @@
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "熊、猫姿态下显示魔法条（德鲁伊）"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "平衡或恢复天赋下启用蘑菇条（德鲁伊）"
 
+	-- Raidframes
 	DuffedUIConfigUILocalization.raid = "Raid Frames"
+	DuffedUIConfigUILocalization.raidenable = "Enable Raid Frames"
 	DuffedUIConfigUILocalization.raidshowrange = "启用小队/团队距离检测"
 	DuffedUIConfigUILocalization.raidraidalphaoor = "小队/团队超出距离透明值"
 	DuffedUIConfigUILocalization.raidshowsymbols = "显示小队/团队标记"

@@ -130,6 +130,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(119085), -- Momentum
 			CreateSpellEntry(115867), -- Mana Tea
 			CreateSpellEntry(124275), -- Light Stagger
+			CreateSpellEntry(116740), -- Tigereye Brew
 		},
 		procs = {
 			CreateSpellEntry(116768), -- Combobreaker: Blackout-Kick

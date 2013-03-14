@@ -188,6 +188,7 @@ DuffedUIConfigUILocalization.unitframesdruidmushroombar = "Show Druid Mushroom b
 
 -- raid frames
 DuffedUIConfigUILocalization.raid = "Raid Frames"
+DuffedUIConfigUILocalization.raidenable = "Enable Raid Frames"
 DuffedUIConfigUILocalization.raidshowrange = "Enable party/raid Range alpha display"
 DuffedUIConfigUILocalization.raidraidalphaoor = "Alpha on Party/Raid unit out of range"
 DuffedUIConfigUILocalization.raidshowsymbols = "Show symbols on party/raid"

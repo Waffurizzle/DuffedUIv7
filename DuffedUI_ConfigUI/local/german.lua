@@ -187,6 +187,7 @@
 
 	-- raid frames
 	DuffedUIConfigUILocalization.raid = "Schlachtzugfenster"
+	DuffedUIConfigUILocalization.raidenable = "Aktiviere DuffedUI-Schlachtzugsfenster"
 	DuffedUIConfigUILocalization.raidshowrange = "Aktiviere Alpha Gruppen/Raid Entfernungs Anzeige"
 	DuffedUIConfigUILocalization.raidraidalphaoor = "Alpha auf Gruppen/Raid Einheiten au\195\159er Reichweite"
 	DuffedUIConfigUILocalization.raidshowsymbols = "Zeige Symbole an Gruppe/Raid"
