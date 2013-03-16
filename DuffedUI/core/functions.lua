@@ -12,13 +12,6 @@ if D.myname == "Nediana" or D.myname == "Trinitý" or D.myname == "Nekralia" or 
 	C["media"].uffont = C["media"].ufcalibri
 end
 
-if C["raid"].enable == false then
-	DisableAddOn("DuffedUI_Raid_Healing")
-	DisableAddOn("DuffedUI_Raid")
-else
-	EnableAddOn("DuffedUI_Raid")
-end
-
 if C["general"].lowres then D.lowversion = true end
 
 -- return if we are currently playing on PTR.

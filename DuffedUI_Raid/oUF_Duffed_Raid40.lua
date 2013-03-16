@@ -6,7 +6,7 @@ ns._Objects = {}
 ns._Headers = {}
 
 local D, C, L, G = unpack(DuffedUI)
-if not C["unitframes"].enable == true then return end
+if not C["raid"].enable == true then return end
 
 local backdrop = {
 	bgFile = C["media"].blank,
