@@ -2052,7 +2052,7 @@ else
 	end
 end
 
-if C["unitframes"].arena then
+if C["raid"].arena then
 	local arena = {}
 	for i = 1, 5 do
 		arena[i] = oUF:Spawn("arena"..i, "DuffedUIArena"..i)
