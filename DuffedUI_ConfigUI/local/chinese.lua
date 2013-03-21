@@ -25,7 +25,7 @@
 	DuffedUIConfigUILocalization.miscchatalert = "启用聊天警报"
 	DuffedUIConfigUILocalization.misclocation = "启用/禁用顶部地理位置信息栏"
 	DuffedUIConfigUILocalization.miscexp_rep = "显示 声望/经验 面板于下方面板"
-	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
+	DuffedUIConfigUILocalization.miscacm_screen = "启用获取成就自动截图"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "插件美化皮肤"
@@ -186,8 +186,8 @@
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "平衡或恢复天赋下启用蘑菇条（德鲁伊）"
 
 	-- Raidframes
-	DuffedUIConfigUILocalization.raid = "Raid Frames"
-	DuffedUIConfigUILocalization.raidenable = "Enable Raid Frames"
+	DuffedUIConfigUILocalization.raid = "团队界面"
+	DuffedUIConfigUILocalization.raidenable = "启用团队界面"
 	DuffedUIConfigUILocalization.raidshowrange = "启用小队/团队距离检测"
 	DuffedUIConfigUILocalization.raidraidalphaoor = "小队/团队超出距离透明值"
 	DuffedUIConfigUILocalization.raidshowsymbols = "显示小队/团队标记"
