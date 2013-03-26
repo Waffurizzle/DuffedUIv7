@@ -159,6 +159,7 @@ if D.client == "itIT" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "Settimanale: "
 	L.datatext_savedraid = "Incursioni Salvate"
 	L.datatext_currency = "Valuta:"
 	L.datatext_fps = " FPS & "

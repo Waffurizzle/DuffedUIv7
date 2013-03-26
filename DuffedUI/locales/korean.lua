@@ -158,6 +158,7 @@ if D.client == "koKR" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "주간: "
 	L.datatext_savedraid = "귀속된 던전"
 	L.datatext_currency = "화폐:"
 	L.datatext_fps = " fps & "

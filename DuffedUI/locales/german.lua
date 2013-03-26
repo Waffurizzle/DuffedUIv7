@@ -158,6 +158,7 @@ if D.client == "deDE" then
 	L.gametooltip_gold_c = "Kochen: "
 	L.gametooltip_gold_jc = "Juwelenschleifen: "
 	L.gametooltip_gold_dr = "Instanzen & Schlachtzug: "
+	L.currencyWeekly = "Wöchentlich: "
 	L.datatext_savedraid = "Instanz ID(s)"
 	L.datatext_currency = "Währung:"
 	L.datatext_fps = " fps & "

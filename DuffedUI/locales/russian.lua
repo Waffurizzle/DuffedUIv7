@@ -158,6 +158,7 @@ if D.client == "ruRU" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "еженедельно: "
 	L.datatext_savedraid = "Сохранения:"
 	L.datatext_currency = "Валюта:"
 	L.datatext_fps = " к/с & "

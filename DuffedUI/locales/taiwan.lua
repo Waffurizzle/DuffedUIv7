@@ -159,6 +159,7 @@ if D.client == "zhTW" then
 	L.gametooltip_gold_c = "烹飪: "
 	L.gametooltip_gold_jc = "珠寶: "
 	L.gametooltip_gold_dr = "地城 & 團隊: "
+	L.currencyWeekly = "每周: "
 	L.datatext_savedraid = "已有進度的團隊副本"
 	L.datatext_currency = "兌換通貨:"
 	L.datatext_fps = " fps & "

@@ -60,16 +60,20 @@ local function Currency(id, weekly, capped)
 	if weekly then
 		if discovered then
 			if id == 390 then
-				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " | " .. " Weekly: " .. week .. " / " .. weekmax, r, g, b, r, g, b)
+				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " - " .. L.currencyWeekly .. week .. " / " .. weekmax, r, g, b, r, g, b)
 			else
-				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " / " .. maxed .. " | " .. " Weekly: " .. week .. " / " .. weekmax, r, g, b, r, g, b)
+				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " / " .. maxed .. " - " .. L.currencyWeekly .. week .. " / " .. weekmax, r, g, b, r, g, b)
 			end
 		end
 	elseif capped  then
 		if id == 392 or id == 395 then maxed = 4000 end
 		if id == 396 then maxed = 3000 end
 		if discovered then
-			GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, amount .. " / " .. maxed, r, g, b, r, g, b) -- \124TInterface\\Icons\\pvecurrency-valor.blp:12\124t
+			if id == 396 then
+				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " - " .. L.currencyWeekly .. week .. " / 1000", r, g, b, r, g, b)
+			else
+				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, amount .. " / " .. maxed, r, g, b, r, g, b)
+			end
 		end
 	else
 		if discovered then

@@ -158,6 +158,7 @@ if D.client == "esES" or D.client == "esMX" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "Semanal: "
 	L.datatext_savedraid = "Mazmorras Registradas"
 	L.datatext_currency = "Monedas:"
 	L.datatext_fps = " fps & "

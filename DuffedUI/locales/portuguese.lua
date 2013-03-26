@@ -159,6 +159,7 @@ if D.client == "ptBR" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "Semanal: "
 	L.datatext_savedraid = "Raide(s) Salva(s)"
 	L.datatext_currency = "Moeda de troca:"
 	L.datatext_fps = " fps & "

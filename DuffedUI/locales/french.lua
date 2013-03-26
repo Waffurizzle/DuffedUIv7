@@ -158,6 +158,7 @@ if D.client == "frFR" then
 	L.gametooltip_gold_c = "Cooking: "
 	L.gametooltip_gold_jc = "Jewelcrafting: "
 	L.gametooltip_gold_dr = "Dungeon & Raids: "
+	L.currencyWeekly = "Hebdomadaire: "
 	L.datatext_savedraid = "Raid(s) enregistré(s)"
 	L.datatext_currency = "Monnaie : "
 	L.datatext_fps = " fps & "

@@ -159,6 +159,7 @@ if D.client == "zhCN" then
 	L.gametooltip_gold_c = "烹饪: "
 	L.gametooltip_gold_jc = "珠宝: "
 	L.gametooltip_gold_dr = "地城 & 团队: "
+	L.currencyWeekly = "每周: "
 	L.datatext_savedraid = "已保存进度的团队副本"
 	L.datatext_currency = "兑换通货："
 	L.datatext_fps = " 帧数 & "
