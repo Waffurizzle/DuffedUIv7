@@ -217,6 +217,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(108381), -- Dream of Cenarius
 			CreateSpellEntry(124974), -- Nature's Vigil
 			CreateSpellEntry(112071), -- Celestial Alignment
+			CreateSpellEntry(100977), -- Harmony
 		},
 		procs = {
 			CreateSpellEntry(48518), -- Eclipse Lunar

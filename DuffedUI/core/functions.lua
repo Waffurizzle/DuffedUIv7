@@ -12,6 +12,10 @@ if D.myname == "Nediana" or D.myname == "Trinitý" or D.myname == "Nekralia" or 
 	C["media"].uffont = C["media"].ufcalibri
 end
 
+if D.myname == "Devonace" then
+	C["media"].dmgfont = C["media"].dmgfont2
+end
+
 if C["general"].lowres then D.lowversion = true end
 
 -- return if we are currently playing on PTR.

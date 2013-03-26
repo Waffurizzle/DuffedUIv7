@@ -123,7 +123,16 @@ if C["datatext"].smf and C["datatext"].smf > 0 then
 		end
 	end)
 
-	Stat:SetScript("OnMouseDown", function(self, btn) if(btn == "LeftButton") then ToggleFrame(PVPFrame) else collectgarbage("collect")	end	end)
+	Stat:SetScript("OnMouseDown", function(self, btn)
+		if (btn == "LeftButton") then
+			if not PVPUIFrame then
+				PVP_LoadUI()
+			end
+			PVPUIFrame_ShowFrame()
+		else
+			collectgarbage("collect")
+		end
+	end)
 	Stat:SetScript("OnLeave", function(self) self.tooltip = false GameTooltip:Hide() end)
 	Stat:SetScript("OnUpdate", Update)
 	Update(Stat, 10)

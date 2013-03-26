@@ -7,6 +7,7 @@ C["media"] = {
 	["calibri"] = [=[Interface\Addons\DuffedUI\medias\fonts\normal_font2.ttf]=], -- general2 font of DuffedUI
 	["ufcalibri"] = [[Interface\AddOns\DuffedUI\medias\fonts\uf_font2.ttf]], -- general2 font of unitframes
 	["dmgfont"] = [[Interface\AddOns\DuffedUI\medias\fonts\combat_font.ttf]], -- general font of dmg / sct
+	["dmgfont2"] = [[Interface\AddOns\DuffedUI\medias\fonts\combat_font2.ttf]], -- general font of dmg / sct specialsetting
 	
 	-- fonts (DEUTSCH)
 	["de_font"] = [=[Interface\Addons\DuffedUI\medias\fonts\normal_font.ttf]=], -- general font of DuffedUI

@@ -302,7 +302,7 @@ D.SkinFuncs["Blizzard_AuctionUI"] = LoadSkin
 local function LoadSecondarySkin()
 		BlackMarketFrame:StripTextures()
 		BlackMarketFrame.Inset:StripTextures()
-		BlackMarketFrame:SetTemplate()
+		BlackMarketFrame:SetTemplate("Transparent")
 		BlackMarketScrollFrameScrollBar:SkinScrollBar()
 		BlackMarketFrame.MoneyFrameBorder:StripTextures()
 		BlackMarketBidPriceGold:SkinEditBox()
@@ -310,7 +310,7 @@ local function LoadSecondarySkin()
 		BlackMarketFrame.HotDeal.Item.IconTexture:SetTexCoord(.08, .92, .08, .92)
 		BlackMarketFrame.BidButton:SkinButton()
 		BlackMarketFrame.BidButton:Height(20)
-		BlackMarketFrame.HotDeal.BidButton:SkinButton()
+		BlackMarketFrame.BidButton:SkinButton()
 		BlackMarketFrame.CloseButton:SkinCloseButton()
 		
 		local tabs = {"ColumnName", "ColumnLevel", "ColumnType", "ColumnDuration", "ColumnHighBidder", "ColumnCurrentBid"}
@@ -361,8 +361,8 @@ local function LoadSecondarySkin()
 	BlackMarketFrame.HotDeal.Item.hover:SetAllPoints()
 	BlackMarketFrame.HotDeal.Item.pushed:SetAllPoints()
 	
-	BlackMarketFrame.HotDeal.BidButton:SkinButton()
-	BlackMarketHotItemBidPriceGold:SkinEditBox()
+	BlackMarketFrame.BidButton:SkinButton()
+	BlackMarketBidPriceGold:SkinEditBox()
 	
 	for i=1, BlackMarketFrame:GetNumRegions() do
 		local region = select(i, BlackMarketFrame:GetRegions())
