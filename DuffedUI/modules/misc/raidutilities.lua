@@ -113,7 +113,11 @@ local function CreateUtilities(self, event, addon)
 		CreateButton("DuffedUIRaidUtilityRoleCheckButton", DuffedUIRaidUtility, "UIMenuButtonStretchTemplate", DuffedUIRaidUtility:GetWidth() * .95, D.Scale(21), "TOP", DuffedUIRaidUtilityDisbandRaidButton, "BOTTOM", 0, D.Scale(-5), ROLE_POLL, nil)
 		DuffedUIRaidUtilityRoleCheckButton:SetScript("OnMouseUp", function(self)
 			if CheckRaidStatus() then
-				InitiateRolePoll()
+				if InCombatLockdown() then
+					print(ERR_NOT_IN_COMBAT)
+				else
+					InitiateRolePoll()
+				end
 			end
 		end)
 

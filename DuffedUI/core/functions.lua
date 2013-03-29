@@ -523,25 +523,14 @@ local initdropdown = function(self)
 		return
 	end
 
-	if(UnitIsUnit(unit, "player")) then
-		menu = "SELF"
-	elseif(UnitIsUnit(unit, "vehicle")) then
-		menu = "VEHICLE"
-	elseif(UnitIsUnit(unit, "pet")) then
-		menu = "PET"
-	elseif(UnitIsPlayer(unit)) then
+	if(UnitIsPlayer(unit)) then
 		id = UnitInRaid(unit)
 		if(id) then
 			menu = "RAID_PLAYER"
 			name = GetRaidRosterInfo(id)
 		elseif(UnitInParty(unit)) then
 			menu = "PARTY"
-		else
-			menu = "PLAYER"
 		end
-	else
-		menu = "TARGET"
-		name = RAID_TARGET_ICON
 	end
 
 	if(menu) then
@@ -550,6 +539,10 @@ local initdropdown = function(self)
 end
 
 UIDropDownMenu_Initialize(dropdown, initdropdown, "MENU")
+
+UnitPopupMenus["PARTY"] = { "ADD_FRIEND", "ADD_FRIEND_MENU", "MUTE", "UNMUTE", "PARTY_SILENCE", "PARTY_UNSILENCE", "RAID_SILENCE", "RAID_UNSILENCE", "BATTLEGROUND_SILENCE", "BATTLEGROUND_UNSILENCE", "WHISPER", "PROMOTE", "PROMOTE_GUIDE", "LOOT_PROMOTE", "VOTE_TO_KICK", "UNINVITE", "INSPECT", "ACHIEVEMENTS", "TRADE", "FOLLOW", "DUEL", "PET_BATTLE_PVP_DUEL", "RAID_TARGET_ICON", "SELECT_ROLE", "PVP_REPORT_AFK", "RAF_SUMMON", "RAF_GRANT_LEVEL", "REPORT_PLAYER", "CANCEL" };
+UnitPopupMenus["RAID_PLAYER"] = { "ADD_FRIEND", "ADD_FRIEND_MENU", "MUTE", "UNMUTE", "RAID_SILENCE", "RAID_UNSILENCE", "BATTLEGROUND_SILENCE", "BATTLEGROUND_UNSILENCE", "WHISPER", "INSPECT", "ACHIEVEMENTS", "TRADE", "FOLLOW", "DUEL", "PET_BATTLE_PVP_DUEL", "RAID_TARGET_ICON", "SELECT_ROLE", "RAID_LEADER", "RAID_PROMOTE", "RAID_DEMOTE", "LOOT_PROMOTE", "VOTE_TO_KICK", "RAID_REMOVE", "PVP_REPORT_AFK", "RAF_SUMMON", "RAF_GRANT_LEVEL", "REPORT_PLAYER", "CANCEL" };
+UnitPopupMenus["RAID"] = { "MUTE", "UNMUTE", "RAID_SILENCE", "RAID_UNSILENCE", "BATTLEGROUND_SILENCE", "BATTLEGROUND_UNSILENCE", "RAID_LEADER", "RAID_PROMOTE", "RAID_MAINTANK", "RAID_MAINASSIST", "LOOT_PROMOTE", "RAID_DEMOTE", "VOTE_TO_KICK", "RAID_REMOVE", "PVP_REPORT_AFK", "MOVE_PLAYER_FRAME", "MOVE_TARGET_FRAME", "REPORT_PLAYER", "CANCEL" };
 
 -- called in some function to return a short value. (example: 120 000 return 120k)
 local ShortValue = function(v)

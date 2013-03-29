@@ -19,7 +19,6 @@ local function Shared(self, unit)
 	self:RegisterForClicks("AnyUp")
 	self:SetScript('OnEnter', UnitFrame_OnEnter)
 	self:SetScript('OnLeave', UnitFrame_OnLeave)
-	
 	self.menu = D.SpawnMenu
 	
 	local health = CreateFrame('StatusBar', nil, self)

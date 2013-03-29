@@ -33,10 +33,8 @@ local function Shared(self, unit)
 	self:RegisterForClicks("AnyUp")
 	self:SetScript('OnEnter', UnitFrame_OnEnter)
 	self:SetScript('OnLeave', UnitFrame_OnLeave)
-	
-	-- menu? lol
 	self.menu = D.SpawnMenu
-
+	
 	------------------------------------------------------------------------
 	--	Features we want for all units at the same time
 	------------------------------------------------------------------------
@@ -2019,17 +2017,3 @@ end
 
 -- this is just a fake party to hide Blizzard frame if no DuffedUI raid layout are loaded.
 local party = oUF:SpawnHeader("oUF_noParty", nil, "party", "showParty", true)
-
-------------------------------------------------------------------------
--- Right-Click on unit frames menu. 
--- Doing this to remove SET_FOCUS eveywhere.
--- SET_FOCUS work only on default unitframes.
--- Main Tank and Main Assist, use /maintank and /mainassist commands.
-------------------------------------------------------------------------
-for _, menu in pairs(UnitPopupMenus) do
-	for index = #menu, 1, -1 do
-		if menu[index] == "SET_FOCUS" or menu[index] == "CLEAR_FOCUS" or menu[index] == "MOVE_PLAYER_FRAME" or menu[index] == "MOVE_TARGET_FRAME" or (D.myclass == "HUNTER" and menu[index] == "PET_DISMISS") then
-			table.remove(menu, index)
-		end
-	end
-end
