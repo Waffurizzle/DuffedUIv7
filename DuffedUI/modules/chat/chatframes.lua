@@ -307,7 +307,7 @@ D.SetDefaultChatPosition = function(frame)
 					frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)
 				else
 					if C["chat"].background then
-						frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)
+						frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 9)
 					else
 						frame:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -9, 6)
 					end
