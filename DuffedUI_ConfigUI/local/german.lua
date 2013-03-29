@@ -284,7 +284,8 @@
 	DuffedUIConfigUILocalization.chat = "Chat"
 	DuffedUIConfigUILocalization.chatenable = "Aktiviere DuffedUI Chat"
 	DuffedUIConfigUILocalization.chatwhispersound = "Spiele einen Ton bei Empfang einer privaten Nachricht"
-	DuffedUIConfigUILocalization.chatbackground = "Aktiviere Chatelement-Hintergrund"
+	DuffedUIConfigUILocalization.chatlbackground = "Aktiviere Chathintergrund (links)"
+	DuffedUIConfigUILocalization.chatrbackground = "Aktiviere Chathintergrund (rechts)"
 	DuffedUIConfigUILocalization.chatfading = "Aktviere ausblenden des Chats"
 	DuffedUIConfigUILocalization.chattextright = "Textausrichtung rechts f\195\188r den rechten Chatframe"
 

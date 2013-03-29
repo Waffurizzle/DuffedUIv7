@@ -338,7 +338,7 @@ local function Shared(self, unit)
 			-- Vengeance Plugin
 			if C["unitframes"].vengeancebar then
 				local vge
-				if not C["general"].threatbar or C["chat"].background == false or not DuffedUIChatBackgroundRight then
+				if not C["general"].threatbar or C["chat"].rbackground == false or not DuffedUIChatBackgroundRight then
 					vge = CreateFrame("StatusBar", "VengeanceBar", DuffedUIInfoRight)
 					vge:Point("TOPLEFT", 2, -2)
 					vge:Point("BOTTOMRIGHT", -2, 2)
@@ -1413,10 +1413,10 @@ local function Shared(self, unit)
 		-- create debuff for focus
 		if C["unitframes"].focusdebuffs then
 			local debuffs = CreateFrame("Frame", nil, self)
-			debuffs:SetHeight(26)
+			debuffs:SetHeight(30)
 			debuffs:SetWidth(200)
-			debuffs:Point("RIGHT", self, "LEFT", -4, 6)
-			debuffs.size = 21
+			debuffs:Point("RIGHT", self, "LEFT", -4, 10)
+			debuffs.size = 28
 			debuffs.num = 4
 			debuffs.spacing = 2
 			debuffs.initialAnchor = "RIGHT"
@@ -1988,7 +1988,7 @@ if C["raid"].maintank == true then
 		'template', 'oUF_DuffedUIMtt'
 	)
 	tank:SetParent(DuffedUIPetBattleHider)
-	if C["chat"].background then
+	if C["chat"].rbackground then
 		tank:SetPoint("TOPLEFT", DuffedUIChatBackgroundRight, "TOPLEFT", 2, 52)
 	else
 		tank:SetPoint("TOPLEFT", ChatFrame4, "TOPLEFT", 2, 62)

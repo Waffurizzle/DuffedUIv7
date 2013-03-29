@@ -123,7 +123,7 @@ if C["actionbar"].buttonsize > 26 and C["actionbar"].layout == 1 and not D.lowve
 	irightlv:SetPoint("BOTTOM", ltoabr, "RIGHT", 0, -1)
 end
 
-if C["chat"].background then
+if C["chat"].lbackground then
 	-- CHAT BG LEFT
 	local chatleftbg = CreateFrame("Frame", "DuffedUIChatBackgroundLeft", DuffedUIInfoLeft)
 	chatleftbg:SetTemplate("Transparent")
@@ -133,15 +133,6 @@ if C["chat"].background then
 	chatleftbg:CreateShadow("Default")
 	G.Panels.LeftChatBackground = chatleftbg
 
-	-- CHAT BG RIGHT
-	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", DuffedUIInfoRight)
-	chatrightbg:SetTemplate("Transparent")
-	chatrightbg:Size(D.InfoLeftRightWidth + 12, 149)
-	if C["actionbar"].layout ~= 1 or D.lowversion then chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 24) else chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 5) end
-	chatrightbg:SetFrameLevel(1)
-	chatrightbg:CreateShadow("Default")
-	G.Panels.RightChatBackground = chatrightbg
-	
 	-- LEFT TAB PANEL
 	local tabsbgleft = CreateFrame("Frame", "DuffedUITabsLeftBackground", UIParent)
 	tabsbgleft:SetTemplate()
@@ -150,6 +141,17 @@ if C["chat"].background then
 	tabsbgleft:SetFrameLevel(2)
 	tabsbgleft:SetFrameStrata("BACKGROUND")
 	G.Panels.LeftChatTabsBackground = tabsbgleft
+end
+
+if C["chat"].rbackground then
+	-- CHAT BG RIGHT
+	local chatrightbg = CreateFrame("Frame", "DuffedUIChatBackgroundRight", DuffedUIInfoRight)
+	chatrightbg:SetTemplate("Transparent")
+	chatrightbg:Size(D.InfoLeftRightWidth + 12, 149)
+	if C["actionbar"].layout ~= 1 or D.lowversion then chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 24) else chatrightbg:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 5) end
+	chatrightbg:SetFrameLevel(1)
+	chatrightbg:CreateShadow("Default")
+	G.Panels.RightChatBackground = chatrightbg
 		
 	-- RIGHT TAB PANEL
 	local tabsbgright = CreateFrame("Frame", "DuffedUITabsRightBackground", UIParent)
@@ -164,7 +166,7 @@ end
 local chatmenu = CreateFrame("Frame", "DuffedUIChatMenu", UIParent)
 chatmenu:SetTemplate("Default")
 chatmenu:Size(20)
-if C["chat"].background then chatmenu:Point("LEFT", DuffedUITabsLeftBackground, "RIGHT", 2, 0) else chatmenu:Point("TOPLEFT", ChatFrame1, "TOPLEFT", 2, 0) end
+if C["chat"].lbackground then chatmenu:Point("LEFT", DuffedUITabsLeftBackground, "RIGHT", 2, 0) else chatmenu:Point("TOPLEFT", ChatFrame1, "TOPLEFT", 2, 0) end
 chatmenu:SetFrameLevel(3)
 chatmenu.text = D.SetFontString(chatmenu, C["media"].font, C["datatext"].fontsize, "THINOUTLINE")
 chatmenu.text:SetPoint("CENTER", 1, -1)

@@ -255,7 +255,7 @@ D.petBarPosition = function()
 	if C["actionbar"].petbarhorizontal ~= true or InCombatLockdown() then return end
 
 	DuffedUIPetBar:ClearAllPoints()
-	if C["chat"].background then
+	if C["chat"].rbackground then
 		DuffedUIPetBar:Point("BOTTOM", DuffedUIChatBackgroundRight, "TOP", 24, 3)
 	else
 		DuffedUIPetBar:Point("BOTTOM", ChatFrame4, "TOP", 0, 10)

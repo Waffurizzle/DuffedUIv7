@@ -299,7 +299,7 @@ local function Shared(self, unit)
 			-- Vengeance Plugin
 			if C["unitframes"].vengeancebar then
 				local vge
-				if not C["general"].threatbar or C["chat"].background == false or not DuffedUIChatBackgroundRight then
+				if not C["general"].threatbar or C["chat"].rbackground == false or not DuffedUIChatBackgroundRight then
 					vge = CreateFrame("StatusBar", "VengeanceBar", DuffedUIInfoRight)
 					vge:Point("TOPLEFT", 2, -2)
 					vge:Point("BOTTOMRIGHT", -2, 2)
@@ -2164,7 +2164,7 @@ if C["raid"].maintank == true then
 		'template', 'oUF_DuffedUIMtt'
 	)
 	tank:SetParent(DuffedUIPetBattleHider)
-	if C["chat"].background then
+	if C["chat"].rbackground then
 		tank:SetPoint("TOPLEFT", DuffedUIChatBackgroundRight, "TOPLEFT", 2, 52)
 	else
 		tank:SetPoint("TOPLEFT", ChatFrame4, "TOPLEFT", 2, 62)

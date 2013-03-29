@@ -411,7 +411,7 @@ function Stuffing:CreateBagFrame(w)
 	f:SetFrameStrata("HIGH")
 	f:SetFrameLevel(20)
 
-	if C["chat"].background then
+	if C["chat"].lbackground and C["chat"].rbackground then
 		if w == "Bank" then
 			f:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "TOPLEFT", 0, 5)
 		else

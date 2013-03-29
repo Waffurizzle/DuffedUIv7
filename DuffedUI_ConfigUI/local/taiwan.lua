@@ -285,7 +285,8 @@
 	DuffedUIConfigUILocalization.chat = "聊天"
 	DuffedUIConfigUILocalization.chatenable = "啟用DuffedUI的聊天框架"
 	DuffedUIConfigUILocalization.chatwhispersound = "在收到密語時播放提示音"
-	DuffedUIConfigUILocalization.chatbackground = "啟用聊天面板背景"
+	DuffedUIConfigUILocalization.chatlbackground = "啟用聊天面板背景 (離開)"
+	DuffedUIConfigUILocalization.chatrbackground = "啟用聊天面板背景 (權)"
 	DuffedUIConfigUILocalization.chatfading = "啟用聊天信息漸隱"
 	DuffedUIConfigUILocalization.chattextright = "右下方聊天框文字向右對齊"
 

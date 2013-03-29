@@ -253,7 +253,8 @@ C["datatext"] = {
 C["chat"] = {
 	["enable"] = true,                                  		-- blah
 	["whispersound"] = true,                            		-- play a sound when receiving whisper
-	["background"] = true,										-- enable chatbackground
+	["lbackground"] = true,										-- enable left chatbackground
+	["rbackground"] = true,										-- enable right chatbackground
 	["textright"] = true,										-- set textjustify to right
 	["fading"] = true,											-- enables fading
 }

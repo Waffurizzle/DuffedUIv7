@@ -40,7 +40,7 @@ anchor:SetFrameStrata("TOOLTIP")
 anchor:SetFrameLevel(20)
 anchor:SetClampedToScreen(true)
 anchor:SetAlpha(0)
-if C["chat"].background and DuffedUIChatBackgroundRight then
+if C["chat"].rbackground and DuffedUIChatBackgroundRight then
 	if C["actionbar"].petbarhorizontal then
 		anchor:SetPoint("BOTTOMRIGHT", DuffedUIPetBar, "TOPRIGHT", 0, -DuffedUIInfoRight:GetHeight())
 	else	

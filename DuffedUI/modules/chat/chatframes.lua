@@ -96,7 +96,7 @@ local function SetChatStyle(frame)
 	tab:SetAlpha(1)
 	tab.SetAlpha = UIFrameFadeRemoveFrame
 
-	if not C["chat"].background then
+	if not C["chat"].lbackground and C["chat"].rbackground then
 		-- hide text when setting chat
 		_G[chat.."TabText"]:Hide()
 		
@@ -292,9 +292,13 @@ D.SetDefaultChatPosition = function(frame)
 		if id == 1 then
 			frame:ClearAllPoints()
 			if D.lowversion or C["actionbar"].layout == 2 then
-				frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 6)
+				if C["chat"].lbackground then
+					frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 6)
+				else
+					frame:Point("BOTTOMLEFT", DuffedUIInfoLeft, "BOTTOMLEFT", 3, 6)
+				end
 			else
-				if C["chat"].background then
+				if C["chat"].lbackground then
 					frame:Point("BOTTOMLEFT", DuffedUIChatBackgroundLeft, "BOTTOMLEFT", 3, 6)
 				else
 					frame:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 3, 6)
@@ -304,9 +308,13 @@ D.SetDefaultChatPosition = function(frame)
 			if not frame.isDocked then
 				frame:ClearAllPoints()
 				if D.lowversion or C["actionbar"].layout == 2 then
-					frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)
+					if C["chat"].rbackground then
+						frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 6)
+					else
+						frame:Point("BOTTOMRIGHT", DuffedUIInfoRight, "BOTTOMRIGHT", -9, 6)
+					end
 				else
-					if C["chat"].background then
+					if C["chat"].rbackground then
 						frame:Point("BOTTOMRIGHT", DuffedUIChatBackgroundRight, "BOTTOMRIGHT", -9, 9)
 					else
 						frame:Point("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -9, 6)
