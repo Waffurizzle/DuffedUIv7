@@ -322,6 +322,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(105809), -- Holy Avenger
 			CreateSpellEntry(86659), -- Guardian of Ancient Kings
 			CreateSpellEntry(85499), -- Speed of Light
+			CreateSpellEntry(90174), -- Devine Purpose
 		},
 		procs = {
 			CreateSpellEntry(53672), CreateSpellEntry(54149), -- Infusion of Light (Rank1/Rank2)

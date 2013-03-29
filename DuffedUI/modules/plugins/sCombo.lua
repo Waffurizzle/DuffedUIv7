@@ -70,7 +70,7 @@ for i = 1, 5 do
 end
 
 -- energy bar
-if not C["unitframes"].sComboenergybar or not C["unitframes"].enable then return end
+if not C["unitframes"].sComboenergybar or not C["unitframes"].enable or not (D.myclass == "ROGUE" or D.myclass == "DRUID") then return end
 local sPowerBG = CreateFrame("Frame", "sPowerBG", DuffedUITarget)
 sPowerBG:Size((Options.comboWidth * 5) + (Options.spacing * 5) - Options.spacing, Options.comboHeight)
 sPowerBG:SetPoint("TOPLEFT", sAnchor, "BOTTOMLEFT", 0, -(Options.comboHeight + 6))
