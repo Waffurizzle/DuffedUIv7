@@ -55,6 +55,7 @@
 	DuffedUIConfigUILocalization.duffedsayinterrupt = "Aktviere Unterbrechungsansage"
 	DuffedUIConfigUILocalization.duffedannouncechannel = "Setze Kanal f\195\188r Warnung (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r oder |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "Aktviere Reinigungswarnnung"
+	DuffedUIConfigUILocalization.duffedspellannounce = "Aktiviere Aurawarnung"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "Allgemein"

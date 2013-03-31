@@ -55,6 +55,7 @@
 	DuffedUIConfigUILocalization.duffedsayinterrupt = "启用打断通告"
 	DuffedUIConfigUILocalization.duffedannouncechannel = "设置通告频道 (设定值为:|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r or |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "启用驱散通告"
+	DuffedUIConfigUILocalization.duffedspellannounce = "Enable Auraannouncement"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "综合"

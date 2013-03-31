@@ -176,7 +176,8 @@ C["duffed"] = {
 	["drinkannouncement"] = false,								-- enable drink announcement
 	["sayinterrupt"] = true,									-- enable interrupt announcement
 	["bossicons"] = true,										-- enable alternative bossicons
-	["announcechannel"] = "PARTY"								-- set announcechannel
+	["announcechannel"] = "PARTY",								-- set announcechannel
+	["spellannounce"] = true,									-- enable aura announcement
 }
 
 C["loot"] = {

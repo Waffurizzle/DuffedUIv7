@@ -22,6 +22,7 @@
 	<Script file="core\install.lua" />
 	<Script file="core\filters\f_buffnotice.lua" />
 	<Script file="core\filters\f_cbticks.lua" />
+	<Script file="core\filters\f_spellalert.lua" />
 	<Include file="modules\blizzard\load_blizzard.xml" />
 	<Script file="modules\misc\commands.lua" />
 	<Script file="modules\misc\micromenu.lua" />

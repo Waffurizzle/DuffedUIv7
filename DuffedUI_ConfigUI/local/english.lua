@@ -56,6 +56,7 @@ DuffedUIConfigUILocalization.duffeddrinkannouncement = "Enable Drinkannouncement
 DuffedUIConfigUILocalization.duffedsayinterrupt = "Enable Interruptannouncement"
 DuffedUIConfigUILocalization.duffedannouncechannel = "Set channel for announcement (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r or |cffC41F3BINSTANCE|r)"
 DuffedUIConfigUILocalization.duffeddispelannouncement = "Enable Dispelannouncement"
+DuffedUIConfigUILocalization.duffedspellannounce = "Enable Auraannouncement"
 
 -- general
 DuffedUIConfigUILocalization.general = "General"
