@@ -245,6 +245,7 @@ if D.client == "zhCN" then
 	L.unitframes_ouf_ghost = "灵魂"
 	L.unitframes_ouf_lowmana = "低法力值"
 	L.unitframes_ouf_threattext = "当前目标仇恨："
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "离线"
 	L.unitframes_ouf_deaddps = "|cffff0000[死亡]|r"
 	L.unitframes_ouf_ghostheal = "灵魂"

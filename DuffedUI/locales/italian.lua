@@ -245,6 +245,7 @@ if D.client == "itIT" then
 	L.unitframes_ouf_ghost = "Fantasma"
 	L.unitframes_ouf_lowmana = "MANA BASSO"
 	L.unitframes_ouf_threattext = "Minaccia sul target corrente:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "Offline"
 	L.unitframes_ouf_deaddps = "|cffff0000[DEAD]|r"
 	L.unitframes_ouf_ghostheal = "FANTASMA"

@@ -244,6 +244,7 @@ if D.client == "ruRU" then
 	L.unitframes_ouf_ghost = "Призрак"
 	L.unitframes_ouf_lowmana = "МАНА"
 	L.unitframes_ouf_threattext = "Угроза на цели:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "Оффлайн"
 	L.unitframes_ouf_deaddps = "|cffff0000[Труп]|r"
 	L.unitframes_ouf_ghostheal = "ПРИЗРАК"

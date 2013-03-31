@@ -244,6 +244,7 @@ if D.client == "deDE" then
 	L.unitframes_ouf_ghost = "Geist"
 	L.unitframes_ouf_lowmana = "WENIG MANA"
 	L.unitframes_ouf_threattext = "Bedrohung am aktuellen Ziel:"
+	L.unitframes_ouf_threattext2 = "Bedrohung"
 	L.unitframes_ouf_offlinedps = "Offline"
 	L.unitframes_ouf_deaddps = "|cffff0000[TOT]|r"
 	L.unitframes_ouf_ghostheal = "GEIST"

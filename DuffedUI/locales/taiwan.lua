@@ -245,6 +245,7 @@ if D.client == "zhTW" then
 	L.unitframes_ouf_ghost = "鬼魂"
 	L.unitframes_ouf_lowmana = "法力過低"
 	L.unitframes_ouf_threattext = "當前目標的仇恨:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "離線"
 	L.unitframes_ouf_deaddps = "|cffff0000[死亡]|r"
 	L.unitframes_ouf_ghostheal = "鬼魂"

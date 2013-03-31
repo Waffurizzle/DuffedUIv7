@@ -245,6 +245,7 @@ if D.client == "frFR" then
 	L.unitframes_ouf_ghost = "Fantome"
 	L.unitframes_ouf_lowmana = "MANA FAIBLE"
 	L.unitframes_ouf_threattext = "Menace sur la cible actuelle: "
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "Hors ligne"
 	L.unitframes_ouf_deaddps = "|cffff0000[MORT]|r"
 	L.unitframes_ouf_ghostheal = "FANTOME"

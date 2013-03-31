@@ -245,6 +245,7 @@ if D.client == "ptBR" then
 	L.unitframes_ouf_ghost = "Fantasma"
 	L.unitframes_ouf_lowmana = "Mana baixa"
 	L.unitframes_ouf_threattext = "Ameaça no alvo actual:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "Offline"
 	L.unitframes_ouf_deaddps = "|cffff0000[MORTO]|r"
 	L.unitframes_ouf_ghostheal = "FANTASMA"

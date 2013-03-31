@@ -244,6 +244,7 @@ if D.client == "esES" or D.client == "esMX" then
 	L.unitframes_ouf_ghost = "Fantasma"
 	L.unitframes_ouf_lowmana = "Mana Bajo"
 	L.unitframes_ouf_threattext = "Amenaza en el objetivo:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "Desconectado"
 	L.unitframes_ouf_deaddps = "|cffff0000[Muerto]|r"
 	L.unitframes_ouf_ghostheal = "FANTASMA"

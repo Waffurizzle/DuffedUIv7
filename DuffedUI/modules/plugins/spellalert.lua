@@ -69,15 +69,15 @@ local OnEvent = function(self, event, ...)
 		
 		if DestName ~= Name then
 			if Duration == nil then
-				SendChatMessage(SpellString .. " is up on " .. DestName .. "!", AnnounceTo)
+				SendChatMessage("++ " .. SpellString .. " on " .. DestName .. "!", AnnounceTo)
 			else
-				SendChatMessage(SpellString .. " is up on " .. DestName .. " for " .. Duration .. " seconds!", AnnounceTo)
+				SendChatMessage("++ " .. SpellString .. " on " .. DestName .. " for " .. Duration .. "s!", AnnounceTo)
 			end
 		else
-			SendChatMessage(SpellString .. " is up for " .. Duration .. " seconds!", AnnounceTo)
+			SendChatMessage("++ " .. SpellString .. " for " .. Duration .. "s!", AnnounceTo)
 		end
 
-		Delay(Duration, SendChatMessage, SpellString .. " is down.", AnnounceTo)
+		Delay(Duration, SendChatMessage, "-- " .. SpellString, AnnounceTo)
 	end
 end
 

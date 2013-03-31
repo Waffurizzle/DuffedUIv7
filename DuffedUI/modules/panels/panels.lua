@@ -216,3 +216,69 @@ bnet.text:SetPoint("CENTER")
 bnet.text:SetText("Move BnetFrame")
 bnet:Hide()
 tinsert(D.AllowFrameMoving, bnet)
+
+if C["misc"].exp_rep then
+	local exp = CreateFrame("StatusBar", "DuffedUIExperience", DuffedUIBar1)
+	exp:SetStatusBarTexture(normTex)
+	exp:SetStatusBarColor(0, 0.4, 1, .8)
+	exp:SetBackdrop(backdrop)
+	exp:SetBackdropColor(C["media"].backdropcolor)
+	exp:Size(D.Scale(155), D.Scale(15))
+	if C["actionbar"].layout == 1 then
+		exp:Point("TOPRIGHT", DuffedUIBar1, "TOPRIGHT", -18, 21)
+	else
+		exp:Point("BOTTOMRIGHT", DuffedUIBar1, "BOTTOMRIGHT", -18, -21)
+	end
+
+	-- explines
+	local expr = CreateFrame("Frame", "ExpLineRight", DuffedUIExperience)
+	expr:SetTemplate("Default")
+	expr:Size(7, 2)
+	expr:SetPoint("LEFT", DuffedUIExperience, "RIGHT", 3, 0)
+
+	local expd = CreateFrame("Frame", "ExpLineDown", DuffedUIExperience)
+	expd:SetTemplate("Default")
+	if C["actionbar"].layout == 1 then
+		expd:Size(2, 14)
+		expd:SetPoint("TOP", expr, "RIGHT", 0, 1)
+	else
+		expd:Size(2, 13)
+		expd:SetPoint("BOTTOM", expr, "RIGHT", 0, -1)
+	end
+
+	-- border and shadows
+	exp:CreateBackdrop()
+	exp.backdrop:CreateShadow()
+
+	local rep = CreateFrame("StatusBar", "DuffedUIReputation", DuffedUIBar1)
+	rep:SetStatusBarTexture(normTex)
+	rep:SetStatusBarColor(0, 0.4, 1, .8)
+	rep:SetBackdrop(backdrop)
+	rep:SetBackdropColor(C["media"].backdropcolor)
+	rep:Size(D.Scale(155), D.Scale(15))
+	if C["actionbar"].layout == 1 then
+		rep:Point("TOPLEFT", DuffedUIBar1, "TOPLEFT", 18, 21)
+	else
+		rep:Point("BOTTOMLEFT", DuffedUIBar1, "BOTTOMLEFT", 18, -21)
+	end
+
+	-- replines
+	local repl = CreateFrame("Frame", "RepLineLeft", DuffedUIReputation)
+	repl:SetTemplate("Default")
+	repl:Size(7, 2)
+	repl:SetPoint("RIGHT", DuffedUIReputation, "LEFT", -3, 0)
+
+	local repd = CreateFrame("Frame", "RepLineDown", DuffedUIReputation)
+	repd:SetTemplate("Default")
+	if C["actionbar"].layout == 1 then
+		repd:Size(2, 14)
+		repd:SetPoint("TOP", repl, "LEFT", 0, 1)
+	else
+		repd:Size(2, 13)
+		repd:SetPoint("BOTTOM", repl, "LEFT", 0, -1)
+	end
+
+	-- border and shadows
+	rep:CreateBackdrop()
+	rep.backdrop:CreateShadow()
+end

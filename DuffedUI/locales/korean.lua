@@ -251,6 +251,7 @@ if D.client == "koKR" then
 	L.unitframes_ouf_ghost = "유령"
 	L.unitframes_ouf_lowmana = "마나 적음"
 	L.unitframes_ouf_threattext = "현재 대상에 대한 위협수준:"
+	L.unitframes_ouf_threattext2 = "Threat"
 	L.unitframes_ouf_offlinedps = "오프라인"
 	L.unitframes_ouf_deaddps = "|cffff0000[죽음]|r"
 	L.unitframes_ouf_ghostheal = "유령"

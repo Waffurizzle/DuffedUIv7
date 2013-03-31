@@ -8,24 +8,40 @@ local aggroColors = {
 }
 
 local DuffedUIThreatBar = CreateFrame("StatusBar", "DuffedUIThreatBar", DuffedUIInfoRight)
-DuffedUIThreatBar:Point("TOPLEFT", 2, -2)
-DuffedUIThreatBar:Point("BOTTOMRIGHT", -2, 2)
-DuffedUIThreatBar:SetFrameStrata("MEDIUM")
-DuffedUIThreatBar:SetFrameLevel(0)
+if (C["misc"].exp_rep and D.level == MAX_PLAYER_LEVEL) then
+	DuffedUIThreatBar:Point("TOPLEFT", DuffedUIExperience, 0, 0)
+	DuffedUIThreatBar:Point("BOTTOMRIGHT", DuffedUIExperience, 0, 0)
+	DuffedUIThreatBar:SetFrameLevel(DuffedUIExperience:GetFrameLevel() + 1)
+	DuffedUIThreatBar:SetFrameStrata("HIGH")
+else
+	DuffedUIThreatBar:Point("TOPLEFT", 2, -2)
+	DuffedUIThreatBar:Point("BOTTOMRIGHT", -2, 2)
+	DuffedUIThreatBar:SetFrameLevel(0)
+	DuffedUIThreatBar:SetFrameStrata("MEDIUM")
+end
 G.Misc.ThreatBar = DuffedUIThreatBar
 
 DuffedUIThreatBar:SetStatusBarTexture(C["media"].normTex)
 DuffedUIThreatBar:GetStatusBarTexture():SetHorizTile(false)
 DuffedUIThreatBar:SetBackdrop({bgFile = C["media"].blank})
-DuffedUIThreatBar:SetBackdropColor(0, 0, 0, 0)
+if not (C["misc"].exp_rep and D.level == MAX_PLAYER_LEVEL) then DuffedUIThreatBar:SetBackdropColor(0, 0, 0, 0) end
 DuffedUIThreatBar:SetMinMaxValues(0, 100)
 
 DuffedUIThreatBar.text = D.SetFontString(DuffedUIThreatBar, C["media"].font, 12)
-DuffedUIThreatBar.text:Point("RIGHT", DuffedUIThreatBar, "RIGHT", -30, 0)
+if (C["misc"].exp_rep and D.level == MAX_PLAYER_LEVEL) then
+	DuffedUIThreatBar.text:Point("RIGHT", DuffedUIThreatBar, "RIGHT", -10, 0)
+else
+	DuffedUIThreatBar.text:Point("RIGHT", DuffedUIThreatBar, "RIGHT", -30, 0)
+end
 
 DuffedUIThreatBar.Title = D.SetFontString(DuffedUIThreatBar, C["media"].font, 12)
-DuffedUIThreatBar.Title:SetText(L.unitframes_ouf_threattext)
-DuffedUIThreatBar.Title:SetPoint("LEFT", DuffedUIThreatBar, "LEFT", D.Scale(30), 0)
+if (C["misc"].exp_rep and D.level == MAX_PLAYER_LEVEL) then
+	DuffedUIThreatBar.Title:SetText(L.unitframes_ouf_threattext2)
+	DuffedUIThreatBar.Title:SetPoint("LEFT", DuffedUIThreatBar, "LEFT", D.Scale(10), 0)
+else
+	DuffedUIThreatBar.Title:SetText(L.unitframes_ouf_threattext)
+	DuffedUIThreatBar.Title:SetPoint("LEFT", DuffedUIThreatBar, "LEFT", D.Scale(30), 0)
+end
 	  
 DuffedUIThreatBar.bg = DuffedUIThreatBar:CreateTexture(nil, 'BORDER')
 DuffedUIThreatBar.bg:SetAllPoints(DuffedUIThreatBar)
