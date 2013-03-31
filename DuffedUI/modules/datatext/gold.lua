@@ -70,7 +70,7 @@ local function Currency(id, weekly, capped)
 		if id == 396 then maxed = 3000 end
 		if discovered then
 			if id == 396 then
-				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " - " .. L.currencyWeekly .. week .. " / 1000", r, g, b, r, g, b)
+				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, "Current: " .. amount .. " / " .. maxed .. " - " .. L.currencyWeekly .. week .. " / 1000", r, g, b, r, g, b)
 			else
 				GameTooltip:AddDoubleLine("\124T" .. tex .. ":12\124t " .. name, amount .. " / " .. maxed, r, g, b, r, g, b)
 			end
