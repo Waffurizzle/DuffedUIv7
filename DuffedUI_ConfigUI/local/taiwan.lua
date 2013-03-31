@@ -28,6 +28,7 @@
 	DuffedUIConfigUILocalization.misclocation = "啟用/禁用頂部地理位置信息欄"
 	DuffedUIConfigUILocalization.miscexp_rep = "顯示 聲望/經驗 面板於下方面板"
 	DuffedUIConfigUILocalization.miscacm_screen = "啟用獲取成就自動截屏"
+	DuffedUIConfigUILocalization.miscclickcast = "Enable Click2Cast-plugin"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "其他插件程式美化皮膚"

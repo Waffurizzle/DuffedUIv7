@@ -96,6 +96,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(138895), -- Frenzy
 	CreateSpellEntry(138963), -- Perfect Aim
 	CreateSpellEntry(138786), -- Wushoolay's Lightning
+	CreateSpellEntry(138702), -- Surge of Strength
 }
 	
 local CLASS_FILTERS = {

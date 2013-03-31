@@ -6,6 +6,7 @@
 	<Script file="bufftracker.lua" />
 	<Script file="chatalert.lua" />
 	<Script file="classtimer.lua" />
+	<Script file="clickcast.lua" />
 	<Script file="combat.lua" />
 	<Script file="dispel_announcement.lua" />
 	<Script file="drink_announcement.lua" />

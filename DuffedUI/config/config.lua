@@ -169,6 +169,7 @@ C["misc"] = {
 	["location"] = true,										-- enable location panel
 	["exp_rep"] = true,											-- enable EXP / Rep-panel on bottom panel
 	["acm_screen"] = true,										-- enable Achievment-screenshot
+	["clickcast"] = true,										-- enable click2cast-plugin
 }
 
 C["duffed"] = {

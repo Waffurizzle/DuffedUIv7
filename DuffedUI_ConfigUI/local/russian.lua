@@ -27,6 +27,7 @@
 	DuffedUIConfigUILocalization.misclocation = "Enable / Disable location panel on top"
 	DuffedUIConfigUILocalization.miscexp_rep = "Show Reputation / XP-Panel on bottom panel"
 	DuffedUIConfigUILocalization.miscacm_screen = "Enable automatic Achievment screenshots"
+	DuffedUIConfigUILocalization.miscclickcast = "Enable Click2Cast-plugin"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "Skins"

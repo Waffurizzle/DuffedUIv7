@@ -27,6 +27,7 @@
 	DuffedUIConfigUILocalization.misclocation = "Aktviere / Deaktviere Ortsanzeige"
 	DuffedUIConfigUILocalization.miscexp_rep = "Zeige Erfahrungs / XP-Panel an dem unteren Panel"
 	DuffedUIConfigUILocalization.miscacm_screen = "Aktiviere automatische Screenshots bei Achievments"
+	DuffedUIConfigUILocalization.miscclickcast = "Aktiviere Click2Cast-Plugin"
 
 	-- skins
 	DuffedUIConfigUILocalization.skins = "AddOn-Skins"
