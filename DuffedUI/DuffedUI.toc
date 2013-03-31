@@ -4,7 +4,7 @@
 ## Title: |cffC41F3BDuffedUI|r
 ## Notes: UI of awesomeness!
 ## SavedVariables: DuffedUIData
-## SavedVariablesPerCharacter: DuffedUIDataPerChar
+## SavedVariablesPerCharacter: DuffedUIDataPerChar, ClickCast
 ## OptionalDeps: DuffedUI_ConfigUI
 ## X-oUF: oUFDuffedUI
 ## Website: http://www.tukui.org

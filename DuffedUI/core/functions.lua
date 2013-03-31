@@ -12,7 +12,7 @@ if D.myname == "Nediana" or D.myname == "Trinitý" or D.myname == "Nekralia" or 
 	C["media"].uffont = C["media"].ufcalibri
 end
 
-if D.myname == "Devonace" then
+if D.myname == "Devonace" or D.myname == "Daryon" or D.myname == "Veneta" or D.myname == "Whitewulf" or D.myname == "Dirawen" or D.myname == "Tyrax" or D.myname == "Zaneda" then
 	C["media"].dmgfont = C["media"].dmgfont2
 end
 
