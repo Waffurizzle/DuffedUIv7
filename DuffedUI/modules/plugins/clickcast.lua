@@ -13,14 +13,14 @@ _G["SpellBinderPortrait"]:SetTexture("Interface\\Spellbook\\Spellbook-Icon")
 
 SpellBinder.title = _G["SpellBinderTitle"] or SpellBinder:CreateFontString("SpellBinderTitle", "OVERLAY", "GameFontNormal")
 SpellBinder.title:SetPoint("TOP", _G["SpellBinder"], "TOP", 0, -5)
-SpellBinder.title:SetText(L.MISCBINDEROPEN)
+SpellBinder.title:SetText(L.click2cast_title)
 
 SpellBinder.sbOpen = false
 SpellBinder.spellbuttons = {}
 
 ClickCastFrames = _G.ClickCastFrames or {}
 for i, v in pairs({
-	"PlayerFrame", "PetFrame",
+	"PetFrame",
 	-- Party members
 	"PartyMemberFrame1", "PartyMemberFrame2", "PartyMemberFrame3", "PartyMemberFrame4", "PartyMemberFrame5",
 	-- Party pets

@@ -7,6 +7,9 @@ if D.client == "zhTW" then
 	L.welcome_1 = "Hello |cffc41f3b".. D.myname.."!|r".."\n".."感謝您使用|cffc41f3bDuffedUI "..D.version.."|r (基於Tukui編譯)."
 	L.welcome_2 = "詳細資訊請訪問 |cffc41f3bhttp://www.tukui.org|r. 進一步資訊及額外的使用幫助請使用小地圖 H 按鈕或者聊天窗口輸入/dhelp."
 
+	-- Click2Cast
+	L.click2cast_title = "Mouse Bindings"
+	
 	-- worldboss 世界Boss
 	L.worldboss_title = "世界Boss:"
 	L.worldboss_galleon = "帆船"

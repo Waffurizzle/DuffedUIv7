@@ -6,6 +6,9 @@ if D.client == "deDE" then
 	L.welcome_1 = "Hallo |cffc41f3b".. D.myname.."!|r".."\n".."Danke das du |cffc41f3bDuffedUI "..D.version.."|r benutzt (basecode von Tukui)."
 	L.welcome_2 = "Fuer detailierte Informationen besuche doch |cffc41f3bhttp://www.tukui.org|r. Fuer zusaetzliche Hilfe nutzen den H-Button oder gebe im Chat /dhelp ein."
 
+	-- Click2Cast
+	L.click2cast_title = "Mausbelegung"
+
 	-- worldboss
 	L.worldboss_title = "Weltboss(e):"
 	L.worldboss_galleon = "Galleon"

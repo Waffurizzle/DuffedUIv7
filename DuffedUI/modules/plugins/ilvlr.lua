@@ -47,7 +47,8 @@ local upgrades = {
 	["459"] = 4,
 	["460"] = 8,
 	["461"] = 12,
-	["462"] = 16
+	["462"] = 16,
+	["465"] = 0
 }
 
 local iEqAvg, iAvg
@@ -122,12 +123,12 @@ local function UpdateButtonsText(frame)
 									duracolor = "|cFFFF0000"
 								end
 
-								text:SetText(ilevelcolor..ilevel.."\n"..duracolor..D.Round(itemDurabilityPercentage).."%|r") -- + upgrades[upgrade]
+								text:SetText(ilevelcolor..ilevel + upgrades[upgrade].."\n"..duracolor..D.Round(itemDurabilityPercentage).."%|r")
 							else
-								text:SetText(ilevelcolor..ilevel) -- + upgrades[upgrade]
+								text:SetText(ilevelcolor..ilevel + upgrades[upgrade])
 							end
 						else
-							text:SetText(ilevel) -- + upgrades[upgrade]
+							text:SetText(ilevel + upgrades[upgrade])
 						end
 					end
 				end
