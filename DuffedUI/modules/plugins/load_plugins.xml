@@ -10,6 +10,7 @@
 	<Script file="combat.lua" />
 	<Script file="dispel_announcement.lua" />
 	<Script file="drink_announcement.lua" />
+	<Script file="efl.lua" />
 	<Script file="exp_repbar.lua" />
 	<Script file="farmmode.lua" />
 	<Script file="flightpoint.lua" />
@@ -34,4 +35,5 @@
 	<Script file="spellalert.lua" />
 	<Script file="spellcooldowns.lua" />
 	<Script file="spellID.lua" />
+	<Script file="test.lua" />
 </Ui>

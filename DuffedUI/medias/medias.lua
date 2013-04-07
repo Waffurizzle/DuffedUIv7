@@ -50,6 +50,11 @@ C["media"] = {
 	["buttonhover"] = [[Interface\AddOns\DuffedUI\medias\textures\button_hover]],
 	["duffed"] = [[Interface\AddOns\DuffedUI\medias\textures\duffed]],
 	["largenodes"] = [[Interface\AddOns\DuffedUI\medias\textures\nodesLarge]],
+	["alliance"] = [[Interface\AddOns\DuffedUI\medias\textures\alliance]],
+	["d3"] = [[Interface\AddOns\DuffedUI\medias\textures\d3]],
+	["horde"] = [[Interface\AddOns\DuffedUI\medias\textures\horde]],
+	["neutral"] = [[Interface\AddOns\DuffedUI\medias\textures\neutral]],
+	["sc2"] = [[Interface\AddOns\DuffedUI\medias\textures\sc2]],
 	
 	-- colors
 	["bordercolor"] = C["general"].bordercolor or { .125, .125, .125 }, -- border color of DuffedUI panels
