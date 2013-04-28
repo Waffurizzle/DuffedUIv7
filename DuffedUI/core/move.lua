@@ -23,7 +23,7 @@ local function exec(self, enable)
 			self:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 		end
 	end
-	
+
 	if self == DuffedUIAurasPlayerBuffs then
 		local buffs = DuffedUIAurasPlayerBuffs
 		

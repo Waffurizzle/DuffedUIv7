@@ -456,6 +456,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(17962), -- Conflagrate
 			CreateSpellEntry(108686), -- Immolate (Area)
 			CreateSpellEntry(87389), -- Seed of Corruption via Soulburn
+			CreateSpellEntry(47960), -- Shadowflame
 		},
 		player = {
 			CreateSpellEntry(17941), -- Shadow Trance
