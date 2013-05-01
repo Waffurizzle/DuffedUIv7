@@ -490,6 +490,8 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(676), -- Disarm
 			CreateSpellEntry(18498), -- Gag Order
 			CreateSpellEntry(6343), -- Thunderclap
+			CreateSpellEntry(115767), -- Deep Wounds
+			CreateSpellEntry(113746), -- Weakend Armor
 		},
 		player = {
 			CreateSpellEntry(469), -- Commanding Shout
@@ -507,6 +509,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(125831), -- Taste for Blood
 			CreateSpellEntry(112048), -- Shield Barrier
 			CreateSpellEntry(132404), -- Shield Block
+			CreateSpellEntry(122510), -- Ultimatum
 		},
 		procs = {
 			CreateSpellEntry(46916), -- Bloodsurge Slam (Free & Instant)

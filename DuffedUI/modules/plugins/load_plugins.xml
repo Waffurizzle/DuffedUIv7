@@ -1,6 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="acmscreen.lua" />
 	<Script file="addonmanager.lua" />
+	<Script file="blizzardbugfixes.lua" />
 	<Script file="bossicons.lua" />
 	<Script file="buffnotice.lua" />
 	<Script file="bufftracker.lua" />
