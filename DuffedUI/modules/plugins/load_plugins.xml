@@ -30,6 +30,7 @@
 	<Script file="mail.lua" />
 	<Script file="mmbskin.lua" />
 	<Script file="raidcooldowns.lua" />
+	<Script file="runes.lua" />
 	<Script file="sayinterrupt.lua" />
 	<Script file="sCombo.lua" />
 	<Script file="ses.lua" />

@@ -181,6 +181,7 @@ DuffedUIConfigUILocalization.unitframesweakenedsoulbar = "Enable Weakened Soul b
 DuffedUIConfigUILocalization.unitframesclassbar = "Enable class bar"
 DuffedUIConfigUILocalization.unitframesdruidmanabar = "Show Druid Mana Bar in Bear/Cat form"
 DuffedUIConfigUILocalization.unitframesdruidmushroombar = "Show Druid Mushroom bar in Balance or Restoration specialization"
+DuffedUIConfigUILocalization.unitframesrunes = "Enable alternativ runebar for Death Knights"
 
 -- raid frames
 DuffedUIConfigUILocalization.raid = "Raid Frames"
