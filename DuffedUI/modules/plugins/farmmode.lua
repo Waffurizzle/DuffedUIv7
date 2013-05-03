@@ -16,7 +16,7 @@ function SlashCmdList.FARMMODE(msg, editbox)
         print("Farm Mode : Off")
     end
 	
-	local defaultBlip, largeBlip = "Interface\\Minimap\\ObjectIcons", C["media"].largenodes
-	Minimap:SetBlipTexture(farm == false and defaultBlip or largeBlip)
+	local defaultBlip = "Interface\\Minimap\\ObjectIcons"
+	Minimap:SetBlipTexture(defaultBlip)
 end
 SLASH_FARMMODE1 = '/farmmode'

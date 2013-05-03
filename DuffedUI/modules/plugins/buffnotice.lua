@@ -50,50 +50,6 @@ local function Buffs1OnEvent(self, event)
 	end
 end
 
---[[local function Buffs2OnEvent(self, event)
-	if (event == "PLAYER_LOGIN" or event == "LEARNED_SPELL_IN_TAB") then
-		for i, buff in pairs(Buffs2) do
-			local name, _, icon = GetSpellInfo(buff)
-			local usable, nomana = IsUsableSpell(name)
-			--print(buff, name, usable, nomana)
-			if (usable or nomana) then
-				self.icon:SetTexture(icon)
-				break
-			end
-		end
-		if (not self.icon:GetTexture() and event == "PLAYER_LOGIN") then
-			self:UnregisterAllEvents()
-			self:RegisterEvent("LEARNED_SPELL_IN_TAB")
-			return
-		elseif (self.icon:GetTexture() and event == "LEARNED_SPELL_IN_TAB") then
-			self:UnregisterAllEvents()
-			self:RegisterEvent("UNIT_AURA")
-			self:RegisterEvent("PLAYER_LOGIN")
-			self:RegisterEvent("PLAYER_REGEN_ENABLED")
-			self:RegisterEvent("PLAYER_REGEN_DISABLED")
-		end
-	end
-	
-	if (UnitAffectingCombat("player") and not UnitInVehicle("player")) then
-		for i, buff in pairs(Buffs2) do
-			local name = GetSpellInfo(buff)
-			if (name and UnitBuff("player", name)) then
-				self:Hide()
-				sound = true
-				return
-			end
-		end
-		self:Show()
-		if C["auras"].warning and sound == true then
-			PlaySoundFile(C["media"].warning)
-			sound = false
-		end
-	else
-		self:Hide()
-		sound = true
-	end
-end]]--
-
 local function WeaponBuffsOnEvent(self, event)
 	if select(2, UnitClass("player")) ~= "SHAMAN" then return end
 	if UnitLevel("player") < 10 then return end
@@ -160,31 +116,17 @@ end
 
 function PositionFrames()
 	DuffedUIBuffs1:ClearAllPoints()
-	--DuffedUIBuffs2:ClearAllPoints()
 	DuffedUIWeaponBuffs:ClearAllPoints()
 	DuffedUIBuffsWarningFrame:SetWidth(40)
 	if DuffedUIBuffs1:IsShown() then
 		DuffedUIBuffs1:SetPoint("LEFT", DuffedUIBuffsWarningFrame, "LEFT", 0, 0)
 	end
-	--[[if DuffedUIBuffs2:IsShown() then
-		if not DuffedUIBuffs1:IsShown() then
-			DuffedUIBuffs2:SetPoint("LEFT", DuffedUIBuffsWarningFrame, "LEFT", 0, 0)
-		else
-			DuffedUIBuffs2:SetPoint("LEFT", DuffedUIBuffs1, "RIGHT", 8, 0)
-			DuffedUIBuffsWarningFrame:SetWidth(88)
-		end
-	end]]--
 	if DuffedUIWeaponBuffs:IsShown() then
-		if not DuffedUIBuffs2:IsShown() then
-			if not DuffedUIBuffs1:IsShown() then
-				DuffedUIWeaponBuffs:SetPoint("LEFT", DuffedUIBuffsWarningFrame, "LEFT", 0, 0)
-			else
-				DuffedUIWeaponBuffs:SetPoint("LEFT", DuffedUIBuffs1, "RIGHT", 8, 0)
-				DuffedUIBuffsWarningFrame:SetWidth(88)
-			end
+		if not DuffedUIBuffs1:IsShown() then
+			DuffedUIWeaponBuffs:SetPoint("LEFT", DuffedUIBuffsWarningFrame, "LEFT", 0, 0)
 		else
-			DuffedUIWeaponBuffs:SetPoint("LEFT", DuffedUIBuffs2, "RIGHT", 8, 0)
-			DuffedUIBuffsWarningFrame:SetWidth(136)
+			DuffedUIWeaponBuffs:SetPoint("LEFT", DuffedUIBuffs1, "RIGHT", 8, 0)
+			DuffedUIBuffsWarningFrame:SetWidth(88)
 		end
 	end
 	DuffedUIBuffsWarningFrame:SetPoint("CENTER", UIParent, "CENTER", 0, 100)
@@ -198,11 +140,6 @@ local DuffedUIBuffs1 = CreateFrame("Frame", "DuffedUIBuffs1", DuffedUIBuffsWarni
 RegisterFrameEvents(DuffedUIBuffs1)
 CreateFrameIcon(DuffedUIBuffs1)
 DuffedUIBuffs1:SetScript("OnEvent", Buffs1OnEvent)
-
---[[local DuffedUIBuffs2 = CreateFrame("Frame", "DuffedUIBuffs2", DuffedUIBuffsWarningFrame)
-RegisterFrameEvents(DuffedUIBuffs2)
-CreateFrameIcon(DuffedUIBuffs2)
-DuffedUIBuffs2:SetScript("OnEvent", Buffs2OnEvent)]]--
 
 local DuffedUIWeaponBuffs = CreateFrame("Frame", "DuffedUIWeaponBuffs", DuffedUIBuffsWarningFrame)
 RegisterFrameEvents(DuffedUIWeaponBuffs)

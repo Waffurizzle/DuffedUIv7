@@ -49,7 +49,6 @@ C["media"] = {
 	["blank"] = [[Interface\AddOns\DuffedUI\medias\textures\blank]], -- the main texture for all borders/panels
 	["buttonhover"] = [[Interface\AddOns\DuffedUI\medias\textures\button_hover]],
 	["duffed"] = [[Interface\AddOns\DuffedUI\medias\textures\duffed]],
-	["largenodes"] = [[Interface\AddOns\DuffedUI\medias\textures\nodesLarge]],
 	["alliance"] = [[Interface\AddOns\DuffedUI\medias\textures\alliance]],
 	["d3"] = [[Interface\AddOns\DuffedUI\medias\textures\d3]],
 	["horde"] = [[Interface\AddOns\DuffedUI\medias\textures\horde]],
