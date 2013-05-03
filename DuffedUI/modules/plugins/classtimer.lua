@@ -98,6 +98,12 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(138963), -- Perfect Aim
 	CreateSpellEntry(138786), -- Wushoolay's Lightning
 	CreateSpellEntry(138702), -- Surge of Strength
+
+	-- Legendary MetaGems
+	CreateSpellEntry(137593), -- Indomitable Primal Diamond
+	CreateSpellEntry(137248), -- Courageous Primal Diamond
+	CreateSpellEntry(137595), -- Capacitive Primal Diamond
+	CreateSpellEntry(137590), -- Sinister Primal Diamond
 }
 	
 local CLASS_FILTERS = {
