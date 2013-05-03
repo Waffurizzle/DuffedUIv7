@@ -61,6 +61,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(128988), -- Relic of Niuzao
 	CreateSpellEntry(128985), -- Relic of Yu'lon
 	CreateSpellEntry(129812), -- Iron Belly Wok
+	CreateSpellEntry(138699), -- Superluminal
 	
 	-- Raidtrinkets
 	-- Mogu'Shan Vaults

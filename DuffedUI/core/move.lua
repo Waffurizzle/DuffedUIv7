@@ -6,7 +6,7 @@ D.AllowFrameMoving = {}
 
 -- used to exec various code if we enable or disable moving
 local function exec(self, enable)
-	if self == DuffedUIGMFrameAnchor or self == TCBanchor or self == FCBanchor or self == RCDAnchor or self == DuffedUISpellCooldowns or self == DuffedUIBnetHolder then
+	if self == DuffedUIGMFrameAnchor or self == TCBanchor or self == FCBanchor or self == RCDAnchor or self == SpellCooldownsFrameAnchor or self == DuffedUIBnetHolder then
 		if enable then
 			self:Show()
 		else

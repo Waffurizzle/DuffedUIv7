@@ -610,43 +610,45 @@ local function Shared(self, unit)
 
 				-- deathknight runes
 				if D.myclass == "DEATHKNIGHT" then
-					local Runes = CreateFrame("Frame", nil, self)
-					Runes:Point("LEFT", power, "BOTTOMLEFT", 15, -3)
-					Runes:Size(100, 5)
-					Runes:SetFrameLevel(self:GetFrameLevel() + 3)
-					Runes:SetFrameStrata("MEDIUM")
+					if C["unitframes"].runes == false then
+						local Runes = CreateFrame("Frame", nil, self)
+						Runes:Point("LEFT", power, "BOTTOMLEFT", 15, -3)
+						Runes:Size(100, 5)
+						Runes:SetFrameLevel(self:GetFrameLevel() + 3)
+						Runes:SetFrameStrata("MEDIUM")
 
-					for i = 1, 6 do
-						Runes[i] = CreateFrame("StatusBar", self:GetName().."_Runes"..i, self)
-						Runes[i]:SetHeight(D.Scale(5))
+						for i = 1, 6 do
+							Runes[i] = CreateFrame("StatusBar", self:GetName().."_Runes"..i, self)
+							Runes[i]:SetHeight(D.Scale(5))
 
-						if i == 1 then
-							Runes[i]:SetPoint("LEFT", Runes, "LEFT", 0, 0)
-							Runes[i]:SetWidth(D.Scale(176 /6))
-						else
-							Runes[i]:SetPoint("LEFT", Runes[i-1], "RIGHT", D.Scale(5), 0)
-							Runes[i]:SetWidth(D.Scale(176 /6))
+							if i == 1 then
+								Runes[i]:SetPoint("LEFT", Runes, "LEFT", 0, 0)
+								Runes[i]:SetWidth(D.Scale(176 /6))
+							else
+								Runes[i]:SetPoint("LEFT", Runes[i-1], "RIGHT", D.Scale(5), 0)
+								Runes[i]:SetWidth(D.Scale(176 /6))
+							end
+							Runes[i]:SetStatusBarTexture(normTex)
+							Runes[i]:GetStatusBarTexture():SetHorizTile(false)
+							Runes[i]:SetBackdrop(backdrop)
+							Runes[i]:SetBackdropColor(0,0,0)
+							Runes[i]:SetFrameLevel(4)
+	                    
+							Runes[i].bg = Runes[i]:CreateTexture(nil, "BORDER")
+							Runes[i].bg:SetAllPoints(Runes[i])
+							Runes[i].bg:SetTexture(normTex)
+							Runes[i].bg.multiplier = 0.3
+						
+							Runes[i].border = CreateFrame("Frame", nil, Runes[i])
+							Runes[i].border:SetPoint("TOPLEFT", Runes[i], "TOPLEFT", D.Scale(-2), D.Scale(2))
+							Runes[i].border:SetPoint("BOTTOMRIGHT", Runes[i], "BOTTOMRIGHT", D.Scale(2), D.Scale(-2))
+							Runes[i].border:SetFrameStrata("MEDIUM")
+							Runes[i].border:SetFrameLevel(4)					
+							Runes[i].border:SetTemplate("Default")
 						end
-						Runes[i]:SetStatusBarTexture(normTex)
-						Runes[i]:GetStatusBarTexture():SetHorizTile(false)
-						Runes[i]:SetBackdrop(backdrop)
-						Runes[i]:SetBackdropColor(0,0,0)
-						Runes[i]:SetFrameLevel(4)
-                    
-						Runes[i].bg = Runes[i]:CreateTexture(nil, "BORDER")
-						Runes[i].bg:SetAllPoints(Runes[i])
-						Runes[i].bg:SetTexture(normTex)
-						Runes[i].bg.multiplier = 0.3
-					
-						Runes[i].border = CreateFrame("Frame", nil, Runes[i])
-						Runes[i].border:SetPoint("TOPLEFT", Runes[i], "TOPLEFT", D.Scale(-2), D.Scale(2))
-						Runes[i].border:SetPoint("BOTTOMRIGHT", Runes[i], "BOTTOMRIGHT", D.Scale(2), D.Scale(-2))
-						Runes[i].border:SetFrameStrata("MEDIUM")
-						Runes[i].border:SetFrameLevel(4)					
-						Runes[i].border:SetTemplate("Default")
-					end
 
-                    self.Runes = Runes
+	                    self.Runes = Runes
+	                end
 					
 					-- statue bar
 					if C["unitframes"].showstatuebar then
@@ -910,7 +912,7 @@ local function Shared(self, unit)
 			local tcb = CreateFrame("Frame", "TCBanchor", UIParent)
 			tcb:SetTemplate("Default")
 			tcb:Size(225, 18)
-			tcb:Point("BOTTOM", UIParent, "BOTTOM", 0, 380)
+			tcb:Point("BOTTOM", UIParent, "BOTTOM", 0, 395)
 			tcb:SetClampedToScreen(true)
 			tcb:SetMovable(true)
 			tcb:SetBackdropColor(0, 0, 0)

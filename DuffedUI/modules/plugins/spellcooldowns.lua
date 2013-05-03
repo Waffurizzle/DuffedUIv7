@@ -115,7 +115,7 @@ spellCooldowns = {
 		29166, -- Innervate
 	},
 	["MAGE"] = {
-		12472, -- Icy Veins
+		131078, -- Icy Veins
 		122,   -- Frost Nova
 		120,   -- Cone of Cold
 		11426, -- Ice Barrier
@@ -140,6 +140,8 @@ spellCooldowns = {
 		82731, -- Flame Orb
 		115610, -- Temporal Shield
 		108978, -- Alter Time
+		84714, -- Frozen Orb
+		33395, -- Freeze (Water Elemental)
 	},
 	["MONK"] = {
 		116680, -- Thunder Focus Tea
@@ -380,14 +382,25 @@ end
 
 local onUpdate
 
+local scfa = CreateFrame("Frame", "SpellCooldownsFrameAnchor", UIParent)
+scfa:SetTemplate("Default")
+scfa:Size(120, 17)
+scfa:SetPoint("BOTTOM", UIParent, "BOTTOM", 0, 350)
+scfa:SetClampedToScreen(true)
+scfa:SetMovable(true)
+scfa:SetBackdropColor(0, 0, 0)
+scfa:SetBackdropBorderColor(1, 0, 0)
+scfa.text = D.SetFontString(scfa, C["media"].font, 12)
+scfa.text:SetPoint("CENTER")
+scfa.text:SetText("Move SpellCooldowns")
+scfa:Hide()
+tinsert(D.AllowFrameMoving, SpellCooldownsFrameAnchor)
+
 local SpellCooldownFrame = CreateFrame("Frame", "DuffedUISpellCooldowns", UIParent)
 SpellCooldownFrame:SetFrameStrata("BACKGROUND")
 SpellCooldownFrame:SetHeight(height)
 SpellCooldownFrame:SetWidth(width)
-SpellCooldownFrame:SetPoint(unpack(anchor))
-SpellCooldownFrame:SetClampedToScreen(true)
-SpellCooldownFrame:SetMovable(true)
-tinsert(D.AllowFrameMoving, SpellCooldownFrame)
+SpellCooldownFrame:SetPoint("BOTTOM", scfa, 0, 0)
 
 local function enableCooldown (self)
 	self.enabled = true
