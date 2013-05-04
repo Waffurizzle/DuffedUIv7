@@ -101,7 +101,7 @@ if C["runes"].enable == true then
 			end
 
 			rpbar.text = rpbar:CreateFontString(nil, "ARTWORK")
-			rpbar.text:SetFont(C["media"]["font"], fontHeight, "THINOUTLINE")
+			rpbar.text:SetFont(C["media"].font, fontHeight, "THINOUTLINE")
 			rpbar.text:SetPoint("CENTER", 1, 0)
 			rpbar.text:SetTextColor(unpack(colors[5]))
 		end
@@ -174,11 +174,19 @@ if C["runes"].enable == true then
 		self:Hide()
 	end)
 
-	--[[if C["runes"].soulreaper then
+	if C["runes"].soulreaper then
+		function frame:FadeIn()
+			UIFrameFadeIn(self, (0.3 * (1 - self:GetAlpha())), self:GetAlpha(), 1)
+		end
+
+		function frame:FadeOut()
+			UIFrameFadeOut(self, (0.3 * (0 + self:GetAlpha())), self:GetAlpha(), 0)
+		end
+
 		local name, _, icon = GetSpellInfo(114866)
 
 		local frame = CreateFrame("Frame", nil, UIParent)
-		frame:Size(50)
+		frame:Size(40)
 		frame:SetPoint("LEFT", _G["dRunes"], "RIGHT", 10, 0)
 		frame:SetTemplate("Default")
 		frame:SetAlpha(1)
@@ -189,30 +197,23 @@ if C["runes"].enable == true then
 		frame.icon:SetPoint("CENTER")
 		frame.icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 
-		function frame:FadeIn()
-			UIFrameFadeIn(self, (0.3 * (1 - self:GetAlpha())), self:GetAlpha(), 1)
-		end
-
-		function frame:FadeOut()
-			UIFrameFadeOut(self, (0.3 * (0 + self:GetAlpha())), self:GetAlpha(), 0)
-		end
+		frame:FadeOut()
 
 		local function OnEvent(self, event)
 			local ahealth = math.floor(UnitHealth("target") / UnitHealthMax("target") * 100)
 			isUsable = IsUsableSpell(name)
 
-			if ahealth <= 35 then
-				if isUsable then
-					self:FadeOut()
-				else
-					self:FadeIn()
-				end
+			if ahealth <= 35 and not UnitIsDead("target") then
+				self:FadeIn()
+			else
+				self:FadeOut()
 			end
 		end
 
 		frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 		frame:RegisterEvent("ACTIONBAR_UPDATE_USABLE")
 		frame:RegisterEvent("SPELL_UPDATE_USABLE")
+		frame:RegisterEvent("SPELL_UPDATE_COOLDOWN")
 		frame:SetScript("OnEvent", OnEvent)
-	end]]--
+	end
 end

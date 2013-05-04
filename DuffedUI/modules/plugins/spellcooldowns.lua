@@ -490,7 +490,7 @@ local function positionDim()
 		local frame = frames[k]
 		
 		-- Check if the spell is in the spellbook. E.G. will of the forsaken will show as a black icon if you're not a Forsaken, when using a PvP trinket, as it has 45s shared cooldown.
-		if GetSpellTexture(GetSpellInfo(frame.spell)) or T.myclass == "PRIEST"then
+		if GetSpellTexture(GetSpellInfo(frame.spell)) or D.myclass == "PRIEST"then
 			local start, duration, enable = GetSpellCooldown(frame.spell)
 			frame.start = start
 			frame.duration = duration
