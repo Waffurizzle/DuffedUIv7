@@ -57,6 +57,7 @@
 	DuffedUIConfigUILocalization.duffedannouncechannel = "Set channel for announcement (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r or |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "Enable Dispelannouncement"
 	DuffedUIConfigUILocalization.duffedspellannounce = "Enable Auraannouncement"
+	DuffedUIConfigUILocalization.duffedrunes = "Enable alternativ runebar for Death Knights"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "General"
@@ -180,7 +181,6 @@
 	DuffedUIConfigUILocalization.unitframesclassbar = "Enable class bar"
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "Show Druid Mana Bar in Bear/Cat form"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "Show Druid Mushroom bar in Balance or Restoration specialization"
-	DuffedUIConfigUILocalization.unitframesrunes = "Enable alternativ runebar for Death Knights"
 
 	-- raid frames
 	DuffedUIConfigUILocalization.raid = "Raid Frames"

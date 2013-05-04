@@ -57,6 +57,7 @@
 	DuffedUIConfigUILocalization.duffedannouncechannel = "设置通告频道 (设定值为:|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r or |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "启用驱散通告"
 	DuffedUIConfigUILocalization.duffedspellannounce = "Enable Auraannouncement"
+	DuffedUIConfigUILocalization.duffedrunes = "Enable alternativ runebar for Death Knights"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "综合"
@@ -180,7 +181,6 @@
 	DuffedUIConfigUILocalization.unitframesclassbar = "启用职业条"
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "熊、猫姿态下显示魔法条（德鲁伊）"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "平衡或恢复天赋下启用蘑菇条（德鲁伊）"
-	DuffedUIConfigUILocalization.unitframesrunes = "Enable alternativ runebar for Death Knights"
 
 	-- Raidframes
 	DuffedUIConfigUILocalization.raid = "团队界面"

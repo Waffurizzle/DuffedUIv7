@@ -57,6 +57,8 @@
 	DuffedUIConfigUILocalization.duffedannouncechannel = "Setze Kanal f\195\188r Warnung (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r oder |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "Aktviere Reinigungswarnnung"
 	DuffedUIConfigUILocalization.duffedspellannounce = "Aktiviere Aurawarnung"
+		DuffedUIConfigUILocalization.unitframesrunes = "Aktiviere alternative Runenanzeige f\195\188r Todesritter"
+
 
 	-- general
 	DuffedUIConfigUILocalization.general = "Allgemein"
@@ -180,7 +182,6 @@
 	DuffedUIConfigUILocalization.unitframesclassbar = "Aktiviere Klassenleisten"
 	DuffedUIConfigUILocalization.unitframesdruidmanabar = "Zeige Druiden Manaleiste auch in B\195\164ren/Katzen-Form"
 	DuffedUIConfigUILocalization.unitframesdruidmushroombar = "Zeige Druiden \"Wildpilz\"-Leiste auch in Gleichgewicht oder Wiederherstellungs Spezialisierung"
-	DuffedUIConfigUILocalization.unitframesrunes = "Aktiviere alternative Runenanzeige f\195\188r Todesritter"
 
 	-- raid frames
 	DuffedUIConfigUILocalization.raid = "Schlachtzugfenster"

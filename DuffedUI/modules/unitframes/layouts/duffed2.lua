@@ -658,25 +658,27 @@ local function Shared(self, unit)
 
 				-- deathknight runes
 				if D.myclass == "DEATHKNIGHT" then
-					local Runes = CreateFrame("Frame", nil, self)
-					Runes:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5)
-					Runes:Height(5)
-					Runes:SetWidth(playerwidth - 4)
-					Runes:SetBackdrop(backdrop)
-					Runes:SetBackdropColor(0, 0, 0)
+					if C["duffed"].runes == false then
+						local Runes = CreateFrame("Frame", nil, self)
+						Runes:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5)
+						Runes:Height(5)
+						Runes:SetWidth(playerwidth - 4)
+						Runes:SetBackdrop(backdrop)
+						Runes:SetBackdropColor(0, 0, 0)
 
-					for i = 1, 6 do
-						Runes[i] = CreateFrame("StatusBar", self:GetName().."_Runes"..i, Runes)
-						Runes[i]:SetHeight(5)
-						if i == 1 then Runes[i]:SetWidth((playerwidth - 4) / 6) else Runes[i]:SetWidth(((playerwidth - 4) / 6) - 1) end
-						if i == 1 then Runes[i]:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5) else  Runes[i]:Point("TOPLEFT", Runes[i-1], "TOPRIGHT", 1, 0) end
-						Runes[i]:SetStatusBarTexture(normTex)
-						Runes[i]:GetStatusBarTexture():SetHorizTile(false)
+						for i = 1, 6 do
+							Runes[i] = CreateFrame("StatusBar", self:GetName().."_Runes"..i, Runes)
+							Runes[i]:SetHeight(5)
+							if i == 1 then Runes[i]:SetWidth((playerwidth - 4) / 6) else Runes[i]:SetWidth(((playerwidth - 4) / 6) - 1) end
+							if i == 1 then Runes[i]:Point("BOTTOMLEFT", health, "TOPLEFT", 0, 5) else  Runes[i]:Point("TOPLEFT", Runes[i-1], "TOPRIGHT", 1, 0) end
+							Runes[i]:SetStatusBarTexture(normTex)
+							Runes[i]:GetStatusBarTexture():SetHorizTile(false)
+						end
+						
+						Runes:CreateBorder("RuneBarBorder")
+
+						self.Runes = Runes
 					end
-					
-					Runes:CreateBorder("RuneBarBorder")
-
-					self.Runes = Runes
 					
 					if C["unitframes"].showstatuebar then
 						-- statue bar

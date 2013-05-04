@@ -26,7 +26,6 @@ C["unitframes"] = {
 		.6, .2, .2,
 		.125, .125, .125,
 	},
-	["runes"] = false,											-- enable alternativ runebar
 	["ColorGradient"] = false,									-- enable colorgradient
 	["framewidth"] = 218,										-- framewidth for unitframes
 	["totandpetlines"] = true,									-- enable connectlines
@@ -180,6 +179,7 @@ C["duffed"] = {
 	["bossicons"] = true,										-- enable alternative bossicons
 	["announcechannel"] = "PARTY",								-- set announcechannel
 	["spellannounce"] = true,									-- enable aura announcement
+	["runes"] = false,											-- enable alternativ runebar
 }
 
 C["loot"] = {

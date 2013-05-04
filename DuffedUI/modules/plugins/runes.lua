@@ -41,7 +41,7 @@ local colors = dRunesSettings.colors
 local runes = {}
 local runemap = dRunesSettings.runemap
 
-if C["unitframes"].runes == true then
+if C["duffed"].runes == true then
 	local dRunesAnchorFrame = CreateFrame("Frame", "dRunesAnchorFrame", UIParent)
 	dRunesAnchorFrame:Size(150, 15)
 	dRunesAnchorFrame:SetPoint("CENTER", UIParent, "CENTER", 0, 100)
