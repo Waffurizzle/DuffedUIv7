@@ -6,7 +6,7 @@ D.AllowFrameMoving = {}
 
 -- used to exec various code if we enable or disable moving
 local function exec(self, enable)
-	if self == DuffedUIGMFrameAnchor or self == TCBanchor or self == FCBanchor or self == RCDAnchor or self == SpellCooldownsFrameAnchor or self == DuffedUIBnetHolder then
+	if self == DuffedUIGMFrameAnchor or self == TCBanchor or self == FCBanchor or self == RCDAnchor or self == SpellCooldownsFrameAnchor or self == DuffedUIBnetHolder or self == dRunesAnchorFrame or self == sCombosAnchor then
 		if enable then
 			self:Show()
 		else
@@ -161,10 +161,6 @@ end
 D.MoveUIElements = function()
 	if DuffedUIRaidUtilityAnchor then
 		if DuffedUIRaidUtilityAnchor:IsShown() then DuffedUIRaidUtilityAnchor:Hide() else DuffedUIRaidUtilityAnchor:Show() end
-	end
-	
-	if sCombosAnchor then
-		if sCombosAnchor:IsShown() then sCombosAnchor:Hide() else sCombosAnchor:Show() end
 	end
 	
 	for i = 1, getn(D.AllowFrameMoving) do

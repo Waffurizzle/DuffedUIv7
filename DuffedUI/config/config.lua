@@ -26,7 +26,7 @@ C["unitframes"] = {
 		.6, .2, .2,
 		.125, .125, .125,
 	},
-	["runes"] = true,											-- enable alternativ runebar
+	["runes"] = false,											-- enable alternativ runebar
 	["ColorGradient"] = false,									-- enable colorgradient
 	["framewidth"] = 218,										-- framewidth for unitframes
 	["totandpetlines"] = true,									-- enable connectlines
