@@ -61,6 +61,13 @@
 	-- drunes
 	DuffedUIConfigUILocalization.runes = "|cffC41F3Bd|rRunes"
 	DuffedUIConfigUILocalization.runesenable = "Enable alternativ runebar for Death Knights"
+	DuffedUIConfigUILocalization.runesbarlength = "Set bar length of runes"
+	DuffedUIConfigUILocalization.runesbarthickness = "Set thickness of rune bars"
+	DuffedUIConfigUILocalization.runesdisplayrpbar = "Enable runic power bar below the runes"
+	DuffedUIConfigUILocalization.runesdisplayrpbartext = "Enable runic power text"
+	DuffedUIConfigUILocalization.runesrpbarthickness = "Set thickenes of runic power bar"
+	DuffedUIConfigUILocalization.runeshideooc = "Hide drunes ooc"
+	DuffedUIConfigUILocalization.runesgrowthdirection = "Set growth direction of rune bars (VERTICAL or HORIZONTAL)"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "综合"

@@ -61,6 +61,13 @@
 	-- drunes
 	DuffedUIConfigUILocalization.runes = "|cffC41F3Bd|rRunes"
 	DuffedUIConfigUILocalization.runesenable = "Aktiviere alternative Runenanzeige f\195\188r Todesritter"
+	DuffedUIConfigUILocalization.runesbarlength = "Setze Länge der Runen"
+	DuffedUIConfigUILocalization.runesbarthickness = "Setze Dicke der Runen"
+	DuffedUIConfigUILocalization.runesdisplayrpbar = "Aktiviere Runenmachtanzeige unterhalb der Runen"
+	DuffedUIConfigUILocalization.runesdisplayrpbartext = "Aktiviere Runenmachttext"
+	DuffedUIConfigUILocalization.runesrpbarthickness = "Setze Dicke der Runenmachtanzeige"
+	DuffedUIConfigUILocalization.runeshideooc = "Verstecke dRunes ausserhalb des Kampfes"
+	DuffedUIConfigUILocalization.runesgrowthdirection = "Setze Wachstumsrichtung der Runen (VERTICAL or HORIZONTAL)"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "Allgemein"
