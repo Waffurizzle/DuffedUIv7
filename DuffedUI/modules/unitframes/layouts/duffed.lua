@@ -648,7 +648,7 @@ local function Shared(self, unit)
 
 				-- deathknight runes
 				if D.myclass == "DEATHKNIGHT" then
-					if C["duffed"].runes == false then
+					if C["runes"].enable == false then
 						local Runes = CreateFrame("Frame", nil, self)
 						Runes:Point("TOPLEFT", power, "BOTTOMLEFT", 0, -5)
 						Runes:Height(5)

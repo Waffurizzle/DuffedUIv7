@@ -179,7 +179,18 @@ C["duffed"] = {
 	["bossicons"] = true,										-- enable alternative bossicons
 	["announcechannel"] = "PARTY",								-- set announcechannel
 	["spellannounce"] = true,									-- enable aura announcement
-	["runes"] = false,											-- enable alternativ runebar
+}
+
+C["runes"] = {
+	["enable"] = false,											-- enable alternativ runebar
+	["barlength"] = 40,											-- bar length of runes
+	["barthickness"] = 14,										-- thickness of rune bars
+	["displayrpbar"] = true,									-- runic power bar below the runes
+	["displayrpbartext"] = true,								-- enable runic power text
+	["rpbarthickness"] = 10,									-- thickenes of runic power bar
+	["hideooc"] = false,										-- hide drunes ooc
+	["growthdirection"] = "VERTICAL",							-- growth direction of rune bars
+	["runestrike"] = false,										-- enable rune strike display if usable
 }
 
 C["loot"] = {

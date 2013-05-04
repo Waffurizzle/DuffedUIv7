@@ -2,48 +2,20 @@ local D, C, L, G = unpack(select(2, ...))
 
 if D.myclass ~= "DEATHKNIGHT" then return end
 
-dRunesSettings = {
-	texture = C["media"].normTex,
-	barLength = 40,
-	barThickness = 14,
-	rpBarThickness = 10,
-	hideOOC = false,
-	x = 0,
-	y = 170,
-	growthDirection = "VERTICAL", -- HORIZONTAL or VERTICAL
-
-	displayRpBar = true, -- runic power bar below the runes
-	displayRpBarText = true, -- runic power text on the runic power bar
-
-	--runestrike = false, -- shows a rune strike icon whenever it's usable
-
-	colors = {
-		{ 0.69, 0.31, 0.31 }, -- blood
-		{ 0.33, 0.59, 0.33 }, -- unholy
-		{ 0.31, 0.45, 0.63 }, -- frost
-		{ 0.84, 0.75, 0.65 }, -- death
-		{ 0, 0.82, 1 }, -- runic power
-	},
-	
-	--[[
-		runemap instructions.
-		This is the order you want your runes to be displayed in (down to bottom or left to right).
-		1,2 = Blood
-		3,4 = Unholy
-		5,6 = Frost
-		(Note: All numbers must be included or it will break)
-	]]
-	runemap = { 1, 2, 3, 4, 5, 6 },
+local colors = {
+	{ 0.69, 0.31, 0.31 }, -- blood
+	{ 0.33, 0.59, 0.33 }, -- unholy
+	{ 0.31, 0.45, 0.63 }, -- frost
+	{ 0.84, 0.75, 0.65 }, -- death
+	{ 0, 0.82, 1 }, -- runic power
 }
-
 local movable = false
-local colors = dRunesSettings.colors
 local runes = {}
-local runemap = dRunesSettings.runemap
+local runemap = { 1, 2, 3, 4, 5, 6 }
 
-if C["duffed"].runes == true then
+if C["runes"].enable == true then
 	local dRunesAnchorFrame = CreateFrame("Frame", "dRunesAnchorFrame", UIParent)
-	dRunesAnchorFrame:Size(150, 15)
+	dRunesAnchorFrame:Size(100, 15)
 	dRunesAnchorFrame:SetPoint("CENTER", UIParent, "CENTER", 0, 100)
 	dRunesAnchorFrame:SetFrameStrata("TOOLTIP")
 	dRunesAnchorFrame:SetFrameLevel(20)
@@ -60,42 +32,42 @@ if C["duffed"].runes == true then
 	tinsert(D.AllowFrameMoving, dRunesAnchorFrame)
 
 	dRunes = CreateFrame("Frame", "dRunes", UIParent)
-	if dRunesSettings.displayRpBar then
-		dRunes:SetPoint("BOTTOM", dRunesAnchorFrame, "TOP", 0, 6 + (dRunesSettings.rpBarThickness or 10))
+	if C["runes"].displayrpbar then
+		dRunes:SetPoint("BOTTOM", dRunesAnchorFrame, "TOP", 0, 6 + (C["runes"].rpbarthickness))
 	else
 		dRunes:SetPoint("BOTTOM", dRunesAnchorFrame, "TOP", 0, 3)
 	end
-	if dRunesSettings.growthDirection == "VERTICAL" then
-		dRunes:SetSize(dRunesSettings.barThickness * 6 + 9, dRunesSettings.barLength)
+	if C["runes"].growthdirection == "VERTICAL" then
+		dRunes:SetSize(C["runes"].barthickness * 6 + 9, C["runes"].barlength)
 	else
-		dRunes:SetSize(dRunesSettings.barLength, dRunesSettings.barThickness * 6 + 9)
+		dRunes:SetSize(C["runes"].barlength, C["runes"].barthickness * 6 + 9)
 	end
 	dRunes:SetTemplate("Transparent")
 	dRunes:CreateShadow("Default")
 
 	for i = 1, 6 do
 		local rune = CreateFrame("StatusBar", "dRunesRune"..i, dRunes)
-		rune:SetStatusBarTexture(dRunesSettings.texture)
+		rune:SetStatusBarTexture(C["media"].normTex)
 		rune:SetStatusBarColor(unpack(colors[math.ceil(runemap[i] / 2) ]))
 		rune:SetMinMaxValues(0, 10)
 
-		if dRunesSettings.growthDirection == "VERTICAL" then
+		if C["runes"].growthdirection == "VERTICAL" then
 			rune:SetOrientation("VERTICAL")
-			rune:SetWidth(dRunesSettings.barThickness)
+			rune:SetWidth(C["runes"].barthickness)
 		else
 			rune:SetOrientation("HORIZONTAL")
-			rune:SetHeight(dRunesSettings.barThickness)
+			rune:SetHeight(C["runes"].barthickness)
 		end
 
 		if i == 1 then
 			rune:SetPoint("TOPLEFT", dRunes, "TOPLEFT", 2, -2)
-			if dRunesSettings.growthDirection == "VERTICAL" then
+			if C["runes"].growthdirection == "VERTICAL" then
 				rune:SetPoint("BOTTOMLEFT", dRunes, "BOTTOMLEFT", 2, 2)
 			else
 				rune:SetPoint("TOPRIGHT", dRunes, "TOPRIGHT", -2, -2)
 			end
 		else
-			if dRunesSettings.growthDirection == "VERTICAL" then
+			if C["runes"].growthdirection == "VERTICAL" then
 				rune:SetHeight(runes[1]:GetHeight())
 				rune:SetPoint("LEFT", runes[i - 1], "RIGHT", 1, 0)
 			else
@@ -107,22 +79,22 @@ if C["duffed"].runes == true then
 		tinsert(runes, rune)
 	end
 
-	if dRunesSettings.displayRpBar then
+	if C["runes"].displayrpbar then
 		local rpbarbg = CreateFrame("Frame", "dRunesRunicPower", dRunes)
 		rpbarbg:SetPoint("TOPLEFT", dRunes, "BOTTOMLEFT", 0, -3)
 		rpbarbg:SetPoint("TOPRIGHT", dRunes, "BOTTOMRIGHT", 0, -3)
-		rpbarbg:SetHeight(dRunesSettings.rpBarThickness or 10)
+		rpbarbg:SetHeight(C["runes"].rpbarthickness)
 		rpbarbg:SetTemplate("Transparent")
 		rpbarbg:CreateShadow("Default")
 
 		local rpbar = CreateFrame("StatusBar", nil, rpbarbg)
-		rpbar:SetStatusBarTexture(dRunesSettings.texture)
+		rpbar:SetStatusBarTexture(C["media"].normTex)
 		rpbar:SetStatusBarColor(unpack(colors[5]))
 		rpbar:SetMinMaxValues(0, 100)
 		rpbar:SetPoint("TOPLEFT", rpbarbg, "TOPLEFT", 2, -2)
 		rpbar:SetPoint("BOTTOMRIGHT", rpbarbg, "BOTTOMRIGHT", -2, 2)
 
-		if dRunesSettings.displayRpBarText then
+		if C["runes"].displayrpbartext then
 			local fontHeight = rpbar:GetHeight() - 4
 			if fontHeight < 11 then
 				fontHeight = 11
@@ -181,7 +153,7 @@ if C["duffed"].runes == true then
 	dRunes:RegisterEvent("PLAYER_REGEN_ENABLED")
 	dRunes:RegisterEvent("PLAYER_ENTERING_WORLD")
 	dRunes:SetScript("OnEvent", function(self, event)
-		if not dRunesSettings.hideOOC then
+		if not C["runes"].hideooc then
 			dRunes:UnregisterAllEvents()
 		elseif event == "PLAYER_REGEN_DISABLED" then
 			UIFrameFadeIn(self, (0.3 * (1 - self:GetAlpha())), self:GetAlpha(), 1)
@@ -202,40 +174,42 @@ if C["duffed"].runes == true then
 		self:Hide()
 	end)
 
-	--[[local name, _, icon = GetSpellInfo(56815)
+	--[[if C["runes"].runestrike then
+		local name, _, icon = GetSpellInfo(56815)
 
-	local frame = CreateFrame("Frame", nil, UIParent)
-	frame:Size(50)
-	frame:SetPoint("BOTTOM", _G["dRunes"], "TOP", 0, 10)
-	frame:SetTemplate("Default")
-	frame:SetAlpha(1)
+		local frame = CreateFrame("Frame", nil, UIParent)
+		frame:Size(50)
+		frame:SetPoint("BOTTOM", _G["dRunes"], "TOP", 0, 10)
+		frame:SetTemplate("Default")
+		frame:SetAlpha(1)
 
-	frame.icon = frame:CreateTexture(nil, "OVERLAY")
-	frame.icon:SetTexture(icon)
-	frame.icon:SetSize(frame:GetHeight() - 4, frame:GetHeight() - 4)
-	frame.icon:SetPoint("CENTER")
-	frame.icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
+		frame.icon = frame:CreateTexture(nil, "OVERLAY")
+		frame.icon:SetTexture(icon)
+		frame.icon:SetSize(frame:GetHeight() - 4, frame:GetHeight() - 4)
+		frame.icon:SetPoint("CENTER")
+		frame.icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 
-	function frame:FadeIn()
-		UIFrameFadeIn(self, (0.3 * (1 - self:GetAlpha())), self:GetAlpha(), 1)
-	end
-
-	function frame:FadeOut()
-		UIFrameFadeOut(self, (0.3 * (0 + self:GetAlpha())), self:GetAlpha(), 0)
-	end
-
-	local function OnEvent(self, event)
-		isUsable = IsUsableSpell(name)
-
-		if isUsable then
-			self:FadeIn()
-		else
-			self:FadeOut()
+		function frame:FadeIn()
+			UIFrameFadeIn(self, (0.3 * (1 - self:GetAlpha())), self:GetAlpha(), 1)
 		end
-	end
 
-	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-	frame:RegisterEvent("ACTIONBAR_UPDATE_USABLE")
-	frame:RegisterEvent("SPELL_UPDATE_USABLE")
-	frame:SetScript("OnEvent", OnEvent)]]--
+		function frame:FadeOut()
+			UIFrameFadeOut(self, (0.3 * (0 + self:GetAlpha())), self:GetAlpha(), 0)
+		end
+
+		local function OnEvent(self, event)
+			isUsable = IsUsableSpell(name)
+
+			if isUsable then
+				self:FadeIn()
+			else
+				self:FadeOut()
+			end
+		end
+
+		frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+		frame:RegisterEvent("ACTIONBAR_UPDATE_USABLE")
+		frame:RegisterEvent("SPELL_UPDATE_USABLE")
+		frame:SetScript("OnEvent", OnEvent)
+	end]]--
 end

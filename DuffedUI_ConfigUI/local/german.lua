@@ -57,8 +57,10 @@
 	DuffedUIConfigUILocalization.duffedannouncechannel = "Setze Kanal f\195\188r Warnung (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r oder |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "Aktviere Reinigungswarnnung"
 	DuffedUIConfigUILocalization.duffedspellannounce = "Aktiviere Aurawarnung"
-		DuffedUIConfigUILocalization.unitframesrunes = "Aktiviere alternative Runenanzeige f\195\188r Todesritter"
-
+		
+	-- drunes
+	DuffedUIConfigUILocalization.runes = "|cffC41F3Bd|rRunes"
+	DuffedUIConfigUILocalization.runesenable = "Aktiviere alternative Runenanzeige f\195\188r Todesritter"
 
 	-- general
 	DuffedUIConfigUILocalization.general = "Allgemein"

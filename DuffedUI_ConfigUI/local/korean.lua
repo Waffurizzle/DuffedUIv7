@@ -57,8 +57,11 @@
 	DuffedUIConfigUILocalization.duffedannouncechannel = "Set channel for announcement (|cffC41F3BSAY|r, |cffC41F3BPARTY|r, |cffC41F3BRAID|r or |cffC41F3BINSTANCE|r)"
 	DuffedUIConfigUILocalization.duffeddispelannouncement = "Enable Dispelannouncement"
 	DuffedUIConfigUILocalization.duffedspellannounce = "Enable Auraannouncement"
-	DuffedUIConfigUILocalization.duffedrunes = "Enable alternativ runebar for Death Knights"
 
+	-- drunes
+	DuffedUIConfigUILocalization.runes = "|cffC41F3Bd|rRunes"
+	DuffedUIConfigUILocalization.runesenable = "Enable alternativ runebar for Death Knights"
+	
 	-- general
 	DuffedUIConfigUILocalization.general = "General"
 	DuffedUIConfigUILocalization.generalautoscale = "Auto UI Scale"
