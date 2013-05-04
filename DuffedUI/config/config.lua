@@ -190,7 +190,7 @@ C["runes"] = {
 	["rpbarthickness"] = 10,									-- thickenes of runic power bar
 	["hideooc"] = false,										-- hide drunes ooc
 	["growthdirection"] = "VERTICAL",							-- growth direction of rune bars
-	["runestrike"] = false,										-- enable rune strike display if usable
+	--["soulreaper"] = true,										-- enable soul reaper display if usable
 }
 
 C["loot"] = {

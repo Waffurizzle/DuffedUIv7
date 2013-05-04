@@ -174,12 +174,12 @@ if C["runes"].enable == true then
 		self:Hide()
 	end)
 
-	--[[if C["runes"].runestrike then
-		local name, _, icon = GetSpellInfo(56815)
+	--[[if C["runes"].soulreaper then
+		local name, _, icon = GetSpellInfo(114866)
 
 		local frame = CreateFrame("Frame", nil, UIParent)
 		frame:Size(50)
-		frame:SetPoint("BOTTOM", _G["dRunes"], "TOP", 0, 10)
+		frame:SetPoint("LEFT", _G["dRunes"], "RIGHT", 10, 0)
 		frame:SetTemplate("Default")
 		frame:SetAlpha(1)
 
@@ -198,12 +198,15 @@ if C["runes"].enable == true then
 		end
 
 		local function OnEvent(self, event)
+			local ahealth = math.floor(UnitHealth("target") / UnitHealthMax("target") * 100)
 			isUsable = IsUsableSpell(name)
 
-			if isUsable then
-				self:FadeIn()
-			else
-				self:FadeOut()
+			if ahealth <= 35 then
+				if isUsable then
+					self:FadeOut()
+				else
+					self:FadeIn()
+				end
 			end
 		end
 
