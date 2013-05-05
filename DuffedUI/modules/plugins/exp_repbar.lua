@@ -42,6 +42,7 @@ if D.level ~= MAX_PLAYER_LEVEL then
 		end)
 		self:SetScript("OnLeave", function() GameTooltip:Hide() end)
 	end
+	
 	DuffedUIExperience:RegisterEvent("PLAYER_ENTERING_WORLD")
 	DuffedUIExperience:RegisterEvent("PLAYER_XP_UPDATE")
 	DuffedUIExperience:RegisterEvent("PLAYER_LEVEL_UP")
