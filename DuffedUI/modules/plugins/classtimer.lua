@@ -103,7 +103,7 @@ local TRINKET_FILTER = {
 	-- Legendary MetaGems
 	CreateSpellEntry(137593), -- Indomitable Primal Diamond
 	CreateSpellEntry(137248), -- Courageous Primal Diamond
-	CreateSpellEntry(137595), -- Capacitive Primal Diamond
+	CreateSpellEntry(137596), -- Capacitive Primal Diamond
 	CreateSpellEntry(137590), -- Sinister Primal Diamond
 }
 	
