@@ -44,11 +44,11 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(96230), -- Synapse Springs
 	
 	-- Weaponenchants & Stuff
-	CreateSpellEntry(104510), -- Windsong
-	CreateSpellEntry(125487), -- Lightweave
-	CreateSpellEntry(120032), -- Dancing Steel
-	CreateSpellEntry(104993), -- Jade Spirit
-	CreateSpellEntry(116660), -- River's Song
+	CreateSpellEntry(104510, true), -- Windsong
+	CreateSpellEntry(125487, true), -- Lightweave
+	CreateSpellEntry(120032, true), -- Dancing Steel
+	CreateSpellEntry(104993, true), -- Jade Spirit
+	CreateSpellEntry(116660, true), -- River's Song
 	
 	-- Dungeon-, Valor- & Darkmoontrinkets
 	CreateSpellEntry(126519), -- Lessons of the Darkmaster
@@ -102,7 +102,7 @@ local TRINKET_FILTER = {
 
 	-- Legendary MetaGems
 	CreateSpellEntry(137593), -- Indomitable Primal Diamond
-	CreateSpellEntry(137248), -- Courageous Primal Diamond
+	CreateSpellEntry(137288), -- Courageous Primal Diamond
 	CreateSpellEntry(137596), -- Capacitive Primal Diamond
 	CreateSpellEntry(137590), -- Sinister Primal Diamond
 }
@@ -209,6 +209,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(48505), -- Starfall
 			CreateSpellEntry(29166), -- Innervate
 			CreateSpellEntry(22812), -- Barkskin
+			CreateSpellEntry(132402, true), -- Savage Defense
 			CreateSpellEntry(16689), -- Nature's Grasp
 			CreateSpellEntry(5229), -- Enrage
 			CreateSpellEntry(52610), -- Savage Roar
