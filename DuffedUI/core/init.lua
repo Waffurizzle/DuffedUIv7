@@ -91,6 +91,8 @@ D.Credits = {
 
 D.DuffedCredits = {
 	"jones7",
+	"Waffurizzle",
+	"Carbonium",
 	"Optional",
 	"Pixelfcuk",
 	"Shera",
