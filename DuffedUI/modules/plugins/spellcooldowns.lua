@@ -185,6 +185,13 @@ spellCooldowns = {
 		80240, -- Havoc
 		108416, -- Sacrificial Pact
 		132409, -- Spell Lock
+		20707, -- Seelenstein
+		6229, -- Zwielichtzauberschutz
+		104773, -- Erbarmungslose Entschlossenheit
+		108359, -- Finstere Regeneration
+		111397, -- Blutschrecken
+		108482, -- Entfesselter Wille
+		108505, -- Archimondes Rache
 	},
 	["PALADIN"] = {
 		498,   -- Divine Protection
@@ -353,6 +360,8 @@ spellCooldowns = {
 		89766, -- Felguard Axe Toss
 		89751, -- Felguard Felstorm
 		30151, -- Felguard Pursuit
+		115770, -- Shivarra Teufelspeitsche
+		115781, -- Beobachter Augenstrahl
 		-- Hunter
 	},
 }
