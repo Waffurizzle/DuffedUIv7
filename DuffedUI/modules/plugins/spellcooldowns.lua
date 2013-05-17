@@ -274,10 +274,10 @@ spellCooldowns = {
 		51753, -- Camouflage		
 	},
 	["WARRIOR"] = {
-		676,     -- Disarm
-		1161,   -- Challenging Shout
-		1719,   -- Recklessness
-		2565,   -- Shield Block
+		676, -- Disarm
+		1161, -- Challenging Shout
+		1719, -- Recklessness
+		2565, -- Shield Block
 		64382, -- Shattering Throw
 		57755, -- Heroic Throw
 		46968, -- Shockwave
@@ -287,18 +287,35 @@ spellCooldowns = {
 		60970, -- Heroic Fury
 		12809, -- Concussion Blow
 		12292, -- Death Wish
-		5246,   -- Intimidating Shout
+		5246, -- Intimidating Shout
 		18499, -- Berserker Rage
 		20230, -- Retaliation
-		871,     -- Shield Wall
+		871, -- Shield Wall
 		12975, -- Last Stand
-		100,    -- Charge
+		100, -- Charge
 		20252, -- Intercept
-		3411,   -- Intervene
+		3411, -- Intervene
 		6544, -- Heroic Leap
 		86346, -- Colossus Smash
 		355, -- Taunt
 		114028, -- Mass Spell Reflect
+		114029, -- Sicherung
+		114192, -- Spottendes banner
+		114203, -- Demoralisierendes Banner
+		114207, -- Schädelbanner
+		118038, -- Durch das Schwert umkommen
+		6552, -- Zuschlagen
+		97462, -- Anspornender Schrei
+		107570,	-- Sturmblitz
+		55697,	-- Wütende Regeneration
+		103840,	-- Bevorstehender Sieg
+		107566, -- Erschütternder Ruf
+		102060, -- Unterbrechender Ruf
+		114030, -- Wachsamkeit
+		107574, -- Avatar
+		118000, -- Drachengebrüll
+		1160, -- Demoralisierender Ruf
+		6343, -- Donnerknall
 	},
 	["RACE"] = {
 		["Orc"] = {
