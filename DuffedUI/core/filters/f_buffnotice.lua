@@ -60,7 +60,6 @@ D.BuffReminder1 = {
 		109773, -- Dark Intent
 		116781, -- Legacy of the White Tiger
 		90364, -- Qiraj Fortitude
-		6307, -- Blood Pact
 	},
 	WARRIOR = {
 		469, -- Commanding Shout
@@ -70,7 +69,7 @@ D.BuffReminder1 = {
 		57330, -- Horn of Winter
 		21562, -- PW: Fortitude
 		90364, -- Qiraj Fortitude
-		6307, -- Blood Pact
+		109773, -- Dark Intent
 	},
 }
 

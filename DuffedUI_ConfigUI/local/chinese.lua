@@ -48,6 +48,10 @@
 	DuffedUIConfigUILocalization.classtimertargetbuffcolor = "设置目标计时条Buff颜色"
 	DuffedUIConfigUILocalization.classtimertargetdebuffcolor = "设置目标计时条Debuff颜色"
 	DuffedUIConfigUILocalization.classtimertrinketcolor = "设置饰品计时条颜色"
+	DuffedUIConfigUILocalization.classtimerheight = "Set height of classtimer bar"
+	DuffedUIConfigUILocalization.classtimerspacing = "Set spacing of classtimer bars"
+	DuffedUIConfigUILocalization.classtimerseparator = "Enable cast separator"
+	DuffedUIConfigUILocalization.classtimerseparatorcolor = "Set color of separator"
 
 	-- duffed
 	DuffedUIConfigUILocalization.duffed = "Duffed"

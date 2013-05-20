@@ -101,6 +101,10 @@ C["classtimer"] = {
 	["targetbuffcolor"] = { 70/255, 150/255, 70/255, 1 },		-- targetbarcolor (buff)
 	["targetdebuffcolor"] = { 150/255, 30/255, 30/255, 1 },		-- targetbarcolor (debuff)
 	["trinketcolor"] = {75/255, 75/255, 75/255, 1 },			-- trinketbarcolor
+	["height"] = 15,											-- height of classtimer bar
+	["spacing"] = 1,											-- spacing of classtimer bars
+	["separator"] = true,										-- enable cast separator
+	["separatorcolor"] = { 0, 0, 0, .5 },						-- color of separator
 }
 
 C["castbar"] = {

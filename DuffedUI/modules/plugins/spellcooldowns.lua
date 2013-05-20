@@ -70,6 +70,10 @@ spellCooldowns = {
 		120668, -- Stormlash Totem
 		108285, -- Call of the Elements
 		5394, -- Healing Stream Totem
+		77130, -- Geistreinigung
+		73680, -- Elemente entfesseln
+		114049, -- Aszendenz
+		108271, -- Astralverschiebung
 	},
 	["ROGUE"] = {
 		1856, -- Vanish
@@ -307,7 +311,7 @@ spellCooldowns = {
 		6552, -- Zuschlagen
 		97462, -- Anspornender Schrei
 		107570,	-- Sturmblitz
-		55697,	-- Wütende Regeneration
+		55694,	-- Wütende Regeneration
 		103840,	-- Bevorstehender Sieg
 		107566, -- Erschütternder Ruf
 		102060, -- Unterbrechender Ruf

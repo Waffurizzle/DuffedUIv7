@@ -48,6 +48,10 @@
 	DuffedUIConfigUILocalization.classtimertargetbuffcolor = "Set target buff color"
 	DuffedUIConfigUILocalization.classtimertargetdebuffcolor = "Set target debuff color"
 	DuffedUIConfigUILocalization.classtimertrinketcolor = "Set trinket color"
+	DuffedUIConfigUILocalization.classtimerheight = "Set height of classtimer bar"
+	DuffedUIConfigUILocalization.classtimerspacing = "Set spacing of classtimer bars"
+	DuffedUIConfigUILocalization.classtimerseparator = "Enable cast separator"
+	DuffedUIConfigUILocalization.classtimerseparatorcolor = "Set color of separator"
 
 	-- duffed
 	DuffedUIConfigUILocalization.duffed = "Duffed"

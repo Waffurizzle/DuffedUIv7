@@ -1,5 +1,6 @@
 local D, C, L, G = unpack(select(2, ...))
 if not C["misc"].ilvlcharacter then return end
+-- /dump GetInventoryItemLink('player', INVSLOT_HEAD)
 
 local time = 3
 local slots = {

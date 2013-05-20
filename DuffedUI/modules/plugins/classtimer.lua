@@ -13,28 +13,28 @@ local CreateSpellEntry = function(id, castByAnyone, color, unitType, castSpellId
 end
 
 -- Configuration starts here:
-local targetdebuffs = C["classtimer"].targetdebuffs							-- display target debuffs above target
-local BAR_HEIGHT = 15														-- Bar height
-local BAR_SPACING = 1														-- Distance between bars
-local SPARK = C["classtimer"].spark											-- Show spark
-local CAST_SEPARATOR = true													-- Show cast separator
-local CAST_SEPARATOR_COLOR = { 0, 0, 0, .5 } 								-- Sets cast separator color
-local TEXT_MARGIN = 5														-- Sets distance between right edge of bar and name and left edge of bar and time left
+local targetdebuffs = C["classtimer"].targetdebuffs
+local BAR_HEIGHT = C["classtimer"].height
+local BAR_SPACING = C["classtimer"].spacing
+local SPARK = C["classtimer"].spark
+local CAST_SEPARATOR = C["classtimer"].separator
+local CAST_SEPARATOR_COLOR = C["classtimer"].separatorcolor
+local TEXT_MARGIN = 5
 
-local PERMANENT_AURA_VALUE = 1												-- Permanent aura bars 1 = filled 0 = empty
+local PERMANENT_AURA_VALUE = 1
 
-local PLAYER_BAR_COLOR = C["classtimer"].playercolor 						-- Player bar color
-local PLAYER_DEBUFF_COLOR = nil 											-- Player debuff color
-local TARGET_BAR_COLOR = C["classtimer"].targetbuffcolor 					-- Target bar color
-local TARGET_DEBUFF_COLOR = C["classtimer"].targetdebuffcolor 				-- Target debuff color
-local TRINKET_BAR_COLOR = C["classtimer"].trinketcolor 						-- Trinket bar color
+local PLAYER_BAR_COLOR = C["classtimer"].playercolor
+local PLAYER_DEBUFF_COLOR = nil
+local TARGET_BAR_COLOR = C["classtimer"].targetbuffcolor
+local TARGET_DEBUFF_COLOR = C["classtimer"].targetdebuffcolor
+local TRINKET_BAR_COLOR = C["classtimer"].trinketcolor
 
-local SORT_DIRECTION = true 												-- Sort direction (true - descending, false - ascending)
-local TENTHS_TRESHOLD = 1 													-- Timer tenths threshold - range from 1 to 60
+local SORT_DIRECTION = true
+local TENTHS_TRESHOLD = 1
 
 -- Trinket filter - mostly for trinket procs, delete or wrap into comment block --[[  ]] if you dont want to track those
 local TRINKET_FILTER = {
-	--Proccs CreateSpellEntry(), --
+	--Proccs
 	CreateSpellEntry(2825, true), CreateSpellEntry(32182, true), CreateSpellEntry(80353, true), -- Bloodlust/Heroism/Timewarp
 	CreateSpellEntry(90355, true), -- Ancient Hysteria, bloodlust from hunters pet
 	CreateSpellEntry(26297), -- Berserking (troll racial)

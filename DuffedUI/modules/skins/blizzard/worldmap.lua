@@ -31,8 +31,6 @@ local function LoadSkin()
 	WorldMapLevelDownButton:Point("BOTTOMLEFT", WorldMapLevelDropDown, "BOTTOMRIGHT", -2, 2)
 
 	WorldMapTrackQuest:SkinCheckBox()
-	WorldMapQuestShowObjectives:SkinCheckBox()
-	WorldMapShowDigSites:SkinCheckBox()
 
 	--Mini
 	local function SmallSkin()
@@ -46,13 +44,11 @@ local function LoadSkin()
 
 	--Large
 	local function LargeSkin()
-		--if not InCombatLockdown() then
-			WorldMapFrame:SetParent(UIParent)
-			WorldMapFrame:EnableMouse(false)
-			WorldMapFrame:EnableKeyboard(false)
-			SetUIPanelAttribute(WorldMapFrame, "area", "center");
-			SetUIPanelAttribute(WorldMapFrame, "allowOtherPanels", true)
-		--end
+		WorldMapFrame:SetParent(UIParent)
+		WorldMapFrame:EnableMouse(false)
+		WorldMapFrame:EnableKeyboard(false)
+		SetUIPanelAttribute(WorldMapFrame, "area", "center");
+		SetUIPanelAttribute(WorldMapFrame, "allowOtherPanels", true)
 		
 		WorldMapFrame.backdrop:ClearAllPoints()
 		WorldMapFrame.backdrop:Point("TOPLEFT", WorldMapDetailFrame, "TOPLEFT", -25, 70)
@@ -60,13 +56,11 @@ local function LoadSkin()
 	end
 
 	local function QuestSkin()
-		--if not InCombatLockdown() then
-			WorldMapFrame:SetParent(UIParent)
-			WorldMapFrame:EnableMouse(false)
-			WorldMapFrame:EnableKeyboard(false)
-			SetUIPanelAttribute(WorldMapFrame, "area", "center");
-			SetUIPanelAttribute(WorldMapFrame, "allowOtherPanels", true)
-		--end
+		WorldMapFrame:SetParent(UIParent)
+		WorldMapFrame:EnableMouse(false)
+		WorldMapFrame:EnableKeyboard(false)
+		SetUIPanelAttribute(WorldMapFrame, "area", "center");
+		SetUIPanelAttribute(WorldMapFrame, "allowOtherPanels", true)
 		
 		WorldMapFrame.backdrop:ClearAllPoints()
 		WorldMapFrame.backdrop:Point("TOPLEFT", WorldMapDetailFrame, "TOPLEFT", -25, 70)
@@ -100,12 +94,10 @@ local function LoadSkin()
 			QuestSkin()
 		end
 
-		--if not InCombatLockdown() then
-			WorldMapFrame:SetScale(1)
-			WorldMapFrameSizeDownButton:Show()
-			WorldMapFrame:SetFrameLevel(40)
-			WorldMapFrame:SetFrameStrata("HIGH")
-		--end
+		WorldMapFrame:SetScale(1)
+		WorldMapFrameSizeDownButton:Show()
+		WorldMapFrame:SetFrameLevel(40)
+		WorldMapFrame:SetFrameStrata("HIGH")
 		
 		WorldMapFrameAreaLabel:SetFont(C["media"].font, 50, "OUTLINE")
 		WorldMapFrameAreaLabel:SetShadowOffset(2, -2)
@@ -129,11 +121,8 @@ local function LoadSkin()
 	end)
 
 	WorldMapFrame:RegisterEvent("PLAYER_LOGIN")
-	--WorldMapFrame:RegisterEvent("PLAYER_REGEN_ENABLED") -- fix taint with small map & big map
-	--WorldMapFrame:RegisterEvent("PLAYER_REGEN_DISABLED") -- fix taint with small map & big map
 	WorldMapFrame:HookScript("OnEvent", function(self, event)
 		local miniWorldMap = GetCVarBool("miniWorldMap")
-		local quest = WorldMapQuestShowObjectives:GetChecked()
 
 		if event == "PLAYER_LOGIN" then
 			if not miniWorldMap then
@@ -199,12 +188,12 @@ local function LoadSkin()
 	end)
 
 	local coords = CreateFrame("Frame", "CoordsFrame", WorldMapFrame)
-	local fontheight = select(2, WorldMapQuestShowObjectivesText:GetFont())*1.1
+	local fontheight = select(2, WorldMapTrackQuestText:GetFont())*1.1
 	coords:SetFrameLevel(90)
 	coords:FontString("PlayerText", C["media"].font, fontheight, "THINOUTLINE")
 	coords:FontString("MouseText", C["media"].font, fontheight, "THINOUTLINE")
-	coords.PlayerText:SetTextColor(WorldMapQuestShowObjectivesText:GetTextColor())
-	coords.MouseText:SetTextColor(WorldMapQuestShowObjectivesText:GetTextColor())
+	coords.PlayerText:SetTextColor(WorldMapTrackQuestText:GetTextColor())
+	coords.MouseText:SetTextColor(WorldMapTrackQuestText:GetTextColor())
 	coords.PlayerText:SetPoint("BOTTOMLEFT", WorldMapDetailFrame, "BOTTOMLEFT", 5, 5)
 	coords.PlayerText:SetText("Player:   0, 0")
 	coords.MouseText:SetPoint("BOTTOMLEFT", coords.PlayerText, "TOPLEFT", 0, 5)

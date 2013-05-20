@@ -102,6 +102,13 @@ local function LoadSkin()
 	HelpFrameCloseButton:SkinCloseButton(HelpFrame.backdrop)	
 	HelpFrameKnowledgebaseErrorFrameCloseButton:SkinCloseButton(HelpFrameKnowledgebaseErrorFrame.backdrop)
 
+	-- Help Browser
+	HelpBrowserNavHome:SkinButton()
+	HelpBrowserNavBack:SkinButton()
+	HelpBrowserNavForward:SkinButton()
+	HelpBrowserNavReload:SkinButton()
+	HelpBrowserBrowserSettings:SkinButton()
+
 	--Hearth Stone Button
 	HelpFrameCharacterStuckHearthstone:StyleButton()
 	HelpFrameCharacterStuckHearthstone:SetTemplate("Default", true)

@@ -48,6 +48,10 @@
 	DuffedUIConfigUILocalization.classtimertargetbuffcolor = "Setze Zielbufffarbe"
 	DuffedUIConfigUILocalization.classtimertargetdebuffcolor = "Setze Zieldebufffarbe"
 	DuffedUIConfigUILocalization.classtimertrinketcolor = "Setze Schmuckst\195\188ckfarbe"
+	DuffedUIConfigUILocalization.classtimerheight = "Höhe der ClassTimer-Leiste"
+	DuffedUIConfigUILocalization.classtimerspacing = "Zwischenraum der ClassTimer-Leisten"
+	DuffedUIConfigUILocalization.classtimerseparator = "Aktiviere Zauberabgrenzung"
+	DuffedUIConfigUILocalization.classtimerseparatorcolor = "Wähle Abgrenzungsfarbe"
 
 	-- duffed
 	DuffedUIConfigUILocalization.duffed = "Duffed"
