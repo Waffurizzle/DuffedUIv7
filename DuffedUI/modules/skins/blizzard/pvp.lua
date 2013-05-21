@@ -82,6 +82,14 @@ local function LoadSkin()
 	HonorFrame.BonusFrame.CallToArmsButton.SelectedTexture:ClearAllPoints()
 	HonorFrame.BonusFrame.CallToArmsButton.SelectedTexture:SetAllPoints()
 	HonorFrame.BonusFrame.CallToArmsButton.SelectedTexture:SetTexture(0, 1, 0, 0.1)
+	
+	HonorFrame.RoleInset:StripTextures()
+	HonorFrame.RoleInset.DPSIcon.checkButton:SkinCheckBox()
+	HonorFrame.RoleInset.DPSIcon.checkButton:SetFrameLevel(HonorFrame.RoleInset.DPSIcon:GetFrameLevel() + 2)
+	HonorFrame.RoleInset.TankIcon.checkButton:SkinCheckBox()
+	HonorFrame.RoleInset.TankIcon.checkButton:SetFrameLevel(HonorFrame.RoleInset.TankIcon:GetFrameLevel() + 2)
+	HonorFrame.RoleInset.HealerIcon.checkButton:SkinCheckBox()
+	HonorFrame.RoleInset.HealerIcon.checkButton:SetFrameLevel(HonorFrame.RoleInset.HealerIcon:GetFrameLevel() + 2)
 
 	for i = 1, 2 do
 		local b = HonorFrame.BonusFrame["WorldPVP"..i.."Button"]
