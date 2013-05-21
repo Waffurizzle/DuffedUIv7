@@ -1,7 +1,7 @@
 ## Interface: 50300
 ## Author: Merith @ Zirkel des Cenarius EU
 ## Title: |cffC41F3BDuffedUI|r Raid
-## Version: 7.2.8
+## Version: 7.2.9
 ## Notes: Raid layout for party and raid, DPS/Tank mode.
 ## X-Email: admin@duffed.net
 ## X-Category: UnitFrame
