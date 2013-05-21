@@ -129,61 +129,6 @@ local function LoadSkin()
 				WorldMapFrame:Show()
 				WorldMapFrame:Hide()
 			end
-		elseif event == "PLAYER_REGEN_DISABLED" then
-			WorldMapFrameSizeDownButton:Disable()
-			WorldMapFrameSizeUpButton:Disable()
-			
-			if (quest) and (miniWorldMap or Taint) then
-				if WorldMapFrame:IsShown() then
-					HideUIPanel(WorldMapFrame)
-				end
-
-				if not miniWorldMap and Taint and WORLDMAP_SETTINGS.size == WORLDMAP_QUESTLIST_SIZE then
-					WorldMapFrame_SetFullMapView()
-				end
-
-				WatchFrame.showObjectives = nil
-				WorldMapTitleButton:Hide()
-				WorldMapBlobFrame:Hide()
-				WorldMapPOIFrame:Hide()
-
-				WorldMapQuestShowObjectives.Show = D.dummy
-				WorldMapTitleButton.Show = D.dummy
-				WorldMapBlobFrame.Show = D.dummy
-				WorldMapPOIFrame.Show = D.dummy
-
-				WatchFrame_Update()
-			end
-			WorldMapQuestShowObjectives:Hide()
-		elseif event == "PLAYER_REGEN_ENABLED" then
-			WorldMapFrameSizeDownButton:Enable()
-			WorldMapFrameSizeUpButton:Enable()
-			
-			if (quest) and (miniWorldMap or Taint) then
-				WorldMapQuestShowObjectives.Show = WorldMapQuestShowObjectives:Show()
-				WorldMapTitleButton.Show = WorldMapTitleButton:Show()
-				WorldMapBlobFrame.Show = WorldMapBlobFrame:Show()
-				WorldMapPOIFrame.Show = WorldMapPOIFrame:Show()
-
-				WorldMapTitleButton:Show()
-
-				WatchFrame.showObjectives = true
-
-				if not miniWorldMap and Taint and WORLDMAP_SETTINGS.size == WORLDMAP_FULLMAP_SIZE then
-					WorldMapFrame_SetFullMapView()
-				end
-
-				WorldMapBlobFrame:Show()
-				WorldMapPOIFrame:Show()
-
-				WatchFrame_Update()
-				
-				if Taint and not miniWorldMap and WorldMapFrame:IsShown() and WORLDMAP_SETTINGS.size == WORLDMAP_FULLMAP_SIZE then
-					HideUIPanel(WorldMapFrame)
-					ShowUIPanel(WorldMapFrame)
-				end
-			end
-			WorldMapQuestShowObjectives:Show()
 		end
 	end)
 
