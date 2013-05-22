@@ -1,4 +1,4 @@
-﻿## Interface: 50300
+## Interface: 50300
 ## Author: Merith @ Zirkel des Cenarius EU
 ## Version: 7.2.9
 ## Title: |cffC41F3BDuffedUI|r
@@ -8,7 +8,10 @@
 ## OptionalDeps: DuffedUI_ConfigUI
 ## X-oUF: oUFDuffedUI
 ## Website: http://www.tukui.org
-## X-Tukui-ProjectID: 114
 ## X-Tukui-Project-Folders: DuffedUI, DuffedUI_ConfigUI, DuffedUI_Raid, DuffedUI_Raid_Healing
 
 DuffedUI.xml
+ 
+ 
+## X-Tukui-ProjectID: 114
+## X-Tukui-ProjectFolders: DuffedUI_Raid, DuffedUI_Raid_Healing, DuffedUI_ConfigUI, DuffedUI

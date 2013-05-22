@@ -158,6 +158,9 @@ local function LoadSkin()
 	ScenarioQueueFrameFindGroupButton:StripTextures()
 	ScenarioQueueFrameFindGroupButton:SkinButton()
 	ScenarioQueueFrameTypeDropDown:SkinDropDownBox()
+	ScenarioQueueFrameSpecificScrollFrameScrollBackgroundTopLeft:Hide()
+	ScenarioQueueFrameSpecificScrollFrameScrollBackgroundBottomRight:Hide()
+	ScenarioQueueFrameSpecificScrollFrameScrollBar:SkinScrollBar()
 	
 	local function SkinScenarioCheckBox()
 		if NUM_SCENARIO_CHOICE_BUTTONS then
