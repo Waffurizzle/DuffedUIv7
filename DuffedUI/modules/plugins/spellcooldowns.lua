@@ -146,6 +146,7 @@ spellCooldowns = {
 		108978, -- Alter Time
 		84714, -- Frozen Orb
 		33395, -- Freeze (Water Elemental)
+		131078, -- Icy Veins
 	},
 	["MONK"] = {
 		116680, -- Thunder Focus Tea
