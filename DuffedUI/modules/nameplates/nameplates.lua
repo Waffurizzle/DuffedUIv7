@@ -41,6 +41,7 @@ local PlateBlacklist = {
 	["Totem of Wrath"] = true,
 	["Wrath of Air Totem"] = true,
 	["Army of the Dead Ghoul"] = true,
+	["Vampiric Cave Bat"] = true,
 }
 
 local function HideObjects(parent)
