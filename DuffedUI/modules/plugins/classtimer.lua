@@ -515,7 +515,7 @@ local CLASS_FILTERS = {
 			CreateSpellEntry(86662), CreateSpellEntry(86663), -- Rude interruption rank 1 and 2
 			CreateSpellEntry(23885), -- Blood Thirst
 			CreateSpellEntry(86663), CreateSpellEntry(84585), CreateSpellEntry(84586), -- Slaughter
-			CreateSpellEntry(125831), -- Taste for Blood
+			CreateSpellEntry(60503), -- Taste for Blood
 			CreateSpellEntry(112048), -- Shield Barrier
 			CreateSpellEntry(132404), -- Shield Block
 			CreateSpellEntry(122510), -- Ultimatum

@@ -248,6 +248,7 @@ local function LoadSkin()
 	ReputationDetailAtWarCheckBox:SkinCheckBox()
 	ReputationDetailInactiveCheckBox:SkinCheckBox()
 	ReputationDetailMainScreenCheckBox:SkinCheckBox()
+	ReputationDetailLFGBonusReputationCheckBox:SkinCheckBox()
 	
 	local function UpdateReputationExpand()
 		-- Skin Expand Buttons
