@@ -2,7 +2,6 @@ local D, C, L, G = unpack(select(2, ...))
 
 D.spellalert = {
 	-- Warrior
-	[2565] = true,		-- Shield Block
 	[871] = true,		-- Shield Wall
 	[12975] = true,		-- Last Stand
 	

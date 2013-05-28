@@ -99,6 +99,7 @@ local TRINKET_FILTER = {
 	CreateSpellEntry(138786), -- Wushoolay's Lightning
 	CreateSpellEntry(138702), -- Surge of Strength
 	CreateSpellEntry(139120), -- Re-Origination
+	CreateSpellEntry(138703), -- Acceleration
 
 	-- Legendary MetaGems
 	CreateSpellEntry(137593), -- Indomitable Primal Diamond

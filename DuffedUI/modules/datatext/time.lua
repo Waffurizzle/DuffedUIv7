@@ -12,6 +12,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 	Text:SetFont(C["media"].font, C["datatext"].fontsize)
 	D.DataTextPosition(C["datatext"].wowtime, Text)
 
+	local played = 0
 	local int = 1
 	local function Update(self, t)
 		local pendingCalendarInvites = CalendarGetNumPendingInvites()
@@ -28,7 +29,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 					Text:SetText(Hr24..":"..Min)
 				end
 			else
-				if Hr24>=12 then
+				if Hr24 >= 12 then
 					if pendingCalendarInvites > 0 then
 						Text:SetText("|cffFF0000"..Hr..":"..Min.." |cffffffffpm|r")
 					else
@@ -44,7 +45,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			end
 		else
 			local Hr, Min = GetGameTime()
-			if Min<10 then Min = "0"..Min end
+			if Min < 10 then Min = "0"..Min end
 			if C["datatext"].time24 == true then
 				if pendingCalendarInvites > 0 then			
 					Text:SetText("|cffFF0000"..Hr..":"..Min.." |cffffffff|r")
@@ -52,8 +53,8 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 					Text:SetText(Hr..":"..Min.." |cffffffff|r")
 				end
 			else
-				if Hr>=12 then
-					if Hr>12 then Hr = Hr-12 end
+				if Hr >= 12 then
+					if Hr > 12 then Hr = Hr - 12 end
 					if pendingCalendarInvites > 0 then
 						Text:SetText("|cffFF0000"..Hr..":"..Min.." |cffffffffpm|r")
 					else
@@ -106,12 +107,12 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		
 		if C["datatext"].localtime == true then
 			local Hr, Min = GetGameTime()
-			if Min<10 then Min = "0"..Min end
+			if Min < 10 then Min = "0"..Min end
 			if C["datatext"].time24 == true then         
 				GameTooltip:AddDoubleLine(L.datatext_servertime,Hr .. ":" .. Min);
 			else             
-				if Hr>=12 then
-				Hr = Hr-12
+				if Hr >= 12 then
+				Hr = Hr - 12
 				if Hr == 0 then Hr = 12 end
 					GameTooltip:AddDoubleLine(L.datatext_servertime,Hr .. ":" .. Min.." PM");
 				else
@@ -126,7 +127,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 			if C["datatext"].time24 == true then
 				GameTooltip:AddDoubleLine(L.datatext_localtime,Hr24 .. ":" .. Min);
 			else
-				if Hr24>=12 then
+				if Hr24 >= 12 then
 					GameTooltip:AddDoubleLine(L.datatext_localtime,Hr .. ":" .. Min.." PM");
 				else
 					GameTooltip:AddDoubleLine(L.datatext_localtime,Hr .. ":" .. Min.." AM");
@@ -162,7 +163,7 @@ if C["datatext"].wowtime and C["datatext"].wowtime > 0 then
 		local actualtime = GetTime()
 		played = actualtime - startTimer
 		if played > 60 then
-			GameTooltip:AddDoubleLine(TIME_PLAYED_MSG..": ", T.FormatTime(played))
+			GameTooltip:AddDoubleLine(TIME_PLAYED_MSG..": ", D.FormatTime(played))
 		end
 
 		GameTooltip:AddDoubleLine(" ", " ")
