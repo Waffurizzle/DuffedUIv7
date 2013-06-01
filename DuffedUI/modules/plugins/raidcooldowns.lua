@@ -39,6 +39,9 @@ local spells = {
 	[108280] = 180,		-- Healing Tide Totem
 	[80353] = 300, 		-- Time Warp
 	[32182] = 300, 		-- Heroism
+	[114203] = 180,		-- Demoralizing Banner
+	[97462] = 180,		-- Rallying Cry
+	[76577] = 180,		-- Smoke Bomb
 	[76095] = 60,		-- Potion of Mogu Power
 	[76093] = 60,		-- Potion of the Jade Serpent
 }
