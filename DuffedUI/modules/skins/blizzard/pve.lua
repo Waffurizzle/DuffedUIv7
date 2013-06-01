@@ -312,7 +312,7 @@ local function LoadSkin()
 	LFDQueueFrameTypeDropDown:Point("RIGHT",-10,0)
 	LFDQueueFrameSpecificListScrollFrameScrollBar:SkinScrollBar()
 	
-	LFGDungeonReadyPopup:SetTemplate("Default")
+	LFGDungeonReadyPopup:SetTemplate("Transparent")
 	LFGDungeonReadyPopup:CreateShadow("Default")
 	LFGDungeonReadyDialog.SetBackdrop = D.dummy
 	LFGDungeonReadyDialog.filigree:SetAlpha(0)

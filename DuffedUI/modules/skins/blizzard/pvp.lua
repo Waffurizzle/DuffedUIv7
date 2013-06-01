@@ -23,7 +23,6 @@ local function LoadSkin()
 		button:StyleButton()
 
 		button:CreateShadow("Default")
-		-- button.shadow:SetBackdropBorderColor(unpack(E['media'].rgbvaluecolor))
 
 		if i == 1 then button.shadow:SetAlpha(1) else button.shadow:SetAlpha(0) end
 
@@ -118,6 +117,17 @@ local function LoadSkin()
 	ConquestFrame.RatedBG.SelectedTexture:SetAllPoints()
 	ConquestFrame.RatedBG.SelectedTexture:SetTexture(0, 1, 0, 0.1)
 	ConquestJoinButton:SkinButton(true)
+	
+	-- PvP Ready Dialog
+	PVPReadyDialog:StripTextures()
+	PVPReadyDialog:SetTemplate("Transparent")
+	PVPReadyDialog.SetBackdrop = D.dummy
+	PVPReadyDialog.filigree:SetAlpha(0)
+	PVPReadyDialog.bottomArt:SetAlpha(0)
+	PVPReadyDialogEnterBattleButton:SkinButton()
+	PVPReadyDialogLeaveQueueButton:SkinButton()
+	PVPReadyDialogCloseButton:SkinCloseButton()
+	PVPReadyDialogCloseButton.t:SetText("_")
 
 	-- WARGRAMES FRAME
 	WarGamesFrame:StripTextures()
