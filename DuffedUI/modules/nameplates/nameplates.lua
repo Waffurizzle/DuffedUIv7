@@ -640,9 +640,7 @@ NamePlates:SetScript("OnUpdate", function(self, elapsed)
 	end
 
 	if self.elapsed and self.elapsed > 0.2 then
-		--if C["nameplate"].enhancethreat then
-			ForEachPlate(UpdateThreat, self.elapsed)
-		--end
+		ForEachPlate(UpdateThreat, self.elapsed)
 		ForEachPlate(AdjustNameLevel)
 		self.elapsed = 0
 	else
